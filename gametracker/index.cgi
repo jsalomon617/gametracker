@@ -150,9 +150,10 @@ class Collection(object):
         lines = []
         while start <= end:
             # format the date nicely
-            datestr = str(start)
+            datestr = "new Date({year}, {month}, {day})".format(
+                year=start.year, month=start.month - 1, day=start.day)
             gamecount = self.count(start)
-            lines.append("['{date}', {count}]".format(date=datestr, count=gamecount))
+            lines.append("[{date}, {count}]".format(date=datestr, count=gamecount))
             
             # increment the date
             start += datetime.timedelta(days=1)
@@ -190,7 +191,7 @@ def print_webpage(datatable):
         var chartDiv = document.getElementById('chart_div');
 
         var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Date');
+        data.addColumn('date', 'Date');
         data.addColumn('number', 'Game Count');
         data.addRows([
         %s
