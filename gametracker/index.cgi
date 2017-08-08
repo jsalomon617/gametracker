@@ -179,25 +179,32 @@ def print_webpage(datatable):
 
     # create our magical string of bullshit
     content = """
-    <script type="text/javascript" src="https://www.google.com/hsapi">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js">
     </script>
     <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
+      google.charts.load('current', {'packages':['line']});
+      google.charts.setOnLoadCallback(drawChart);
+
       function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-        ['Date', 'Count'],
+
+        var chartDiv = document.getElementById('chart_div');
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Date');
+        data.addColumn('number', 'Game Count');
+        data.addRows([
         %s
         ]);
 
         var options = {
-          title: 'Google column chart',
-          hAxis: {title: 'Date', titleTextStyle: {color: 'blue'}},
-          vAxis: {title: 'Count', titleTextStyle: {color: 'blue'}}
+          chart: {
+            title: 'Game Counts'
+          },
+          width: 900,
+          height: 500
         };
 
-        var chart = new google.visualization.ColumnChart
-                (document.getElementById('chart_div'));
+        var chart = new google.charts.Line(chartDiv);
         chart.draw(data, options);
       }
     </script>
