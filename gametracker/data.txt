@@ -60,3 +60,7 @@
 2017-08-07  +   Wagon Wheels
 2017-08-08  -   Raxxon
 2017-08-10  +   Sol: Last Days of a Star
+2017-08-11  +   Arkham Ritual
+2017-08-12  -   Islebound
+2017-08-12  -   Isle of Trains
+2017-08-12  -   Arkham Ritual
