@@ -3,12 +3,6 @@
 from collections import defaultdict
 import datetime
 
-import cgi
-import cgitb
-
-# enable tracebacks of exceptions
-cgitb.enable()
-
 # start of our tracker
 START = datetime.date(2017, 07, 30)
 
@@ -165,18 +159,11 @@ class Collection(object):
         return dataset
 
 
-def print_http_header():
-    """Print an HTTP header string"""
-    
-    print("Content-type: text/html")
-    print("")
-    print("")
-
-def print_webpage(datatable):
+def generate_webpage(datatable):
     """Print our webpage"""
 
-    # print the header
-    print_http_header()
+    # start with blank page
+    page = ""
 
     # create our magical string of bullshit
     content = """
@@ -217,8 +204,11 @@ def print_webpage(datatable):
     # go ahead and format it
     content %= datatable
 
-    # actually print the damn thing
-    print(content)
+    # actually add it
+    page += content
+
+    # spit it out
+    return page
 
 def main():
     """Do the actual stuff"""
@@ -229,9 +219,12 @@ def main():
     # get the datatable blob
     datatable = collection.chart_datatable()
 
-    # print stuff
-    print_webpage(datatable)
+    # get the page
+    page = generate_webpage(datatable)
 
+    # write it to file
+    with open("index.html", "w") as f:
+        f.write(page)
 
 # actually do shit
 if __name__ == "__main__":

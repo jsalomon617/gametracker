@@ -1,0 +1,54 @@
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js">
+    </script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['line']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var chartDiv = document.getElementById('chart_div');
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('date', 'Date');
+        data.addColumn('number', 'Game Count');
+        data.addRows([
+        [new Date(2017, 6, 30), 52],
+[new Date(2017, 6, 31), 53],
+[new Date(2017, 7, 1), 53],
+[new Date(2017, 7, 2), 52],
+[new Date(2017, 7, 3), 53],
+[new Date(2017, 7, 4), 53],
+[new Date(2017, 7, 5), 52],
+[new Date(2017, 7, 6), 52],
+[new Date(2017, 7, 7), 56],
+[new Date(2017, 7, 8), 55],
+[new Date(2017, 7, 9), 55],
+[new Date(2017, 7, 10), 56],
+[new Date(2017, 7, 11), 57],
+[new Date(2017, 7, 12), 54],
+[new Date(2017, 7, 13), 54],
+[new Date(2017, 7, 14), 54],
+[new Date(2017, 7, 15), 55],
+[new Date(2017, 7, 16), 55],
+[new Date(2017, 7, 17), 55],
+[new Date(2017, 7, 18), 55],
+[new Date(2017, 7, 19), 55]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Game Counts'
+          },
+          width: 900,
+          height: 500
+        };
+
+        var chart = new google.charts.Line(chartDiv);
+        chart.draw(data, options);
+      }
+    </script>
+    <div id="chart_div"></div>
+
+    </body>
+    
