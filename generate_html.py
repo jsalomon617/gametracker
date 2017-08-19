@@ -223,7 +223,7 @@ def main():
     page = generate_webpage(datatable)
 
     # write it to file
-    with open("index.html", "w") as f:
+    with open("www/index.html", "w") as f:
         f.write(page)
 
 # actually do shit
