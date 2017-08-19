@@ -12,8 +12,12 @@ a commit is made to the repo - this ensures that any changes made to the code or
 (both to update it for viewers, and to make sure that it's updated as part of the commit).
 
 TODO:
+
 (*) Use BGG links instead of text names for games (find old games owned code, somehow
 incorporate it here)
+
 (*) Show "days since last game" value
+
 (*) Show games acquired/played on any given day
+
 (*) Show lifespan of a single game on request
