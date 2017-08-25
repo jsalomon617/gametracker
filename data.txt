@@ -70,3 +70,5 @@
 2017-08-19  -   Spirit Island
 2017-08-20  +   VivaJava: The Coffee Game
 2017-08-23  +   VivaJava: The Coffee Game: The Dice Game
+2017-08-24  +   Overlords of Infamy
+2017-08-24  +   Mistborn: House War
