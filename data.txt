@@ -74,3 +74,6 @@
 2017-08-24  +   Mistborn: House War
 2017-08-26  -   City of Iron
 2017-08-29  +   Abandon Planet
+2017-08-30  -   Harbour
+2017-08-31  +   Salem: 1692
+2017-08-31  +   Tortuga: 1667
