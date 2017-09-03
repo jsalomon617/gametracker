@@ -77,3 +77,5 @@
 2017-08-30  -   Harbour
 2017-08-31  +   Salem: 1692
 2017-08-31  +   Tortuga: 1667
+2017-09-02  -   Belle of the Ball
+2017-09-02  -   Lazer Ryderz
