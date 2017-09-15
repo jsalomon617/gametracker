@@ -167,15 +167,14 @@ def generate_webpage(datatable):
 
     # create our magical string of bullshit
     content = """
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js">
-    </script>
+    <html><head>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-      google.charts.load('current', {'packages':['line']});
+      google.charts.load('current', {'packages':['corechart', 'line']});
       google.charts.setOnLoadCallback(drawChart);
 
       function drawChart() {
-
-        var chartDiv = document.getElementById('chart_div');
 
         var data = new google.visualization.DataTable();
         data.addColumn('date', 'Date');
@@ -185,20 +184,60 @@ def generate_webpage(datatable):
         ]);
 
         var options = {
-          chart: {
-            title: 'Game Counts'
+          vAxis: {
+            title: 'Game Count',
+            format: '#',
+            gridlines: {count: -1},
           },
+          hAxis: {
+            title: 'Date',
+            format: 'M/d/yy',
+          },
+          series: {
+            1: {curveType: 'function'},
+          },
+          legend: {
+            position: 'none',
+          },
+          title: 'Unplayed Game Counts',
           width: 900,
           height: 500
         };
 
-        var chart = new google.charts.Line(chartDiv);
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+        // wait for the chart to finish drawing before calling the getImageURI() method
+        google.visualization.events.addListener(chart, 'ready', function () {
+          document.getElementById('png').innerHTML = '<img src="' + chart.getImageURI() + '">';
+        });
+
         chart.draw(data, options);
       }
     </script>
+
+    <script type="text/javascript">
+      function toggleButton() {
+        var button = document.getElementById('button');
+        var div = document.getElementById('png');
+        if (div.style.display !== 'none') {
+          div.style.display = 'none';
+          //button.innerHTML = 'Show Static Image';
+        } else {
+          div.style.display = 'block';
+          //button.innerHTML = 'Hide Static Image';
+        }
+      };
+    </script>
+
+    </head><body>
+
     <div id="chart_div"></div>
 
-    </body>
+    <button id='button' type='button' onclick='toggleButton()'>Toggle Static Image</button>
+
+    <div id='png' style="display:none"></div>
+
+    </body></html>
     """
 
     # go ahead and format it
