@@ -10,6 +10,7 @@ START = datetime.date(2017, 07, 30)
 TODAY = datetime.date.today()
 
 class Event:
+    """We either get games or play them"""
     GET = 1
     PLAY = 2
 
@@ -131,6 +132,33 @@ class Collection(object):
 
         return self.datecounts[date]
 
+    def tooltip(self, date):
+        """Generate the line chart tooltip for a given date (using HTML)"""
+
+        # let's make a list of lines, and then separate by <br> because html
+        lines = []
+
+        # get the day of week (full name)
+        weekday = "<b>%s</b>" % date.strftime('%A')
+        lines.append(weekday)
+
+        # get the date as <abbv month> <day>, <year>
+        datestr = "<b>%s</b>" % date.strftime('%b %d, %Y')
+        lines.append(datestr)
+
+        # get the game count
+        countstr = "Game Count: <b>%s</b>" % self.count(date)
+        lines.append(countstr)
+
+        # put it all together
+        multiline = "<br>".join(lines)
+
+        # wrap it in a tooltip div for format funtimes
+        div = '<div class="google-tooltip">%s</div>' % multiline
+
+        # return it
+        return div
+
     def chart_datatable(self, start=None, end=None):
         """Given a start and end date (inclusive), get the data set of game counts
         per day to send to google charts.  By default, start will be our global start, and
@@ -147,7 +175,12 @@ class Collection(object):
             datestr = "new Date({year}, {month}, {day})".format(
                 year=start.year, month=start.month - 1, day=start.day)
             gamecount = self.count(start)
-            lines.append("[{date}, {count}]".format(date=datestr, count=gamecount))
+            tooltip = self.tooltip(start)
+            lines.append("[{date}, {count}, '{tooltip}']".format(
+                date=datestr,
+                count=gamecount,
+                tooltip=tooltip
+            ))
             
             # increment the date
             start += datetime.timedelta(days=1)
@@ -179,6 +212,7 @@ def generate_webpage(datatable):
         var data = new google.visualization.DataTable();
         data.addColumn('date', 'Date');
         data.addColumn('number', 'Game Count');
+        data.addColumn({type: 'string', role: 'tooltip', p: {'html': true}});
         data.addRows([
         %s
         ]);
@@ -198,6 +232,10 @@ def generate_webpage(datatable):
           },
           legend: {
             position: 'none',
+          },
+          tooltip: {
+            trigger: 'both',
+            isHtml: true,
           },
           title: 'Unplayed Game Counts',
           width: 900,
@@ -228,6 +266,14 @@ def generate_webpage(datatable):
         }
       };
     </script>
+
+    <style>
+      .google-tooltip {
+        font-size: 15px;
+        padding: 5px 5px 5px 5px;
+        font-family: Arial, Helvetica;
+      }
+    </style>
 
     </head><body>
 
