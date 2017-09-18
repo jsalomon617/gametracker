@@ -129,8 +129,15 @@ class Collection(object):
 
     def count(self, date):
         """Count how many games we have on any given date"""
-
         return self.datecounts[date]
+
+    def games_get(self, date):
+        """List which games we got on a given date"""
+        return [g for (g,e) in self.datestore[date] if e == Event.GET]
+
+    def games_play(self, date):
+        """List which games we played on a given date"""
+        return [g for (g,e) in self.datestore[date] if e == Event.PLAY]
 
     def tooltip(self, date):
         """Generate the line chart tooltip for a given date (using HTML)"""
@@ -184,6 +191,39 @@ class Collection(object):
         # get the actual datatable
         return date_array(f, start=start, end=end)
 
+    def date_data(self, start=None, end=None):
+        """Get a dataset showing games obtained and played each day"""
+
+        def make_list(title, items):
+            output = ""
+            output += "<b>%s</b>" % title
+            output += "<br>" + "<br>".join(items)
+            return output
+
+        # get our row function
+        def f(date):
+            # format the date nicely
+            datestr = date_js(date)
+
+            # get the count
+            gamecount = self.count(date)
+
+            # generate the get-list and play-list of each game
+            gameinfo = []
+            for (title, func) in (("Obtained", self.games_get), ("Played", self.games_play)):
+                namelist = [g.name for g in func(date)]
+                if len(namelist) == 0:
+                    gameinfo.append("<b>No Games %s</b>" % title)
+                else:
+                    gameinfo.append(make_list("Games %s:" % title, namelist))
+            gamestr = "<br>".join(gameinfo)
+
+            # generate the row
+            row = "[%s, %s, '%s']" % (datestr, gamecount, gamestr)
+            return row
+
+        # return the actual datatable
+        return date_array(f, start=start, end=end)
 
 def date_js(obj):
     """Given a Python datetime object, convert it to a JavaScript 'new Date(...)'
@@ -222,7 +262,7 @@ def date_array(f, start=None, end=None):
     return dataset
 
 
-def generate_webpage(datatable):
+def generate_webpage(datatable, datedata):
     """Print our webpage"""
 
     # start with blank page
@@ -236,6 +276,9 @@ def generate_webpage(datatable):
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart', 'line']});
       google.charts.setOnLoadCallback(drawChart);
+
+      // get the dataset with game info for our sidebars
+      var dataset = %s;
 
       function drawChart() {
 
@@ -325,7 +368,7 @@ def generate_webpage(datatable):
     """
 
     # go ahead and format it
-    content %= datatable
+    content %= (datedata, datatable)
 
     # actually add it
     page += content
@@ -342,8 +385,11 @@ def main():
     # get the datatable blob
     datatable = collection.chart_datatable()
 
+    # get the date data
+    datedata = collection.date_data()
+
     # get the page
-    page = generate_webpage(datatable)
+    page = generate_webpage(datatable, datedata)
 
     # write it to file
     with open("www/index.html", "w") as f:
