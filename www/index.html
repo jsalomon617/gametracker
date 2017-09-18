@@ -12,8 +12,7 @@
         data.addColumn('date', 'Date');
         data.addColumn('number', 'Game Count');
         data.addColumn({type: 'string', role: 'tooltip', p: {'html': true}});
-        data.addRows([
-        [new Date(2017, 6, 30), 52, '<div class="google-tooltip"><b>Sunday</b><br><b>Jul 30, 2017</b><br>Game Count: <b>52</b></div>'],
+        data.addRows([[new Date(2017, 6, 30), 52, '<div class="google-tooltip"><b>Sunday</b><br><b>Jul 30, 2017</b><br>Game Count: <b>52</b></div>'],
 [new Date(2017, 6, 31), 53, '<div class="google-tooltip"><b>Monday</b><br><b>Jul 31, 2017</b><br>Game Count: <b>53</b></div>'],
 [new Date(2017, 7, 1), 53, '<div class="google-tooltip"><b>Tuesday</b><br><b>Aug 01, 2017</b><br>Game Count: <b>53</b></div>'],
 [new Date(2017, 7, 2), 52, '<div class="google-tooltip"><b>Wednesday</b><br><b>Aug 02, 2017</b><br>Game Count: <b>52</b></div>'],
@@ -62,8 +61,7 @@
 [new Date(2017, 8, 14), 56, '<div class="google-tooltip"><b>Thursday</b><br><b>Sep 14, 2017</b><br>Game Count: <b>56</b></div>'],
 [new Date(2017, 8, 15), 56, '<div class="google-tooltip"><b>Friday</b><br><b>Sep 15, 2017</b><br>Game Count: <b>56</b></div>'],
 [new Date(2017, 8, 16), 55, '<div class="google-tooltip"><b>Saturday</b><br><b>Sep 16, 2017</b><br>Game Count: <b>55</b></div>'],
-[new Date(2017, 8, 17), 55, '<div class="google-tooltip"><b>Sunday</b><br><b>Sep 17, 2017</b><br>Game Count: <b>55</b></div>']
-        ]);
+[new Date(2017, 8, 17), 55, '<div class="google-tooltip"><b>Sunday</b><br><b>Sep 17, 2017</b><br>Game Count: <b>55</b></div>']]);
 
         var options = {
           vAxis: {
@@ -95,6 +93,16 @@
         // wait for the chart to finish drawing before calling the getImageURI() method
         google.visualization.events.addListener(chart, 'ready', function () {
           document.getElementById('png').innerHTML = '<img src="' + chart.getImageURI() + '">';
+        });
+
+        // show extra game information when we mouseover a specific day
+        google.visualization.events.addListener(chart, 'onmouseover', function () {
+          toggleButton();
+        });
+
+        // show permanent game info when we click a specific day
+        google.visualization.events.addListener(chart, 'select', function () {
+          toggleButton();
         });
 
         chart.draw(data, options);

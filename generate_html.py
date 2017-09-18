@@ -160,36 +160,66 @@ class Collection(object):
         return div
 
     def chart_datatable(self, start=None, end=None):
-        """Given a start and end date (inclusive), get the data set of game counts
-        per day to send to google charts.  By default, start will be our global start, and
-        end will be today."""
-        
-        if start is None:
-            start = START
-        if end is None:
-            end = TODAY
+        """Get the dataset of game counts per day for the Google LineChart."""
 
-        lines = []
-        while start <= end:
+        # get our row function
+        def f(date):
             # format the date nicely
-            datestr = "new Date({year}, {month}, {day})".format(
-                year=start.year, month=start.month - 1, day=start.day)
-            gamecount = self.count(start)
-            tooltip = self.tooltip(start)
-            lines.append("[{date}, {count}, '{tooltip}']".format(
+            datestr = date_js(date)
+
+            # get the other data
+            gamecount = self.count(date)
+            tooltip = self.tooltip(date)
+
+            # generate the row
+            row = "[{date}, {count}, '{tooltip}']".format(
                 date=datestr,
                 count=gamecount,
                 tooltip=tooltip
-            ))
-            
-            # increment the date
-            start += datetime.timedelta(days=1)
+            )
 
-        # put the blob together
-        dataset = ",\n".join(lines)
+            # return the row
+            return row
 
-        # return it
-        return dataset
+        # get the actual datatable
+        return date_array(f, start=start, end=end)
+
+
+def date_js(obj):
+    """Given a Python datetime object, convert it to a JavaScript 'new Date(...)'
+    string"""
+
+    datestr = "new Date({year}, {month}, {day})".format(
+        year=obj.year, month=obj.month - 1, day=obj.day)
+    return datestr
+
+def date_array(f, start=None, end=None):
+    """Generate a JavaScript array containing some kind of data, specified by
+    our input function f.  Each row of the array will be for a specific day,
+    ranging from start to end (inclusive).  By default, start will be our global
+    start, and end will be today's date."""
+
+    if start is None:
+        start = START
+    if end is None:
+        end = TODAY
+
+    lines = []
+    while start <= end:
+        # get the row from our function
+        row = f(start)
+
+        # add the row to our list of lines
+        lines.append(row)
+
+        # increment the date
+        start += datetime.timedelta(days=1)
+
+    # put the blob together
+    dataset = "[%s]" % ",\n".join(lines)
+
+    # return it
+    return dataset
 
 
 def generate_webpage(datatable):
@@ -213,9 +243,7 @@ def generate_webpage(datatable):
         data.addColumn('date', 'Date');
         data.addColumn('number', 'Game Count');
         data.addColumn({type: 'string', role: 'tooltip', p: {'html': true}});
-        data.addRows([
-        %s
-        ]);
+        data.addRows(%s);
 
         var options = {
           vAxis: {
@@ -247,6 +275,16 @@ def generate_webpage(datatable):
         // wait for the chart to finish drawing before calling the getImageURI() method
         google.visualization.events.addListener(chart, 'ready', function () {
           document.getElementById('png').innerHTML = '<img src="' + chart.getImageURI() + '">';
+        });
+
+        // show extra game information when we mouseover a specific day
+        google.visualization.events.addListener(chart, 'onmouseover', function () {
+          toggleButton();
+        });
+
+        // show permanent game info when we click a specific day
+        google.visualization.events.addListener(chart, 'select', function () {
+          toggleButton();
         });
 
         chart.draw(data, options);
