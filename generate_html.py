@@ -211,7 +211,7 @@ class Collection(object):
             # generate the get-list and play-list of each game
             gameinfo = []
             for (title, func) in (("Obtained", self.games_get), ("Played", self.games_play)):
-                namelist = [g.name for g in func(date)]
+                namelist = [escape(g.name) for g in func(date)]
                 if len(namelist) == 0:
                     gameinfo.append("<b>No Games %s</b>" % title)
                 else:
@@ -261,6 +261,17 @@ def date_array(f, start=None, end=None):
     # return it
     return dataset
 
+def escape(txt):
+    """Given some text, escape it to make it JavaScript-safe"""
+
+    replacements = [
+        ("'", "\\'"),
+    ]
+
+    for (old, new) in replacements:
+        txt = txt.replace(old, new)
+
+    return txt
 
 def generate_webpage(datatable, datedata):
     """Print our webpage"""
