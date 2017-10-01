@@ -375,6 +375,8 @@ def generate_webpage(datatable, datedata):
 
     <div id='png' style="display:none"></div>
 
+    <br><br><br><img src="fine.png" />
+
     </body></html>
     """
 
