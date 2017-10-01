@@ -89,3 +89,7 @@
 2017-09-25  +   Spaceteam: Triangulum Expansion
 2017-09-27  -   Champions of Midgard expansions
 2017-09-29  +   Twin Stars: Adventure Series 1
+2017-10-01  +   Francis Drake
+2017-10-01  +   Tiny Epic Western
+2017-10-01  +   Yardmaster
+2017-10-01  -   Yardmaster
