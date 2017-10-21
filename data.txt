@@ -93,3 +93,9 @@
 2017-10-01  +   Tiny Epic Western
 2017-10-01  +   Yardmaster
 2017-10-01  -   Yardmaster
+2017-10-21  +   Fresco: Big Box
+2017-10-21  +   Codenames Duet
+2017-10-21  +   Dead of Winter: Warring Colonies
+2017-10-21  +   Quadropolis: Public Services
+2017-10-21  +   Terraforming Mars: Hellas and Elysium
+2017-10-21  +   Five Tribes: Whims of the Sultan
