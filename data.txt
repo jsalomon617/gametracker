@@ -99,3 +99,4 @@
 2017-10-21  +   Quadropolis: Public Services
 2017-10-21  +   Terraforming Mars: Hellas and Elysium
 2017-10-21  +   Five Tribes: Whims of the Sultan
+2017-10-21  -   Five Tribes: Whims of the Sultan
