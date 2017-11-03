@@ -102,3 +102,4 @@
 2017-10-21  -   Five Tribes: Whims of the Sultan
 2017-10-25  -   Pandemic: State of Emergency
 2017-10-26  +   Cytosis
+2017-11-01  -   Cytosis
