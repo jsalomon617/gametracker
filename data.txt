@@ -103,3 +103,4 @@
 2017-10-25  -   Pandemic: State of Emergency
 2017-10-26  +   Cytosis
 2017-11-01  -   Cytosis
+2017-11-02  +   Merchant of Venus
