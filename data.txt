@@ -106,3 +106,5 @@
 2017-11-02  +   Merchant of Venus
 2017-11-06  +   Entropy: Worlds Collide
 2017-11-08  -   Overlords of Infamy
+2017-11-09  +   Martian Fluxx
+2017-11-09  -   Martian Fluxx
