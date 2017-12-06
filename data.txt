@@ -119,3 +119,7 @@
 2017-11-30  +   Peak Oil
 2017-12-01  +   Caverna
 2017-12-02  -   Fury of Dracula
+2017-12-05  +   Long Live the Queen
+2017-12-05  +   Coaster Park
+2017-12-05  +   Scythe: The Wind Gambit
+2017-12-05  -   Scythe: The Wind Gambit
