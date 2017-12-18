@@ -126,3 +126,11 @@
 2017-12-08  +   Kiek
 2017-12-13  -   Caverna
 2017-12-16  +   Dinosaur Island
+2017-12-18  +   Charterstone
+2017-12-18  +   Pandemic: The Cure Expansion
+2017-12-18  +   Red Scare
+2017-12-18  +   Tiny Epic Galaxies
+2017-12-18  -   Tiny Epic Galaxies
+2017-12-18  +   Sheriff of Nottingham Expansion
+2017-12-18  +   Marco Polo
+2017-12-18  +   Dark Moon Expansion
