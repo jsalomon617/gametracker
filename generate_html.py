@@ -24,6 +24,14 @@ class Game(object):
         self.get = None
         self.play = None
 
+    def is_owned(self):
+        """Whether or not we acquired the game (should always be true, logically)"""
+        return self.get is not None
+
+    def is_played(self):
+        """Whether or not we've played the game yet"""
+        return self.play is not None
+
 class Collection(object):
 
     DATA = "data.txt"
@@ -91,7 +99,9 @@ class Collection(object):
             name, date, event = self.parse_line(line)
             
             # get the game object (creating it if necessary)
-            gameobj = self.gamestore.get(name, Game(name))
+            if name not in self.gamestore:
+                self.gamestore[name] = Game(name)
+            gameobj = self.gamestore[name]
 
             # add the game and event to our datestore
             self.datestore[date].append((gameobj, event))
@@ -208,7 +218,7 @@ class Collection(object):
             # get the count
             gamecount = self.count(date)
 
-            # generate the get-list and play-list of each game
+            # generate the get-list and play-list of each day
             gameinfo = []
             for (title, func) in (("Obtained", self.games_get), ("Played", self.games_play)):
                 namelist = [escape(g.name) for g in func(date)]
@@ -224,6 +234,11 @@ class Collection(object):
 
         # return the actual datatable
         return date_array(f, start=start, end=end)
+
+    def get_unplayed(self):
+        """Get a list of names of unplayed games"""
+
+        return [g for g in self.gamestore if not self.gamestore[g].is_played()]
 
 def date_js(obj):
     """Given a Python datetime object, convert it to a JavaScript 'new Date(...)'
@@ -273,7 +288,7 @@ def escape(txt):
 
     return txt
 
-def generate_webpage(datatable, datedata):
+def generate_webpage(datatable, datedata, unplayed):
     """Print our webpage"""
 
     # start with blank page
@@ -376,12 +391,24 @@ def generate_webpage(datatable, datedata):
     <div id='png' style="display:none"></div>
 
     <br><br><br><img src="fine.png" />
+    
+    <br><br>
+    <b><u>Unplayed Games (%s):</u></b>
+    <br>
+    %s
 
     </body></html>
     """
 
     # go ahead and format it
-    content %= (datedata, datatable)
+    unplayed_count = len(unplayed)
+    unplayed_lines = "<br>".join(unplayed)
+    content %= (
+        datedata,
+        datatable,
+        unplayed_count,
+        unplayed_lines,
+    )
 
     # actually add it
     page += content
@@ -401,8 +428,12 @@ def main():
     # get the date data
     datedata = collection.date_data()
 
+    # get the list of unplayed games
+    unplayed = collection.get_unplayed()
+    unplayed.sort()
+
     # get the page
-    page = generate_webpage(datatable, datedata)
+    page = generate_webpage(datatable, datedata, unplayed)
 
     # write it to file
     with open("www/index.html", "w") as f:
