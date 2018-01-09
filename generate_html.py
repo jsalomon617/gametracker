@@ -84,6 +84,9 @@ class Collection(object):
         # for each game, store its info
         self.gamestore = {}
 
+        # keep track of the last day on which we acquired a game
+        self.last_acquired = None
+
     def store(self):
         """Store the dataset by date and by name"""
         
@@ -124,6 +127,8 @@ class Collection(object):
             for (_, event) in self.datestore[current]:
                 if event == Event.GET:
                     counter += 1
+                    # we acquired a game on this day
+                    self.last_acquired = current
                 elif event == Event.PLAY:
                     counter -= 1
 
@@ -148,6 +153,10 @@ class Collection(object):
     def games_play(self, date):
         """List which games we played on a given date"""
         return [g for (g,e) in self.datestore[date] if e == Event.PLAY]
+
+    def last_acquired_date(self):
+        """Return the date on which we last acquired a game"""
+        return self.last_acquired
 
     def tooltip(self, date):
         """Generate the line chart tooltip for a given date (using HTML)"""
@@ -288,7 +297,7 @@ def escape(txt):
 
     return txt
 
-def generate_webpage(datatable, datedata, unplayed):
+def generate_webpage(datatable, datedata, unplayed, last_acquired):
     """Print our webpage"""
 
     # start with blank page
@@ -386,6 +395,23 @@ def generate_webpage(datatable, datedata, unplayed):
 
     <div id="chart_div"></div>
 
+    Last Game Acquired on <b>%s</b>
+    (<span id="dayDiff"></span> days ago)
+    <br><br>
+
+    <script>
+        // count days since we last got a new game
+        var last_acquired = %s;
+        var today = new Date();
+        today.setHours(0,0,0,0);
+        var diff = Math.abs(today - last_acquired);
+        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+        // write the answer to our html
+        var div = document.getElementById("dayDiff");
+        div.textContent = days;
+    </script>
+
     <button id='button' type='button' onclick='toggleButton()'>Toggle Static Image</button>
 
     <div id='png' style="display:none"></div>
@@ -406,6 +432,8 @@ def generate_webpage(datatable, datedata, unplayed):
     content %= (
         datedata,
         datatable,
+        str(last_acquired),
+        date_js(last_acquired),
         unplayed_count,
         unplayed_lines,
     )
@@ -432,8 +460,16 @@ def main():
     unplayed = collection.get_unplayed()
     unplayed.sort()
 
+    # get the date we last acquired a game
+    last_acquired = collection.last_acquired_date()
+
     # get the page
-    page = generate_webpage(datatable, datedata, unplayed)
+    page = generate_webpage(
+        datatable,
+        datedata,
+        unplayed,
+        last_acquired,
+    )
 
     # write it to file
     with open("www/index.html", "w") as f:

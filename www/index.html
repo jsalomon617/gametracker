@@ -168,7 +168,8 @@
 [new Date(2018, 0, 4), 77, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 0, 5), 77, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 0, 6), 76, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Kingdom Builder'],
-[new Date(2018, 0, 7), 76, '<b>No Games Obtained</b><br><b>No Games Played</b>']];
+[new Date(2018, 0, 7), 76, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 0, 8), 76, '<b>No Games Obtained</b><br><b>No Games Played</b>']];
 
       function drawChart() {
 
@@ -337,7 +338,8 @@
 [new Date(2018, 0, 4), 77, '<div class="google-tooltip"><b>Thursday</b><br><b>Jan 04, 2018</b><br>Game Count: <b>77</b></div>'],
 [new Date(2018, 0, 5), 77, '<div class="google-tooltip"><b>Friday</b><br><b>Jan 05, 2018</b><br>Game Count: <b>77</b></div>'],
 [new Date(2018, 0, 6), 76, '<div class="google-tooltip"><b>Saturday</b><br><b>Jan 06, 2018</b><br>Game Count: <b>76</b></div>'],
-[new Date(2018, 0, 7), 76, '<div class="google-tooltip"><b>Sunday</b><br><b>Jan 07, 2018</b><br>Game Count: <b>76</b></div>']]);
+[new Date(2018, 0, 7), 76, '<div class="google-tooltip"><b>Sunday</b><br><b>Jan 07, 2018</b><br>Game Count: <b>76</b></div>'],
+[new Date(2018, 0, 8), 76, '<div class="google-tooltip"><b>Monday</b><br><b>Jan 08, 2018</b><br>Game Count: <b>76</b></div>']]);
 
         var options = {
           vAxis: {
@@ -410,6 +412,23 @@
     </head><body>
 
     <div id="chart_div"></div>
+
+    Last Game Acquired on <b>2017-12-22</b>
+    (<span id="dayDiff"></span> days ago)
+    <br><br>
+
+    <script>
+        // count days since we last got a new game
+        var last_acquired = new Date(2017, 11, 22);
+        var today = new Date();
+        today.setHours(0,0,0,0);
+        var diff = Math.abs(today - last_acquired);
+        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+        // write the answer to our html
+        var div = document.getElementById("dayDiff");
+        div.textContent = days;
+    </script>
 
     <button id='button' type='button' onclick='toggleButton()'>Toggle Static Image</button>
 
