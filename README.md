@@ -1,7 +1,7 @@
 Basic script to keep track of games acquired/played.  To set up, symlink the
 www directory here to /var/www/{something} on your machine.
 
-Additionally, run ./update_hooks.sh - this script will copy our custom git hook(s)
+Additionally, run ./copy_hooks.sh - this script will copy our custom git hook(s)
 (stored in source control) into Git's actual hooks directory (which is not actually
 covered by normal source control).
 
