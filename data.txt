@@ -140,3 +140,4 @@
 2018-01-06  -   Kingdom Builder
 2018-01-10  -   Marco Polo
 2018-01-17  -   Dinosaur Island
+2018-01-20  -   Exoplanets
