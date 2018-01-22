@@ -141,3 +141,5 @@
 2018-01-10  -   Marco Polo
 2018-01-17  -   Dinosaur Island
 2018-01-20  -   Exoplanets
+2018-01-22  +   Bios: Genesis
+2018-01-22  +   Bios: Megafauna
