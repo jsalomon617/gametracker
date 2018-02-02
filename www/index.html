@@ -192,7 +192,9 @@
 [new Date(2018, 0, 28), 76, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 0, 29), 76, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 0, 30), 76, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
-[new Date(2018, 0, 31), 75, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Peak Oil']];
+[new Date(2018, 0, 31), 75, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Peak Oil'],
+[new Date(2018, 1, 1), 75, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 1, 2), 77, '<b>Games Obtained:</b><br>Indonesia<br>Antiquity<br><b>No Games Played</b>']];
 
       function drawChart() {
 
@@ -385,7 +387,9 @@
 [new Date(2018, 0, 28), 76, '<div class="google-tooltip"><b>Sunday</b><br><b>Jan 28, 2018</b><br>Game Count: <b>76</b></div>'],
 [new Date(2018, 0, 29), 76, '<div class="google-tooltip"><b>Monday</b><br><b>Jan 29, 2018</b><br>Game Count: <b>76</b></div>'],
 [new Date(2018, 0, 30), 76, '<div class="google-tooltip"><b>Tuesday</b><br><b>Jan 30, 2018</b><br>Game Count: <b>76</b></div>'],
-[new Date(2018, 0, 31), 75, '<div class="google-tooltip"><b>Wednesday</b><br><b>Jan 31, 2018</b><br>Game Count: <b>75</b></div>']]);
+[new Date(2018, 0, 31), 75, '<div class="google-tooltip"><b>Wednesday</b><br><b>Jan 31, 2018</b><br>Game Count: <b>75</b></div>'],
+[new Date(2018, 1, 1), 75, '<div class="google-tooltip"><b>Thursday</b><br><b>Feb 01, 2018</b><br>Game Count: <b>75</b></div>'],
+[new Date(2018, 1, 2), 77, '<div class="google-tooltip"><b>Friday</b><br><b>Feb 02, 2018</b><br>Game Count: <b>77</b></div>']]);
 
         var options = {
           vAxis: {
@@ -459,13 +463,13 @@
 
     <div id="chart_div"></div>
 
-    Last Game Acquired on <b>2018-01-22</b>
+    Last Game Acquired on <b>2018-02-02</b>
     (<span id="dayDiff"></span> days ago)
     <br><br>
 
     <script>
         // count days since we last got a new game
-        var last_acquired = new Date(2018, 0, 22);
+        var last_acquired = new Date(2018, 1, 2);
         var today = new Date();
         today.setHours(0,0,0,0);
         var diff = Math.abs(today - last_acquired);
@@ -483,9 +487,9 @@
     <br><br><br><img src="fine.png" />
     
     <br><br>
-    <b><u>Unplayed Games (75):</u></b>
+    <b><u>Unplayed Games (77):</u></b>
     <br>
-    Abandon Planet<br>Avignon: A Clash of Popes<br>Avignon: Pilgrimage<br>BSG Expansions<br>Back to the Future<br>Bears vs Babies<br>Bios: Genesis<br>Bios: Megafauna<br>Broom Service<br>Carcassonne Catapult<br>Cartouche Dynasties<br>Castles of Burgundy<br>Charterstone<br>Circle the Wagons<br>Coaster Park<br>Codenames Duet<br>Coup Reformation<br>Dark Dealings<br>Dark Moon Expansion<br>Dead of Winter: Warring Colonies<br>Dominant Species: The Card Game<br>Easy Breezy Travel Agency<br>Eclipse<br>Empires of the Void II<br>Entropy: Worlds Collide<br>Farlight<br>Fate of the Elder Gods<br>Find Your Seats<br>Francis Drake<br>Ghost Pirates<br>Hemloch: Dark Promenade<br>Hocus<br>In the Year of the Dragon<br>Joking Hazard expansion<br>Kiek<br>Killer Bunnies<br>Long Live the Queen<br>Lord of the P.I.G.S.<br>Masques<br>Merchant of Venus<br>Merchants and Marauders<br>Mermaid Rain<br>Mint Delivery<br>Mint Julep<br>Mistborn: House War<br>Moby Dick<br>New Angeles<br>Pandemic: The Cure Expansion<br>Pax Renaissance<br>Quadropolis: Public Services<br>Red Scare<br>Saga of the Northmen<br>Salem: 1692<br>San Juan<br>Scuttle!<br>Seii Daimyo<br>Shadows Over Camelot: The Card Game<br>Sheriff of Nottingham Expansion<br>Smash Up: Sheep<br>Space Cadets<br>Spaceteam: Triangulum Expansion<br>Spires<br>Terra Mystica<br>Terraforming Mars: Hellas and Elysium<br>That Snow Moon<br>Tiny Epic Western<br>Tortuga: 1667<br>Traitor Mechanic the Traitor Mechanic Game<br>Turbo Drift<br>Twilight Struggle<br>Twin Stars: Adventure Series 1<br>VivaJava: The Coffee Game: The Dice Game<br>Wagon Wheels<br>Wizard School<br>XCOM
+    Abandon Planet<br>Antiquity<br>Avignon: A Clash of Popes<br>Avignon: Pilgrimage<br>BSG Expansions<br>Back to the Future<br>Bears vs Babies<br>Bios: Genesis<br>Bios: Megafauna<br>Broom Service<br>Carcassonne Catapult<br>Cartouche Dynasties<br>Castles of Burgundy<br>Charterstone<br>Circle the Wagons<br>Coaster Park<br>Codenames Duet<br>Coup Reformation<br>Dark Dealings<br>Dark Moon Expansion<br>Dead of Winter: Warring Colonies<br>Dominant Species: The Card Game<br>Easy Breezy Travel Agency<br>Eclipse<br>Empires of the Void II<br>Entropy: Worlds Collide<br>Farlight<br>Fate of the Elder Gods<br>Find Your Seats<br>Francis Drake<br>Ghost Pirates<br>Hemloch: Dark Promenade<br>Hocus<br>In the Year of the Dragon<br>Indonesia<br>Joking Hazard expansion<br>Kiek<br>Killer Bunnies<br>Long Live the Queen<br>Lord of the P.I.G.S.<br>Masques<br>Merchant of Venus<br>Merchants and Marauders<br>Mermaid Rain<br>Mint Delivery<br>Mint Julep<br>Mistborn: House War<br>Moby Dick<br>New Angeles<br>Pandemic: The Cure Expansion<br>Pax Renaissance<br>Quadropolis: Public Services<br>Red Scare<br>Saga of the Northmen<br>Salem: 1692<br>San Juan<br>Scuttle!<br>Seii Daimyo<br>Shadows Over Camelot: The Card Game<br>Sheriff of Nottingham Expansion<br>Smash Up: Sheep<br>Space Cadets<br>Spaceteam: Triangulum Expansion<br>Spires<br>Terra Mystica<br>Terraforming Mars: Hellas and Elysium<br>That Snow Moon<br>Tiny Epic Western<br>Tortuga: 1667<br>Traitor Mechanic the Traitor Mechanic Game<br>Turbo Drift<br>Twilight Struggle<br>Twin Stars: Adventure Series 1<br>VivaJava: The Coffee Game: The Dice Game<br>Wagon Wheels<br>Wizard School<br>XCOM
 
     </body></html>
     

@@ -145,3 +145,5 @@
 2018-01-22  +   Bios: Megafauna
 2018-01-22  +   Empires of the Void II
 2018-01-31  -   Peak Oil
+2018-02-02  +   Indonesia
+2018-02-02  +   Antiquity
