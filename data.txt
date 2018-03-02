@@ -152,3 +152,6 @@
 2018-02-16  -   Charterstone
 2018-02-22  -   Hemloch: Dark Promenade
 2018-02-24  -   Tortuga: 1667
+2018-03-02  +   The Lady and the Tiger
+2018-03-02  +   Cavern Tavern
+2018-03-02  +   Rise to Nobility
