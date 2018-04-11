@@ -158,3 +158,12 @@
 2018-03-02  +   Deception: Murder in Hong Kong
 2018-03-03  -   Castles of Burgundy
 2018-03-07  -   Cavern Tavern
+2018-03-16  +   Barker's Row
+2018-03-18  -   The Lady and the Tiger
+2018-03-19  -   Long Live the Queen
+2018-03-20  -   Cartouche Dynasties
+2018-03-21  -   Ghost Pirates
+2018-03-23  -   Farlight
+2018-03-29  +   Manhattan Project 2: Minutes to Midnight
+2018-04-01  -   Merchant of Venus
+2018-04-05  +   Raiders of the North Sea
