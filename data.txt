@@ -169,3 +169,4 @@
 2018-04-05  +   Raiders of the North Sea
 2018-04-11  +   Calimala
 2018-04-11  -   Calimala
+2018-04-18  -   Raiders of the North Sea
