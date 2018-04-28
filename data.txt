@@ -172,3 +172,4 @@
 2018-04-18  -   Raiders of the North Sea
 2018-04-20  -   In the Year of the Dragon
 2018-04-21  -   Quadropolis: Public Services
+2018-04-27  +   Pigment
