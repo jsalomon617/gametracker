@@ -279,7 +279,13 @@
 [new Date(2018, 3, 25), 68, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 3, 26), 68, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 3, 27), 69, '<b>Games Obtained:</b><br>Pigment<br><b>No Games Played</b>'],
-[new Date(2018, 3, 28), 68, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Pigment']];
+[new Date(2018, 3, 28), 68, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Pigment'],
+[new Date(2018, 3, 29), 68, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 3, 30), 68, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 4, 1), 68, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 4, 2), 68, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 4, 3), 68, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 4, 4), 69, '<b>Games Obtained:</b><br>Canalis<br><b>No Games Played</b>']];
 
       function drawChart() {
 
@@ -559,7 +565,13 @@
 [new Date(2018, 3, 25), 68, '<div class="google-tooltip"><b>Wednesday</b><br><b>Apr 25, 2018</b><br>Game Count: <b>68</b></div>'],
 [new Date(2018, 3, 26), 68, '<div class="google-tooltip"><b>Thursday</b><br><b>Apr 26, 2018</b><br>Game Count: <b>68</b></div>'],
 [new Date(2018, 3, 27), 69, '<div class="google-tooltip"><b>Friday</b><br><b>Apr 27, 2018</b><br>Game Count: <b>69</b></div>'],
-[new Date(2018, 3, 28), 68, '<div class="google-tooltip"><b>Saturday</b><br><b>Apr 28, 2018</b><br>Game Count: <b>68</b></div>']]);
+[new Date(2018, 3, 28), 68, '<div class="google-tooltip"><b>Saturday</b><br><b>Apr 28, 2018</b><br>Game Count: <b>68</b></div>'],
+[new Date(2018, 3, 29), 68, '<div class="google-tooltip"><b>Sunday</b><br><b>Apr 29, 2018</b><br>Game Count: <b>68</b></div>'],
+[new Date(2018, 3, 30), 68, '<div class="google-tooltip"><b>Monday</b><br><b>Apr 30, 2018</b><br>Game Count: <b>68</b></div>'],
+[new Date(2018, 4, 1), 68, '<div class="google-tooltip"><b>Tuesday</b><br><b>May 01, 2018</b><br>Game Count: <b>68</b></div>'],
+[new Date(2018, 4, 2), 68, '<div class="google-tooltip"><b>Wednesday</b><br><b>May 02, 2018</b><br>Game Count: <b>68</b></div>'],
+[new Date(2018, 4, 3), 68, '<div class="google-tooltip"><b>Thursday</b><br><b>May 03, 2018</b><br>Game Count: <b>68</b></div>'],
+[new Date(2018, 4, 4), 69, '<div class="google-tooltip"><b>Friday</b><br><b>May 04, 2018</b><br>Game Count: <b>69</b></div>']]);
 
         var options = {
           vAxis: {
@@ -633,13 +645,13 @@
 
     <div id="chart_div"></div>
 
-    Last Game Acquired on <b>2018-04-27</b>
+    Last Game Acquired on <b>2018-05-04</b>
     (<span id="dayDiff"></span> days ago)
     <br><br>
 
     <script>
         // count days since we last got a new game
-        var last_acquired = new Date(2018, 3, 27);
+        var last_acquired = new Date(2018, 4, 4);
         var today = new Date();
         today.setHours(0,0,0,0);
         var diff = Math.abs(today - last_acquired);
@@ -657,9 +669,9 @@
     <br><br><br><img src="fine.png" />
     
     <br><br>
-    <b><u>Unplayed Games (68):</u></b>
+    <b><u>Unplayed Games (69):</u></b>
     <br>
-    Abandon Planet<br>Antiquity<br>Avignon: A Clash of Popes<br>Avignon: Pilgrimage<br>BSG Expansions<br>Back to the Future<br>Barker's Row<br>Bears vs Babies<br>Bios: Genesis<br>Bios: Megafauna<br>Carcassonne Catapult<br>Circle the Wagons<br>Coaster Park<br>Codenames Duet<br>Coup Reformation<br>Dark Dealings<br>Dark Moon Expansion<br>Dead of Winter: Warring Colonies<br>Deception: Murder in Hong Kong<br>Dominant Species: The Card Game<br>Easy Breezy Travel Agency<br>Eclipse<br>Empires of the Void II<br>Entropy: Worlds Collide<br>Fate of the Elder Gods<br>Find Your Seats<br>Francis Drake<br>Hocus<br>Indonesia<br>Joking Hazard expansion<br>Kiek<br>Killer Bunnies<br>Lord of the P.I.G.S.<br>Manhattan Project 2: Minutes to Midnight<br>Masques<br>Merchants and Marauders<br>Mermaid Rain<br>Mint Delivery<br>Mint Julep<br>Mistborn: House War<br>Moby Dick<br>New Angeles<br>Pandemic: The Cure Expansion<br>Pax Renaissance<br>Red Scare<br>Rise to Nobility<br>Saga of the Northmen<br>Salem: 1692<br>San Juan<br>Scuttle!<br>Seii Daimyo<br>Shadows Over Camelot: The Card Game<br>Sheriff of Nottingham Expansion<br>Smash Up: Sheep<br>Space Cadets<br>Spaceteam: Triangulum Expansion<br>Spires<br>Terra Mystica<br>Terraforming Mars: Hellas and Elysium<br>That Snow Moon<br>Tiny Epic Western<br>Traitor Mechanic the Traitor Mechanic Game<br>Turbo Drift<br>Twilight Struggle<br>Twin Stars: Adventure Series 1<br>Wagon Wheels<br>Wizard School<br>XCOM
+    Abandon Planet<br>Antiquity<br>Avignon: A Clash of Popes<br>Avignon: Pilgrimage<br>BSG Expansions<br>Back to the Future<br>Barker's Row<br>Bears vs Babies<br>Bios: Genesis<br>Bios: Megafauna<br>Canalis<br>Carcassonne Catapult<br>Circle the Wagons<br>Coaster Park<br>Codenames Duet<br>Coup Reformation<br>Dark Dealings<br>Dark Moon Expansion<br>Dead of Winter: Warring Colonies<br>Deception: Murder in Hong Kong<br>Dominant Species: The Card Game<br>Easy Breezy Travel Agency<br>Eclipse<br>Empires of the Void II<br>Entropy: Worlds Collide<br>Fate of the Elder Gods<br>Find Your Seats<br>Francis Drake<br>Hocus<br>Indonesia<br>Joking Hazard expansion<br>Kiek<br>Killer Bunnies<br>Lord of the P.I.G.S.<br>Manhattan Project 2: Minutes to Midnight<br>Masques<br>Merchants and Marauders<br>Mermaid Rain<br>Mint Delivery<br>Mint Julep<br>Mistborn: House War<br>Moby Dick<br>New Angeles<br>Pandemic: The Cure Expansion<br>Pax Renaissance<br>Red Scare<br>Rise to Nobility<br>Saga of the Northmen<br>Salem: 1692<br>San Juan<br>Scuttle!<br>Seii Daimyo<br>Shadows Over Camelot: The Card Game<br>Sheriff of Nottingham Expansion<br>Smash Up: Sheep<br>Space Cadets<br>Spaceteam: Triangulum Expansion<br>Spires<br>Terra Mystica<br>Terraforming Mars: Hellas and Elysium<br>That Snow Moon<br>Tiny Epic Western<br>Traitor Mechanic the Traitor Mechanic Game<br>Turbo Drift<br>Twilight Struggle<br>Twin Stars: Adventure Series 1<br>Wagon Wheels<br>Wizard School<br>XCOM
 
     </body></html>
     

@@ -174,3 +174,4 @@
 2018-04-21  -   Quadropolis: Public Services
 2018-04-27  +   Pigment
 2018-04-28  -   Pigment
+2018-05-04  +   Canalis
