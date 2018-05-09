@@ -181,3 +181,9 @@
 2018-05-05  -   Fate of the Elder Gods
 2018-05-06  -   Manhattan Project 2: Minutes to Midnight
 2018-05-09  +   Courtier
+2018-05-09  +   Altiplano
+2018-05-09  +   Mombasa
+2018-05-09  +   Rajas of the Ganges
+2018-05-09  -   Rajas of the Ganges
+2018-05-09  +   Heaven & Ale
+2018-05-09  -   Heaven & Ale
