@@ -357,12 +357,12 @@ def generate_webpage(datatable, datedata, unplayed, last_acquired):
 
         // show extra game information when we mouseover a specific day
         google.visualization.events.addListener(chart, 'onmouseover', function () {
-          toggleButton();
+          //toggleButton();
         });
 
         // show permanent game info when we click a specific day
         google.visualization.events.addListener(chart, 'select', function () {
-          toggleButton();
+          //toggleButton();
         });
 
         chart.draw(data, options);
