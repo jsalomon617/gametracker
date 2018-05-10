@@ -113,8 +113,27 @@ def escape(txt):
 
     return txt
 
-def generate_webpage(datatable, datedata, unplayed, last_acquired, average_net_day, average_net_week):
+def generate_webpage(collection):
     """Print our webpage"""
+
+    # get the datatable blob
+    datatable = chart_datatable(collection)
+
+    # get the date data
+    datedata = date_data(collection)
+
+    # get the list of unplayed games
+    unplayed = collection.get_unplayed()
+    unplayed.sort()
+
+    # get the date we last acquired a game
+    last_acquired = collection.last_acquired_date()
+
+    # get the average of daily and weekly nets
+    average_net_day = collection.average_net_day()
+    average_net_week = collection.average_net_week()
+
+
 
     # start with blank page
     page = ""
@@ -272,32 +291,8 @@ def main():
     # create our collection
     collection = Collection()
     
-    # get the datatable blob
-    datatable = chart_datatable(collection)
-
-    # get the date data
-    datedata = date_data(collection)
-
-    # get the list of unplayed games
-    unplayed = collection.get_unplayed()
-    unplayed.sort()
-
-    # get the date we last acquired a game
-    last_acquired = collection.last_acquired_date()
-
-    # get the average of daily and weekly nets
-    average_net_day = collection.average_net_day()
-    average_net_week = collection.average_net_week()
-
     # get the page
-    page = generate_webpage(
-        datatable,
-        datedata,
-        unplayed,
-        last_acquired,
-        average_net_day,
-        average_net_week,
-    )
+    page = generate_webpage(collection)
 
     # write it to file
     with open("www/index.html", "w") as f:
