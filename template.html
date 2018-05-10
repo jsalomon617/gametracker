@@ -76,6 +76,9 @@
       //toggleStaticImage();
     });
 
+    // NOTE: https://stackoverflow.com/questions/45764587/google-visualization-explorer-options-wont-have-any-effect-after-chart-redraw
+    // tl;dr redrawing instead of rebuilding breaks explorer, fixed "next release" says 2017-08-19
+
     // the trendlines button toggles the existence of our trendline
     document.getElementById('trendline_toggle').addEventListener('click', function () {
       if (Object.keys(options.trendlines).length > 0) {
