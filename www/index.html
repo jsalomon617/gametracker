@@ -614,11 +614,24 @@
       height: 500
     };
 
-    var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+    var chart_div = document.getElementById('chart_div');
+    var chart = new google.visualization.LineChart(chart_div);
 
-    // wait for the chart to finish drawing before calling the getImageURI() method
-    google.visualization.events.addListener(chart, 'ready', function () {
+    // define our static image function (calling getImageURI)
+    function setStatic() {
       document.getElementById('png').innerHTML = '<img src="' + chart.getImageURI() + '">';
+    };
+
+    // wait for the chart to finish drawing before initializing our static image
+    google.visualization.events.addListener(chart, 'ready', setStatic);
+
+    // whenever our chart changes, redraw the static image
+    var observer = new MutationObserver(setStatic);
+    google.visualization.events.addListener(chart, 'ready', function() {
+      observer.observe(chart_div, {
+        childList: true,
+        subtree: true,
+      });
     });
 
     // show extra game information when we mouseover a specific day
