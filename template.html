@@ -89,7 +89,7 @@
 <div id="chart_div"></div>
 
 Last Game Acquired on <b> {{ last_acquired }} </b>
-(<span id="dayDiff"></span> days ago)
+(<span id="dayDiff"></span> ago)
 <br>
 Average Daily Net Change: <b> {{ average_net_day }} </b>
 <br>
@@ -104,9 +104,15 @@ Average 7-Day Rolling Net Change: <b> {{ average_net_week }} </b>
     var diff = Math.abs(today - last_acquired);
     var days = Math.floor(diff / (1000 * 60 * 60 * 24));
 
+    // "day" if 1 day, "days" otherwise
+    var plural = "s";
+    if (days == 1) {
+      plural = "";
+    }
+
     // write the answer to our html
     var div = document.getElementById("dayDiff");
-    div.textContent = days;
+    div.textContent = days + " day" + plural;
 </script>
 
 <button id='button' type='button' onclick='toggleButton()'>Toggle Static Image</button>

@@ -289,7 +289,8 @@
 [new Date(2018, 4, 6), 66, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Manhattan Project 2: Minutes to Midnight'],
 [new Date(2018, 4, 7), 66, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 4, 8), 66, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
-[new Date(2018, 4, 9), 69, '<b>Games Obtained:</b><br>Courtier<br>Altiplano<br>Mombasa<br>Rajas of the Ganges<br>Heaven & Ale<br><b>Games Played:</b><br>Rajas of the Ganges<br>Heaven & Ale']] ;
+[new Date(2018, 4, 9), 69, '<b>Games Obtained:</b><br>Courtier<br>Altiplano<br>Mombasa<br>Rajas of the Ganges<br>Heaven & Ale<br><b>Games Played:</b><br>Rajas of the Ganges<br>Heaven & Ale'],
+[new Date(2018, 4, 10), 69, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -580,7 +581,8 @@
 [new Date(2018, 4, 6), 66, '<div class="google-tooltip"><b>Sunday</b><br><b>May 06, 2018</b><br>Game Count: <b>66</b> (-1)<br>7-Day Rolling Net: <b>-2</b></div>'],
 [new Date(2018, 4, 7), 66, '<div class="google-tooltip"><b>Monday</b><br><b>May 07, 2018</b><br>Game Count: <b>66</b><br>7-Day Rolling Net: <b>-2</b></div>'],
 [new Date(2018, 4, 8), 66, '<div class="google-tooltip"><b>Tuesday</b><br><b>May 08, 2018</b><br>Game Count: <b>66</b><br>7-Day Rolling Net: <b>-2</b></div>'],
-[new Date(2018, 4, 9), 69, '<div class="google-tooltip"><b>Wednesday</b><br><b>May 09, 2018</b><br>Game Count: <b>69</b> (+3)<br>7-Day Rolling Net: <b>+1</b></div>']] );
+[new Date(2018, 4, 9), 69, '<div class="google-tooltip"><b>Wednesday</b><br><b>May 09, 2018</b><br>Game Count: <b>69</b> (+3)<br>7-Day Rolling Net: <b>+1</b></div>'],
+[new Date(2018, 4, 10), 69, '<div class="google-tooltip"><b>Thursday</b><br><b>May 10, 2018</b><br>Game Count: <b>69</b><br>7-Day Rolling Net: <b>+1</b></div>']] );
 
     var options = {
       vAxis: {
@@ -655,7 +657,7 @@
 <div id="chart_div"></div>
 
 Last Game Acquired on <b> 2018-05-09 </b>
-(<span id="dayDiff"></span> days ago)
+(<span id="dayDiff"></span> ago)
 <br>
 Average Daily Net Change: <b> 0.06 </b>
 <br>
@@ -670,9 +672,15 @@ Average 7-Day Rolling Net Change: <b> 0.38 </b>
     var diff = Math.abs(today - last_acquired);
     var days = Math.floor(diff / (1000 * 60 * 60 * 24));
 
+    // "day" if 1 day, "days" otherwise
+    var plural = "s";
+    if (days == 1) {
+      plural = "";
+    }
+
     // write the answer to our html
     var div = document.getElementById("dayDiff");
-    div.textContent = days;
+    div.textContent = days + " day" + plural;
 </script>
 
 <button id='button' type='button' onclick='toggleButton()'>Toggle Static Image</button>
