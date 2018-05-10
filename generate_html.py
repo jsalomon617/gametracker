@@ -155,17 +155,11 @@ def generate_webpage(collection):
     # get the date we last acquired a game
     last_acquired = collection.last_acquired_date()
 
-    # get the average of daily and weekly nets
-    average_net_day = collection.average_net_day()
-    average_net_week = collection.average_net_week()
-
     ### prepare them for formatting
     format = {
         "datedata": datedata,
         "datatable": datatable,
         "last_acquired": str(last_acquired),
-        "average_net_day": "%.2f" % average_net_day,
-        "average_net_week": "%.2f" % average_net_week,
         "js_last_acquired": date_js(last_acquired),
         "unplayed_count": len(unplayed),
         "unplayed_lines": "<br>".join(unplayed),

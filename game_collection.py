@@ -230,33 +230,6 @@ class Collection(object):
         """Return the date on which we last acquired a game"""
         return self.last_acquired
 
-    def average_net_day(self):
-        """Return the average of daily nets over the entire timespan"""
-
-        days = 0
-        nets = 0
-        current = START + datetime.timedelta(days=1)
-        while current <= TODAY:
-            days += 1
-            nets += self.get_date(current).net
-            current += datetime.timedelta(days=1)
-
-        return (nets * 1.0) / days
-
-
-    def average_net_week(self):
-        """Return the average of 7-day nets over the entire timespan"""
-
-        days = 0
-        nets = 0
-        current = START + datetime.timedelta(days=7)
-        while current <= TODAY:
-            days += 1
-            nets += self.get_date(current).stats["net_week"]
-            current += datetime.timedelta(days=1)
-
-        return (nets * 1.0) / days
-
     def tooltip(self, date):
         """Generate the line chart tooltip for a given date (using HTML)"""
 
