@@ -607,6 +607,8 @@
         maxZoomIn: 0.1,
         keepInBounds: true,
       },
+      // empty trendlines necessary for toggle button
+      trendlines: {},
       title: 'Unplayed Game Counts',
       width: 900,
       height: 500
@@ -634,12 +636,28 @@
 
     // show extra game information when we mouseover a specific day
     google.visualization.events.addListener(chart, 'onmouseover', function () {
-      //toggleButton();
+      //toggleStaticImage();
     });
 
     // show permanent game info when we click a specific day
     google.visualization.events.addListener(chart, 'select', function () {
-      //toggleButton();
+      //toggleStaticImage();
+    });
+
+    // the trendlines button toggles the existence of our trendline
+    document.getElementById('trendline_toggle').addEventListener('click', function () {
+      if (Object.keys(options.trendlines).length > 0) {
+        options.trendlines = {};
+      } else {
+        options.trendlines = {
+          0: {
+            type: 'polynomial',
+            degree: 2,
+            color: 'green',
+          },
+        };
+      }
+      chart.draw(data, options)
     });
 
     chart.draw(data, options);
@@ -647,8 +665,8 @@
 </script>
 
 <script type="text/javascript">
-  function toggleButton() {
-    var button = document.getElementById('button');
+  function toggleStaticImage() {
+    var button = document.getElementById('static_toggle');
     var div = document.getElementById('png');
     if (div.style.display !== 'none') {
       div.style.display = 'none';
@@ -695,7 +713,10 @@ Last Game Acquired on <b> 2018-05-09 </b>
     div.textContent = days + " day" + plural;
 </script>
 
-<button id='button' type='button' onclick='toggleButton()'>Toggle Static Image</button>
+<button id='trendline_toggle' type='button'>Toggle Trendline</button>
+<br><br>
+
+<button id='static_toggle' type='button' onclick='toggleStaticImage()'>Toggle Static Image</button>
 
 <div id='png' style="display:none"></div>
 
