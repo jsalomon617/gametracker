@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import datetime
+import re
 
 from game_collection import START, TODAY, Collection
 
@@ -113,9 +114,34 @@ def escape(txt):
 
     return txt
 
+def get_template():
+    """Return our template string, ready for formatting"""
+
+    # first read in our template file
+    with open("template.html") as f:
+        content = f.read()
+
+    # now find all of our format strings
+    format = "{{ ([a-zA-Z0-9_]+?) }}"
+    matches = re.findall(format, content)
+
+    # now replace normal curly braces with double curly braces
+    replacements = [
+        ("{", "{{"),
+        ("}", "}}"),
+    ]
+    replacements.extend([
+        ("{{{{ %s }}}}" % m, "{%s}" % m) for m in matches
+    ])
+    for (old, new) in replacements:
+        content = content.replace(old, new)
+
+    return (content, matches)
+
 def generate_webpage(collection):
     """Print our webpage"""
 
+    ### extract the bits we care about from the collection
     # get the datatable blob
     datatable = chart_datatable(collection)
 
@@ -133,161 +159,34 @@ def generate_webpage(collection):
     average_net_day = collection.average_net_day()
     average_net_week = collection.average_net_week()
 
+    ### prepare them for formatting
+    format = {
+        "datedata": datedata,
+        "datatable": datatable,
+        "last_acquired": str(last_acquired),
+        "average_net_day": "%.2f" % average_net_day,
+        "average_net_week": "%.2f" % average_net_week,
+        "js_last_acquired": date_js(last_acquired),
+        "unplayed_count": len(unplayed),
+        "unplayed_lines": "<br>".join(unplayed),
+    }
 
+    ### get the template data
+    content, matches = get_template()
 
-    # start with blank page
-    page = ""
+    ### confirm that our formatting blob is exactly correct
+    if sorted(format.keys()) != sorted(matches):
+        raise ValueError("invalid formatting blob!")
 
-    # create our magical string of bullshit
-    content = """
-    <html><head>
+    ### go ahead and do the formatting
+    page = content.format(**format)
 
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart', 'line']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      // get the dataset with game info for our sidebars
-      var dataset = %s;
-
-      function drawChart() {
-
-        var data = new google.visualization.DataTable();
-        data.addColumn('date', 'Date');
-        data.addColumn('number', 'Game Count');
-        data.addColumn({type: 'string', role: 'tooltip', p: {'html': true}});
-        data.addRows(%s);
-
-        var options = {
-          vAxis: {
-            title: 'Game Count',
-            format: '#',
-            gridlines: {count: -1},
-          },
-          hAxis: {
-            title: 'Date',
-            format: 'M/d/yy',
-          },
-          series: {
-            1: {curveType: 'function'},
-          },
-          legend: {
-            position: 'none',
-          },
-          tooltip: {
-            trigger: 'both',
-            isHtml: true,
-          },
-          title: 'Unplayed Game Counts',
-          width: 900,
-          height: 500
-        };
-
-        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-
-        // wait for the chart to finish drawing before calling the getImageURI() method
-        google.visualization.events.addListener(chart, 'ready', function () {
-          document.getElementById('png').innerHTML = '<img src="' + chart.getImageURI() + '">';
-        });
-
-        // show extra game information when we mouseover a specific day
-        google.visualization.events.addListener(chart, 'onmouseover', function () {
-          //toggleButton();
-        });
-
-        // show permanent game info when we click a specific day
-        google.visualization.events.addListener(chart, 'select', function () {
-          //toggleButton();
-        });
-
-        chart.draw(data, options);
-      }
-    </script>
-
-    <script type="text/javascript">
-      function toggleButton() {
-        var button = document.getElementById('button');
-        var div = document.getElementById('png');
-        if (div.style.display !== 'none') {
-          div.style.display = 'none';
-          //button.innerHTML = 'Show Static Image';
-        } else {
-          div.style.display = 'block';
-          //button.innerHTML = 'Hide Static Image';
-        }
-      };
-    </script>
-
-    <style>
-      .google-tooltip {
-        font-size: 15px;
-        padding: 5px 5px 5px 5px;
-        font-family: Arial, Helvetica;
-      }
-    </style>
-
-    </head><body>
-
-    <div id="chart_div"></div>
-
-    Last Game Acquired on <b>%s</b>
-    (<span id="dayDiff"></span> days ago)
-    <br>
-    Average Daily Net Change: <b>%s</b>
-    <br>
-    Average 7-Day Rolling Net Change: <b>%s</b>
-    <br><br>
-
-    <script>
-        // count days since we last got a new game
-        var last_acquired = %s;
-        var today = new Date();
-        today.setHours(0,0,0,0);
-        var diff = Math.abs(today - last_acquired);
-        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-
-        // write the answer to our html
-        var div = document.getElementById("dayDiff");
-        div.textContent = days;
-    </script>
-
-    <button id='button' type='button' onclick='toggleButton()'>Toggle Static Image</button>
-
-    <div id='png' style="display:none"></div>
-
-    <br><br><br><img src="fine.png" />
-    
-    <br><br>
-    <b><u>Unplayed Games (%s):</u></b>
-    <br>
-    %s
-
-    </body></html>
-    """
-
-    # go ahead and format it
-    unplayed_count = len(unplayed)
-    unplayed_lines = "<br>".join(unplayed)
-    content %= (
-        datedata,
-        datatable,
-        str(last_acquired),
-        "%.2f" % average_net_day,
-        "%.2f" % average_net_week,
-        date_js(last_acquired),
-        unplayed_count,
-        unplayed_lines,
-    )
-
-    # actually add it
-    page += content
-
-    # spit it out
+    ### spit it out
     return page
 
 def main():
     """Do the actual stuff"""
-    
+
     # create our collection
     collection = Collection()
     

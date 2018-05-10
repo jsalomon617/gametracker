@@ -1,13 +1,12 @@
+<html><head>
 
-    <html><head>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart', 'line']});
+  google.charts.setOnLoadCallback(drawChart);
 
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart', 'line']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      // get the dataset with game info for our sidebars
-      var dataset = [[new Date(2017, 6, 30), 52, '<b>Games Obtained:</b><br>Dark Dealings<br>Spires<br>Virulence<br>Killer Bunnies<br>Wizard School<br>Dominant Species: The Card Game<br>Moby Dick<br>Pax Renaissance<br>Saga of the Northmen<br>Eclipse<br>Terra Mystica<br>Twilight Struggle<br>Mermaid Rain<br>Merchants and Marauders<br>Spirit Island<br>Space Cadets<br>Islebound<br>City of Iron<br>Evolution<br>XCOM<br>New Angeles<br>Coal Baron<br>Kingdom Builder<br>Fury of Dracula<br>BSG Expansions<br>Turbo Drift<br>Back to the Future<br>Easy Breezy Travel Agency<br>Isle of Trains<br>Harbour<br>Hocus<br>Ghost Pirates<br>Seii Daimyo<br>Hemloch: Dark Promenade<br>Cartouche Dynasties<br>Belle of the Ball<br>Kaiju Incorporated<br>Traitor Mechanic the Traitor Mechanic Game<br>Shadows Over Camelot: The Card Game<br>Coup Reformation<br>Pandemic: State of Emergency<br>Carcassonne Catapult<br>Bears vs Babies<br>Masques<br>Joking Hazard expansion<br>Avignon: A Clash of Popes<br>Avignon: Pilgrimage<br>Find Your Seats<br>Lazer Ryderz<br>Exoplanets<br>A Feast for Odin<br>Kingdom of Solomon<br><b>No Games Played</b>'],
+  // get the dataset with game info for our sidebars
+  var dataset = [[new Date(2017, 6, 30), 52, '<b>Games Obtained:</b><br>Dark Dealings<br>Spires<br>Virulence<br>Killer Bunnies<br>Wizard School<br>Dominant Species: The Card Game<br>Moby Dick<br>Pax Renaissance<br>Saga of the Northmen<br>Eclipse<br>Terra Mystica<br>Twilight Struggle<br>Mermaid Rain<br>Merchants and Marauders<br>Spirit Island<br>Space Cadets<br>Islebound<br>City of Iron<br>Evolution<br>XCOM<br>New Angeles<br>Coal Baron<br>Kingdom Builder<br>Fury of Dracula<br>BSG Expansions<br>Turbo Drift<br>Back to the Future<br>Easy Breezy Travel Agency<br>Isle of Trains<br>Harbour<br>Hocus<br>Ghost Pirates<br>Seii Daimyo<br>Hemloch: Dark Promenade<br>Cartouche Dynasties<br>Belle of the Ball<br>Kaiju Incorporated<br>Traitor Mechanic the Traitor Mechanic Game<br>Shadows Over Camelot: The Card Game<br>Coup Reformation<br>Pandemic: State of Emergency<br>Carcassonne Catapult<br>Bears vs Babies<br>Masques<br>Joking Hazard expansion<br>Avignon: A Clash of Popes<br>Avignon: Pilgrimage<br>Find Your Seats<br>Lazer Ryderz<br>Exoplanets<br>A Feast for Odin<br>Kingdom of Solomon<br><b>No Games Played</b>'],
 [new Date(2017, 6, 31), 53, '<b>Games Obtained:</b><br>Champions of Midgard expansions<br><b>No Games Played</b>'],
 [new Date(2017, 7, 1), 53, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2017, 7, 2), 52, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Kingdom of Solomon'],
@@ -290,15 +289,15 @@
 [new Date(2018, 4, 6), 66, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Manhattan Project 2: Minutes to Midnight'],
 [new Date(2018, 4, 7), 66, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 4, 8), 66, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
-[new Date(2018, 4, 9), 69, '<b>Games Obtained:</b><br>Courtier<br>Altiplano<br>Mombasa<br>Rajas of the Ganges<br>Heaven & Ale<br><b>Games Played:</b><br>Rajas of the Ganges<br>Heaven & Ale']];
+[new Date(2018, 4, 9), 69, '<b>Games Obtained:</b><br>Courtier<br>Altiplano<br>Mombasa<br>Rajas of the Ganges<br>Heaven & Ale<br><b>Games Played:</b><br>Rajas of the Ganges<br>Heaven & Ale']] ;
 
-      function drawChart() {
+  function drawChart() {
 
-        var data = new google.visualization.DataTable();
-        data.addColumn('date', 'Date');
-        data.addColumn('number', 'Game Count');
-        data.addColumn({type: 'string', role: 'tooltip', p: {'html': true}});
-        data.addRows([[new Date(2017, 6, 30), 52, '<div class="google-tooltip"><b>Sunday</b><br><b>Jul 30, 2017</b><br>Game Count: <b>52</b> (+52)<br>7-Day Rolling Net: <b>+52</b></div>'],
+    var data = new google.visualization.DataTable();
+    data.addColumn('date', 'Date');
+    data.addColumn('number', 'Game Count');
+    data.addColumn({type: 'string', role: 'tooltip', p: {'html': true}});
+    data.addRows( [[new Date(2017, 6, 30), 52, '<div class="google-tooltip"><b>Sunday</b><br><b>Jul 30, 2017</b><br>Game Count: <b>52</b> (+52)<br>7-Day Rolling Net: <b>+52</b></div>'],
 [new Date(2017, 6, 31), 53, '<div class="google-tooltip"><b>Monday</b><br><b>Jul 31, 2017</b><br>Game Count: <b>53</b> (+1)<br>7-Day Rolling Net: <b>+53</b></div>'],
 [new Date(2017, 7, 1), 53, '<div class="google-tooltip"><b>Tuesday</b><br><b>Aug 01, 2017</b><br>Game Count: <b>53</b><br>7-Day Rolling Net: <b>+53</b></div>'],
 [new Date(2017, 7, 2), 52, '<div class="google-tooltip"><b>Wednesday</b><br><b>Aug 02, 2017</b><br>Game Count: <b>52</b> (-1)<br>7-Day Rolling Net: <b>+52</b></div>'],
@@ -581,111 +580,110 @@
 [new Date(2018, 4, 6), 66, '<div class="google-tooltip"><b>Sunday</b><br><b>May 06, 2018</b><br>Game Count: <b>66</b> (-1)<br>7-Day Rolling Net: <b>-2</b></div>'],
 [new Date(2018, 4, 7), 66, '<div class="google-tooltip"><b>Monday</b><br><b>May 07, 2018</b><br>Game Count: <b>66</b><br>7-Day Rolling Net: <b>-2</b></div>'],
 [new Date(2018, 4, 8), 66, '<div class="google-tooltip"><b>Tuesday</b><br><b>May 08, 2018</b><br>Game Count: <b>66</b><br>7-Day Rolling Net: <b>-2</b></div>'],
-[new Date(2018, 4, 9), 69, '<div class="google-tooltip"><b>Wednesday</b><br><b>May 09, 2018</b><br>Game Count: <b>69</b> (+3)<br>7-Day Rolling Net: <b>+1</b></div>']]);
+[new Date(2018, 4, 9), 69, '<div class="google-tooltip"><b>Wednesday</b><br><b>May 09, 2018</b><br>Game Count: <b>69</b> (+3)<br>7-Day Rolling Net: <b>+1</b></div>']] );
 
-        var options = {
-          vAxis: {
-            title: 'Game Count',
-            format: '#',
-            gridlines: {count: -1},
-          },
-          hAxis: {
-            title: 'Date',
-            format: 'M/d/yy',
-          },
-          series: {
-            1: {curveType: 'function'},
-          },
-          legend: {
-            position: 'none',
-          },
-          tooltip: {
-            trigger: 'both',
-            isHtml: true,
-          },
-          title: 'Unplayed Game Counts',
-          width: 900,
-          height: 500
-        };
+    var options = {
+      vAxis: {
+        title: 'Game Count',
+        format: '#',
+        gridlines: {count: -1},
+      },
+      hAxis: {
+        title: 'Date',
+        format: 'M/d/yy',
+      },
+      series: {
+        1: {curveType: 'function'},
+      },
+      legend: {
+        position: 'none',
+      },
+      tooltip: {
+        trigger: 'both',
+        isHtml: true,
+      },
+      title: 'Unplayed Game Counts',
+      width: 900,
+      height: 500
+    };
 
-        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+    var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
 
-        // wait for the chart to finish drawing before calling the getImageURI() method
-        google.visualization.events.addListener(chart, 'ready', function () {
-          document.getElementById('png').innerHTML = '<img src="' + chart.getImageURI() + '">';
-        });
+    // wait for the chart to finish drawing before calling the getImageURI() method
+    google.visualization.events.addListener(chart, 'ready', function () {
+      document.getElementById('png').innerHTML = '<img src="' + chart.getImageURI() + '">';
+    });
 
-        // show extra game information when we mouseover a specific day
-        google.visualization.events.addListener(chart, 'onmouseover', function () {
-          //toggleButton();
-        });
+    // show extra game information when we mouseover a specific day
+    google.visualization.events.addListener(chart, 'onmouseover', function () {
+      //toggleButton();
+    });
 
-        // show permanent game info when we click a specific day
-        google.visualization.events.addListener(chart, 'select', function () {
-          //toggleButton();
-        });
+    // show permanent game info when we click a specific day
+    google.visualization.events.addListener(chart, 'select', function () {
+      //toggleButton();
+    });
 
-        chart.draw(data, options);
-      }
-    </script>
+    chart.draw(data, options);
+  }
+</script>
 
-    <script type="text/javascript">
-      function toggleButton() {
-        var button = document.getElementById('button');
-        var div = document.getElementById('png');
-        if (div.style.display !== 'none') {
-          div.style.display = 'none';
-          //button.innerHTML = 'Show Static Image';
-        } else {
-          div.style.display = 'block';
-          //button.innerHTML = 'Hide Static Image';
-        }
-      };
-    </script>
+<script type="text/javascript">
+  function toggleButton() {
+    var button = document.getElementById('button');
+    var div = document.getElementById('png');
+    if (div.style.display !== 'none') {
+      div.style.display = 'none';
+      //button.innerHTML = 'Show Static Image';
+    } else {
+      div.style.display = 'block';
+      //button.innerHTML = 'Hide Static Image';
+    }
+  };
+</script>
 
-    <style>
-      .google-tooltip {
-        font-size: 15px;
-        padding: 5px 5px 5px 5px;
-        font-family: Arial, Helvetica;
-      }
-    </style>
+<style>
+  .google-tooltip {
+    font-size: 15px;
+    padding: 5px 5px 5px 5px;
+    font-family: Arial, Helvetica;
+  }
+</style>
 
-    </head><body>
+</head><body>
 
-    <div id="chart_div"></div>
+<div id="chart_div"></div>
 
-    Last Game Acquired on <b>2018-05-09</b>
-    (<span id="dayDiff"></span> days ago)
-    <br>
-    Average Daily Net Change: <b>0.06</b>
-    <br>
-    Average 7-Day Rolling Net Change: <b>0.38</b>
-    <br><br>
+Last Game Acquired on <b> 2018-05-09 </b>
+(<span id="dayDiff"></span> days ago)
+<br>
+Average Daily Net Change: <b> 0.06 </b>
+<br>
+Average 7-Day Rolling Net Change: <b> 0.38 </b>
+<br><br>
 
-    <script>
-        // count days since we last got a new game
-        var last_acquired = new Date(2018, 4, 9);
-        var today = new Date();
-        today.setHours(0,0,0,0);
-        var diff = Math.abs(today - last_acquired);
-        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+<script>
+    // count days since we last got a new game
+    var last_acquired = new Date(2018, 4, 9) ;
+    var today = new Date();
+    today.setHours(0,0,0,0);
+    var diff = Math.abs(today - last_acquired);
+    var days = Math.floor(diff / (1000 * 60 * 60 * 24));
 
-        // write the answer to our html
-        var div = document.getElementById("dayDiff");
-        div.textContent = days;
-    </script>
+    // write the answer to our html
+    var div = document.getElementById("dayDiff");
+    div.textContent = days;
+</script>
 
-    <button id='button' type='button' onclick='toggleButton()'>Toggle Static Image</button>
+<button id='button' type='button' onclick='toggleButton()'>Toggle Static Image</button>
 
-    <div id='png' style="display:none"></div>
+<div id='png' style="display:none"></div>
 
-    <br><br><br><img src="fine.png" />
-    
-    <br><br>
-    <b><u>Unplayed Games (69):</u></b>
-    <br>
-    Abandon Planet<br>Altiplano<br>Antiquity<br>Avignon: A Clash of Popes<br>Avignon: Pilgrimage<br>BSG Expansions<br>Back to the Future<br>Barker's Row<br>Bears vs Babies<br>Bios: Genesis<br>Bios: Megafauna<br>Carcassonne Catapult<br>Circle the Wagons<br>Coaster Park<br>Codenames Duet<br>Coup Reformation<br>Courtier<br>Dark Dealings<br>Dark Moon Expansion<br>Dead of Winter: Warring Colonies<br>Deception: Murder in Hong Kong<br>Dominant Species: The Card Game<br>Easy Breezy Travel Agency<br>Eclipse<br>Empires of the Void II<br>Entropy: Worlds Collide<br>Find Your Seats<br>Francis Drake<br>Hocus<br>Indonesia<br>Joking Hazard expansion<br>Kiek<br>Killer Bunnies<br>Lord of the P.I.G.S.<br>Masques<br>Merchants and Marauders<br>Mermaid Rain<br>Mint Delivery<br>Mint Julep<br>Mistborn: House War<br>Moby Dick<br>Mombasa<br>New Angeles<br>Pandemic: The Cure Expansion<br>Pax Renaissance<br>Red Scare<br>Rise to Nobility<br>Saga of the Northmen<br>Salem: 1692<br>San Juan<br>Scuttle!<br>Seii Daimyo<br>Shadows Over Camelot: The Card Game<br>Sheriff of Nottingham Expansion<br>Smash Up: Sheep<br>Space Cadets<br>Spaceteam: Triangulum Expansion<br>Spires<br>Terra Mystica<br>Terraforming Mars: Hellas and Elysium<br>That Snow Moon<br>Tiny Epic Western<br>Traitor Mechanic the Traitor Mechanic Game<br>Turbo Drift<br>Twilight Struggle<br>Twin Stars: Adventure Series 1<br>Wagon Wheels<br>Wizard School<br>XCOM
+<br><br><br><img src="fine.png" />
 
-    </body></html>
-    
+<br><br>
+<b><u>Unplayed Games (69):</u></b>
+<br>
+Abandon Planet<br>Altiplano<br>Antiquity<br>Avignon: A Clash of Popes<br>Avignon: Pilgrimage<br>BSG Expansions<br>Back to the Future<br>Barker's Row<br>Bears vs Babies<br>Bios: Genesis<br>Bios: Megafauna<br>Carcassonne Catapult<br>Circle the Wagons<br>Coaster Park<br>Codenames Duet<br>Coup Reformation<br>Courtier<br>Dark Dealings<br>Dark Moon Expansion<br>Dead of Winter: Warring Colonies<br>Deception: Murder in Hong Kong<br>Dominant Species: The Card Game<br>Easy Breezy Travel Agency<br>Eclipse<br>Empires of the Void II<br>Entropy: Worlds Collide<br>Find Your Seats<br>Francis Drake<br>Hocus<br>Indonesia<br>Joking Hazard expansion<br>Kiek<br>Killer Bunnies<br>Lord of the P.I.G.S.<br>Masques<br>Merchants and Marauders<br>Mermaid Rain<br>Mint Delivery<br>Mint Julep<br>Mistborn: House War<br>Moby Dick<br>Mombasa<br>New Angeles<br>Pandemic: The Cure Expansion<br>Pax Renaissance<br>Red Scare<br>Rise to Nobility<br>Saga of the Northmen<br>Salem: 1692<br>San Juan<br>Scuttle!<br>Seii Daimyo<br>Shadows Over Camelot: The Card Game<br>Sheriff of Nottingham Expansion<br>Smash Up: Sheep<br>Space Cadets<br>Spaceteam: Triangulum Expansion<br>Spires<br>Terra Mystica<br>Terraforming Mars: Hellas and Elysium<br>That Snow Moon<br>Tiny Epic Western<br>Traitor Mechanic the Traitor Mechanic Game<br>Turbo Drift<br>Twilight Struggle<br>Twin Stars: Adventure Series 1<br>Wagon Wheels<br>Wizard School<br>XCOM
+
+</body></html>
