@@ -113,7 +113,7 @@ def escape(txt):
 
     return txt
 
-def generate_webpage(datatable, datedata, unplayed, last_acquired):
+def generate_webpage(datatable, datedata, unplayed, last_acquired, average_net_day, average_net_week):
     """Print our webpage"""
 
     # start with blank page
@@ -213,6 +213,10 @@ def generate_webpage(datatable, datedata, unplayed, last_acquired):
 
     Last Game Acquired on <b>%s</b>
     (<span id="dayDiff"></span> days ago)
+    <br>
+    Average Daily Net Change: <b>%s</b>
+    <br>
+    Average 7-Day Rolling Net Change: <b>%s</b>
     <br><br>
 
     <script>
@@ -249,6 +253,8 @@ def generate_webpage(datatable, datedata, unplayed, last_acquired):
         datedata,
         datatable,
         str(last_acquired),
+        average_net_day,
+        average_net_week,
         date_js(last_acquired),
         unplayed_count,
         unplayed_lines,
@@ -279,12 +285,18 @@ def main():
     # get the date we last acquired a game
     last_acquired = collection.last_acquired_date()
 
+    # get the average of daily and weekly nets
+    average_net_day = collection.average_net_day()
+    average_net_week = collection.average_net_week()
+
     # get the page
     page = generate_webpage(
         datatable,
         datedata,
         unplayed,
         last_acquired,
+        average_net_day,
+        average_net_week,
     )
 
     # write it to file
