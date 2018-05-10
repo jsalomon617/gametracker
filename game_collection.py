@@ -235,7 +235,7 @@ class Collection(object):
 
         days = 0
         nets = 0
-        current = START
+        current = START + datetime.timedelta(days=1)
         while current <= TODAY:
             days += 1
             nets += self.get_date(current).net
@@ -249,7 +249,7 @@ class Collection(object):
 
         days = 0
         nets = 0
-        current = START
+        current = START + datetime.timedelta(days=7)
         while current <= TODAY:
             days += 1
             nets += self.get_date(current).stats["net_week"]
