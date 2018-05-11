@@ -120,16 +120,41 @@
 </script>
 
 <script type="text/javascript">
-  function toggleTrendlineDegree() {
-    var degree = document.getElementById('trendline_degree');
-    var disabled = degree.disabled;
-    console.log(disabled);
-    if (degree.disabled) {
-      degree.disabled = false;
+  function toggleElement(id) {
+    var element = document.getElementById(id);
+    var disabled = element.disabled;
+    if (element.disabled) {
+      element.disabled = false;
     } else {
-      degree.disabled = true;
+      element.disabled = true;
     }
   };
+
+  function toggleTrendlineDegree() {
+    var ids = ["trendline_degree", "degree_up", "degree_down"];
+    var i;
+    for (i = 0; i < ids.length; i++) {
+      toggleElement(ids[i]);
+    }
+  };
+</script>
+
+<script type="text/javascript">
+  function changeDegree(val) {
+    var degree = document.getElementById('trendline_degree');
+    var newval = parseInt(degree.value) + parseInt(val);
+    if (newval < 1) {
+      newval = 1;
+    } else if (newval > 32) {
+      newval = 32;
+    }
+    degree.value = newval;
+
+    // we have to fire the change event ourselves
+    var event = new CustomEvent("change");
+    degree.dispatchEvent(event);
+  };
+
 </script>
 
 <style>
@@ -167,11 +192,13 @@ Last Game Acquired on <b> {{ last_acquired }} </b>
     div.textContent = days + " day" + plural;
 </script>
 
-Trendline:
+<b>Trendline:</b>
 <input id='trendline_toggle' type='checkbox' onclick="toggleTrendlineDegree()">
 <br>
-Degree:
-<input type='number' id='trendline_degree' value='2' min='1' max='32' disabled style="width: 3em">
+<b>Degree:</b>
+<input type='text' id='trendline_degree' value='2' disabled readonly style="width: 2em; text-align: center">
+<button id='degree_up' type='button' disabled onclick='changeDegree(1)'>+</button>
+<button id='degree_down' type='button' disabled onclick='changeDegree(-1)'>-</button>
 <br><br>
 
 <button id='static_toggle' type='button' onclick='toggleStaticImage()'>Toggle Static Image</button>
