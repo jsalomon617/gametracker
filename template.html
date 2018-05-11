@@ -87,12 +87,18 @@
         options.trendlines = {
           0: {
             type: 'polynomial',
-            degree: 2,
+            degree: document.getElementById('trendline_degree').value,
             color: 'green',
           },
         };
       }
       chart.draw(data, options)
+    });
+
+    // changing the trendline degree should redraw the trendline
+    document.getElementById('trendline_degree').addEventListener('change', function () {
+      options.trendlines[0].degree = this.value;
+      chart.draw(data, options);
     });
 
     chart.draw(data, options);
@@ -109,6 +115,19 @@
     } else {
       div.style.display = 'block';
       //button.innerHTML = 'Hide Static Image';
+    }
+  };
+</script>
+
+<script type="text/javascript">
+  function toggleTrendlineDegree() {
+    var degree = document.getElementById('trendline_degree');
+    var disabled = degree.disabled;
+    console.log(disabled);
+    if (degree.disabled) {
+      degree.disabled = false;
+    } else {
+      degree.disabled = true;
     }
   };
 </script>
@@ -148,7 +167,11 @@ Last Game Acquired on <b> {{ last_acquired }} </b>
     div.textContent = days + " day" + plural;
 </script>
 
-<button id='trendline_toggle' type='button'>Toggle Trendline</button>
+Trendline:
+<input id='trendline_toggle' type='checkbox' onclick="toggleTrendlineDegree()">
+<br>
+Degree:
+<input type='number' id='trendline_degree' value='2' min='1' disabled style="width: 3em">
 <br><br>
 
 <button id='static_toggle' type='button' onclick='toggleStaticImage()'>Toggle Static Image</button>
