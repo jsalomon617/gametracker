@@ -187,3 +187,5 @@
 2018-05-09  -   Rajas of the Ganges
 2018-05-09  +   Heaven & Ale
 2018-05-09  -   Heaven & Ale
+2018-05-12  -   Courtier
+2018-05-12  -   San Juan
