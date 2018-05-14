@@ -58,7 +58,7 @@ class Game(object):
             return "{name} ({links})".format(
                 name=self.name,
                 links=", ".join([
-                    "<a href={link}>id</a>".format(link=link, id=id)
+                    "<a href={link} target='_blank'>{id}</a>".format(link=link, id=id)
                     for (id, link) in pairs
                 ])
             )

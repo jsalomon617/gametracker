@@ -165,7 +165,7 @@ def generate_webpage(collection):
         "last_acquired": str(last_acquired),
         "js_last_acquired": date_js(last_acquired),
         "unplayed_count": len(unplayed),
-        "unplayed_lines": "<br>".join(unplayed_links),
+        "unplayed_lines": "\n<br> ".join(unplayed_links),
     }
 
     ### get the template data
