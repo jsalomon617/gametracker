@@ -148,9 +148,12 @@ def generate_webpage(collection):
     # get the date data
     datedata = date_data(collection)
 
-    # get the list of unplayed games
+    # get the list of unplayed games (sorted by name-as-provided)
     unplayed = collection.get_unplayed()
-    unplayed.sort()
+    unplayed.sort(key=lambda g: g.name)
+
+    # get the display links for the unplayed games
+    unplayed_links = [g.linked_name() for g in unplayed]
 
     # get the date we last acquired a game
     last_acquired = collection.last_acquired_date()
@@ -162,7 +165,7 @@ def generate_webpage(collection):
         "last_acquired": str(last_acquired),
         "js_last_acquired": date_js(last_acquired),
         "unplayed_count": len(unplayed),
-        "unplayed_lines": "<br>".join(unplayed),
+        "unplayed_lines": "<br>".join(unplayed_links),
     }
 
     ### get the template data

@@ -18,11 +18,14 @@ class Event:
 class Game(object):
     """Stores relevant info about a specific game"""
 
-    def __init__(self, name):
+    def __init__(self, name, bgg=None):
         # store our initial info about the game
         self.name = name
 
-        # store other things we may learn later
+        # we may receive some BGG IDs with the game info; if so, store them
+        self.bgg = [] if bgg is None else bgg
+
+        # store other info we may get later
         self.get = None
         self.play = None
 
@@ -33,6 +36,32 @@ class Game(object):
     def is_played(self):
         """Whether or not we've played the game yet"""
         return self.play is not None
+
+    def linked_name(self):
+        """Return the name of the game as part of a BGG link, if possible"""
+
+        # the base bgg link
+        base = "https://www.boardgamegeek.com/boardgame/{id}/"
+
+        # check how many bgg IDs we have
+        if len(self.bgg) == 0:
+            # we have no ID, just say so
+            return "{name} (no BGG link)".format(name=self.name)
+        elif len(self.bgg) == 1:
+            # we have exactly one ID, let's link the name
+            link = base.format(id=self.bgg[0])
+            return "<a href={link} target='_blank'>{name}</a>".format(link=link, name=self.name)
+        else:
+            # we have many ids, let's include them generically for now
+            # TODO reference BGG library to provide names
+            pairs = [(id, base.format(id=id)) for id in self.bgg]
+            return "{name} ({links})".format(
+                name=self.name,
+                links=", ".join([
+                    "<a href={link}>id</a>".format(link=link, id=id)
+                    for (id, link) in pairs
+                ])
+            )
 
 
 class Date(object):
@@ -80,6 +109,7 @@ class Date(object):
         return [g for (g,e) in self.events if e == Event.GET]
 
     def games_play(self):
+        """List the games we played today"""
         return [g for (g,e) in self.events if e == Event.PLAY]
 
 
@@ -113,6 +143,7 @@ class Collection(object):
             "-": Event.PLAY,
         }
 
+        # split a fixed number of times on the default "any amount of whitespace" is silly
         datestr, eventstr, name = line.split(None, 2)
 
         # parse the date properly
@@ -121,8 +152,33 @@ class Collection(object):
         # parse the event into an enum
         event = eventmap[eventstr]
 
+        # if we're adding a game, we may have a BGG ID (but otherwise default
+        # to nothing)
+        bgg = None
+        if event == Event.GET:
+            # bgg IDs will always be at the very end
+            pieces = name.rsplit(None, 1)
+
+            # if there's only one piece, then it's a one-word name and clearly has no ID
+            if len(pieces) == 2:
+                start, end = pieces
+
+                # ids should always start with "id" to really really minimize
+                # accidental collisions
+                if end.startswith("id"):
+                    # strip that off
+                    end = end[2:]
+
+                    # ids will be comma-separated lists of values
+                    ids = end.split(",")
+
+                    # if they all match, store the list
+                    if all([x.isdigit() and x[0] != "0" for x in ids]):
+                        bgg = [int(x) for x in ids]
+                        name = start
+
         # return our data
-        return name, date, event
+        return name, date, event, bgg
 
     def wipe(self):
         """Wipe our stored data (also useful for initializing)"""
@@ -154,11 +210,17 @@ class Collection(object):
         # go through each line
         for line in lines:
             # parse the line
-            name, date, event = self.parse_line(line)
+            name, date, event, bgg = self.parse_line(line)
             
             # get the game object (creating it if necessary)
             if name not in self.gamestore:
-                self.gamestore[name] = Game(name)
+                # let's actually enforce that get events must come before play events
+                if event == Event.PLAY:
+                    raise ValueError("game %s on date %s has PLAY before GET" % (name, date))
+
+                # if we haven't hit this, then clearly we're fine, and so can
+                # also add the bgg ids
+                self.gamestore[name] = Game(name, bgg=bgg)
             gameobj = self.gamestore[name]
 
             # modify the game object with our event
@@ -274,6 +336,6 @@ class Collection(object):
         return div
 
     def get_unplayed(self):
-        """Get a list of names of unplayed games"""
+        """Get a list of unplayed game objects"""
 
-        return [g for g in self.gamestore if not self.gamestore[g].is_played()]
+        return [g for g in self.gamestore.values() if not g.is_played()]
