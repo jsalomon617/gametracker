@@ -293,7 +293,17 @@
 [new Date(2018, 4, 10), 69, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 4, 11), 69, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 4, 12), 67, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Courtier<br>San Juan'],
-[new Date(2018, 4, 13), 67, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
+[new Date(2018, 4, 13), 67, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 4, 14), 67, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 4, 15), 67, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 4, 16), 67, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 4, 17), 67, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 4, 18), 67, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 4, 19), 66, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Spires'],
+[new Date(2018, 4, 20), 66, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 4, 21), 69, '<b>Games Obtained:</b><br>Vinhos<br>The Gallerist<br>Lisboa<br><b>No Games Played</b>'],
+[new Date(2018, 4, 22), 69, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 4, 23), 69, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -588,7 +598,17 @@
 [new Date(2018, 4, 10), 69, '<div class="google-tooltip"><b>Thursday</b><br><b>May 10, 2018</b><br>Game Count: <b>69</b><br>7-Day Rolling Net: <b>+1</b></div>'],
 [new Date(2018, 4, 11), 69, '<div class="google-tooltip"><b>Friday</b><br><b>May 11, 2018</b><br>Game Count: <b>69</b><br>7-Day Rolling Net: <b>-1</b></div>'],
 [new Date(2018, 4, 12), 67, '<div class="google-tooltip"><b>Saturday</b><br><b>May 12, 2018</b><br>Game Count: <b>67</b> (-2)<br>7-Day Rolling Net: <b>0</b></div>'],
-[new Date(2018, 4, 13), 67, '<div class="google-tooltip"><b>Sunday</b><br><b>May 13, 2018</b><br>Game Count: <b>67</b><br>7-Day Rolling Net: <b>+1</b></div>']] );
+[new Date(2018, 4, 13), 67, '<div class="google-tooltip"><b>Sunday</b><br><b>May 13, 2018</b><br>Game Count: <b>67</b><br>7-Day Rolling Net: <b>+1</b></div>'],
+[new Date(2018, 4, 14), 67, '<div class="google-tooltip"><b>Monday</b><br><b>May 14, 2018</b><br>Game Count: <b>67</b><br>7-Day Rolling Net: <b>+1</b></div>'],
+[new Date(2018, 4, 15), 67, '<div class="google-tooltip"><b>Tuesday</b><br><b>May 15, 2018</b><br>Game Count: <b>67</b><br>7-Day Rolling Net: <b>+1</b></div>'],
+[new Date(2018, 4, 16), 67, '<div class="google-tooltip"><b>Wednesday</b><br><b>May 16, 2018</b><br>Game Count: <b>67</b><br>7-Day Rolling Net: <b>-2</b></div>'],
+[new Date(2018, 4, 17), 67, '<div class="google-tooltip"><b>Thursday</b><br><b>May 17, 2018</b><br>Game Count: <b>67</b><br>7-Day Rolling Net: <b>-2</b></div>'],
+[new Date(2018, 4, 18), 67, '<div class="google-tooltip"><b>Friday</b><br><b>May 18, 2018</b><br>Game Count: <b>67</b><br>7-Day Rolling Net: <b>-2</b></div>'],
+[new Date(2018, 4, 19), 66, '<div class="google-tooltip"><b>Saturday</b><br><b>May 19, 2018</b><br>Game Count: <b>66</b> (-1)<br>7-Day Rolling Net: <b>-1</b></div>'],
+[new Date(2018, 4, 20), 66, '<div class="google-tooltip"><b>Sunday</b><br><b>May 20, 2018</b><br>Game Count: <b>66</b><br>7-Day Rolling Net: <b>-1</b></div>'],
+[new Date(2018, 4, 21), 69, '<div class="google-tooltip"><b>Monday</b><br><b>May 21, 2018</b><br>Game Count: <b>69</b> (+3)<br>7-Day Rolling Net: <b>+2</b></div>'],
+[new Date(2018, 4, 22), 69, '<div class="google-tooltip"><b>Tuesday</b><br><b>May 22, 2018</b><br>Game Count: <b>69</b><br>7-Day Rolling Net: <b>+2</b></div>'],
+[new Date(2018, 4, 23), 69, '<div class="google-tooltip"><b>Wednesday</b><br><b>May 23, 2018</b><br>Game Count: <b>69</b><br>7-Day Rolling Net: <b>+2</b></div>']] );
 
     var options = {
       vAxis: {
@@ -743,13 +763,13 @@
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2018-05-09 </b>
+Last Game Acquired on <b> 2018-05-21 </b>
 (<span id="dayDiff"></span> ago)
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2018, 4, 9) ;
+    var last_acquired = new Date(2018, 4, 21) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -782,7 +802,7 @@ Last Game Acquired on <b> 2018-05-09 </b>
 <br><br><br><img src="fine.png" />
 
 <br><br>
-<b><u>Unplayed Games (67):</u></b>
+<b><u>Unplayed Games (69):</u></b>
 <br>
 Abandon Planet (no BGG link)
 <br> Altiplano (no BGG link)
@@ -816,6 +836,7 @@ Abandon Planet (no BGG link)
 <br> Joking Hazard expansion (no BGG link)
 <br> Kiek (no BGG link)
 <br> Killer Bunnies (no BGG link)
+<br> <a href=https://www.boardgamegeek.com/boardgame/161533/ target='_blank'>Lisboa</a>
 <br> Lord of the P.I.G.S. (no BGG link)
 <br> Masques (no BGG link)
 <br> Merchants and Marauders (no BGG link)
@@ -839,15 +860,16 @@ Abandon Planet (no BGG link)
 <br> Smash Up: Sheep (no BGG link)
 <br> Space Cadets (no BGG link)
 <br> Spaceteam: Triangulum Expansion (no BGG link)
-<br> <a href=https://www.boardgamegeek.com/boardgame/199908/ target='_blank'>Spires</a>
 <br> Terra Mystica (no BGG link)
 <br> Terraforming Mars: Hellas and Elysium (no BGG link)
 <br> That Snow Moon (no BGG link)
+<br> <a href=https://www.boardgamegeek.com/boardgame/125153/ target='_blank'>The Gallerist</a>
 <br> Tiny Epic Western (no BGG link)
 <br> Traitor Mechanic the Traitor Mechanic Game (no BGG link)
 <br> Turbo Drift (no BGG link)
 <br> Twilight Struggle (no BGG link)
 <br> Twin Stars: Adventure Series 1 (no BGG link)
+<br> <a href=https://www.boardgamegeek.com/boardgame/175640/ target='_blank'>Vinhos</a>
 <br> Wagon Wheels (no BGG link)
 <br> Wizard School (no BGG link)
 <br> XCOM (no BGG link)

@@ -189,3 +189,7 @@
 2018-05-09  -   Heaven & Ale
 2018-05-12  -   Courtier
 2018-05-12  -   San Juan
+2018-05-19  -   Spires
+2018-05-21  +   Vinhos          id175640
+2018-05-21  +   The Gallerist   id125153
+2018-05-21  +   Lisboa          id161533
