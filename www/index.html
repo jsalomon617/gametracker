@@ -303,7 +303,8 @@
 [new Date(2018, 4, 20), 66, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 4, 21), 69, '<b>Games Obtained:</b><br>Vinhos<br>The Gallerist<br>Lisboa<br><b>No Games Played</b>'],
 [new Date(2018, 4, 22), 69, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
-[new Date(2018, 4, 23), 69, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
+[new Date(2018, 4, 23), 69, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 4, 24), 70, '<b>Games Obtained:</b><br>Viticulture: Visit from the Rhine Valley<br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -608,7 +609,8 @@
 [new Date(2018, 4, 20), 66, '<div class="google-tooltip"><b>Sunday</b><br><b>May 20, 2018</b><br>Game Count: <b>66</b><br>7-Day Rolling Net: <b>-1</b></div>'],
 [new Date(2018, 4, 21), 69, '<div class="google-tooltip"><b>Monday</b><br><b>May 21, 2018</b><br>Game Count: <b>69</b> (+3)<br>7-Day Rolling Net: <b>+2</b></div>'],
 [new Date(2018, 4, 22), 69, '<div class="google-tooltip"><b>Tuesday</b><br><b>May 22, 2018</b><br>Game Count: <b>69</b><br>7-Day Rolling Net: <b>+2</b></div>'],
-[new Date(2018, 4, 23), 69, '<div class="google-tooltip"><b>Wednesday</b><br><b>May 23, 2018</b><br>Game Count: <b>69</b><br>7-Day Rolling Net: <b>+2</b></div>']] );
+[new Date(2018, 4, 23), 69, '<div class="google-tooltip"><b>Wednesday</b><br><b>May 23, 2018</b><br>Game Count: <b>69</b><br>7-Day Rolling Net: <b>+2</b></div>'],
+[new Date(2018, 4, 24), 70, '<div class="google-tooltip"><b>Thursday</b><br><b>May 24, 2018</b><br>Game Count: <b>70</b> (+1)<br>7-Day Rolling Net: <b>+3</b></div>']] );
 
     var options = {
       vAxis: {
@@ -763,13 +765,13 @@
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2018-05-21 </b>
+Last Game Acquired on <b> 2018-05-24 </b>
 (<span id="dayDiff"></span> ago)
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2018, 4, 21) ;
+    var last_acquired = new Date(2018, 4, 24) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -802,7 +804,7 @@ Last Game Acquired on <b> 2018-05-21 </b>
 <br><br><br><img src="fine.png" />
 
 <br><br>
-<b><u>Unplayed Games (69):</u></b>
+<b><u>Unplayed Games (70):</u></b>
 <br>
 Abandon Planet (no BGG link)
 <br> Altiplano (no BGG link)
@@ -870,6 +872,7 @@ Abandon Planet (no BGG link)
 <br> Twilight Struggle (no BGG link)
 <br> Twin Stars: Adventure Series 1 (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/175640/ target='_blank'>Vinhos</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/248929/ target='_blank'>Viticulture: Visit from the Rhine Valley</a>
 <br> Wagon Wheels (no BGG link)
 <br> Wizard School (no BGG link)
 <br> XCOM (no BGG link)

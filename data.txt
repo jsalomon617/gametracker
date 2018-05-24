@@ -193,3 +193,4 @@
 2018-05-21  +   Vinhos          id175640
 2018-05-21  +   The Gallerist   id125153
 2018-05-21  +   Lisboa          id161533
+2018-05-24  +   Viticulture: Visit from the Rhine Valley    id248929
