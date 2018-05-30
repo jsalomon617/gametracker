@@ -1,56 +1,56 @@
 2017-07-30  +   Dark Dealings   id173460
 2017-07-30  +   Spires          id199908
-2017-07-30  +   Virulence
-2017-07-30  +   Killer Bunnies
-2017-07-30  +   Wizard School
-2017-07-30  +   Dominant Species: The Card Game
-2017-07-30  +   Moby Dick
-2017-07-30  +   Pax Renaissance
-2017-07-30  +   Saga of the Northmen
-2017-07-30  +   Eclipse
-2017-07-30  +   Terra Mystica
-2017-07-30  +   Twilight Struggle
-2017-07-30  +   Mermaid Rain
-2017-07-30  +   Merchants and Marauders
-2017-07-30  +   Spirit Island
-2017-07-30  +   Space Cadets
-2017-07-30  +   Islebound
-2017-07-30  +   City of Iron
-2017-07-30  +   Evolution
-2017-07-30  +   XCOM
-2017-07-30  +   New Angeles
-2017-07-30  +   Coal Baron
-2017-07-30  +   Kingdom Builder
-2017-07-30  +   Fury of Dracula
+2017-07-30  +   Virulence       id202207
+2017-07-30  +   Killer Bunnies  id3699
+2017-07-30  +   Wizard School   id185154
+2017-07-30  +   Dominant Species: The Card Game     id96260
+2017-07-30  +   Moby Dick       id142584
+2017-07-30  +   Pax Renaissance id198953
+2017-07-30  +   Saga of the Northmen    id177248
+2017-07-30  +   Eclipse         id72125
+2017-07-30  +   Terra Mystica   id120677
+2017-07-30  +   Twilight Struggle   id12333
+2017-07-30  +   Mermaid Rain    id5941
+2017-07-30  +   Merchants and Marauders     id25292
+2017-07-30  +   Spirit Island   id162886
+2017-07-30  +   Space Cadets    id123096
+2017-07-30  +   Islebound       id185589
+2017-07-30  +   City of Iron    id195503
+2017-07-30  +   Evolution       id155703
+2017-07-30  +   XCOM            id163602
+2017-07-30  +   New Angeles     id205716
+2017-07-30  +   Coal Baron      id143515
+2017-07-30  +   Kingdom Builder     id107529
+2017-07-30  +   Fury of Dracula     id181279
 2017-07-30  +   BSG Expansions      id43539,85905,141648
-2017-07-30  +   Turbo Drift
-2017-07-30  +   Back to the Future
-2017-07-30  +   Easy Breezy Travel Agency
-2017-07-30  +   Isle of Trains
-2017-07-30  +   Harbour
-2017-07-30  +   Hocus
-2017-07-30  +   Ghost Pirates
-2017-07-30  +   Seii Daimyo
-2017-07-30  +   Hemloch: Dark Promenade
-2017-07-30  +   Cartouche Dynasties
-2017-07-30  +   Belle of the Ball
-2017-07-30  +   Kaiju Incorporated
-2017-07-30  +   Traitor Mechanic the Traitor Mechanic Game
-2017-07-30  +   Shadows Over Camelot: The Card Game
-2017-07-30  +   Coup Reformation
-2017-07-30  +   Pandemic: State of Emergency
-2017-07-30  +   Carcassonne Catapult
-2017-07-30  +   Bears vs Babies
-2017-07-30  +   Masques
-2017-07-30  +   Joking Hazard expansion
-2017-07-30  +   Avignon: A Clash of Popes
-2017-07-30  +   Avignon: Pilgrimage
-2017-07-30  +   Find Your Seats
-2017-07-30  +   Lazer Ryderz
-2017-07-30  +   Exoplanets
-2017-07-30  +   A Feast for Odin
-2017-07-30  +   Kingdom of Solomon
-2017-07-31  +   Champions of Midgard expansions
+2017-07-30  +   Turbo Drift         id207442
+2017-07-30  +   Back to the Future  id71676
+2017-07-30  +   Easy Breezy Travel Agency   id154904
+2017-07-30  +   Isle of Trains      id154906
+2017-07-30  +   Harbour             id155969
+2017-07-30  +   Hocus               id171261
+2017-07-30  +   Ghost Pirates       id113311
+2017-07-30  +   Seii Daimyo         id224151
+2017-07-30  +   Hemloch: Dark Promenade     id109548
+2017-07-30  +   Cartouche Dynasties         id224153
+2017-07-30  +   Belle of the Ball   id139897
+2017-07-30  +   Kaiju Incorporated  id208995
+2017-07-30  +   Traitor Mechanic the Traitor Mechanic Game      id197069
+2017-07-30  +   Shadows Over Camelot: The Card Game             id129904
+2017-07-30  +   Coup Reformation        id148931
+2017-07-30  +   Pandemic: State of Emergency        id168703
+2017-07-30  +   Carcassonne Catapult    id38855
+2017-07-30  +   Bears vs Babies         id211534
+2017-07-30  +   Masques             id65673
+2017-07-30  +   Joking Hazard expansion     id240250
+2017-07-30  +   Avignon: A Clash of Popes   id188181
+2017-07-30  +   Avignon: Pilgrimage         id209741
+2017-07-30  +   Find Your Seats     id209748
+2017-07-30  +   Lazer Ryderz        id210052
+2017-07-30  +   Exoplanets          id163976
+2017-07-30  +   A Feast for Odin    id177736
+2017-07-30  +   Kingdom of Solomon  id87821
+2017-07-31  +   Champions of Midgard expansions     id219787,219788
 2017-08-02  -   Kingdom of Solomon
 2017-08-03  +   Raxxon
 2017-08-05  -   Virulence
