@@ -196,3 +196,5 @@
 2018-05-24  +   Viticulture: Visit from the Rhine Valley    id248929
 2018-05-26  -   Dead of Winter: Warring Colonies
 2018-05-30  -   Vinhos
+2018-06-01  -   Viticulture: Visit from the Rhine Valley
+2018-06-02  -   Joking Hazard expansion
