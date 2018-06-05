@@ -198,3 +198,10 @@
 2018-05-30  -   Vinhos
 2018-06-01  -   Viticulture: Visit from the Rhine Valley
 2018-06-02  -   Joking Hazard expansion
+2018-06-05  +   Village                     id104006,136223,155996
+2018-06-05  +   My Village                  id172381
+2018-06-05  +   Coal Baron: The Card Game   id192945
+2018-06-05  +   Clans of Caledonia          id216132
+2018-06-05  +   Jorvik                      id193739
+2018-06-05  +   Porta Nigra                 id172385
+

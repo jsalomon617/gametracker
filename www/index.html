@@ -314,7 +314,9 @@
 [new Date(2018, 4, 31), 68, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 5, 1), 67, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Viticulture: Visit from the Rhine Valley'],
 [new Date(2018, 5, 2), 66, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Joking Hazard expansion'],
-[new Date(2018, 5, 3), 66, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
+[new Date(2018, 5, 3), 66, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 5, 4), 66, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 5, 5), 72, '<b>Games Obtained:</b><br>Village<br>My Village<br>Coal Baron: The Card Game<br>Clans of Caledonia<br>Jorvik<br>Porta Nigra<br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -630,7 +632,9 @@
 [new Date(2018, 4, 31), 68, '<div class="google-tooltip"><b>Thursday</b><br><b>May 31, 2018</b><br>Game Count: <b>68</b><br>7-Day Rolling Net: <b>-2</b></div>'],
 [new Date(2018, 5, 1), 67, '<div class="google-tooltip"><b>Friday</b><br><b>Jun 01, 2018</b><br>Game Count: <b>67</b> (-1)<br>7-Day Rolling Net: <b>-3</b></div>'],
 [new Date(2018, 5, 2), 66, '<div class="google-tooltip"><b>Saturday</b><br><b>Jun 02, 2018</b><br>Game Count: <b>66</b> (-1)<br>7-Day Rolling Net: <b>-3</b></div>'],
-[new Date(2018, 5, 3), 66, '<div class="google-tooltip"><b>Sunday</b><br><b>Jun 03, 2018</b><br>Game Count: <b>66</b><br>7-Day Rolling Net: <b>-3</b></div>']] );
+[new Date(2018, 5, 3), 66, '<div class="google-tooltip"><b>Sunday</b><br><b>Jun 03, 2018</b><br>Game Count: <b>66</b><br>7-Day Rolling Net: <b>-3</b></div>'],
+[new Date(2018, 5, 4), 66, '<div class="google-tooltip"><b>Monday</b><br><b>Jun 04, 2018</b><br>Game Count: <b>66</b><br>7-Day Rolling Net: <b>-3</b></div>'],
+[new Date(2018, 5, 5), 72, '<div class="google-tooltip"><b>Tuesday</b><br><b>Jun 05, 2018</b><br>Game Count: <b>72</b> (+6)<br>7-Day Rolling Net: <b>+3</b></div>']] );
 
     var options = {
       vAxis: {
@@ -785,13 +789,13 @@
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2018-05-24 </b>
+Last Game Acquired on <b> 2018-06-05 </b>
 (<span id="dayDiff"></span> ago)
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2018, 4, 24) ;
+    var last_acquired = new Date(2018, 5, 5) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -824,7 +828,7 @@ Last Game Acquired on <b> 2018-05-24 </b>
 <br><br><br><img src="fine.png" />
 
 <br><br>
-<b><u>Unplayed Games (66):</u></b>
+<b><u>Unplayed Games (72):</u></b>
 <br>
 Abandon Planet (no BGG link)
 <br> Altiplano (no BGG link)
@@ -839,6 +843,8 @@ Abandon Planet (no BGG link)
 <br> Bios: Megafauna (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/38855/ target='_blank'>Carcassonne Catapult</a>
 <br> Circle the Wagons (no BGG link)
+<br> <a href=https://www.boardgamegeek.com/boardgame/216132/ target='_blank'>Clans of Caledonia</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/192945/ target='_blank'>Coal Baron: The Card Game</a>
 <br> Coaster Park (no BGG link)
 <br> Codenames Duet (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/148931/ target='_blank'>Coup Reformation</a>
@@ -854,6 +860,7 @@ Abandon Planet (no BGG link)
 <br> Francis Drake (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/171261/ target='_blank'>Hocus</a>
 <br> Indonesia (no BGG link)
+<br> <a href=https://www.boardgamegeek.com/boardgame/193739/ target='_blank'>Jorvik</a>
 <br> Kiek (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/3699/ target='_blank'>Killer Bunnies</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/161533/ target='_blank'>Lisboa</a>
@@ -866,9 +873,11 @@ Abandon Planet (no BGG link)
 <br> Mistborn: House War (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/142584/ target='_blank'>Moby Dick</a>
 <br> Mombasa (no BGG link)
+<br> <a href=https://www.boardgamegeek.com/boardgame/172381/ target='_blank'>My Village</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/205716/ target='_blank'>New Angeles</a>
 <br> Pandemic: The Cure Expansion (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/198953/ target='_blank'>Pax Renaissance</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/172385/ target='_blank'>Porta Nigra</a>
 <br> Red Scare (no BGG link)
 <br> Rise to Nobility (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/177248/ target='_blank'>Saga of the Northmen</a>
@@ -889,6 +898,7 @@ Abandon Planet (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/207442/ target='_blank'>Turbo Drift</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/12333/ target='_blank'>Twilight Struggle</a>
 <br> Twin Stars: Adventure Series 1 (no BGG link)
+<br> Village (<a href=https://www.boardgamegeek.com/boardgame/104006/ target='_blank'>104006</a>, <a href=https://www.boardgamegeek.com/boardgame/136223/ target='_blank'>136223</a>, <a href=https://www.boardgamegeek.com/boardgame/155996/ target='_blank'>155996</a>)
 <br> Wagon Wheels (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/185154/ target='_blank'>Wizard School</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/163602/ target='_blank'>XCOM</a>
