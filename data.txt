@@ -204,4 +204,4 @@
 2018-06-05  +   Clans of Caledonia          id216132
 2018-06-05  +   Jorvik                      id193739
 2018-06-05  +   Porta Nigra                 id172385
-
+2018-06-08  -   Francis Drake
