@@ -97,7 +97,7 @@
 2017-10-21  +   Codenames Duet
 2017-10-21  +   Dead of Winter: Warring Colonies
 2017-10-21  +   Quadropolis: Public Services
-2017-10-21  +   Terraforming Mars: Hellas and Elysium
+2017-10-21  +   Terraforming Mars expansions        id218127,231965
 2017-10-21  +   Five Tribes: Whims of the Sultan
 2017-10-21  -   Five Tribes: Whims of the Sultan
 2017-10-25  -   Pandemic: State of Emergency
@@ -205,3 +205,6 @@
 2018-06-05  +   Jorvik                      id193739
 2018-06-05  +   Porta Nigra                 id172385
 2018-06-08  -   Francis Drake
+2018-06-09  +   Marco Polo expansion        id232945
+2018-06-09  +   Pandemic: Rising Tide       id234671
+2018-06-09  +   Keyflower                   id122515

@@ -89,7 +89,7 @@
 [new Date(2017, 9, 18), 59, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2017, 9, 19), 59, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2017, 9, 20), 59, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
-[new Date(2017, 9, 21), 64, '<b>Games Obtained:</b><br>Fresco: Big Box<br>Codenames Duet<br>Dead of Winter: Warring Colonies<br>Quadropolis: Public Services<br>Terraforming Mars: Hellas and Elysium<br>Five Tribes: Whims of the Sultan<br><b>Games Played:</b><br>Five Tribes: Whims of the Sultan'],
+[new Date(2017, 9, 21), 64, '<b>Games Obtained:</b><br>Fresco: Big Box<br>Codenames Duet<br>Dead of Winter: Warring Colonies<br>Quadropolis: Public Services<br>Terraforming Mars expansions<br>Five Tribes: Whims of the Sultan<br><b>Games Played:</b><br>Five Tribes: Whims of the Sultan'],
 [new Date(2017, 9, 22), 64, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2017, 9, 23), 64, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2017, 9, 24), 64, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
@@ -319,7 +319,8 @@
 [new Date(2018, 5, 5), 72, '<b>Games Obtained:</b><br>Village<br>My Village<br>Coal Baron: The Card Game<br>Clans of Caledonia<br>Jorvik<br>Porta Nigra<br><b>No Games Played</b>'],
 [new Date(2018, 5, 6), 72, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 5, 7), 72, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
-[new Date(2018, 5, 8), 71, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Francis Drake']] ;
+[new Date(2018, 5, 8), 71, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Francis Drake'],
+[new Date(2018, 5, 9), 74, '<b>Games Obtained:</b><br>Marco Polo expansion<br>Pandemic: Rising Tide<br>Keyflower<br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -640,7 +641,8 @@
 [new Date(2018, 5, 5), 72, '<div class="google-tooltip"><b>Tuesday</b><br><b>Jun 05, 2018</b><br>Game Count: <b>72</b> (+6)<br>7-Day Rolling Net: <b>+3</b></div>'],
 [new Date(2018, 5, 6), 72, '<div class="google-tooltip"><b>Wednesday</b><br><b>Jun 06, 2018</b><br>Game Count: <b>72</b><br>7-Day Rolling Net: <b>+4</b></div>'],
 [new Date(2018, 5, 7), 72, '<div class="google-tooltip"><b>Thursday</b><br><b>Jun 07, 2018</b><br>Game Count: <b>72</b><br>7-Day Rolling Net: <b>+4</b></div>'],
-[new Date(2018, 5, 8), 71, '<div class="google-tooltip"><b>Friday</b><br><b>Jun 08, 2018</b><br>Game Count: <b>71</b> (-1)<br>7-Day Rolling Net: <b>+4</b></div>']] );
+[new Date(2018, 5, 8), 71, '<div class="google-tooltip"><b>Friday</b><br><b>Jun 08, 2018</b><br>Game Count: <b>71</b> (-1)<br>7-Day Rolling Net: <b>+4</b></div>'],
+[new Date(2018, 5, 9), 74, '<div class="google-tooltip"><b>Saturday</b><br><b>Jun 09, 2018</b><br>Game Count: <b>74</b> (+3)<br>7-Day Rolling Net: <b>+8</b></div>']] );
 
     var options = {
       vAxis: {
@@ -795,13 +797,13 @@
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2018-06-05 </b>
+Last Game Acquired on <b> 2018-06-09 </b>
 (<span id="dayDiff"></span> ago)
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2018, 5, 5) ;
+    var last_acquired = new Date(2018, 5, 9) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -834,7 +836,7 @@ Last Game Acquired on <b> 2018-06-05 </b>
 <br><br><br><img src="fine.png" />
 
 <br><br>
-<b><u>Unplayed Games (71):</u></b>
+<b><u>Unplayed Games (74):</u></b>
 <br>
 Abandon Planet (no BGG link)
 <br> Altiplano (no BGG link)
@@ -866,10 +868,12 @@ Abandon Planet (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/171261/ target='_blank'>Hocus</a>
 <br> Indonesia (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/193739/ target='_blank'>Jorvik</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/122515/ target='_blank'>Keyflower</a>
 <br> Kiek (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/3699/ target='_blank'>Killer Bunnies</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/161533/ target='_blank'>Lisboa</a>
 <br> Lord of the P.I.G.S. (no BGG link)
+<br> <a href=https://www.boardgamegeek.com/boardgame/232945/ target='_blank'>Marco Polo expansion</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/65673/ target='_blank'>Masques</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/25292/ target='_blank'>Merchants and Marauders</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/5941/ target='_blank'>Mermaid Rain</a>
@@ -880,6 +884,7 @@ Abandon Planet (no BGG link)
 <br> Mombasa (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/172381/ target='_blank'>My Village</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/205716/ target='_blank'>New Angeles</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/234671/ target='_blank'>Pandemic: Rising Tide</a>
 <br> Pandemic: The Cure Expansion (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/198953/ target='_blank'>Pax Renaissance</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/172385/ target='_blank'>Porta Nigra</a>
@@ -895,7 +900,7 @@ Abandon Planet (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/123096/ target='_blank'>Space Cadets</a>
 <br> Spaceteam: Triangulum Expansion (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/120677/ target='_blank'>Terra Mystica</a>
-<br> Terraforming Mars: Hellas and Elysium (no BGG link)
+<br> Terraforming Mars expansions (<a href=https://www.boardgamegeek.com/boardgame/218127/ target='_blank'>218127</a>, <a href=https://www.boardgamegeek.com/boardgame/231965/ target='_blank'>231965</a>)
 <br> That Snow Moon (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/125153/ target='_blank'>The Gallerist</a>
 <br> Tiny Epic Western (no BGG link)
