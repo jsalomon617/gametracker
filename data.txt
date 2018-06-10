@@ -208,3 +208,4 @@
 2018-06-09  +   Marco Polo expansion        id232945
 2018-06-09  +   Pandemic: Rising Tide       id234671
 2018-06-09  +   Keyflower                   id122515
+2018-06-09  -   Space Cadets
