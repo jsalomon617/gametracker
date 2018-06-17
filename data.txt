@@ -131,7 +131,7 @@
 2017-12-18  +   Red Scare
 2017-12-18  +   Tiny Epic Galaxies
 2017-12-18  -   Tiny Epic Galaxies
-2017-12-18  +   Sheriff of Nottingham Expansion
+2017-12-18  +   Sheriff of Nottingham Expansion     id226065
 2017-12-18  +   Marco Polo
 2017-12-18  +   Dark Moon Expansion
 2017-12-18  +   Mint Delivery
@@ -211,3 +211,4 @@
 2018-06-09  -   Space Cadets
 2018-06-11  -   The Gallerist
 2018-06-13  -   Rise to Nobility
+2018-06-16  -   Sheriff of Nottingham Expansion
