@@ -331,7 +331,9 @@
 [new Date(2018, 5, 17), 70, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 5, 18), 70, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 5, 19), 70, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
-[new Date(2018, 5, 20), 69, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Keyflower']] ;
+[new Date(2018, 5, 20), 69, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Keyflower'],
+[new Date(2018, 5, 21), 69, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 5, 22), 70, '<b>Games Obtained:</b><br>Oaxaca: Crafts of a Culture<br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -664,7 +666,9 @@
 [new Date(2018, 5, 17), 70, '<div class="google-tooltip"><b>Sunday</b><br><b>Jun 17, 2018</b><br>Game Count: <b>70</b><br>7-Day Rolling Net: <b>-3</b></div>'],
 [new Date(2018, 5, 18), 70, '<div class="google-tooltip"><b>Monday</b><br><b>Jun 18, 2018</b><br>Game Count: <b>70</b><br>7-Day Rolling Net: <b>-2</b></div>'],
 [new Date(2018, 5, 19), 70, '<div class="google-tooltip"><b>Tuesday</b><br><b>Jun 19, 2018</b><br>Game Count: <b>70</b><br>7-Day Rolling Net: <b>-2</b></div>'],
-[new Date(2018, 5, 20), 69, '<div class="google-tooltip"><b>Wednesday</b><br><b>Jun 20, 2018</b><br>Game Count: <b>69</b> (-1)<br>7-Day Rolling Net: <b>-2</b></div>']] );
+[new Date(2018, 5, 20), 69, '<div class="google-tooltip"><b>Wednesday</b><br><b>Jun 20, 2018</b><br>Game Count: <b>69</b> (-1)<br>7-Day Rolling Net: <b>-2</b></div>'],
+[new Date(2018, 5, 21), 69, '<div class="google-tooltip"><b>Thursday</b><br><b>Jun 21, 2018</b><br>Game Count: <b>69</b><br>7-Day Rolling Net: <b>-2</b></div>'],
+[new Date(2018, 5, 22), 70, '<div class="google-tooltip"><b>Friday</b><br><b>Jun 22, 2018</b><br>Game Count: <b>70</b> (+1)<br>7-Day Rolling Net: <b>-1</b></div>']] );
 
     var options = {
       vAxis: {
@@ -819,13 +823,13 @@
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2018-06-09 </b>
+Last Game Acquired on <b> 2018-06-22 </b>
 (<span id="dayDiff"></span> ago)
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2018, 5, 9) ;
+    var last_acquired = new Date(2018, 5, 22) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -858,7 +862,7 @@ Last Game Acquired on <b> 2018-06-09 </b>
 <br><br><br><img src="fine.png" />
 
 <br><br>
-<b><u>Unplayed Games (69):</u></b>
+<b><u>Unplayed Games (70):</u></b>
 <br>
 Abandon Planet (no BGG link)
 <br> Altiplano (no BGG link)
@@ -905,6 +909,7 @@ Abandon Planet (no BGG link)
 <br> Mombasa (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/172381/ target='_blank'>My Village</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/205716/ target='_blank'>New Angeles</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/147241/ target='_blank'>Oaxaca: Crafts of a Culture</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/234671/ target='_blank'>Pandemic: Rising Tide</a>
 <br> Pandemic: The Cure Expansion (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/198953/ target='_blank'>Pax Renaissance</a>
