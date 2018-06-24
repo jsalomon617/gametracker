@@ -215,3 +215,5 @@
 2018-06-20  -   Keyflower
 2018-06-22  +   Oaxaca: Crafts of a Culture id147241
 2018-06-23  -   Coaster Park
+2018-06-23  -   Pandemic: Rising Tide
+2018-06-23  -   XCOM
