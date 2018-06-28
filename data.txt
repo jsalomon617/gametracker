@@ -218,3 +218,4 @@
 2018-06-23  -   Pandemic: Rising Tide
 2018-06-23  -   XCOM
 2018-06-25  -   Lisboa
+2018-06-27  -   Village
