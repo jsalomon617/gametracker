@@ -220,3 +220,6 @@
 2018-06-25  -   Lisboa
 2018-06-27  -   Village
 2018-06-30  -   Saga of the Northmen
+2018-07-01  +   The Ancient World               id147253
+2018-07-01  +   Eight-Minute Empire: Legends    id142326,161363
+2018-07-01  +   Yokohama                        id196340
