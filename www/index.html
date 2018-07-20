@@ -360,7 +360,9 @@
 [new Date(2018, 6, 14), 66, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Deception: Murder in Hong Kong'],
 [new Date(2018, 6, 15), 66, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 6, 16), 66, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
-[new Date(2018, 6, 17), 65, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Dark Dealings']] ;
+[new Date(2018, 6, 17), 65, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Dark Dealings'],
+[new Date(2018, 6, 18), 65, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 6, 19), 66, '<b>Games Obtained:</b><br>Minerva<br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -720,7 +722,9 @@
 [new Date(2018, 6, 14), 66, '<div class="google-tooltip"><b>Saturday</b><br><b>Jul 14, 2018</b><br>Game Count: <b>66</b> (-1)<br>7-Day Rolling Net: <b>-2</b></div>'],
 [new Date(2018, 6, 15), 66, '<div class="google-tooltip"><b>Sunday</b><br><b>Jul 15, 2018</b><br>Game Count: <b>66</b><br>7-Day Rolling Net: <b>-2</b></div>'],
 [new Date(2018, 6, 16), 66, '<div class="google-tooltip"><b>Monday</b><br><b>Jul 16, 2018</b><br>Game Count: <b>66</b><br>7-Day Rolling Net: <b>-2</b></div>'],
-[new Date(2018, 6, 17), 65, '<div class="google-tooltip"><b>Tuesday</b><br><b>Jul 17, 2018</b><br>Game Count: <b>65</b> (-1)<br>7-Day Rolling Net: <b>-3</b></div>']] );
+[new Date(2018, 6, 17), 65, '<div class="google-tooltip"><b>Tuesday</b><br><b>Jul 17, 2018</b><br>Game Count: <b>65</b> (-1)<br>7-Day Rolling Net: <b>-3</b></div>'],
+[new Date(2018, 6, 18), 65, '<div class="google-tooltip"><b>Wednesday</b><br><b>Jul 18, 2018</b><br>Game Count: <b>65</b><br>7-Day Rolling Net: <b>-2</b></div>'],
+[new Date(2018, 6, 19), 66, '<div class="google-tooltip"><b>Thursday</b><br><b>Jul 19, 2018</b><br>Game Count: <b>66</b> (+1)<br>7-Day Rolling Net: <b>-1</b></div>']] );
 
     var options = {
       vAxis: {
@@ -875,13 +879,13 @@
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2018-07-02 </b>
+Last Game Acquired on <b> 2018-07-19 </b>
 (<span id="dayDiff"></span> ago)
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2018, 6, 2) ;
+    var last_acquired = new Date(2018, 6, 19) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -914,7 +918,7 @@ Last Game Acquired on <b> 2018-07-02 </b>
 <br><br><br><img src="images/fine.png" />
 
 <br><br>
-<b><u>Unplayed Games (65):</u></b>
+<b><u>Unplayed Games (66):</u></b>
 <br>
 Abandon Planet (no BGG link)
 <br> Above and Below: Expanded Edition (<a href=https://www.boardgamegeek.com/boardgame/175452/ target='_blank'>175452</a>, <a href=https://www.boardgamegeek.com/boardgame/229085/ target='_blank'>229085</a>)
@@ -952,6 +956,7 @@ Abandon Planet (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/65673/ target='_blank'>Masques</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/25292/ target='_blank'>Merchants and Marauders</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/5941/ target='_blank'>Mermaid Rain</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/175695/ target='_blank'>Minerva</a>
 <br> Mint Delivery (no BGG link)
 <br> Mint Julep (no BGG link)
 <br> Mistborn: House War (no BGG link)
