@@ -230,3 +230,5 @@
 2018-07-14  -   Deception: Murder in Hong Kong
 2018-07-17  -   Dark Dealings
 2018-07-19  +   Minerva         id175695
+2018-07-23  +   Dresden Files expansions    id249860,251818
+2018-07-23  +   Eight Minute Empire     id131366
