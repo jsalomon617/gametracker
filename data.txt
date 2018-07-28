@@ -143,7 +143,7 @@
 2018-01-20  -   Exoplanets
 2018-01-22  +   Bios: Genesis       id98918
 2018-01-22  +   Bios: Megafauna     id221769
-2018-01-22  +   Empires of the Void II  218509
+2018-01-22  +   Empires of the Void II  id218509
 2018-01-31  -   Peak Oil
 2018-02-02  +   Indonesia       id19777
 2018-02-02  +   Antiquity       id13122
