@@ -369,7 +369,9 @@
 [new Date(2018, 6, 23), 68, '<b>Games Obtained:</b><br>Dresden Files expansions<br>Eight Minute Empire<br><b>No Games Played</b>'],
 [new Date(2018, 6, 24), 67, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Mint Delivery'],
 [new Date(2018, 6, 25), 67, '<b>Games Obtained:</b><br>Scythe: Rise of Fenris<br><b>Games Played:</b><br>Coal Baron: The Card Game'],
-[new Date(2018, 6, 26), 66, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Porta Nigra']] ;
+[new Date(2018, 6, 26), 66, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Porta Nigra'],
+[new Date(2018, 6, 27), 66, '<b>Games Obtained:</b><br>Smiths of Winterforge<br><b>Games Played:</b><br>Empires of the Void II'],
+[new Date(2018, 6, 28), 66, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -738,7 +740,9 @@
 [new Date(2018, 6, 23), 68, '<div class="google-tooltip"><b>Monday</b><br><b>Jul 23, 2018</b><br>Game Count: <b>68</b> (+2)<br>7-Day Rolling Net: <b>+2</b></div>'],
 [new Date(2018, 6, 24), 67, '<div class="google-tooltip"><b>Tuesday</b><br><b>Jul 24, 2018</b><br>Game Count: <b>67</b> (-1)<br>7-Day Rolling Net: <b>+2</b></div>'],
 [new Date(2018, 6, 25), 67, '<div class="google-tooltip"><b>Wednesday</b><br><b>Jul 25, 2018</b><br>Game Count: <b>67</b><br>7-Day Rolling Net: <b>+2</b></div>'],
-[new Date(2018, 6, 26), 66, '<div class="google-tooltip"><b>Thursday</b><br><b>Jul 26, 2018</b><br>Game Count: <b>66</b> (-1)<br>7-Day Rolling Net: <b>0</b></div>']] );
+[new Date(2018, 6, 26), 66, '<div class="google-tooltip"><b>Thursday</b><br><b>Jul 26, 2018</b><br>Game Count: <b>66</b> (-1)<br>7-Day Rolling Net: <b>0</b></div>'],
+[new Date(2018, 6, 27), 66, '<div class="google-tooltip"><b>Friday</b><br><b>Jul 27, 2018</b><br>Game Count: <b>66</b><br>7-Day Rolling Net: <b>0</b></div>'],
+[new Date(2018, 6, 28), 66, '<div class="google-tooltip"><b>Saturday</b><br><b>Jul 28, 2018</b><br>Game Count: <b>66</b><br>7-Day Rolling Net: <b>0</b></div>']] );
 
     var options = {
       vAxis: {
@@ -893,13 +897,13 @@
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2018-07-25 </b>
+Last Game Acquired on <b> 2018-07-27 </b>
 (<span id="dayDiff"></span> ago)
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2018, 6, 25) ;
+    var last_acquired = new Date(2018, 6, 27) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -958,7 +962,6 @@ Abandon Planet (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/72125/ target='_blank'>Eclipse</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/131366/ target='_blank'>Eight Minute Empire</a>
 <br> Eight-Minute Empire: Legends (<a href=https://www.boardgamegeek.com/boardgame/142326/ target='_blank'>142326</a>, <a href=https://www.boardgamegeek.com/boardgame/161363/ target='_blank'>161363</a>)
-<br> Empires of the Void II (no BGG link)
 <br> Entropy: Worlds Collide (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/209748/ target='_blank'>Find Your Seats</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/171261/ target='_blank'>Hocus</a>
@@ -987,6 +990,7 @@ Abandon Planet (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/224151/ target='_blank'>Seii Daimyo</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/129904/ target='_blank'>Shadows Over Camelot: The Card Game</a>
 <br> Smash Up: Sheep (no BGG link)
+<br> <a href=https://www.boardgamegeek.com/boardgame/192619/ target='_blank'>Smiths of Winterforge</a>
 <br> Spaceteam: Triangulum Expansion (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/120677/ target='_blank'>Terra Mystica</a>
 <br> Terraforming Mars expansions (<a href=https://www.boardgamegeek.com/boardgame/218127/ target='_blank'>218127</a>, <a href=https://www.boardgamegeek.com/boardgame/231965/ target='_blank'>231965</a>)

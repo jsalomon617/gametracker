@@ -236,3 +236,5 @@
 2018-07-25  +   Scythe: Rise of Fenris  id242277
 2018-07-25  -   Coal Baron: The Card Game
 2018-07-26  -   Porta Nigra
+2018-07-27  +   Smiths of Winterforge   id192619
+2018-07-27  -   Empires of the Void II
