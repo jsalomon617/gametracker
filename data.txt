@@ -52,140 +52,140 @@
 2017-07-30  +   Kingdom of Solomon  id87821
 2017-07-31  +   Champions of Midgard expansions     id219787,219788
 2017-08-02  -   Kingdom of Solomon
-2017-08-03  +   Raxxon
+2017-08-03  +   Raxxon      id231197
 2017-08-05  -   Virulence
-2017-08-07  +   Circle the Wagons
-2017-08-07  +   That Snow Moon
-2017-08-07  +   Mint Julep
-2017-08-07  +   Wagon Wheels
+2017-08-07  +   Circle the Wagons   id213266
+2017-08-07  +   That Snow Moon      id213268
+2017-08-07  +   Mint Julep          id222462
+2017-08-07  +   Wagon Wheels        id227266
 2017-08-08  -   Raxxon
-2017-08-10  +   Sol: Last Days of a Star
-2017-08-11  +   Arkham Ritual
+2017-08-10  +   Sol: Last Days of a Star    id174837
+2017-08-11  +   Arkham Ritual       id203967
 2017-08-12  -   Islebound
 2017-08-12  -   Isle of Trains
 2017-08-12  -   Arkham Ritual
-2017-08-15  +   Fate of the Elder Gods
-2017-08-16  +   Love Letter Wedding Edition
+2017-08-15  +   Fate of the Elder Gods          id198609,231235
+2017-08-16  +   Love Letter Wedding Edition     id129622
 2017-08-16  -   Love Letter Wedding Edition
 2017-08-19  -   Spirit Island
-2017-08-20  +   VivaJava: The Coffee Game
-2017-08-23  +   VivaJava: The Coffee Game: The Dice Game
-2017-08-24  +   Overlords of Infamy
-2017-08-24  +   Mistborn: House War
+2017-08-20  +   VivaJava: The Coffee Game       id103660
+2017-08-23  +   VivaJava: The Coffee Game: The Dice Game    id139899
+2017-08-24  +   Overlords of Infamy             id178030
+2017-08-24  +   Mistborn: House War             id182626
 2017-08-26  -   City of Iron
-2017-08-29  +   Abandon Planet
+2017-08-29  +   Abandon Planet      id207117
 2017-08-30  -   Harbour
-2017-08-31  +   Salem: 1692
-2017-08-31  +   Tortuga: 1667
+2017-08-31  +   Salem: 1692         id175549
+2017-08-31  +   Tortuga: 1667       id218530
 2017-09-02  -   Belle of the Ball
 2017-09-02  -   Lazer Ryderz
 2017-09-06  -   VivaJava: The Coffee Game
-2017-09-11  +   Farlight
+2017-09-11  +   Farlight            id221230
 2017-09-13  -   A Feast for Odin
 2017-09-16  -   Kaiju Incorporated
 2017-09-20  -   Coal Baron
-2017-09-22  +   Scuttle!
-2017-09-22  +   Dracula's Feast
-2017-09-25  +   Spaceteam: Triangulum Expansion
+2017-09-22  +   Scuttle!            id195296
+2017-09-22  +   Dracula's Feast     id159575
+2017-09-25  +   Spaceteam: Triangulum Expansion     id191679
 2017-09-27  -   Champions of Midgard expansions
-2017-09-29  +   Twin Stars: Adventure Series 1
-2017-10-01  +   Francis Drake
-2017-10-01  +   Tiny Epic Western
-2017-10-01  +   Yardmaster
+2017-09-29  +   Twin Stars: Adventure Series 1      id231854
+2017-10-01  +   Francis Drake       id140603
+2017-10-01  +   Tiny Epic Western   id180852
+2017-10-01  +   Yardmaster          id154634
 2017-10-01  -   Yardmaster
-2017-10-21  +   Fresco: Big Box
-2017-10-21  +   Codenames Duet
-2017-10-21  +   Dead of Winter: Warring Colonies
-2017-10-21  +   Quadropolis: Public Services
+2017-10-21  +   Fresco: Big Box     id139991
+2017-10-21  +   Codenames Duet      id224037
+2017-10-21  +   Dead of Winter: Warring Colonies    id206094
+2017-10-21  +   Quadropolis: Public Services        id219618
 2017-10-21  +   Terraforming Mars expansions        id218127,231965
-2017-10-21  +   Five Tribes: Whims of the Sultan
+2017-10-21  +   Five Tribes: Whims of the Sultan    id226828
 2017-10-21  -   Five Tribes: Whims of the Sultan
 2017-10-25  -   Pandemic: State of Emergency
-2017-10-26  +   Cytosis
+2017-10-26  +   Cytosis     id202977
 2017-11-01  -   Cytosis
-2017-11-02  +   Merchant of Venus
-2017-11-06  +   Entropy: Worlds Collide
+2017-11-02  +   Merchant of Venus   id230
+2017-11-06  +   Entropy: Worlds Collide     id223151
 2017-11-08  -   Overlords of Infamy
-2017-11-09  +   Martian Fluxx
+2017-11-09  +   Martian Fluxx       id35369
 2017-11-09  -   Martian Fluxx
 2017-11-11  -   Sol: Last Days of a Star
 2017-11-11  -   Dracula's Feast
-2017-11-20  +   San Juan
-2017-11-20  +   Broom Service
-2017-11-20  +   In the Year of the Dragon
-2017-11-22  +   Castles of Burgundy
+2017-11-20  +   San Juan            id166669
+2017-11-20  +   Broom Service       id172308
+2017-11-20  +   In the Year of the Dragon   id214000
+2017-11-22  +   Castles of Burgundy     id84876
 2017-11-25  -   Evolution
-2017-11-30  +   Lord of the P.I.G.S.
-2017-11-30  +   Peak Oil
-2017-12-01  +   Caverna
+2017-11-30  +   Lord of the P.I.G.S.    id169393
+2017-11-30  +   Peak Oil                id169215
+2017-12-01  +   Caverna                 id102794
 2017-12-02  -   Fury of Dracula
-2017-12-05  +   Long Live the Queen
-2017-12-05  +   Coaster Park
-2017-12-05  +   Scythe: The Wind Gambit
+2017-12-05  +   Long Live the Queen     id160419
+2017-12-05  +   Coaster Park            id232895
+2017-12-05  +   Scythe: The Wind Gambit     id223555
 2017-12-05  -   Scythe: The Wind Gambit
-2017-12-08  +   Kiek
+2017-12-08  +   Kiek                    id239770
 2017-12-13  -   Caverna
-2017-12-16  +   Dinosaur Island
-2017-12-18  +   Charterstone
-2017-12-18  +   Pandemic: The Cure Expansion
-2017-12-18  +   Red Scare
-2017-12-18  +   Tiny Epic Galaxies
+2017-12-16  +   Dinosaur Island     id221194
+2017-12-18  +   Charterstone        id197376
+2017-12-18  +   Pandemic: The Cure Expansion    id207017
+2017-12-18  +   Red Scare           id224212
+2017-12-18  +   Tiny Epic Galaxies  id163967
 2017-12-18  -   Tiny Epic Galaxies
 2017-12-18  +   Sheriff of Nottingham Expansion     id226065
-2017-12-18  +   Marco Polo
-2017-12-18  +   Dark Moon Expansion
-2017-12-18  +   Mint Delivery
-2017-12-22  +   Smash Up: Sheep
+2017-12-18  +   Marco Polo          id171623
+2017-12-18  +   Dark Moon Expansion     id230534
+2017-12-18  +   Mint Delivery       id230251
+2017-12-22  +   Smash Up: Sheep     id220188
 2018-01-03  -   Fresco: Big Box
 2018-01-06  -   Kingdom Builder
 2018-01-10  -   Marco Polo
 2018-01-17  -   Dinosaur Island
 2018-01-20  -   Exoplanets
-2018-01-22  +   Bios: Genesis
-2018-01-22  +   Bios: Megafauna
-2018-01-22  +   Empires of the Void II
+2018-01-22  +   Bios: Genesis       id98918
+2018-01-22  +   Bios: Megafauna     id221769
+2018-01-22  +   Empires of the Void II  218509
 2018-01-31  -   Peak Oil
-2018-02-02  +   Indonesia
-2018-02-02  +   Antiquity
+2018-02-02  +   Indonesia       id19777
+2018-02-02  +   Antiquity       id13122
 2018-02-03  -   VivaJava: The Coffee Game: The Dice Game
 2018-02-10  -   Broom Service
 2018-02-16  -   Charterstone
 2018-02-22  -   Hemloch: Dark Promenade
 2018-02-24  -   Tortuga: 1667
-2018-03-02  +   The Lady and the Tiger
-2018-03-02  +   Cavern Tavern
-2018-03-02  +   Rise to Nobility
-2018-03-02  +   Deception: Murder in Hong Kong
+2018-03-02  +   The Lady and the Tiger  id222643
+2018-03-02  +   Cavern Tavern           id189067
+2018-03-02  +   Rise to Nobility        id218293
+2018-03-02  +   Deception: Murder in Hong Kong      id156129
 2018-03-03  -   Castles of Burgundy
 2018-03-07  -   Cavern Tavern
-2018-03-16  +   Barker's Row
+2018-03-16  +   Barker's Row                id202443
 2018-03-18  -   The Lady and the Tiger
 2018-03-19  -   Long Live the Queen
 2018-03-20  -   Cartouche Dynasties
 2018-03-21  -   Ghost Pirates
 2018-03-23  -   Farlight
-2018-03-29  +   Manhattan Project 2: Minutes to Midnight
+2018-03-29  +   Manhattan Project 2: Minutes to Midnight    id177659
 2018-04-01  -   Merchant of Venus
-2018-04-05  +   Raiders of the North Sea
-2018-04-11  +   Calimala
+2018-04-05  +   Raiders of the North Sea    id170042
+2018-04-11  +   Calimala                    id199383
 2018-04-11  -   Calimala
 2018-04-18  -   Raiders of the North Sea
 2018-04-20  -   In the Year of the Dragon
 2018-04-21  -   Quadropolis: Public Services
-2018-04-27  +   Pigment
+2018-04-27  +   Pigment     id224060
 2018-04-28  -   Pigment
-2018-05-04  +   Canalis
-2018-05-04  +   Pandemic: Iberia
+2018-05-04  +   Canalis     id144382
+2018-05-04  +   Pandemic: Iberia    id198928
 2018-05-05  -   Pandemic: Iberia
 2018-05-05  -   Canalis
 2018-05-05  -   Fate of the Elder Gods
 2018-05-06  -   Manhattan Project 2: Minutes to Midnight
-2018-05-09  +   Courtier
-2018-05-09  +   Altiplano
-2018-05-09  +   Mombasa
-2018-05-09  +   Rajas of the Ganges
+2018-05-09  +   Courtier    id122891
+2018-05-09  +   Altiplano   id234487
+2018-05-09  +   Mombasa     id172386
+2018-05-09  +   Rajas of the Ganges     id220877
 2018-05-09  -   Rajas of the Ganges
-2018-05-09  +   Heaven & Ale
+2018-05-09  +   Heaven & Ale            id227789
 2018-05-09  -   Heaven & Ale
 2018-05-12  -   Courtier
 2018-05-12  -   San Juan
