@@ -238,3 +238,11 @@
 2018-07-26  -   Porta Nigra
 2018-07-27  +   Smiths of Winterforge   id192619
 2018-07-27  -   Empires of the Void II
+2018-07-28  +   Oh My Goods!            id183840
+2018-07-28  +   Great Western Trail     id193738
+2018-07-28  +   Isle of Skye            id176494,232226
+2018-07-28  +   Kitchen Rush            id223953
+2018-07-28  +   Nusfjord                id234277
+2018-07-28  +   Unearth                 id217085
+2018-07-28  -   Nusfjord
+2018-07-28  -   Unearth
