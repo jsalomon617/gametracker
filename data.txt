@@ -248,3 +248,7 @@
 2018-07-28  -   Unearth
 2018-07-28  -   Minerva
 2018-07-29  -   Kitchen Rush
+2018-07-31  -   Oh My Goods!
+2018-07-31  +   Shipwrights of the North Sea    id75547
+2018-07-31  +   Explorers of the North Sea      id176371
+2018-07-31  +   North Sea Runesaga              id190798

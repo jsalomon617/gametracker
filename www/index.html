@@ -372,7 +372,10 @@
 [new Date(2018, 6, 26), 66, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Porta Nigra'],
 [new Date(2018, 6, 27), 66, '<b>Games Obtained:</b><br>Smiths of Winterforge<br><b>Games Played:</b><br>Empires of the Void II'],
 [new Date(2018, 6, 28), 69, '<b>Games Obtained:</b><br>Oh My Goods!<br>Great Western Trail<br>Isle of Skye<br>Kitchen Rush<br>Nusfjord<br>Unearth<br><b>Games Played:</b><br>Nusfjord<br>Unearth<br>Minerva'],
-[new Date(2018, 6, 29), 68, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Kitchen Rush']] ;
+[new Date(2018, 6, 29), 68, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Kitchen Rush'],
+[new Date(2018, 6, 30), 68, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 6, 31), 70, '<b>Games Obtained:</b><br>Shipwrights of the North Sea<br>Explorers of the North Sea<br>North Sea Runesaga<br><b>Games Played:</b><br>Oh My Goods!'],
+[new Date(2018, 7, 1), 70, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -744,7 +747,10 @@
 [new Date(2018, 6, 26), 66, '<div class="google-tooltip"><b>Thursday</b><br><b>Jul 26, 2018</b><br>Game Count: <b>66</b> (-1)<br>7-Day Rolling Net: <b>0</b></div>'],
 [new Date(2018, 6, 27), 66, '<div class="google-tooltip"><b>Friday</b><br><b>Jul 27, 2018</b><br>Game Count: <b>66</b><br>7-Day Rolling Net: <b>0</b></div>'],
 [new Date(2018, 6, 28), 69, '<div class="google-tooltip"><b>Saturday</b><br><b>Jul 28, 2018</b><br>Game Count: <b>69</b> (+3)<br>7-Day Rolling Net: <b>+3</b></div>'],
-[new Date(2018, 6, 29), 68, '<div class="google-tooltip"><b>Sunday</b><br><b>Jul 29, 2018</b><br>Game Count: <b>68</b> (-1)<br>7-Day Rolling Net: <b>+2</b></div>']] );
+[new Date(2018, 6, 29), 68, '<div class="google-tooltip"><b>Sunday</b><br><b>Jul 29, 2018</b><br>Game Count: <b>68</b> (-1)<br>7-Day Rolling Net: <b>+2</b></div>'],
+[new Date(2018, 6, 30), 68, '<div class="google-tooltip"><b>Monday</b><br><b>Jul 30, 2018</b><br>Game Count: <b>68</b><br>7-Day Rolling Net: <b>0</b></div>'],
+[new Date(2018, 6, 31), 70, '<div class="google-tooltip"><b>Tuesday</b><br><b>Jul 31, 2018</b><br>Game Count: <b>70</b> (+2)<br>7-Day Rolling Net: <b>+3</b></div>'],
+[new Date(2018, 7, 1), 70, '<div class="google-tooltip"><b>Wednesday</b><br><b>Aug 01, 2018</b><br>Game Count: <b>70</b><br>7-Day Rolling Net: <b>+3</b></div>']] );
 
     var options = {
       vAxis: {
@@ -899,13 +905,13 @@
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2018-07-28 </b>
+Last Game Acquired on <b> 2018-07-31 </b>
 (<span id="dayDiff"></span> ago)
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2018, 6, 28) ;
+    var last_acquired = new Date(2018, 6, 31) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -938,7 +944,7 @@ Last Game Acquired on <b> 2018-07-28 </b>
 <br><br><br><img src="images/fine.png" />
 
 <br><br>
-<b><u>Unplayed Games (68):</u></b>
+<b><u>Unplayed Games (70):</u></b>
 <br>
 <a href=https://www.boardgamegeek.com/boardgame/207117/ target='_blank'>Abandon Planet</a>
 <br> Above and Below: Expanded Edition (<a href=https://www.boardgamegeek.com/boardgame/175452/ target='_blank'>175452</a>, <a href=https://www.boardgamegeek.com/boardgame/229085/ target='_blank'>229085</a>)
@@ -965,6 +971,7 @@ Last Game Acquired on <b> 2018-07-28 </b>
 <br> <a href=https://www.boardgamegeek.com/boardgame/131366/ target='_blank'>Eight Minute Empire</a>
 <br> Eight-Minute Empire: Legends (<a href=https://www.boardgamegeek.com/boardgame/142326/ target='_blank'>142326</a>, <a href=https://www.boardgamegeek.com/boardgame/161363/ target='_blank'>161363</a>)
 <br> <a href=https://www.boardgamegeek.com/boardgame/223151/ target='_blank'>Entropy: Worlds Collide</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/176371/ target='_blank'>Explorers of the North Sea</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/209748/ target='_blank'>Find Your Seats</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/193738/ target='_blank'>Great Western Trail</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/171261/ target='_blank'>Hocus</a>
@@ -983,8 +990,8 @@ Last Game Acquired on <b> 2018-07-28 </b>
 <br> <a href=https://www.boardgamegeek.com/boardgame/142584/ target='_blank'>Moby Dick</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/236667/ target='_blank'>Near and Far: Amber Mines</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/205716/ target='_blank'>New Angeles</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/190798/ target='_blank'>North Sea Runesaga</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/147241/ target='_blank'>Oaxaca: Crafts of a Culture</a>
-<br> <a href=https://www.boardgamegeek.com/boardgame/183840/ target='_blank'>Oh My Goods!</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/207017/ target='_blank'>Pandemic: The Cure Expansion</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/198953/ target='_blank'>Pax Renaissance</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/224212/ target='_blank'>Red Scare</a>
@@ -993,6 +1000,7 @@ Last Game Acquired on <b> 2018-07-28 </b>
 <br> <a href=https://www.boardgamegeek.com/boardgame/242277/ target='_blank'>Scythe: Rise of Fenris</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/224151/ target='_blank'>Seii Daimyo</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/129904/ target='_blank'>Shadows Over Camelot: The Card Game</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/75547/ target='_blank'>Shipwrights of the North Sea</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/220188/ target='_blank'>Smash Up: Sheep</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/192619/ target='_blank'>Smiths of Winterforge</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/191679/ target='_blank'>Spaceteam: Triangulum Expansion</a>
