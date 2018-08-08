@@ -254,3 +254,4 @@
 2018-07-31  +   North Sea Runesaga              id190798
 2018-08-01  -   Jorvik
 2018-08-02  +   Sentinels of the Multiverse: Oblivaeon  id192926
+2018-08-07  -   Isle of Skye
