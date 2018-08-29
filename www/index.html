@@ -400,7 +400,9 @@
 [new Date(2018, 7, 23), 64, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Above and Below: Expanded Edition'],
 [new Date(2018, 7, 24), 62, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Near and Far: Amber Mines<br>Sentinels of the Multiverse: Oblivaeon'],
 [new Date(2018, 7, 25), 59, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Scythe: Rise of Fenris<br>Eight Minute Empire<br>Eight Minute Empire: Legends'],
-[new Date(2018, 7, 26), 59, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
+[new Date(2018, 7, 26), 59, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 7, 27), 59, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 7, 28), 59, '<b>Games Obtained:</b><br>Cauldron<br><b>Games Played:</b><br>Back to the Future']] ;
 
   function drawChart() {
 
@@ -800,7 +802,9 @@
 [new Date(2018, 7, 23), 64, '<div class="google-tooltip"><b>Thursday</b><br><b>Aug 23, 2018</b><br>Game Count: <b>64</b> (-1)<br>7-Day Rolling Net: <b>-2</b></div>'],
 [new Date(2018, 7, 24), 62, '<div class="google-tooltip"><b>Friday</b><br><b>Aug 24, 2018</b><br>Game Count: <b>62</b> (-2)<br>7-Day Rolling Net: <b>-3</b></div>'],
 [new Date(2018, 7, 25), 59, '<div class="google-tooltip"><b>Saturday</b><br><b>Aug 25, 2018</b><br>Game Count: <b>59</b> (-3)<br>7-Day Rolling Net: <b>-7</b></div>'],
-[new Date(2018, 7, 26), 59, '<div class="google-tooltip"><b>Sunday</b><br><b>Aug 26, 2018</b><br>Game Count: <b>59</b><br>7-Day Rolling Net: <b>-7</b></div>']] );
+[new Date(2018, 7, 26), 59, '<div class="google-tooltip"><b>Sunday</b><br><b>Aug 26, 2018</b><br>Game Count: <b>59</b><br>7-Day Rolling Net: <b>-7</b></div>'],
+[new Date(2018, 7, 27), 59, '<div class="google-tooltip"><b>Monday</b><br><b>Aug 27, 2018</b><br>Game Count: <b>59</b><br>7-Day Rolling Net: <b>-7</b></div>'],
+[new Date(2018, 7, 28), 59, '<div class="google-tooltip"><b>Tuesday</b><br><b>Aug 28, 2018</b><br>Game Count: <b>59</b><br>7-Day Rolling Net: <b>-7</b></div>']] );
 
     var options = {
       vAxis: {
@@ -955,13 +959,13 @@
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2018-08-18 </b>
+Last Game Acquired on <b> 2018-08-28 </b>
 (<span id="dayDiff"></span> ago)
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2018, 7, 18) ;
+    var last_acquired = new Date(2018, 7, 28) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -1001,11 +1005,11 @@ Last Game Acquired on <b> 2018-08-18 </b>
 <br> <a href=https://www.boardgamegeek.com/boardgame/188181/ target='_blank'>Avignon: A Clash of Popes</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/209741/ target='_blank'>Avignon: Pilgrimage</a>
 <br> BSG Expansions (<a href=https://www.boardgamegeek.com/boardgame/43539/ target='_blank'>43539</a>, <a href=https://www.boardgamegeek.com/boardgame/85905/ target='_blank'>85905</a>, <a href=https://www.boardgamegeek.com/boardgame/141648/ target='_blank'>141648</a>)
-<br> <a href=https://www.boardgamegeek.com/boardgame/71676/ target='_blank'>Back to the Future</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/202443/ target='_blank'>Barker's Row</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/211534/ target='_blank'>Bears vs Babies</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/98918/ target='_blank'>Bios: Genesis</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/38855/ target='_blank'>Carcassonne Catapult</a>
+<br> Cauldron (<a href=https://www.boardgamegeek.com/boardgame/221834/ target='_blank'>221834</a>, <a href=https://www.boardgamegeek.com/boardgame/225995/ target='_blank'>225995</a>, <a href=https://www.boardgamegeek.com/boardgame/225996/ target='_blank'>225996</a>, <a href=https://www.boardgamegeek.com/boardgame/225997/ target='_blank'>225997</a>, <a href=https://www.boardgamegeek.com/boardgame/225998/ target='_blank'>225998</a>)
 <br> <a href=https://www.boardgamegeek.com/boardgame/213266/ target='_blank'>Circle the Wagons</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/216132/ target='_blank'>Clans of Caledonia</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/224037/ target='_blank'>Codenames Duet</a>

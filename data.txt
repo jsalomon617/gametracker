@@ -267,3 +267,5 @@
 2018-08-25  -   Scythe: Rise of Fenris
 2018-08-25  -   Eight Minute Empire
 2018-08-25  -   Eight Minute Empire: Legends
+2018-08-28  -   Back to the Future
+2018-08-28  +   Cauldron        id221834,225995,225996,225997,225998
