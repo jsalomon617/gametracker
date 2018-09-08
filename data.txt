@@ -271,3 +271,5 @@
 2018-08-28  +   Sentinels: Cauldron             id221834,225995,225996,225997,225998
 2018-08-29  +   Castles of Mad King Ludwig      id155426
 2018-08-30  -   Sentinels: Cauldron
+2018-08-31  +   Red7    id161417
+2018-08-31  -   Red7

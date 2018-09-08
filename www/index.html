@@ -404,7 +404,15 @@
 [new Date(2018, 7, 27), 59, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 7, 28), 59, '<b>Games Obtained:</b><br>Sentinels: Cauldron<br><b>Games Played:</b><br>Back to the Future'],
 [new Date(2018, 7, 29), 60, '<b>Games Obtained:</b><br>Castles of Mad King Ludwig<br><b>No Games Played</b>'],
-[new Date(2018, 7, 30), 59, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Sentinels: Cauldron']] ;
+[new Date(2018, 7, 30), 59, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Sentinels: Cauldron'],
+[new Date(2018, 7, 31), 59, '<b>Games Obtained:</b><br>Red7<br><b>Games Played:</b><br>Red7'],
+[new Date(2018, 8, 1), 59, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 8, 2), 59, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 8, 3), 59, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 8, 4), 59, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 8, 5), 59, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 8, 6), 59, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 8, 7), 59, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -808,7 +816,15 @@
 [new Date(2018, 7, 27), 59, '<div class="google-tooltip"><b>Monday</b><br><b>Aug 27, 2018</b><br>Game Count: <b>59</b><br>7-Day Rolling Net: <b>-7</b></div>'],
 [new Date(2018, 7, 28), 59, '<div class="google-tooltip"><b>Tuesday</b><br><b>Aug 28, 2018</b><br>Game Count: <b>59</b><br>7-Day Rolling Net: <b>-7</b></div>'],
 [new Date(2018, 7, 29), 60, '<div class="google-tooltip"><b>Wednesday</b><br><b>Aug 29, 2018</b><br>Game Count: <b>60</b> (+1)<br>7-Day Rolling Net: <b>-5</b></div>'],
-[new Date(2018, 7, 30), 59, '<div class="google-tooltip"><b>Thursday</b><br><b>Aug 30, 2018</b><br>Game Count: <b>59</b> (-1)<br>7-Day Rolling Net: <b>-5</b></div>']] );
+[new Date(2018, 7, 30), 59, '<div class="google-tooltip"><b>Thursday</b><br><b>Aug 30, 2018</b><br>Game Count: <b>59</b> (-1)<br>7-Day Rolling Net: <b>-5</b></div>'],
+[new Date(2018, 7, 31), 59, '<div class="google-tooltip"><b>Friday</b><br><b>Aug 31, 2018</b><br>Game Count: <b>59</b><br>7-Day Rolling Net: <b>-3</b></div>'],
+[new Date(2018, 8, 1), 59, '<div class="google-tooltip"><b>Saturday</b><br><b>Sep 01, 2018</b><br>Game Count: <b>59</b><br>7-Day Rolling Net: <b>0</b></div>'],
+[new Date(2018, 8, 2), 59, '<div class="google-tooltip"><b>Sunday</b><br><b>Sep 02, 2018</b><br>Game Count: <b>59</b><br>7-Day Rolling Net: <b>0</b></div>'],
+[new Date(2018, 8, 3), 59, '<div class="google-tooltip"><b>Monday</b><br><b>Sep 03, 2018</b><br>Game Count: <b>59</b><br>7-Day Rolling Net: <b>0</b></div>'],
+[new Date(2018, 8, 4), 59, '<div class="google-tooltip"><b>Tuesday</b><br><b>Sep 04, 2018</b><br>Game Count: <b>59</b><br>7-Day Rolling Net: <b>0</b></div>'],
+[new Date(2018, 8, 5), 59, '<div class="google-tooltip"><b>Wednesday</b><br><b>Sep 05, 2018</b><br>Game Count: <b>59</b><br>7-Day Rolling Net: <b>-1</b></div>'],
+[new Date(2018, 8, 6), 59, '<div class="google-tooltip"><b>Thursday</b><br><b>Sep 06, 2018</b><br>Game Count: <b>59</b><br>7-Day Rolling Net: <b>0</b></div>'],
+[new Date(2018, 8, 7), 59, '<div class="google-tooltip"><b>Friday</b><br><b>Sep 07, 2018</b><br>Game Count: <b>59</b><br>7-Day Rolling Net: <b>0</b></div>']] );
 
     var options = {
       vAxis: {
@@ -963,13 +979,13 @@
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2018-08-29 </b>
+Last Game Acquired on <b> 2018-08-31 </b>
 (<span id="dayDiff"></span> ago)
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2018, 7, 29) ;
+    var last_acquired = new Date(2018, 7, 31) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
