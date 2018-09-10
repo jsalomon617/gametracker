@@ -273,3 +273,4 @@
 2018-08-30  -   Sentinels: Cauldron
 2018-08-31  +   Red7    id161417
 2018-08-31  -   Red7
+2018-09-09  -   BSG Expansions
