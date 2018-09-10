@@ -158,12 +158,16 @@ def generate_webpage(collection):
     # get the date we last acquired a game
     last_acquired = collection.last_acquired_date()
 
+    # get the last time that the count was lower than right now
+    lowest_since = collection.lowest_since()
+
     ### prepare them for formatting
     format = {
         "datedata": datedata,
         "datatable": datatable,
         "last_acquired": str(last_acquired),
         "js_last_acquired": date_js(last_acquired),
+        "lowest_since": str(lowest_since),
         "unplayed_count": len(unplayed),
         "unplayed_lines": "\n<br> ".join(unplayed_links),
     }
@@ -172,7 +176,9 @@ def generate_webpage(collection):
     content, matches = get_template()
 
     ### confirm that our formatting blob is exactly correct
-    if sorted(format.keys()) != sorted(matches):
+    if set(format.keys()) != set(matches):
+        print(sorted(format.keys()))
+        print(sorted(matches))
         raise ValueError("invalid formatting blob!")
 
     ### go ahead and do the formatting

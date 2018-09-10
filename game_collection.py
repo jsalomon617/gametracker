@@ -292,6 +292,25 @@ class Collection(object):
         """Return the date on which we last acquired a game"""
         return self.last_acquired
 
+    def lowest_since(self, given_date=TODAY):
+        """Return the most recent date with a lower playcount than the given date."""
+
+        given_count = self.count(given_date)
+        while given_date >= START:
+            # get the count of games on the relevant date
+            check_count = self.count(given_date)
+
+            # if it's lower than our given count, stop now
+            if check_count < given_count:
+                break
+
+            # otherwise, go back a day
+            given_date -= datetime.timedelta(days=1)
+
+        # if we're here, we're either on the right date or went back through the entire
+        # thing (at which point we call it good enough)
+        return given_date
+
     def tooltip(self, date):
         """Generate the line chart tooltip for a given date (using HTML)"""
 
