@@ -296,12 +296,13 @@ class Collection(object):
         """Return the most recent date with a lower playcount than the given date."""
 
         given_count = self.count(given_date)
+        given_date -= datetime.timedelta(days=1)
         while given_date >= START:
             # get the count of games on the relevant date
             check_count = self.count(given_date)
 
-            # if it's lower than our given count, stop now
-            if check_count < given_count:
+            # if it's lower than (or equal to) our given count, stop now
+            if check_count <= given_count:
                 break
 
             # otherwise, go back a day
