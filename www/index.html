@@ -417,7 +417,10 @@
 [new Date(2018, 8, 9), 58, '<b>No Games Obtained</b><br><b>Games Played:</b><br>BSG Expansions'],
 [new Date(2018, 8, 10), 59, '<b>Games Obtained:</b><br>Between Two Castles of Mad King Ludwig<br><b>No Games Played</b>'],
 [new Date(2018, 8, 11), 58, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Between Two Castles of Mad King Ludwig'],
-[new Date(2018, 8, 12), 57, '<b>No Games Obtained</b><br><b>Games Played:</b><br>The Ancient World']] ;
+[new Date(2018, 8, 12), 57, '<b>No Games Obtained</b><br><b>Games Played:</b><br>The Ancient World'],
+[new Date(2018, 8, 13), 57, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 8, 14), 58, '<b>Games Obtained:</b><br>Sprawlopolis<br><b>No Games Played</b>'],
+[new Date(2018, 8, 15), 58, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -834,7 +837,10 @@
 [new Date(2018, 8, 9), 58, '<div class="google-tooltip"><b>Sunday</b><br><b>Sep 09, 2018</b><br>Game Count: <b>58</b> (-1)<br>7-Day Rolling Net: <b>-1</b></div>'],
 [new Date(2018, 8, 10), 59, '<div class="google-tooltip"><b>Monday</b><br><b>Sep 10, 2018</b><br>Game Count: <b>59</b> (+1)<br>7-Day Rolling Net: <b>0</b></div>'],
 [new Date(2018, 8, 11), 58, '<div class="google-tooltip"><b>Tuesday</b><br><b>Sep 11, 2018</b><br>Game Count: <b>58</b> (-1)<br>7-Day Rolling Net: <b>-1</b></div>'],
-[new Date(2018, 8, 12), 57, '<div class="google-tooltip"><b>Wednesday</b><br><b>Sep 12, 2018</b><br>Game Count: <b>57</b> (-1)<br>7-Day Rolling Net: <b>-2</b></div>']] );
+[new Date(2018, 8, 12), 57, '<div class="google-tooltip"><b>Wednesday</b><br><b>Sep 12, 2018</b><br>Game Count: <b>57</b> (-1)<br>7-Day Rolling Net: <b>-2</b></div>'],
+[new Date(2018, 8, 13), 57, '<div class="google-tooltip"><b>Thursday</b><br><b>Sep 13, 2018</b><br>Game Count: <b>57</b><br>7-Day Rolling Net: <b>-2</b></div>'],
+[new Date(2018, 8, 14), 58, '<div class="google-tooltip"><b>Friday</b><br><b>Sep 14, 2018</b><br>Game Count: <b>58</b> (+1)<br>7-Day Rolling Net: <b>-1</b></div>'],
+[new Date(2018, 8, 15), 58, '<div class="google-tooltip"><b>Saturday</b><br><b>Sep 15, 2018</b><br>Game Count: <b>58</b><br>7-Day Rolling Net: <b>-1</b></div>']] );
 
     var options = {
       vAxis: {
@@ -989,16 +995,16 @@
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2018-09-10 </b>
+Last Game Acquired on <b> 2018-09-14 </b>
 (<span id="dayDiff"></span> ago)
 <br>
-Currently Unplayed: <b> 57 </b>
-(Lowest Since <b> 2017-09-28) </b>
+Currently Unplayed: <b> 58 </b>
+(Lowest Since <b> 2018-09-13) </b>
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2018, 8, 10) ;
+    var last_acquired = new Date(2018, 8, 14) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -1031,7 +1037,7 @@ Currently Unplayed: <b> 57 </b>
 <br><br><br><img src="images/fine.png" />
 
 <br><br>
-<b><u>Unplayed Games (57):</u></b>
+<b><u>Unplayed Games (58):</u></b>
 <br>
 <a href=https://www.boardgamegeek.com/boardgame/207117/ target='_blank'>Abandon Planet</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/13122/ target='_blank'>Antiquity</a>
@@ -1080,6 +1086,7 @@ Currently Unplayed: <b> 57 </b>
 <br> <a href=https://www.boardgamegeek.com/boardgame/220188/ target='_blank'>Smash Up: Sheep</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/192619/ target='_blank'>Smiths of Winterforge</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/191679/ target='_blank'>Spaceteam: Triangulum Expansion</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/251658/ target='_blank'>Sprawlopolis</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/120677/ target='_blank'>Terra Mystica</a>
 <br> Terraforming Mars expansions (<a href=https://www.boardgamegeek.com/boardgame/218127/ target='_blank'>218127</a>, <a href=https://www.boardgamegeek.com/boardgame/231965/ target='_blank'>231965</a>)
 <br> <a href=https://www.boardgamegeek.com/boardgame/213268/ target='_blank'>That Snow Moon</a>
