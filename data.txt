@@ -279,3 +279,5 @@
 2018-09-12  -   The Ancient World
 2018-09-14  +   Sprawlopolis    id251658
 2018-09-18  -   Castles of Mad King Ludwig
+2018-09-19  -   Oaxaca: Crafts of a Culture
+2018-09-19  -   Pandemic: The Cure Expansion
