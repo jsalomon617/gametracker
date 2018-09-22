@@ -281,3 +281,5 @@
 2018-09-18  -   Castles of Mad King Ludwig
 2018-09-19  -   Oaxaca: Crafts of a Culture
 2018-09-19  -   Pandemic: The Cure Expansion
+2018-09-21  +   Rescue Polar Bears  id229370
+2018-09-21  -   Rescue Polar Bears

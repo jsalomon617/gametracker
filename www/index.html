@@ -425,7 +425,8 @@
 [new Date(2018, 8, 17), 58, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 8, 18), 57, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Castles of Mad King Ludwig'],
 [new Date(2018, 8, 19), 55, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Oaxaca: Crafts of a Culture<br>Pandemic: The Cure Expansion'],
-[new Date(2018, 8, 20), 55, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
+[new Date(2018, 8, 20), 55, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 8, 21), 55, '<b>Games Obtained:</b><br>Rescue Polar Bears<br><b>Games Played:</b><br>Rescue Polar Bears']] ;
 
   function drawChart() {
 
@@ -850,7 +851,8 @@
 [new Date(2018, 8, 17), 58, '<div class="google-tooltip"><b>Monday</b><br><b>Sep 17, 2018</b><br>Game Count: <b>58</b><br>7-Day Rolling Net: <b>-1</b></div>'],
 [new Date(2018, 8, 18), 57, '<div class="google-tooltip"><b>Tuesday</b><br><b>Sep 18, 2018</b><br>Game Count: <b>57</b> (-1)<br>7-Day Rolling Net: <b>-1</b></div>'],
 [new Date(2018, 8, 19), 55, '<div class="google-tooltip"><b>Wednesday</b><br><b>Sep 19, 2018</b><br>Game Count: <b>55</b> (-2)<br>7-Day Rolling Net: <b>-2</b></div>'],
-[new Date(2018, 8, 20), 55, '<div class="google-tooltip"><b>Thursday</b><br><b>Sep 20, 2018</b><br>Game Count: <b>55</b><br>7-Day Rolling Net: <b>-2</b></div>']] );
+[new Date(2018, 8, 20), 55, '<div class="google-tooltip"><b>Thursday</b><br><b>Sep 20, 2018</b><br>Game Count: <b>55</b><br>7-Day Rolling Net: <b>-2</b></div>'],
+[new Date(2018, 8, 21), 55, '<div class="google-tooltip"><b>Friday</b><br><b>Sep 21, 2018</b><br>Game Count: <b>55</b><br>7-Day Rolling Net: <b>-3</b></div>']] );
 
     var options = {
       vAxis: {
@@ -1005,7 +1007,7 @@
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2018-09-14 </b>
+Last Game Acquired on <b> 2018-09-21 </b>
 (<span id="dayDiff"></span> ago)
 <br>
 Currently Unplayed: <b> 55 </b>
@@ -1014,7 +1016,7 @@ Currently Unplayed: <b> 55 </b>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2018, 8, 14) ;
+    var last_acquired = new Date(2018, 8, 21) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
