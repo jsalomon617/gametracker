@@ -290,3 +290,5 @@
 2018-10-17  +   Covalence   id184663
 2018-10-17  +   Ion         id174611
 2018-10-27  +   Cogs and Commissars     id238972
+2018-10-30  -   Covalence
+2018-10-30  -   Cogs and Commissars
