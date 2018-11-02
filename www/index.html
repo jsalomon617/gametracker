@@ -465,7 +465,9 @@
 [new Date(2018, 9, 27), 60, '<b>Games Obtained:</b><br>Cogs and Commissars<br><b>No Games Played</b>'],
 [new Date(2018, 9, 28), 60, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 9, 29), 60, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
-[new Date(2018, 9, 30), 58, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Covalence<br>Cogs and Commissars']] ;
+[new Date(2018, 9, 30), 58, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Covalence<br>Cogs and Commissars'],
+[new Date(2018, 9, 31), 58, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 10, 1), 59, '<b>Games Obtained:</b><br>Wu Wei<br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -930,7 +932,9 @@
 [new Date(2018, 9, 27), 60, '<div class="google-tooltip"><b>Saturday</b><br><b>Oct 27, 2018</b><br>Game Count: <b>60</b> (+1)<br>7-Day Rolling Net: <b>+1</b></div>'],
 [new Date(2018, 9, 28), 60, '<div class="google-tooltip"><b>Sunday</b><br><b>Oct 28, 2018</b><br>Game Count: <b>60</b><br>7-Day Rolling Net: <b>+1</b></div>'],
 [new Date(2018, 9, 29), 60, '<div class="google-tooltip"><b>Monday</b><br><b>Oct 29, 2018</b><br>Game Count: <b>60</b><br>7-Day Rolling Net: <b>+1</b></div>'],
-[new Date(2018, 9, 30), 58, '<div class="google-tooltip"><b>Tuesday</b><br><b>Oct 30, 2018</b><br>Game Count: <b>58</b> (-2)<br>7-Day Rolling Net: <b>-1</b></div>']] );
+[new Date(2018, 9, 30), 58, '<div class="google-tooltip"><b>Tuesday</b><br><b>Oct 30, 2018</b><br>Game Count: <b>58</b> (-2)<br>7-Day Rolling Net: <b>-1</b></div>'],
+[new Date(2018, 9, 31), 58, '<div class="google-tooltip"><b>Wednesday</b><br><b>Oct 31, 2018</b><br>Game Count: <b>58</b><br>7-Day Rolling Net: <b>-1</b></div>'],
+[new Date(2018, 10, 1), 59, '<div class="google-tooltip"><b>Thursday</b><br><b>Nov 01, 2018</b><br>Game Count: <b>59</b> (+1)<br>7-Day Rolling Net: <b>0</b></div>']] );
 
     var options = {
       vAxis: {
@@ -1085,16 +1089,16 @@
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2018-10-27 </b>
+Last Game Acquired on <b> 2018-11-01 </b>
 (<span id="dayDiff"></span> ago)
 <br>
-Currently Unplayed: <b> 58 </b>
-(Lowest Since <b> 2018-10-16) </b>
+Currently Unplayed: <b> 59 </b>
+(Lowest Since <b> 2018-10-31) </b>
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2018, 9, 27) ;
+    var last_acquired = new Date(2018, 10, 1) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -1127,7 +1131,7 @@ Currently Unplayed: <b> 58 </b>
 <br><br><br><img src="images/fine.png" />
 
 <br><br>
-<b><u>Unplayed Games (58):</u></b>
+<b><u>Unplayed Games (59):</u></b>
 <br>
 <a href=https://www.boardgamegeek.com/boardgame/207117/ target='_blank'>Abandon Planet</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/13122/ target='_blank'>Antiquity</a>
@@ -1187,5 +1191,6 @@ Currently Unplayed: <b> 58 </b>
 <br> Viticulture: Aboriculture and Formaggio (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/227266/ target='_blank'>Wagon Wheels</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/185154/ target='_blank'>Wizard School</a>
+<br> Wu Wei (no BGG link)
 
 </body></html>
