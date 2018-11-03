@@ -467,7 +467,8 @@
 [new Date(2018, 9, 29), 60, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 9, 30), 58, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Covalence<br>Cogs and Commissars'],
 [new Date(2018, 9, 31), 58, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
-[new Date(2018, 10, 1), 59, '<b>Games Obtained:</b><br>Wu Wei<br><b>No Games Played</b>']] ;
+[new Date(2018, 10, 1), 59, '<b>Games Obtained:</b><br>Wu Wei<br><b>No Games Played</b>'],
+[new Date(2018, 10, 2), 60, '<b>Games Obtained:</b><br>Deadwood 1876<br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -934,7 +935,8 @@
 [new Date(2018, 9, 29), 60, '<div class="google-tooltip"><b>Monday</b><br><b>Oct 29, 2018</b><br>Game Count: <b>60</b><br>7-Day Rolling Net: <b>+1</b></div>'],
 [new Date(2018, 9, 30), 58, '<div class="google-tooltip"><b>Tuesday</b><br><b>Oct 30, 2018</b><br>Game Count: <b>58</b> (-2)<br>7-Day Rolling Net: <b>-1</b></div>'],
 [new Date(2018, 9, 31), 58, '<div class="google-tooltip"><b>Wednesday</b><br><b>Oct 31, 2018</b><br>Game Count: <b>58</b><br>7-Day Rolling Net: <b>-1</b></div>'],
-[new Date(2018, 10, 1), 59, '<div class="google-tooltip"><b>Thursday</b><br><b>Nov 01, 2018</b><br>Game Count: <b>59</b> (+1)<br>7-Day Rolling Net: <b>0</b></div>']] );
+[new Date(2018, 10, 1), 59, '<div class="google-tooltip"><b>Thursday</b><br><b>Nov 01, 2018</b><br>Game Count: <b>59</b> (+1)<br>7-Day Rolling Net: <b>0</b></div>'],
+[new Date(2018, 10, 2), 60, '<div class="google-tooltip"><b>Friday</b><br><b>Nov 02, 2018</b><br>Game Count: <b>60</b> (+1)<br>7-Day Rolling Net: <b>+1</b></div>']] );
 
     var options = {
       vAxis: {
@@ -1089,16 +1091,16 @@
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2018-11-01 </b>
+Last Game Acquired on <b> 2018-11-02 </b>
 (<span id="dayDiff"></span> ago)
 <br>
-Currently Unplayed: <b> 59 </b>
-(Lowest Since <b> 2018-10-31) </b>
+Currently Unplayed: <b> 60 </b>
+(Lowest Since <b> 2018-11-01) </b>
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2018, 10, 1) ;
+    var last_acquired = new Date(2018, 10, 2) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -1131,7 +1133,7 @@ Currently Unplayed: <b> 59 </b>
 <br><br><br><img src="images/fine.png" />
 
 <br><br>
-<b><u>Unplayed Games (59):</u></b>
+<b><u>Unplayed Games (60):</u></b>
 <br>
 <a href=https://www.boardgamegeek.com/boardgame/207117/ target='_blank'>Abandon Planet</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/13122/ target='_blank'>Antiquity</a>
@@ -1146,6 +1148,7 @@ Currently Unplayed: <b> 59 </b>
 <br> <a href=https://www.boardgamegeek.com/boardgame/224037/ target='_blank'>Codenames Duet</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/148931/ target='_blank'>Coup Reformation</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/230534/ target='_blank'>Dark Moon Expansion</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/245197/ target='_blank'>Deadwood 1876</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/96260/ target='_blank'>Dominant Species: The Card Game</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/154904/ target='_blank'>Easy Breezy Travel Agency</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/72125/ target='_blank'>Eclipse</a>
