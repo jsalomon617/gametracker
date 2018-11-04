@@ -294,3 +294,5 @@
 2018-10-30  -   Cogs and Commissars
 2018-11-01  +   Wu Wei      id153811
 2018-11-02  +   Deadwood 1876       id245197
+2018-11-03  -   Subatomic
+2018-11-03  -   Ion
