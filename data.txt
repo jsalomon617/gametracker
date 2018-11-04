@@ -286,7 +286,7 @@
 2018-10-01  +   Viticulture: Aboriculture and Formaggio
 2018-10-08  +   Scythe Encounters           id262151
 2018-10-13  -   Terra Mystica
-2018-10-17  +   Subtomic    id207910
+2018-10-17  +   Subatomic    id207910
 2018-10-17  +   Covalence   id184663
 2018-10-17  +   Ion         id174611
 2018-10-27  +   Cogs and Commissars     id238972
