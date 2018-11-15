@@ -472,7 +472,15 @@
 [new Date(2018, 10, 3), 58, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Subatomic<br>Ion'],
 [new Date(2018, 10, 4), 58, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 10, 5), 58, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
-[new Date(2018, 10, 6), 57, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Wu Wei']] ;
+[new Date(2018, 10, 6), 57, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Wu Wei'],
+[new Date(2018, 10, 7), 57, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 10, 8), 57, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 10, 9), 57, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 10, 10), 57, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 10, 11), 57, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 10, 12), 57, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 10, 13), 57, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 10, 14), 57, '<b>Games Obtained:</b><br>Architects of the West Kingdom<br><b>Games Played:</b><br>Architects of the West Kingdom']] ;
 
   function drawChart() {
 
@@ -944,7 +952,15 @@
 [new Date(2018, 10, 3), 58, '<div class="google-tooltip"><b>Saturday</b><br><b>Nov 03, 2018</b><br>Game Count: <b>58</b> (-2)<br>7-Day Rolling Net: <b>-2</b></div>'],
 [new Date(2018, 10, 4), 58, '<div class="google-tooltip"><b>Sunday</b><br><b>Nov 04, 2018</b><br>Game Count: <b>58</b><br>7-Day Rolling Net: <b>-2</b></div>'],
 [new Date(2018, 10, 5), 58, '<div class="google-tooltip"><b>Monday</b><br><b>Nov 05, 2018</b><br>Game Count: <b>58</b><br>7-Day Rolling Net: <b>-2</b></div>'],
-[new Date(2018, 10, 6), 57, '<div class="google-tooltip"><b>Tuesday</b><br><b>Nov 06, 2018</b><br>Game Count: <b>57</b> (-1)<br>7-Day Rolling Net: <b>-1</b></div>']] );
+[new Date(2018, 10, 6), 57, '<div class="google-tooltip"><b>Tuesday</b><br><b>Nov 06, 2018</b><br>Game Count: <b>57</b> (-1)<br>7-Day Rolling Net: <b>-1</b></div>'],
+[new Date(2018, 10, 7), 57, '<div class="google-tooltip"><b>Wednesday</b><br><b>Nov 07, 2018</b><br>Game Count: <b>57</b><br>7-Day Rolling Net: <b>-1</b></div>'],
+[new Date(2018, 10, 8), 57, '<div class="google-tooltip"><b>Thursday</b><br><b>Nov 08, 2018</b><br>Game Count: <b>57</b><br>7-Day Rolling Net: <b>-2</b></div>'],
+[new Date(2018, 10, 9), 57, '<div class="google-tooltip"><b>Friday</b><br><b>Nov 09, 2018</b><br>Game Count: <b>57</b><br>7-Day Rolling Net: <b>-3</b></div>'],
+[new Date(2018, 10, 10), 57, '<div class="google-tooltip"><b>Saturday</b><br><b>Nov 10, 2018</b><br>Game Count: <b>57</b><br>7-Day Rolling Net: <b>-1</b></div>'],
+[new Date(2018, 10, 11), 57, '<div class="google-tooltip"><b>Sunday</b><br><b>Nov 11, 2018</b><br>Game Count: <b>57</b><br>7-Day Rolling Net: <b>-1</b></div>'],
+[new Date(2018, 10, 12), 57, '<div class="google-tooltip"><b>Monday</b><br><b>Nov 12, 2018</b><br>Game Count: <b>57</b><br>7-Day Rolling Net: <b>-1</b></div>'],
+[new Date(2018, 10, 13), 57, '<div class="google-tooltip"><b>Tuesday</b><br><b>Nov 13, 2018</b><br>Game Count: <b>57</b><br>7-Day Rolling Net: <b>0</b></div>'],
+[new Date(2018, 10, 14), 57, '<div class="google-tooltip"><b>Wednesday</b><br><b>Nov 14, 2018</b><br>Game Count: <b>57</b><br>7-Day Rolling Net: <b>0</b></div>']] );
 
     var options = {
       vAxis: {
@@ -1099,7 +1115,7 @@
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2018-11-02 </b>
+Last Game Acquired on <b> 2018-11-14 </b>
 (<span id="dayDiff"></span> ago)
 <br>
 Currently Unplayed: <b> 57 </b>
@@ -1108,7 +1124,7 @@ Currently Unplayed: <b> 57 </b>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2018, 10, 2) ;
+    var last_acquired = new Date(2018, 10, 14) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
