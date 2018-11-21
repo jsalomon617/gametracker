@@ -484,7 +484,9 @@
 [new Date(2018, 10, 15), 57, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 10, 16), 57, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 10, 17), 57, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
-[new Date(2018, 10, 18), 58, '<b>Games Obtained:</b><br>Robin Hood and the Merry Men<br><b>No Games Played</b>']] ;
+[new Date(2018, 10, 18), 58, '<b>Games Obtained:</b><br>Robin Hood and the Merry Men<br><b>No Games Played</b>'],
+[new Date(2018, 10, 19), 58, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 10, 20), 58, '<b>Games Obtained:</b><br>Tokyo Metro<br><b>Games Played:</b><br>Tokyo Metro']] ;
 
   function drawChart() {
 
@@ -968,7 +970,9 @@
 [new Date(2018, 10, 15), 57, '<div class="google-tooltip"><b>Thursday</b><br><b>Nov 15, 2018</b><br>Game Count: <b>57</b><br>7-Day Rolling Net: <b>0</b></div>'],
 [new Date(2018, 10, 16), 57, '<div class="google-tooltip"><b>Friday</b><br><b>Nov 16, 2018</b><br>Game Count: <b>57</b><br>7-Day Rolling Net: <b>0</b></div>'],
 [new Date(2018, 10, 17), 57, '<div class="google-tooltip"><b>Saturday</b><br><b>Nov 17, 2018</b><br>Game Count: <b>57</b><br>7-Day Rolling Net: <b>0</b></div>'],
-[new Date(2018, 10, 18), 58, '<div class="google-tooltip"><b>Sunday</b><br><b>Nov 18, 2018</b><br>Game Count: <b>58</b> (+1)<br>7-Day Rolling Net: <b>+1</b></div>']] );
+[new Date(2018, 10, 18), 58, '<div class="google-tooltip"><b>Sunday</b><br><b>Nov 18, 2018</b><br>Game Count: <b>58</b> (+1)<br>7-Day Rolling Net: <b>+1</b></div>'],
+[new Date(2018, 10, 19), 58, '<div class="google-tooltip"><b>Monday</b><br><b>Nov 19, 2018</b><br>Game Count: <b>58</b><br>7-Day Rolling Net: <b>+1</b></div>'],
+[new Date(2018, 10, 20), 58, '<div class="google-tooltip"><b>Tuesday</b><br><b>Nov 20, 2018</b><br>Game Count: <b>58</b><br>7-Day Rolling Net: <b>+1</b></div>']] );
 
     var options = {
       vAxis: {
@@ -1123,7 +1127,7 @@
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2018-11-18 </b>
+Last Game Acquired on <b> 2018-11-20 </b>
 (<span id="dayDiff"></span> ago)
 <br>
 Currently Unplayed: <b> 58 </b>
@@ -1132,7 +1136,7 @@ Currently Unplayed: <b> 58 </b>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2018, 10, 18) ;
+    var last_acquired = new Date(2018, 10, 20) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
