@@ -303,3 +303,5 @@
 2018-11-20  +   Tokyo Metro     id235344
 2018-11-20  -   Tokyo Metro
 2018-11-22  +   Samurai         id3
+2018-11-24  -   Samurai
+2018-11-24  +   City of Gears       id131682

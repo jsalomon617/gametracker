@@ -489,7 +489,9 @@
 [new Date(2018, 10, 20), 58, '<b>Games Obtained:</b><br>Tokyo Metro<br><b>Games Played:</b><br>Tokyo Metro'],
 [new Date(2018, 10, 21), 58, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 10, 22), 59, '<b>Games Obtained:</b><br>Samurai<br><b>No Games Played</b>'],
-[new Date(2018, 10, 23), 59, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
+[new Date(2018, 10, 23), 59, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 10, 24), 59, '<b>Games Obtained:</b><br>City of Gears<br><b>Games Played:</b><br>Samurai'],
+[new Date(2018, 10, 25), 59, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -978,7 +980,9 @@
 [new Date(2018, 10, 20), 58, '<div class="google-tooltip"><b>Tuesday</b><br><b>Nov 20, 2018</b><br>Game Count: <b>58</b><br>7-Day Rolling Net: <b>+1</b></div>'],
 [new Date(2018, 10, 21), 58, '<div class="google-tooltip"><b>Wednesday</b><br><b>Nov 21, 2018</b><br>Game Count: <b>58</b><br>7-Day Rolling Net: <b>+1</b></div>'],
 [new Date(2018, 10, 22), 59, '<div class="google-tooltip"><b>Thursday</b><br><b>Nov 22, 2018</b><br>Game Count: <b>59</b> (+1)<br>7-Day Rolling Net: <b>+2</b></div>'],
-[new Date(2018, 10, 23), 59, '<div class="google-tooltip"><b>Friday</b><br><b>Nov 23, 2018</b><br>Game Count: <b>59</b><br>7-Day Rolling Net: <b>+2</b></div>']] );
+[new Date(2018, 10, 23), 59, '<div class="google-tooltip"><b>Friday</b><br><b>Nov 23, 2018</b><br>Game Count: <b>59</b><br>7-Day Rolling Net: <b>+2</b></div>'],
+[new Date(2018, 10, 24), 59, '<div class="google-tooltip"><b>Saturday</b><br><b>Nov 24, 2018</b><br>Game Count: <b>59</b><br>7-Day Rolling Net: <b>+2</b></div>'],
+[new Date(2018, 10, 25), 59, '<div class="google-tooltip"><b>Sunday</b><br><b>Nov 25, 2018</b><br>Game Count: <b>59</b><br>7-Day Rolling Net: <b>+1</b></div>']] );
 
     var options = {
       vAxis: {
@@ -1133,7 +1137,7 @@
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2018-11-22 </b>
+Last Game Acquired on <b> 2018-11-24 </b>
 (<span id="dayDiff"></span> ago)
 <br>
 Currently Unplayed: <b> 59 </b>
@@ -1142,7 +1146,7 @@ Currently Unplayed: <b> 59 </b>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2018, 10, 22) ;
+    var last_acquired = new Date(2018, 10, 24) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -1186,6 +1190,7 @@ Currently Unplayed: <b> 59 </b>
 <br> <a href=https://www.boardgamegeek.com/boardgame/98918/ target='_blank'>Bios: Genesis</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/38855/ target='_blank'>Carcassonne Catapult</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/213266/ target='_blank'>Circle the Wagons</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/131682/ target='_blank'>City of Gears</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/216132/ target='_blank'>Clans of Caledonia</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/224037/ target='_blank'>Codenames Duet</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/148931/ target='_blank'>Coup Reformation</a>
@@ -1216,7 +1221,6 @@ Currently Unplayed: <b> 59 </b>
 <br> <a href=https://www.boardgamegeek.com/boardgame/224212/ target='_blank'>Red Scare</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/232666/ target='_blank'>Robin Hood and the Merry Men</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/175549/ target='_blank'>Salem: 1692</a>
-<br> <a href=https://www.boardgamegeek.com/boardgame/3/ target='_blank'>Samurai</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/195296/ target='_blank'>Scuttle!</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/262151/ target='_blank'>Scythe Encounters</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/224151/ target='_blank'>Seii Daimyo</a>
