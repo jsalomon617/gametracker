@@ -491,7 +491,9 @@
 [new Date(2018, 10, 22), 59, '<b>Games Obtained:</b><br>Samurai<br><b>No Games Played</b>'],
 [new Date(2018, 10, 23), 59, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 10, 24), 59, '<b>Games Obtained:</b><br>City of Gears<br><b>Games Played:</b><br>Samurai'],
-[new Date(2018, 10, 25), 59, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
+[new Date(2018, 10, 25), 59, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 10, 26), 61, '<b>Games Obtained:</b><br>Cerebria: The Inside World<br>Cerebria: The Card Game<br><b>No Games Played</b>'],
+[new Date(2018, 10, 27), 61, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -982,7 +984,9 @@
 [new Date(2018, 10, 22), 59, '<div class="google-tooltip"><b>Thursday</b><br><b>Nov 22, 2018</b><br>Game Count: <b>59</b> (+1)<br>7-Day Rolling Net: <b>+2</b></div>'],
 [new Date(2018, 10, 23), 59, '<div class="google-tooltip"><b>Friday</b><br><b>Nov 23, 2018</b><br>Game Count: <b>59</b><br>7-Day Rolling Net: <b>+2</b></div>'],
 [new Date(2018, 10, 24), 59, '<div class="google-tooltip"><b>Saturday</b><br><b>Nov 24, 2018</b><br>Game Count: <b>59</b><br>7-Day Rolling Net: <b>+2</b></div>'],
-[new Date(2018, 10, 25), 59, '<div class="google-tooltip"><b>Sunday</b><br><b>Nov 25, 2018</b><br>Game Count: <b>59</b><br>7-Day Rolling Net: <b>+1</b></div>']] );
+[new Date(2018, 10, 25), 59, '<div class="google-tooltip"><b>Sunday</b><br><b>Nov 25, 2018</b><br>Game Count: <b>59</b><br>7-Day Rolling Net: <b>+1</b></div>'],
+[new Date(2018, 10, 26), 61, '<div class="google-tooltip"><b>Monday</b><br><b>Nov 26, 2018</b><br>Game Count: <b>61</b> (+2)<br>7-Day Rolling Net: <b>+3</b></div>'],
+[new Date(2018, 10, 27), 61, '<div class="google-tooltip"><b>Tuesday</b><br><b>Nov 27, 2018</b><br>Game Count: <b>61</b><br>7-Day Rolling Net: <b>+3</b></div>']] );
 
     var options = {
       vAxis: {
@@ -1137,16 +1141,16 @@
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2018-11-24 </b>
+Last Game Acquired on <b> 2018-11-26 </b>
 (<span id="dayDiff"></span> ago)
 <br>
-Currently Unplayed: <b> 59 </b>
-(Lowest Since <b> 2018-11-21) </b>
+Currently Unplayed: <b> 61 </b>
+(Lowest Since <b> 2018-11-25) </b>
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2018, 10, 24) ;
+    var last_acquired = new Date(2018, 10, 26) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -1179,7 +1183,7 @@ Currently Unplayed: <b> 59 </b>
 <br><br><br><img src="images/fine.png" />
 
 <br><br>
-<b><u>Unplayed Games (59):</u></b>
+<b><u>Unplayed Games (61):</u></b>
 <br>
 <a href=https://www.boardgamegeek.com/boardgame/207117/ target='_blank'>Abandon Planet</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/13122/ target='_blank'>Antiquity</a>
@@ -1189,6 +1193,8 @@ Currently Unplayed: <b> 59 </b>
 <br> <a href=https://www.boardgamegeek.com/boardgame/211534/ target='_blank'>Bears vs Babies</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/98918/ target='_blank'>Bios: Genesis</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/38855/ target='_blank'>Carcassonne Catapult</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/236304/ target='_blank'>Cerebria: The Card Game</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/236781/ target='_blank'>Cerebria: The Inside World</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/213266/ target='_blank'>Circle the Wagons</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/131682/ target='_blank'>City of Gears</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/216132/ target='_blank'>Clans of Caledonia</a>
