@@ -311,3 +311,7 @@
 2018-12-11  +   Dinosaur Island: Totally Liquid     id248591
 2018-12-11  +   Duelosaur Island                    id247236
 2018-12-12  -   Dinosaur Island: Totally Liquid
+2018-12-14  +   Keyper                      id212516
+2018-12-14  +   Key to the City: London     id205507
+2018-12-14  +   Key Flow                    id252446
+2018-12-14  +   Keyflower expansion         id144058,163572,205504,261369

@@ -508,7 +508,9 @@
 [new Date(2018, 11, 9), 62, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 11, 10), 62, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 11, 11), 64, '<b>Games Obtained:</b><br>Dinosaur Island: Totally Liquid<br>Duelosaur Island<br><b>No Games Played</b>'],
-[new Date(2018, 11, 12), 63, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Dinosaur Island: Totally Liquid']] ;
+[new Date(2018, 11, 12), 63, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Dinosaur Island: Totally Liquid'],
+[new Date(2018, 11, 13), 63, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2018, 11, 14), 67, '<b>Games Obtained:</b><br>Keyper<br>Key to the City: London<br>Key Flow<br>Keyflower expansion<br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -1016,7 +1018,9 @@
 [new Date(2018, 11, 9), 62, '<div class="google-tooltip"><b>Sunday</b><br><b>Dec 09, 2018</b><br>Game Count: <b>62</b><br>7-Day Rolling Net: <b>+1</b></div>'],
 [new Date(2018, 11, 10), 62, '<div class="google-tooltip"><b>Monday</b><br><b>Dec 10, 2018</b><br>Game Count: <b>62</b><br>7-Day Rolling Net: <b>+1</b></div>'],
 [new Date(2018, 11, 11), 64, '<div class="google-tooltip"><b>Tuesday</b><br><b>Dec 11, 2018</b><br>Game Count: <b>64</b> (+2)<br>7-Day Rolling Net: <b>+3</b></div>'],
-[new Date(2018, 11, 12), 63, '<div class="google-tooltip"><b>Wednesday</b><br><b>Dec 12, 2018</b><br>Game Count: <b>63</b> (-1)<br>7-Day Rolling Net: <b>+1</b></div>']] );
+[new Date(2018, 11, 12), 63, '<div class="google-tooltip"><b>Wednesday</b><br><b>Dec 12, 2018</b><br>Game Count: <b>63</b> (-1)<br>7-Day Rolling Net: <b>+1</b></div>'],
+[new Date(2018, 11, 13), 63, '<div class="google-tooltip"><b>Thursday</b><br><b>Dec 13, 2018</b><br>Game Count: <b>63</b><br>7-Day Rolling Net: <b>+1</b></div>'],
+[new Date(2018, 11, 14), 67, '<div class="google-tooltip"><b>Friday</b><br><b>Dec 14, 2018</b><br>Game Count: <b>67</b> (+4)<br>7-Day Rolling Net: <b>+5</b></div>']] );
 
     var options = {
       vAxis: {
@@ -1171,16 +1175,16 @@
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2018-12-11 </b>
+Last Game Acquired on <b> 2018-12-14 </b>
 (<span id="dayDiff"></span> ago)
 <br>
-Currently Unplayed: <b> 63 </b>
-(Lowest Since <b> 2018-12-10) </b>
+Currently Unplayed: <b> 67 </b>
+(Lowest Since <b> 2018-12-13) </b>
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2018, 11, 11) ;
+    var last_acquired = new Date(2018, 11, 14) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -1213,7 +1217,7 @@ Currently Unplayed: <b> 63 </b>
 <br><br><br><img src="images/fine.png" />
 
 <br><br>
-<b><u>Unplayed Games (63):</u></b>
+<b><u>Unplayed Games (67):</u></b>
 <br>
 <a href=https://www.boardgamegeek.com/boardgame/207117/ target='_blank'>Abandon Planet</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/13122/ target='_blank'>Antiquity</a>
@@ -1242,6 +1246,10 @@ Currently Unplayed: <b> 63 </b>
 <br> <a href=https://www.boardgamegeek.com/boardgame/193738/ target='_blank'>Great Western Trail</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/171261/ target='_blank'>Hocus</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/19777/ target='_blank'>Indonesia</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/252446/ target='_blank'>Key Flow</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/205507/ target='_blank'>Key to the City: London</a>
+<br> Keyflower expansion (<a href=https://www.boardgamegeek.com/boardgame/144058/ target='_blank'>144058</a>, <a href=https://www.boardgamegeek.com/boardgame/163572/ target='_blank'>163572</a>, <a href=https://www.boardgamegeek.com/boardgame/205504/ target='_blank'>205504</a>, <a href=https://www.boardgamegeek.com/boardgame/261369/ target='_blank'>261369</a>)
+<br> <a href=https://www.boardgamegeek.com/boardgame/212516/ target='_blank'>Keyper</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/239770/ target='_blank'>Kiek</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/3699/ target='_blank'>Killer Bunnies</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/169393/ target='_blank'>Lord of the P.I.G.S.</a>
