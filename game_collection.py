@@ -343,8 +343,8 @@ class Collection(object):
         lines.append(countstr)
 
         # get the rolling 7-day net
-        netweek = "7-Day Rolling Net: <b>%s</b>" % delta_prefix(self.net_week(date))
-        lines.append(netweek)
+        #netweek = "7-Day Rolling Net: <b>%s</b>" % delta_prefix(self.net_week(date))
+        #lines.append(netweek)
 
         # put it all together
         multiline = "<br>".join(lines)
