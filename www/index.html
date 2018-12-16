@@ -511,7 +511,7 @@
 [new Date(2018, 11, 12), 63, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Dinosaur Island: Totally Liquid'],
 [new Date(2018, 11, 13), 63, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2018, 11, 14), 67, '<b>Games Obtained:</b><br>Keyper<br>Key to the City: London<br>Key Flow<br>Keyflower expansion<br><b>No Games Played</b>'],
-[new Date(2018, 11, 15), 67, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
+[new Date(2018, 11, 15), 67, '<b>Games Obtained:</b><br>Good Dog, Bad Zombie<br><b>Games Played:</b><br>Good Dog, Bad Zombie']] ;
 
   function drawChart() {
 
@@ -1177,7 +1177,7 @@
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2018-12-14 </b>
+Last Game Acquired on <b> 2018-12-15 </b>
 (<span id="dayDiff"></span> ago)
 <br>
 Currently Unplayed: <b> 67 </b>
@@ -1186,7 +1186,7 @@ Currently Unplayed: <b> 67 </b>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2018, 11, 14) ;
+    var last_acquired = new Date(2018, 11, 15) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
