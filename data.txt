@@ -317,3 +317,13 @@
 2018-12-14  +   Keyflower expansion         id144058,163572,205504,261369
 2018-12-15  +   Good Dog, Bad Zombie        id238182
 2018-12-15  -   Good Dog, Bad Zombie
+2018-12-16  +   Agricola                        id200680,257344,247720
+2018-12-16  +   Le Havre                        id35677
+2018-12-16  +   Founders of Gloomhaven          id214032
+2018-12-16  +   Flamme Rouge                    id199478,229941
+2018-12-16  +   Harry Potter: Hogwarts Battle   id223494
+2018-12-16  +   Ticket to Ride: Europe                      id14996,53383
+2018-12-16  +   Ticket ro Ride: Rails and Sails             id202670
+2018-12-16  +   Ticket to Ride: India and Switzerland       id106645
+2018-12-16  +   Galaxy Trucker  id31481
+2018-12-16  -   Galaxy Trucker
