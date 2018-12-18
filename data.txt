@@ -328,3 +328,5 @@
 2018-12-16  +   Ticket to Ride: India and Switzerland       id106645
 2018-12-16  +   Galaxy Trucker  id31481
 2018-12-16  -   Galaxy Trucker
+2018-12-17  +   Chaosmos    id142830
+2018-12-17  -   Chaosmos
