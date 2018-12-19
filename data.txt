@@ -330,3 +330,9 @@
 2018-12-16  -   Galaxy Trucker
 2018-12-17  +   Chaosmos    id142830
 2018-12-17  -   Chaosmos
+2018-12-18  +   Isle of Skye: Druids                id246646
+2018-12-18  +   Pandemic: Fall of Rome              id260428
+2018-12-18  +   Deep Space D-6                      id183571
+2018-12-18  +   Crypt                               id250442
+2018-12-18  +   The Palace of Mad King Ludwig       id223278
+2018-12-18  +   Lancaster: Big Box                  id170815
