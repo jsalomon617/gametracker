@@ -239,7 +239,7 @@
 2018-07-27  +   Smiths of Winterforge   id192619
 2018-07-27  -   Empires of the Void II
 2018-07-28  +   Oh My Goods!            id183840
-2018-07-28  +   Great Western Trail     id193738
+2018-07-28  +   Great Western Trail     id193738,245744
 2018-07-28  +   Isle of Skye            id176494,232226
 2018-07-28  +   Kitchen Rush            id223953
 2018-07-28  +   Nusfjord                id234277
@@ -336,3 +336,8 @@
 2018-12-18  +   Crypt                               id250442
 2018-12-18  +   The Palace of Mad King Ludwig       id223278
 2018-12-18  +   Lancaster: Big Box                  id170815
+2018-12-20  +   Azul                                id230802
+2018-12-20  +   Azul: Stained Glass of Sintra       id256226
+2018-12-20  +   Paper Tales                         id217861,245473
+2018-12-20  -   Azul
+2018-12-20  -   Paper Tales
