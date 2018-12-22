@@ -324,7 +324,7 @@
 2018-12-16  +   Harry Potter: Hogwarts Battle   id223494
 2018-12-16  +   Ticket to Ride: Europe                      id14996,53383
 2018-12-16  -   Ticket to Ride: Europe
-2018-12-16  +   Ticket ro Ride: Rails and Sails             id202670
+2018-12-16  +   Ticket to Ride: Rails and Sails             id202670
 2018-12-16  +   Ticket to Ride: India and Switzerland       id106645
 2018-12-16  +   Galaxy Trucker  id31481
 2018-12-16  -   Galaxy Trucker
@@ -341,3 +341,4 @@
 2018-12-20  +   Paper Tales                         id217861,245473
 2018-12-20  -   Azul
 2018-12-20  -   Paper Tales
+2018-12-22  -   Ticket to Ride: Rails and Sails
