@@ -346,3 +346,4 @@
 2018-12-26  -   Isle of Skye: Druids
 2018-12-27  +   Grifters: Nexus     id250865
 2018-12-31  -   Deep Space D-6
+2019-01-02  -   Azul: Stained Glass of Sintra
