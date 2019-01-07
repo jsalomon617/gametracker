@@ -347,3 +347,10 @@
 2018-12-27  +   Grifters: Nexus     id250865
 2018-12-31  -   Deep Space D-6
 2019-01-02  -   Azul: Stained Glass of Sintra
+2019-01-06  +   Ticket ro Ride: Germany                 id225244
+2019-01-06  +   Ticket ro Ride: Nordic Countries        id31627
+2019-01-06  +   Ticket ro Ride: Asia                    id106637
+2019-01-06  +   Ticket ro Ride: France and Old West     id233891
+2019-01-06  +   Alhambra: Big Box                       id45358
+2019-01-06  +   Ex Libris                               id201825
+2019-01-06  +   Ora et Labora                           id70149
