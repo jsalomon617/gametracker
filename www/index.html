@@ -533,7 +533,10 @@
 [new Date(2019, 0, 3), 79, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2019, 0, 4), 79, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2019, 0, 5), 79, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
-[new Date(2019, 0, 6), 86, '<b>Games Obtained:</b><br>Ticket ro Ride: Germany<br>Ticket ro Ride: Nordic Countries<br>Ticket ro Ride: Asia<br>Ticket ro Ride: France and Old West<br>Alhambra: Big Box<br>Ex Libris<br>Ora et Labora<br><b>No Games Played</b>']] ;
+[new Date(2019, 0, 6), 86, '<b>Games Obtained:</b><br>Ticket to Ride: Germany<br>Ticket to Ride: Nordic Countries<br>Ticket to Ride: Asia<br>Ticket to Ride: France and Old West<br>Alhambra: Big Box<br>Ex Libris<br>Ora et Labora<br><b>No Games Played</b>'],
+[new Date(2019, 0, 7), 86, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 0, 8), 85, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Photosynthesis'],
+[new Date(2019, 0, 9), 90, '<b>Games Obtained:</b><br>Pocket Dragon<br>Yellow and Yangtze<br>Ticket to Ride: Africa<br>Ticket to Ride: Nederland<br>Ticket to Ride: UK and Pennsylvania<br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -1066,7 +1069,10 @@
 [new Date(2019, 0, 3), 79, '<div class="google-tooltip"><b>Thursday</b><br><b>Jan 03, 2019</b><br>Game Count: <b>79</b></div>'],
 [new Date(2019, 0, 4), 79, '<div class="google-tooltip"><b>Friday</b><br><b>Jan 04, 2019</b><br>Game Count: <b>79</b></div>'],
 [new Date(2019, 0, 5), 79, '<div class="google-tooltip"><b>Saturday</b><br><b>Jan 05, 2019</b><br>Game Count: <b>79</b></div>'],
-[new Date(2019, 0, 6), 86, '<div class="google-tooltip"><b>Sunday</b><br><b>Jan 06, 2019</b><br>Game Count: <b>86</b> (+7)</div>']] );
+[new Date(2019, 0, 6), 86, '<div class="google-tooltip"><b>Sunday</b><br><b>Jan 06, 2019</b><br>Game Count: <b>86</b> (+7)</div>'],
+[new Date(2019, 0, 7), 86, '<div class="google-tooltip"><b>Monday</b><br><b>Jan 07, 2019</b><br>Game Count: <b>86</b></div>'],
+[new Date(2019, 0, 8), 85, '<div class="google-tooltip"><b>Tuesday</b><br><b>Jan 08, 2019</b><br>Game Count: <b>85</b> (-1)</div>'],
+[new Date(2019, 0, 9), 90, '<div class="google-tooltip"><b>Wednesday</b><br><b>Jan 09, 2019</b><br>Game Count: <b>90</b> (+5)</div>']] );
 
     var options = {
       vAxis: {
@@ -1221,16 +1227,16 @@
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2019-01-06 </b>
+Last Game Acquired on <b> 2019-01-09 </b>
 (<span id="dayDiff"></span> ago)
 <br>
-Currently Unplayed: <b> 86 </b>
-(Lowest Since <b> 2019-01-05) </b>
+Currently Unplayed: <b> 90 </b>
+(Lowest Since <b> 2019-01-08) </b>
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2019, 0, 6) ;
+    var last_acquired = new Date(2019, 0, 9) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -1263,7 +1269,7 @@ Currently Unplayed: <b> 86 </b>
 <br><br><br><img src="images/fine.png" />
 
 <br><br>
-<b><u>Unplayed Games (86):</u></b>
+<b><u>Unplayed Games (90):</u></b>
 <br>
 <a href=https://www.boardgamegeek.com/boardgame/207117/ target='_blank'>Abandon Planet</a>
 <br> Agricola (<a href=https://www.boardgamegeek.com/boardgame/200680/ target='_blank'>200680</a>, <a href=https://www.boardgamegeek.com/boardgame/257344/ target='_blank'>257344</a>, <a href=https://www.boardgamegeek.com/boardgame/247720/ target='_blank'>247720</a>)
@@ -1321,7 +1327,7 @@ Currently Unplayed: <b> 86 </b>
 <br> <a href=https://www.boardgamegeek.com/boardgame/70149/ target='_blank'>Ora et Labora</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/260428/ target='_blank'>Pandemic: Fall of Rome</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/198953/ target='_blank'>Pax Renaissance</a>
-<br> <a href=https://www.boardgamegeek.com/boardgame/218603/ target='_blank'>Photosynthesis</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/255651/ target='_blank'>Pocket Dragon</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/224212/ target='_blank'>Red Scare</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/232666/ target='_blank'>Robin Hood and the Merry Men</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/175549/ target='_blank'>Salem: 1692</a>
@@ -1338,11 +1344,14 @@ Currently Unplayed: <b> 86 </b>
 <br> Terraforming Mars expansions (<a href=https://www.boardgamegeek.com/boardgame/218127/ target='_blank'>218127</a>, <a href=https://www.boardgamegeek.com/boardgame/231965/ target='_blank'>231965</a>)
 <br> <a href=https://www.boardgamegeek.com/boardgame/213268/ target='_blank'>That Snow Moon</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/223278/ target='_blank'>The Palace of Mad King Ludwig</a>
-<br> <a href=https://www.boardgamegeek.com/boardgame/106637/ target='_blank'>Ticket ro Ride: Asia</a>
-<br> <a href=https://www.boardgamegeek.com/boardgame/233891/ target='_blank'>Ticket ro Ride: France and Old West</a>
-<br> <a href=https://www.boardgamegeek.com/boardgame/225244/ target='_blank'>Ticket ro Ride: Germany</a>
-<br> <a href=https://www.boardgamegeek.com/boardgame/31627/ target='_blank'>Ticket ro Ride: Nordic Countries</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/131188/ target='_blank'>Ticket to Ride: Africa</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/106637/ target='_blank'>Ticket to Ride: Asia</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/233891/ target='_blank'>Ticket to Ride: France and Old West</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/225244/ target='_blank'>Ticket to Ride: Germany</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/106645/ target='_blank'>Ticket to Ride: India and Switzerland</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/147938/ target='_blank'>Ticket to Ride: Nederland</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/31627/ target='_blank'>Ticket to Ride: Nordic Countries</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/182078/ target='_blank'>Ticket to Ride: UK and Pennsylvania</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/180852/ target='_blank'>Tiny Epic Western</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/197069/ target='_blank'>Traitor Mechanic the Traitor Mechanic Game</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/207442/ target='_blank'>Turbo Drift</a>
@@ -1351,5 +1360,6 @@ Currently Unplayed: <b> 86 </b>
 <br> Viticulture: Aboriculture and Formaggio (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/227266/ target='_blank'>Wagon Wheels</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/185154/ target='_blank'>Wizard School</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/244114/ target='_blank'>Yellow and Yangtze</a>
 
 </body></html>
