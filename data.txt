@@ -363,3 +363,5 @@
 2019-01-10  +   Tudor       id219512
 2019-01-11  -   Pandemic: Fall of Rome
 2019-01-12  -   Great Western Trail
+2019-01-14  +   Wingspan                id266192
+2019-01-14  +   Small Star Empires      id178044
