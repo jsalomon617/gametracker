@@ -365,3 +365,6 @@
 2019-01-12  -   Great Western Trail
 2019-01-14  +   Wingspan                id266192
 2019-01-14  +   Small Star Empires      id178044
+2019-01-15  +   Book of Dragons         id233080
+2019-01-15  -   Songbirds
+2019-01-15  -   Crypt

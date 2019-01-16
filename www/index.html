@@ -541,7 +541,8 @@
 [new Date(2019, 0, 11), 90, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Pandemic: Fall of Rome'],
 [new Date(2019, 0, 12), 89, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Great Western Trail'],
 [new Date(2019, 0, 13), 89, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
-[new Date(2019, 0, 14), 91, '<b>Games Obtained:</b><br>Wingspan<br>Small Star Empires<br><b>No Games Played</b>']] ;
+[new Date(2019, 0, 14), 91, '<b>Games Obtained:</b><br>Wingspan<br>Small Star Empires<br><b>No Games Played</b>'],
+[new Date(2019, 0, 15), 90, '<b>Games Obtained:</b><br>Book of Dragons<br><b>Games Played:</b><br>Songbirds<br>Crypt']] ;
 
   function drawChart() {
 
@@ -1082,7 +1083,8 @@
 [new Date(2019, 0, 11), 90, '<div class="google-tooltip"><b>Friday</b><br><b>Jan 11, 2019</b><br>Game Count: <b>90</b> (-1)</div>'],
 [new Date(2019, 0, 12), 89, '<div class="google-tooltip"><b>Saturday</b><br><b>Jan 12, 2019</b><br>Game Count: <b>89</b> (-1)</div>'],
 [new Date(2019, 0, 13), 89, '<div class="google-tooltip"><b>Sunday</b><br><b>Jan 13, 2019</b><br>Game Count: <b>89</b></div>'],
-[new Date(2019, 0, 14), 91, '<div class="google-tooltip"><b>Monday</b><br><b>Jan 14, 2019</b><br>Game Count: <b>91</b> (+2)</div>']] );
+[new Date(2019, 0, 14), 91, '<div class="google-tooltip"><b>Monday</b><br><b>Jan 14, 2019</b><br>Game Count: <b>91</b> (+2)</div>'],
+[new Date(2019, 0, 15), 90, '<div class="google-tooltip"><b>Tuesday</b><br><b>Jan 15, 2019</b><br>Game Count: <b>90</b> (-1)</div>']] );
 
     var options = {
       vAxis: {
@@ -1237,16 +1239,16 @@
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2019-01-14 </b>
+Last Game Acquired on <b> 2019-01-15 </b>
 (<span id="dayDiff"></span> ago)
 <br>
-Currently Unplayed: <b> 91 </b>
+Currently Unplayed: <b> 90 </b>
 (Lowest Since <b> 2019-01-13) </b>
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2019, 0, 14) ;
+    var last_acquired = new Date(2019, 0, 15) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -1279,7 +1281,7 @@ Currently Unplayed: <b> 91 </b>
 <br><br><br><img src="images/fine.png" />
 
 <br><br>
-<b><u>Unplayed Games (91):</u></b>
+<b><u>Unplayed Games (90):</u></b>
 <br>
 <a href=https://www.boardgamegeek.com/boardgame/207117/ target='_blank'>Abandon Planet</a>
 <br> Agricola (<a href=https://www.boardgamegeek.com/boardgame/200680/ target='_blank'>200680</a>, <a href=https://www.boardgamegeek.com/boardgame/257344/ target='_blank'>257344</a>, <a href=https://www.boardgamegeek.com/boardgame/247720/ target='_blank'>247720</a>)
@@ -1290,6 +1292,7 @@ Currently Unplayed: <b> 91 </b>
 <br> <a href=https://www.boardgamegeek.com/boardgame/202443/ target='_blank'>Barker's Row</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/211534/ target='_blank'>Bears vs Babies</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/98918/ target='_blank'>Bios: Genesis</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/233080/ target='_blank'>Book of Dragons</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/38855/ target='_blank'>Carcassonne Catapult</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/236304/ target='_blank'>Cerebria: The Card Game</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/236781/ target='_blank'>Cerebria: The Inside World</a>
@@ -1298,7 +1301,6 @@ Currently Unplayed: <b> 91 </b>
 <br> <a href=https://www.boardgamegeek.com/boardgame/216132/ target='_blank'>Clans of Caledonia</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/224037/ target='_blank'>Codenames Duet</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/148931/ target='_blank'>Coup Reformation</a>
-<br> <a href=https://www.boardgamegeek.com/boardgame/250442/ target='_blank'>Crypt</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/230534/ target='_blank'>Dark Moon Expansion</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/245197/ target='_blank'>Deadwood 1876</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/96260/ target='_blank'>Dominant Species: The Card Game</a>
@@ -1347,7 +1349,6 @@ Currently Unplayed: <b> 91 </b>
 <br> <a href=https://www.boardgamegeek.com/boardgame/178044/ target='_blank'>Small Star Empires</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/220188/ target='_blank'>Smash Up: Sheep</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/192619/ target='_blank'>Smiths of Winterforge</a>
-<br> <a href=https://www.boardgamegeek.com/boardgame/212765/ target='_blank'>Songbirds</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/191679/ target='_blank'>Spaceteam: Triangulum Expansion</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/251658/ target='_blank'>Sprawlopolis</a>
 <br> Terraforming Mars expansions (<a href=https://www.boardgamegeek.com/boardgame/218127/ target='_blank'>218127</a>, <a href=https://www.boardgamegeek.com/boardgame/231965/ target='_blank'>231965</a>)
