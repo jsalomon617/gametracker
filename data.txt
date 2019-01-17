@@ -368,3 +368,5 @@
 2019-01-15  +   Book of Dragons         id233080
 2019-01-15  -   Songbirds
 2019-01-15  -   Crypt
+2019-01-16  -   Robin Hood and the Merry Men
+2019-01-16  +   Crisis                  id128721
