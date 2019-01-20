@@ -371,3 +371,4 @@
 2019-01-16  -   Robin Hood and the Merry Men
 2019-01-16  +   Crisis                  id128721
 2019-01-17  -   Duelosaur Island
+2019-01-19  -   Wingspan
