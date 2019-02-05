@@ -560,7 +560,9 @@
 [new Date(2019, 0, 30), 87, '<b>Games Obtained:</b><br>Sentinels: Cauldron - Adrift<br><b>Games Played:</b><br>Key to the City: London'],
 [new Date(2019, 0, 31), 87, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2019, 1, 1), 87, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
-[new Date(2019, 1, 2), 86, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Sentinels: Cauldron - Adrift']] ;
+[new Date(2019, 1, 2), 86, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Sentinels: Cauldron - Adrift'],
+[new Date(2019, 1, 3), 86, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 1, 4), 87, '<b>Games Obtained:</b><br>Kitchen Rush: Piece of Cake<br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -1120,7 +1122,9 @@
 [new Date(2019, 0, 30), 87, '<div class="google-tooltip"><b>Wednesday</b><br><b>Jan 30, 2019</b><br>Game Count: <b>87</b></div>'],
 [new Date(2019, 0, 31), 87, '<div class="google-tooltip"><b>Thursday</b><br><b>Jan 31, 2019</b><br>Game Count: <b>87</b></div>'],
 [new Date(2019, 1, 1), 87, '<div class="google-tooltip"><b>Friday</b><br><b>Feb 01, 2019</b><br>Game Count: <b>87</b></div>'],
-[new Date(2019, 1, 2), 86, '<div class="google-tooltip"><b>Saturday</b><br><b>Feb 02, 2019</b><br>Game Count: <b>86</b> (-1)</div>']] );
+[new Date(2019, 1, 2), 86, '<div class="google-tooltip"><b>Saturday</b><br><b>Feb 02, 2019</b><br>Game Count: <b>86</b> (-1)</div>'],
+[new Date(2019, 1, 3), 86, '<div class="google-tooltip"><b>Sunday</b><br><b>Feb 03, 2019</b><br>Game Count: <b>86</b></div>'],
+[new Date(2019, 1, 4), 87, '<div class="google-tooltip"><b>Monday</b><br><b>Feb 04, 2019</b><br>Game Count: <b>87</b> (+1)</div>']] );
 
     var options = {
       vAxis: {
@@ -1275,16 +1279,16 @@
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2019-01-30 </b>
+Last Game Acquired on <b> 2019-02-04 </b>
 (<span id="dayDiff"></span> ago)
 <br>
-Currently Unplayed: <b> 86 </b>
-(Lowest Since <b> 2019-01-08) </b>
+Currently Unplayed: <b> 87 </b>
+(Lowest Since <b> 2019-02-03) </b>
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2019, 0, 30) ;
+    var last_acquired = new Date(2019, 1, 4) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -1317,7 +1321,7 @@ Currently Unplayed: <b> 86 </b>
 <br><br><br><img src="images/fine.png" />
 
 <br><br>
-<b><u>Unplayed Games (86):</u></b>
+<b><u>Unplayed Games (87):</u></b>
 <br>
 <a href=https://www.boardgamegeek.com/boardgame/207117/ target='_blank'>Abandon Planet</a>
 <br> Agricola (<a href=https://www.boardgamegeek.com/boardgame/200680/ target='_blank'>200680</a>, <a href=https://www.boardgamegeek.com/boardgame/257344/ target='_blank'>257344</a>, <a href=https://www.boardgamegeek.com/boardgame/247720/ target='_blank'>247720</a>)
@@ -1357,6 +1361,7 @@ Currently Unplayed: <b> 86 </b>
 <br> <a href=https://www.boardgamegeek.com/boardgame/212516/ target='_blank'>Keyper</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/239770/ target='_blank'>Kiek</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/3699/ target='_blank'>Killer Bunnies</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/249201/ target='_blank'>Kitchen Rush: Piece of Cake</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/170815/ target='_blank'>Lancaster: Big Box</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/35677/ target='_blank'>Le Havre</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/169393/ target='_blank'>Lord of the P.I.G.S.</a>
