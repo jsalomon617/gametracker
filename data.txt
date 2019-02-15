@@ -317,11 +317,11 @@
 2018-12-14  +   Keyflower expansion         id144058,163572,205504,261369
 2018-12-15  +   Good Dog, Bad Zombie        id238182
 2018-12-15  -   Good Dog, Bad Zombie
-2018-12-16  +   Agricola                        id200680,257344,247720
+2018-12-16  +   Agricola                        id200680,257344,247720,210625
 2018-12-16  +   Le Havre                        id35677
 2018-12-16  +   Founders of Gloomhaven          id214032
 2018-12-16  +   Flamme Rouge                    id199478,229941
-2018-12-16  +   Harry Potter: Hogwarts Battle   id223494
+2018-12-16  +   Harry Potter: Hogwarts Battle   id199042,223494
 2018-12-16  +   Ticket to Ride: Europe                      id14996,53383
 2018-12-16  -   Ticket to Ride: Europe
 2018-12-16  +   Ticket to Ride: Rails and Sails             id202670
@@ -378,3 +378,8 @@
 2019-02-02  -   Sentinels: Cauldron - Adrift
 2019-02-04  +   Kitchen Rush: Piece of Cake     id249201
 2019-02-13  -   Ex Libris
+2019-02-14  +   Kanagawa                                id200147
+2019-02-14  +   A Feast for Odin: The Norwegians        id216788
+2019-02-14  +   Reykholt                                id241831
+2019-02-14  +   CO2: Second Chance                      id214887
+2018-02-14  -   CO2: Second Chance
