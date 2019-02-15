@@ -208,10 +208,18 @@ class Collection(object):
         lines = self.read()
         
         # go through each line
+        last_date = None
         for line in lines:
             # parse the line
             name, date, event, bgg = self.parse_line(line)
-            
+
+            # enforce that our dates must be in order, for sanity
+            if last_date is not None and date < last_date:
+                raise ValueError(
+                    "game {} has date {} older than last date {}".format(
+                        name, date, last_date))
+            last_date = date
+
             # get the game object (creating it if necessary)
             if name not in self.gamestore:
                 # let's actually enforce that get events must come before play events
