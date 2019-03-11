@@ -585,7 +585,18 @@
 [new Date(2019, 1, 24), 89, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2019, 1, 25), 89, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2019, 1, 26), 89, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
-[new Date(2019, 1, 27), 88, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Keyper']] ;
+[new Date(2019, 1, 27), 88, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Keyper'],
+[new Date(2019, 1, 28), 88, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 2, 1), 88, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 2, 2), 88, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 2, 3), 88, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 2, 4), 88, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 2, 5), 88, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 2, 6), 88, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 2, 7), 89, '<b>Games Obtained:</b><br>Euphoria: Ignorance is Bliss<br><b>No Games Played</b>'],
+[new Date(2019, 2, 8), 89, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 2, 9), 89, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 2, 10), 89, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -1170,7 +1181,18 @@
 [new Date(2019, 1, 24), 89, '<div class="google-tooltip"><b>Sunday</b><br><b>Feb 24, 2019</b><br>Game Count: <b>89</b></div>'],
 [new Date(2019, 1, 25), 89, '<div class="google-tooltip"><b>Monday</b><br><b>Feb 25, 2019</b><br>Game Count: <b>89</b></div>'],
 [new Date(2019, 1, 26), 89, '<div class="google-tooltip"><b>Tuesday</b><br><b>Feb 26, 2019</b><br>Game Count: <b>89</b></div>'],
-[new Date(2019, 1, 27), 88, '<div class="google-tooltip"><b>Wednesday</b><br><b>Feb 27, 2019</b><br>Game Count: <b>88</b> (-1)</div>']] );
+[new Date(2019, 1, 27), 88, '<div class="google-tooltip"><b>Wednesday</b><br><b>Feb 27, 2019</b><br>Game Count: <b>88</b> (-1)</div>'],
+[new Date(2019, 1, 28), 88, '<div class="google-tooltip"><b>Thursday</b><br><b>Feb 28, 2019</b><br>Game Count: <b>88</b></div>'],
+[new Date(2019, 2, 1), 88, '<div class="google-tooltip"><b>Friday</b><br><b>Mar 01, 2019</b><br>Game Count: <b>88</b></div>'],
+[new Date(2019, 2, 2), 88, '<div class="google-tooltip"><b>Saturday</b><br><b>Mar 02, 2019</b><br>Game Count: <b>88</b></div>'],
+[new Date(2019, 2, 3), 88, '<div class="google-tooltip"><b>Sunday</b><br><b>Mar 03, 2019</b><br>Game Count: <b>88</b></div>'],
+[new Date(2019, 2, 4), 88, '<div class="google-tooltip"><b>Monday</b><br><b>Mar 04, 2019</b><br>Game Count: <b>88</b></div>'],
+[new Date(2019, 2, 5), 88, '<div class="google-tooltip"><b>Tuesday</b><br><b>Mar 05, 2019</b><br>Game Count: <b>88</b></div>'],
+[new Date(2019, 2, 6), 88, '<div class="google-tooltip"><b>Wednesday</b><br><b>Mar 06, 2019</b><br>Game Count: <b>88</b></div>'],
+[new Date(2019, 2, 7), 89, '<div class="google-tooltip"><b>Thursday</b><br><b>Mar 07, 2019</b><br>Game Count: <b>89</b> (+1)</div>'],
+[new Date(2019, 2, 8), 89, '<div class="google-tooltip"><b>Friday</b><br><b>Mar 08, 2019</b><br>Game Count: <b>89</b></div>'],
+[new Date(2019, 2, 9), 89, '<div class="google-tooltip"><b>Saturday</b><br><b>Mar 09, 2019</b><br>Game Count: <b>89</b></div>'],
+[new Date(2019, 2, 10), 89, '<div class="google-tooltip"><b>Sunday</b><br><b>Mar 10, 2019</b><br>Game Count: <b>89</b></div>']] );
 
     var options = {
       vAxis: {
@@ -1325,16 +1347,16 @@
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2019-02-20 </b>
+Last Game Acquired on <b> 2019-03-07 </b>
 (<span id="dayDiff"></span> ago)
 <br>
-Currently Unplayed: <b> 88 </b>
-(Lowest Since <b> 2019-02-13) </b>
+Currently Unplayed: <b> 89 </b>
+(Lowest Since <b> 2019-03-06) </b>
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2019, 1, 20) ;
+    var last_acquired = new Date(2019, 2, 7) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -1367,7 +1389,7 @@ Currently Unplayed: <b> 88 </b>
 <br><br><br><img src="images/fine.png" />
 
 <br><br>
-<b><u>Unplayed Games (88):</u></b>
+<b><u>Unplayed Games (89):</u></b>
 <br>
 <a href=https://www.boardgamegeek.com/boardgame/216788/ target='_blank'>A Feast for Odin: The Norwegians</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/207117/ target='_blank'>Abandon Planet</a>
@@ -1395,6 +1417,7 @@ Currently Unplayed: <b> 88 </b>
 <br> <a href=https://www.boardgamegeek.com/boardgame/154904/ target='_blank'>Easy Breezy Travel Agency</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/72125/ target='_blank'>Eclipse</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/223151/ target='_blank'>Entropy: Worlds Collide</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/271664/ target='_blank'>Euphoria: Ignorance is Bliss</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/176371/ target='_blank'>Explorers of the North Sea</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/209748/ target='_blank'>Find Your Seats</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/214032/ target='_blank'>Founders of Gloomhaven</a>
