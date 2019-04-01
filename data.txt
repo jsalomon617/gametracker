@@ -389,3 +389,6 @@
 2019-02-20  +   Village Pillage     id247342
 2019-02-27  -   Keyper
 2019-03-07  +   Euphoria: Ignorance is Bliss        id271664
+2019-03-26  +   Mapmaker: The Gerrymandering Game       id252997
+2019-03-27  -   Kanagawa
+2019-03-30  -   Carcassonne Catapult
