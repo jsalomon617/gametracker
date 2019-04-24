@@ -392,3 +392,7 @@
 2019-03-26  +   Mapmaker: The Gerrymandering Game       id252997
 2019-03-27  -   Kanagawa
 2019-03-30  -   Carcassonne Catapult
+2019-04-15  -   Ticket to Ride: France and Old West
+2019-04-16  +   Escape Plan                         id142379
+2019-04-17  +   The Ancient World, 2nd Edition      id259298
+2019-04-17  -   The Ancient World, 2nd Edition
