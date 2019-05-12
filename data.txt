@@ -396,3 +396,5 @@
 2019-04-16  +   Escape Plan                         id142379
 2019-04-17  +   The Ancient World, 2nd Edition      id259298
 2019-04-17  -   The Ancient World, 2nd Edition
+2019-05-03  +   Neta-Tanka                          id245931
+2019-05-08  -   City of Gears
