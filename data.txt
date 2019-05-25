@@ -398,3 +398,5 @@
 2019-04-17  -   The Ancient World, 2nd Edition
 2019-05-03  +   Neta-Tanka                          id245931
 2019-05-08  -   City of Gears
+2019-05-17  -   Cerebria: The Card Game
+2019-05-21  +   Chocolatiers                        id233354
