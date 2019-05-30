@@ -400,3 +400,5 @@
 2019-05-08  -   City of Gears
 2019-05-17  -   Cerebria: The Card Game
 2019-05-21  +   Chocolatiers                        id233354
+2019-05-28  -   Terraforming Mars expansions
+2019-05-29  -   Neta-Tanka
