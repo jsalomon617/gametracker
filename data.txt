@@ -403,3 +403,5 @@
 2019-05-28  -   Terraforming Mars expansions
 2019-05-29  -   Neta-Tanka
 2019-06-04  -   Chocolatiers
+2019-06-05  -   Reykholt
+2019-06-05  +   Scythe: Modular Board       id279304
