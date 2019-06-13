@@ -405,3 +405,5 @@
 2019-06-04  -   Chocolatiers
 2019-06-05  -   Reykholt
 2019-06-05  +   Scythe: Modular Board       id279304
+2019-06-08  -   Ticket to Ride: Africa
+2019-06-12  -   Key Flow
