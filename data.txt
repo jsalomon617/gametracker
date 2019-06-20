@@ -314,7 +314,7 @@
 2018-12-14  +   Keyper                      id212516
 2018-12-14  +   Key to the City: London     id205507
 2018-12-14  +   Key Flow                    id252446
-2018-12-14  +   Keyflower expansion         id144058,163572,205504,261369
+2018-12-14  +   Keyflower expansions        id144058,163572,205504,261369
 2018-12-15  +   Good Dog, Bad Zombie        id238182
 2018-12-15  -   Good Dog, Bad Zombie
 2018-12-16  +   Agricola                        id200680,257344,247720,210625
@@ -407,3 +407,4 @@
 2019-06-05  +   Scythe: Modular Board       id279304
 2019-06-08  -   Ticket to Ride: Africa
 2019-06-12  -   Key Flow
+2019-06-19  -   Keyflower expansions
