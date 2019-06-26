@@ -409,3 +409,4 @@
 2019-06-12  -   Key Flow
 2019-06-19  -   Keyflower expansions
 2019-06-21  -   Escape Plan
+2019-06-25  -   Mapmaker: The Gerrymandering Game
