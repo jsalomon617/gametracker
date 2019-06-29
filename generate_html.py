@@ -3,6 +3,7 @@
 import datetime
 import re
 
+from game_breaker import GAMEBREAKER_START_DATE
 from game_collection import START, TODAY, Collection
 
 
@@ -161,6 +162,19 @@ def generate_webpage(collection):
     # get the last time that the count was lower than right now
     lowest_since = collection.lowest_since()
 
+    # compute our gamebreakers
+    game_breaker_start = GAMEBREAKER_START_DATE
+    game_breaker_rows = "\n".join([
+        '<tr><td>{score}</td><td>{date}</td><td style="text-align:left">{games}</td></tr>'.format(
+            score=gb.score,
+            date=str(gb.date),
+            games="\n<br>".join(gb.games))
+        for gb in collection.gamebreakers
+    ])
+
+    # get the info for our next gamebreaker
+    next_game_breaker_date, next_game_breaker_count = collection.next_gamebreaker()
+
     ### prepare them for formatting
     format = {
         "datedata": datedata,
@@ -170,6 +184,10 @@ def generate_webpage(collection):
         "lowest_since": str(lowest_since),
         "unplayed_count": len(unplayed),
         "unplayed_lines": "\n<br> ".join(unplayed_links),
+        "game_breaker_start": str(game_breaker_start),
+        "game_breaker_rows": game_breaker_rows,
+        "next_game_breaker_date": str(next_game_breaker_date),
+        "next_game_breaker_count": next_game_breaker_count,
     }
 
     ### get the template data

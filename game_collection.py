@@ -3,6 +3,9 @@
 from collections import defaultdict
 import datetime
 
+import bgg_link
+from game_breaker import GameBreaker, _GAMEBREAKER_INPUT_DATA
+
 # start of our tracker
 START = datetime.date(2017, 07, 30)
 
@@ -40,28 +43,7 @@ class Game(object):
     def linked_name(self):
         """Return the name of the game as part of a BGG link, if possible"""
 
-        # the base bgg link
-        base = "https://www.boardgamegeek.com/boardgame/{id}/"
-
-        # check how many bgg IDs we have
-        if len(self.bgg) == 0:
-            # we have no ID, just say so
-            return "{name} (no BGG link)".format(name=self.name)
-        elif len(self.bgg) == 1:
-            # we have exactly one ID, let's link the name
-            link = base.format(id=self.bgg[0])
-            return "<a href={link} target='_blank'>{name}</a>".format(link=link, name=self.name)
-        else:
-            # we have many ids, let's include them generically for now
-            # TODO reference BGG library to provide names
-            pairs = [(id, base.format(id=id)) for id in self.bgg]
-            return "{name} ({links})".format(
-                name=self.name,
-                links=", ".join([
-                    "<a href={link} target='_blank'>{id}</a>".format(link=link, id=id)
-                    for (id, link) in pairs
-                ])
-            )
+        return bgg_link.linked_name(self.name, self.bgg)
 
 
 class Date(object):
@@ -189,8 +171,12 @@ class Collection(object):
         # for each date, store its object (keyed by datetime.date object)
         self.datestore = {}
 
-        # keep track of the last day on which we acquired a game
-        self.last_acquired = None
+        # keep track of the last day on which we acquired a game (init to our
+        # start date, for simplicity)
+        self.last_acquired = START
+
+        # initialize our gamebreaker list
+        self.gamebreakers = _GAMEBREAKER_INPUT_DATA[:]
 
     def get_date(self, date):
         """Given a specific date, get it from datestore (creating it if necessary)"""
@@ -259,9 +245,18 @@ class Collection(object):
             # yesterday's count should already be set, so just add today's net
             date_current.stats["count"] = date_previous.stats["count"] + date_current.net
 
+            ### store how long it's been since our last game, in case today is a gamebreaker
+            days_since_last_game = current - self.last_acquired
+            days_since_last_game = days_since_last_game.days
+
             ### update last acquired day if necessary
             if date_current.acquired:
                 self.last_acquired = current
+
+                # if this is a gamebreaker, add it to our list
+                if days_since_last_game > self.gamebreakers[-1].score:
+                    self.gamebreakers.append(GameBreaker(current, days_since_last_game,
+                        *[g.linked_name() for g in date_current.games_get()]))
 
             ### net change in the last 7 days
             # get the date object from 7 days ago
@@ -367,3 +362,18 @@ class Collection(object):
         """Get a list of unplayed game objects"""
 
         return [g for g in self.gamestore.values() if not g.is_played()]
+
+    def next_gamebreaker(self):
+        """Return the date and minimum score of the next possible gamebreaker"""
+
+        # get the last gamebreaker's score
+        gb = self.gamebreakers[-1]
+
+        # add 1 to the score
+        new_score = gb.score + 1
+
+        # add that many days to last acquired
+        new_date = self.last_acquired + datetime.timedelta(days=new_score)
+
+        # return those
+        return (new_date, new_score)
