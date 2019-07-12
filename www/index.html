@@ -712,7 +712,14 @@
 [new Date(2019, 6, 1), 80, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2019, 6, 2), 80, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2019, 6, 3), 79, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Ora et Labora'],
-[new Date(2019, 6, 4), 79, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
+[new Date(2019, 6, 4), 79, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 6, 5), 79, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 6, 6), 79, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 6, 7), 79, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 6, 8), 79, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 6, 9), 79, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 6, 10), 79, '<b>Games Obtained:</b><br>Penny Lane<br><b>Games Played:</b><br>Agricola'],
+[new Date(2019, 6, 11), 79, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -1424,7 +1431,14 @@
 [new Date(2019, 6, 1), 80, '<div class="google-tooltip"><b>Monday</b><br><b>Jul 01, 2019</b><br>Game Count: <b>80</b></div>'],
 [new Date(2019, 6, 2), 80, '<div class="google-tooltip"><b>Tuesday</b><br><b>Jul 02, 2019</b><br>Game Count: <b>80</b></div>'],
 [new Date(2019, 6, 3), 79, '<div class="google-tooltip"><b>Wednesday</b><br><b>Jul 03, 2019</b><br>Game Count: <b>79</b> (-1)</div>'],
-[new Date(2019, 6, 4), 79, '<div class="google-tooltip"><b>Thursday</b><br><b>Jul 04, 2019</b><br>Game Count: <b>79</b></div>']] );
+[new Date(2019, 6, 4), 79, '<div class="google-tooltip"><b>Thursday</b><br><b>Jul 04, 2019</b><br>Game Count: <b>79</b></div>'],
+[new Date(2019, 6, 5), 79, '<div class="google-tooltip"><b>Friday</b><br><b>Jul 05, 2019</b><br>Game Count: <b>79</b></div>'],
+[new Date(2019, 6, 6), 79, '<div class="google-tooltip"><b>Saturday</b><br><b>Jul 06, 2019</b><br>Game Count: <b>79</b></div>'],
+[new Date(2019, 6, 7), 79, '<div class="google-tooltip"><b>Sunday</b><br><b>Jul 07, 2019</b><br>Game Count: <b>79</b></div>'],
+[new Date(2019, 6, 8), 79, '<div class="google-tooltip"><b>Monday</b><br><b>Jul 08, 2019</b><br>Game Count: <b>79</b></div>'],
+[new Date(2019, 6, 9), 79, '<div class="google-tooltip"><b>Tuesday</b><br><b>Jul 09, 2019</b><br>Game Count: <b>79</b></div>'],
+[new Date(2019, 6, 10), 79, '<div class="google-tooltip"><b>Wednesday</b><br><b>Jul 10, 2019</b><br>Game Count: <b>79</b></div>'],
+[new Date(2019, 6, 11), 79, '<div class="google-tooltip"><b>Thursday</b><br><b>Jul 11, 2019</b><br>Game Count: <b>79</b></div>']] );
 
     var options = {
       vAxis: {
@@ -1590,7 +1604,7 @@ th, td {
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2019-06-05 </b>
+Last Game Acquired on <b> 2019-07-10 </b>
 (<span id="dayDiff"></span> ago)
 <br>
 Currently Unplayed: <b> 79 </b>
@@ -1599,7 +1613,7 @@ Currently Unplayed: <b> 79 </b>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2019, 5, 5) ;
+    var last_acquired = new Date(2019, 6, 10) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -1641,11 +1655,12 @@ Currently Unplayed: <b> 79 </b>
 <tr><td>31</td><td>2018-01-22</td><td style="text-align:left"><a href=https://www.boardgamegeek.com/boardgame/98918/ target='_blank'>Bios: Genesis</a>
 <br><a href=https://www.boardgamegeek.com/boardgame/221769/ target='_blank'>Bios: Megafauna</a>
 <br><a href=https://www.boardgamegeek.com/boardgame/218509/ target='_blank'>Empires of the Void II</a></td></tr>
+<tr><td>35</td><td>2019-07-10</td><td style="text-align:left"><a href=https://www.boardgamegeek.com/boardgame/252479/ target='_blank'>Penny Lane</a></td></tr>
 </table>
 
 <br>
 
-Next Possible Gamebreaker Threshold: <b>2019-07-07</b> (Score: 32)
+Next Possible Gamebreaker Threshold: <b>2019-08-15</b> (Score: 36)
 
 <br><br>
 
@@ -1660,7 +1675,6 @@ Next Possible Gamebreaker Threshold: <b>2019-07-07</b> (Score: 32)
 <br>
 <a href=https://www.boardgamegeek.com/boardgame/216788/ target='_blank'>A Feast for Odin: The Norwegians</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/207117/ target='_blank'>Abandon Planet</a>
-<br> Agricola (<a href=https://www.boardgamegeek.com/boardgame/200680/ target='_blank'>200680</a>, <a href=https://www.boardgamegeek.com/boardgame/257344/ target='_blank'>257344</a>, <a href=https://www.boardgamegeek.com/boardgame/247720/ target='_blank'>247720</a>, <a href=https://www.boardgamegeek.com/boardgame/210625/ target='_blank'>210625</a>)
 <br> <a href=https://www.boardgamegeek.com/boardgame/45358/ target='_blank'>Alhambra: Big Box</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/13122/ target='_blank'>Antiquity</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/188181/ target='_blank'>Avignon: A Clash of Popes</a>
@@ -1704,6 +1718,7 @@ Next Possible Gamebreaker Threshold: <b>2019-07-07</b> (Score: 32)
 <br> <a href=https://www.boardgamegeek.com/boardgame/230064/ target='_blank'>Ninjitsu</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/190798/ target='_blank'>North Sea Runesaga</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/198953/ target='_blank'>Pax Renaissance</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/252479/ target='_blank'>Penny Lane</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/255651/ target='_blank'>Pocket Dragon</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/224212/ target='_blank'>Red Scare</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/175549/ target='_blank'>Salem: 1692</a>
