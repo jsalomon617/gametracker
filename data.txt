@@ -413,3 +413,8 @@
 2019-07-03  -   Ora et Labora
 2019-07-10  -   Agricola
 2019-07-10  +   Penny Lane      id252479
+2019-07-12  +   Trogdor                     id255907
+2019-07-12  +   Decrypto                    id225694
+2019-07-12  +   Altiplano: The Traveler     id257047
+2019-07-12  +   Sushi Roll                  id271869
+2019-07-12  -   Sushi Roll
