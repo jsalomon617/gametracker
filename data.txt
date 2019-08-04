@@ -423,3 +423,4 @@
 2019-07-20  -   Trogdor
 2019-08-02  +   Homebrewers     id257006
 2019-08-02  +   Microbrewers    id154905
+2019-08-03  -   Tudor
