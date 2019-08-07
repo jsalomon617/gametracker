@@ -424,3 +424,4 @@
 2019-08-02  +   Homebrewers     id257006
 2019-08-02  +   Microbrewers    id154905
 2019-08-03  -   Tudor
+2019-08-06  -   The Palace of Mad King Ludwig
