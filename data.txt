@@ -425,3 +425,4 @@
 2019-08-02  +   Microbrewers    id154905
 2019-08-03  -   Tudor
 2019-08-06  -   The Palace of Mad King Ludwig
+2019-08-13  +   Snowdonia       id255924
