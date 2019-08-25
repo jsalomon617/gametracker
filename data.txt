@@ -427,3 +427,5 @@
 2019-08-06  -   The Palace of Mad King Ludwig
 2019-08-13  +   Snowdonia       id255924
 2019-08-17  -   Periodic
+2019-08-24  -   Homebrewers
+2019-08-24  +   Rurik: Dawn of Kiev     id228328
