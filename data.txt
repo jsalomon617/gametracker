@@ -431,3 +431,5 @@
 2019-08-24  +   Rurik: Dawn of Kiev     id228328
 2019-08-27  -   Microbrewers
 2019-08-28  -   Snowdonia
+2019-09-03  -   Altiplano: The Traveler
+2019-09-05  +   HECK: A Tiny Card Game
