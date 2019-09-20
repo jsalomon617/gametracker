@@ -785,7 +785,11 @@
 [new Date(2019, 8, 12), 78, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2019, 8, 13), 78, '<b>Games Obtained:</b><br>Tapestry<br><b>Games Played:</b><br>Ticket to Ride: UK and Pennsylvania'],
 [new Date(2019, 8, 14), 77, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Tapestry'],
-[new Date(2019, 8, 15), 77, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
+[new Date(2019, 8, 15), 77, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 8, 16), 77, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 8, 17), 77, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 8, 18), 77, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 8, 19), 78, '<b>Games Obtained:</b><br>Roads and Boats<br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -1570,7 +1574,11 @@
 [new Date(2019, 8, 12), 78, '<div class="google-tooltip"><b>Thursday</b><br><b>Sep 12, 2019</b><br>Game Count: <b>78</b></div>'],
 [new Date(2019, 8, 13), 78, '<div class="google-tooltip"><b>Friday</b><br><b>Sep 13, 2019</b><br>Game Count: <b>78</b></div>'],
 [new Date(2019, 8, 14), 77, '<div class="google-tooltip"><b>Saturday</b><br><b>Sep 14, 2019</b><br>Game Count: <b>77</b> (-1)</div>'],
-[new Date(2019, 8, 15), 77, '<div class="google-tooltip"><b>Sunday</b><br><b>Sep 15, 2019</b><br>Game Count: <b>77</b></div>']] );
+[new Date(2019, 8, 15), 77, '<div class="google-tooltip"><b>Sunday</b><br><b>Sep 15, 2019</b><br>Game Count: <b>77</b></div>'],
+[new Date(2019, 8, 16), 77, '<div class="google-tooltip"><b>Monday</b><br><b>Sep 16, 2019</b><br>Game Count: <b>77</b></div>'],
+[new Date(2019, 8, 17), 77, '<div class="google-tooltip"><b>Tuesday</b><br><b>Sep 17, 2019</b><br>Game Count: <b>77</b></div>'],
+[new Date(2019, 8, 18), 77, '<div class="google-tooltip"><b>Wednesday</b><br><b>Sep 18, 2019</b><br>Game Count: <b>77</b></div>'],
+[new Date(2019, 8, 19), 78, '<div class="google-tooltip"><b>Thursday</b><br><b>Sep 19, 2019</b><br>Game Count: <b>78</b> (+1)</div>']] );
 
     var options = {
       vAxis: {
@@ -1736,16 +1744,16 @@ th, td {
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2019-09-13 </b>
+Last Game Acquired on <b> 2019-09-19 </b>
 (<span id="dayDiff"></span> ago)
 <br>
-Currently Unplayed: <b> 77 </b>
-(Lowest Since <b> 2018-12-17) </b>
+Currently Unplayed: <b> 78 </b>
+(Lowest Since <b> 2019-09-18) </b>
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2019, 8, 13) ;
+    var last_acquired = new Date(2019, 8, 19) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -1792,7 +1800,7 @@ Currently Unplayed: <b> 77 </b>
 
 <br>
 
-Next Possible Gamebreaker Threshold: <b>2019-10-19</b> (Score: 36)
+Next Possible Gamebreaker Threshold: <b>2019-10-25</b> (Score: 36)
 
 <br><br>
 
@@ -1803,7 +1811,7 @@ Next Possible Gamebreaker Threshold: <b>2019-10-19</b> (Score: 36)
 <br><br><br><img src="images/fine.png" />
 
 <br><br>
-<b><u>Unplayed Games (77):</u></b>
+<b><u>Unplayed Games (78):</u></b>
 <br>
 <a href=https://www.boardgamegeek.com/boardgame/216788/ target='_blank'>A Feast for Odin: The Norwegians</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/207117/ target='_blank'>Abandon Planet</a>
@@ -1854,6 +1862,7 @@ Next Possible Gamebreaker Threshold: <b>2019-10-19</b> (Score: 36)
 <br> <a href=https://www.boardgamegeek.com/boardgame/252479/ target='_blank'>Penny Lane</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/255651/ target='_blank'>Pocket Dragon</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/224212/ target='_blank'>Red Scare</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/276502/ target='_blank'>Roads and Boats</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/228328/ target='_blank'>Rurik: Dawn of Kiev</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/175549/ target='_blank'>Salem: 1692</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/195296/ target='_blank'>Scuttle!</a>
