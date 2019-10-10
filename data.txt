@@ -439,3 +439,7 @@
 2019-09-14  -   Tapestry
 2019-09-19  +   Roads and Boats     id276502
 2019-10-05  +   Trickerion Expansion    id244358
+2019-10-08  -   Penny Lane
+2019-10-08  -   Pocket Dragon
+2019-10-08  +   Paladins of the West Kingdom    id266810
+2019-10-08  +   Circadians: First Light         id264052
