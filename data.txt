@@ -443,3 +443,6 @@
 2019-10-08  -   Pocket Dragon
 2019-10-08  +   Paladins of the West Kingdom    id266810
 2019-10-08  +   Circadians: First Light         id264052
+2019-10-11  -   Codenames Duet
+2019-10-12  -   New Angeles
+2019-10-13  -   Paladins of the West Kingdom
