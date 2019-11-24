@@ -450,3 +450,8 @@
 2019-10-18  -   Viticulture: Aboriculture and Formaggio
 2019-10-19  -   Fantastic Factories
 2019-10-22  +   Key Market      id275067
+2019-10-31  +   Reavers of Midgard  id242684
+2019-11-01  +   Roam                id267319
+2019-11-01  +   Haven               id205127
+2019-11-19  +   Suburbia            id267367
+2019-11-23  -   Scythe: Modular Board
