@@ -855,7 +855,9 @@
 [new Date(2019, 10, 21), 80, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2019, 10, 22), 80, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2019, 10, 23), 79, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Scythe: Modular Board'],
-[new Date(2019, 10, 24), 79, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
+[new Date(2019, 10, 24), 79, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 10, 25), 79, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 10, 26), 80, '<b>Games Obtained:</b><br>Wingspan: European Expansion<br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -1710,7 +1712,9 @@
 [new Date(2019, 10, 21), 80, '<div class="google-tooltip"><b>Thursday</b><br><b>Nov 21, 2019</b><br>Game Count: <b>80</b></div>'],
 [new Date(2019, 10, 22), 80, '<div class="google-tooltip"><b>Friday</b><br><b>Nov 22, 2019</b><br>Game Count: <b>80</b></div>'],
 [new Date(2019, 10, 23), 79, '<div class="google-tooltip"><b>Saturday</b><br><b>Nov 23, 2019</b><br>Game Count: <b>79</b> (-1)</div>'],
-[new Date(2019, 10, 24), 79, '<div class="google-tooltip"><b>Sunday</b><br><b>Nov 24, 2019</b><br>Game Count: <b>79</b></div>']] );
+[new Date(2019, 10, 24), 79, '<div class="google-tooltip"><b>Sunday</b><br><b>Nov 24, 2019</b><br>Game Count: <b>79</b></div>'],
+[new Date(2019, 10, 25), 79, '<div class="google-tooltip"><b>Monday</b><br><b>Nov 25, 2019</b><br>Game Count: <b>79</b></div>'],
+[new Date(2019, 10, 26), 80, '<div class="google-tooltip"><b>Tuesday</b><br><b>Nov 26, 2019</b><br>Game Count: <b>80</b> (+1)</div>']] );
 
     var options = {
       vAxis: {
@@ -1876,16 +1880,16 @@ th, td {
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2019-11-19 </b>
+Last Game Acquired on <b> 2019-11-26 </b>
 (<span id="dayDiff"></span> ago)
 <br>
-Currently Unplayed: <b> 79 </b>
-(Lowest Since <b> 2019-10-31) </b>
+Currently Unplayed: <b> 80 </b>
+(Lowest Since <b> 2019-11-25) </b>
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2019, 10, 19) ;
+    var last_acquired = new Date(2019, 10, 26) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -1932,7 +1936,7 @@ Currently Unplayed: <b> 79 </b>
 
 <br>
 
-Next Possible Gamebreaker Threshold: <b>2019-12-25</b> (Score: 36)
+Next Possible Gamebreaker Threshold: <b>2020-01-01</b> (Score: 36)
 
 <br><br>
 
@@ -1943,7 +1947,7 @@ Next Possible Gamebreaker Threshold: <b>2019-12-25</b> (Score: 36)
 <br><br><br><img src="images/fine.png" />
 
 <br><br>
-<b><u>Unplayed Games (79):</u></b>
+<b><u>Unplayed Games (80):</u></b>
 <br>
 <a href=https://www.boardgamegeek.com/boardgame/216788/ target='_blank'>A Feast for Odin: The Norwegians</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/207117/ target='_blank'>Abandon Planet</a>
@@ -2022,6 +2026,7 @@ Next Possible Gamebreaker Threshold: <b>2019-12-25</b> (Score: 36)
 <br> <a href=https://www.boardgamegeek.com/boardgame/231854/ target='_blank'>Twin Stars: Adventure Series 1</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/247342/ target='_blank'>Village Pillage</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/227266/ target='_blank'>Wagon Wheels</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/290448/ target='_blank'>Wingspan: European Expansion</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/185154/ target='_blank'>Wizard School</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/244114/ target='_blank'>Yellow and Yangtze</a>
 

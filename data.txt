@@ -455,3 +455,4 @@
 2019-11-01  +   Haven               id205127
 2019-11-19  +   Suburbia            id267367
 2019-11-23  -   Scythe: Modular Board
+2019-11-26  +   Wingspan: European Expansion    id290448
