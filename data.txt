@@ -456,3 +456,6 @@
 2019-11-19  +   Suburbia            id267367
 2019-11-23  -   Scythe: Modular Board
 2019-11-26  +   Wingspan: European Expansion    id290448
+2019-11-27  +   Bios: Origins           id235555
+2019-11-27  +   Pax Transhumanity       id257732
+2019-11-27  +   Pax Porfiriana          id128780
