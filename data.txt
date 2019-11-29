@@ -459,3 +459,4 @@
 2019-11-27  +   Bios: Origins           id235555
 2019-11-27  +   Pax Transhumanity       id257732
 2019-11-27  +   Pax Porfiriana          id128780
+2019-11-28  -   Wingspan: European Expansion
