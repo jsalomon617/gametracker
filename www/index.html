@@ -876,7 +876,11 @@
 [new Date(2019, 11, 12), 79, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2019, 11, 13), 79, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2019, 11, 14), 78, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Small Star Empires'],
-[new Date(2019, 11, 15), 78, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
+[new Date(2019, 11, 15), 78, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 11, 16), 78, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 11, 17), 78, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 11, 18), 78, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 11, 19), 79, '<b>Games Obtained:</b><br>On Mars<br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -1752,7 +1756,11 @@
 [new Date(2019, 11, 12), 79, '<div class="google-tooltip"><b>Thursday</b><br><b>Dec 12, 2019</b><br>Game Count: <b>79</b></div>'],
 [new Date(2019, 11, 13), 79, '<div class="google-tooltip"><b>Friday</b><br><b>Dec 13, 2019</b><br>Game Count: <b>79</b></div>'],
 [new Date(2019, 11, 14), 78, '<div class="google-tooltip"><b>Saturday</b><br><b>Dec 14, 2019</b><br>Game Count: <b>78</b> (-1)</div>'],
-[new Date(2019, 11, 15), 78, '<div class="google-tooltip"><b>Sunday</b><br><b>Dec 15, 2019</b><br>Game Count: <b>78</b></div>']] );
+[new Date(2019, 11, 15), 78, '<div class="google-tooltip"><b>Sunday</b><br><b>Dec 15, 2019</b><br>Game Count: <b>78</b></div>'],
+[new Date(2019, 11, 16), 78, '<div class="google-tooltip"><b>Monday</b><br><b>Dec 16, 2019</b><br>Game Count: <b>78</b></div>'],
+[new Date(2019, 11, 17), 78, '<div class="google-tooltip"><b>Tuesday</b><br><b>Dec 17, 2019</b><br>Game Count: <b>78</b></div>'],
+[new Date(2019, 11, 18), 78, '<div class="google-tooltip"><b>Wednesday</b><br><b>Dec 18, 2019</b><br>Game Count: <b>78</b></div>'],
+[new Date(2019, 11, 19), 79, '<div class="google-tooltip"><b>Thursday</b><br><b>Dec 19, 2019</b><br>Game Count: <b>79</b> (+1)</div>']] );
 
     var options = {
       vAxis: {
@@ -1918,16 +1926,16 @@ th, td {
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2019-11-29 </b>
+Last Game Acquired on <b> 2019-12-19 </b>
 (<span id="dayDiff"></span> ago)
 <br>
-Currently Unplayed: <b> 78 </b>
-(Lowest Since <b> 2019-10-31) </b>
+Currently Unplayed: <b> 79 </b>
+(Lowest Since <b> 2019-12-18) </b>
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2019, 10, 29) ;
+    var last_acquired = new Date(2019, 11, 19) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -1974,7 +1982,7 @@ Currently Unplayed: <b> 78 </b>
 
 <br>
 
-Next Possible Gamebreaker Threshold: <b>2020-01-04</b> (Score: 36)
+Next Possible Gamebreaker Threshold: <b>2020-01-24</b> (Score: 36)
 
 <br><br>
 
@@ -1985,7 +1993,7 @@ Next Possible Gamebreaker Threshold: <b>2020-01-04</b> (Score: 36)
 <br><br><br><img src="images/fine.png" />
 
 <br><br>
-<b><u>Unplayed Games (78):</u></b>
+<b><u>Unplayed Games (79):</u></b>
 <br>
 <a href=https://www.boardgamegeek.com/boardgame/216788/ target='_blank'>A Feast for Odin: The Norwegians</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/207117/ target='_blank'>Abandon Planet</a>
@@ -2034,6 +2042,7 @@ Next Possible Gamebreaker Threshold: <b>2020-01-04</b> (Score: 36)
 <br> <a href=https://www.boardgamegeek.com/boardgame/142584/ target='_blank'>Moby Dick</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/230064/ target='_blank'>Ninjitsu</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/190798/ target='_blank'>North Sea Runesaga</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/184267/ target='_blank'>On Mars</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/128780/ target='_blank'>Pax Porfiriana</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/198953/ target='_blank'>Pax Renaissance</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/242684/ target='_blank'>Reavers of Midgard</a>
