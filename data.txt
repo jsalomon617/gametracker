@@ -470,3 +470,4 @@
 2019-12-21  +   Terraforming Mars: Prelude/Colonies     id247030,255681
 2019-12-21  +   Brains!                                 id258474
 2019-12-21  -   Coup Reformation
+2019-12-22  -   Scythe Encounters
