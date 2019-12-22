@@ -467,3 +467,6 @@
 2019-12-07  -   Bios: Genesis
 2019-12-14  -   Small Star Empires
 2019-12-19  +   On Mars         id184267
+2019-12-21  +   Terraforming Mars: Prelude/Colonies     id247030,255681
+2019-12-21  +   Brains!                                 id258474
+2019-12-21  -   Coup Reformation
