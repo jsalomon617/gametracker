@@ -471,3 +471,4 @@
 2019-12-21  +   Brains!                                 id258474
 2019-12-21  -   Coup Reformation
 2019-12-22  -   Scythe Encounters
+2019-12-26  +   Azul: Summer        id287954
