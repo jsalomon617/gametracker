@@ -887,7 +887,9 @@
 [new Date(2019, 11, 23), 79, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2019, 11, 24), 79, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2019, 11, 25), 79, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
-[new Date(2019, 11, 26), 80, '<b>Games Obtained:</b><br>Azul: Summer<br><b>No Games Played</b>']] ;
+[new Date(2019, 11, 26), 80, '<b>Games Obtained:</b><br>Azul: Summer<br><b>No Games Played</b>'],
+[new Date(2019, 11, 27), 81, '<b>Games Obtained:</b><br>In the Hall of the Mountain King<br><b>No Games Played</b>'],
+[new Date(2019, 11, 28), 80, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Azul: Summer']] ;
 
   function drawChart() {
 
@@ -1774,7 +1776,9 @@
 [new Date(2019, 11, 23), 79, '<div class="google-tooltip"><b>Monday</b><br><b>Dec 23, 2019</b><br>Game Count: <b>79</b></div>'],
 [new Date(2019, 11, 24), 79, '<div class="google-tooltip"><b>Tuesday</b><br><b>Dec 24, 2019</b><br>Game Count: <b>79</b></div>'],
 [new Date(2019, 11, 25), 79, '<div class="google-tooltip"><b>Wednesday</b><br><b>Dec 25, 2019</b><br>Game Count: <b>79</b></div>'],
-[new Date(2019, 11, 26), 80, '<div class="google-tooltip"><b>Thursday</b><br><b>Dec 26, 2019</b><br>Game Count: <b>80</b> (+1)</div>']] );
+[new Date(2019, 11, 26), 80, '<div class="google-tooltip"><b>Thursday</b><br><b>Dec 26, 2019</b><br>Game Count: <b>80</b> (+1)</div>'],
+[new Date(2019, 11, 27), 81, '<div class="google-tooltip"><b>Friday</b><br><b>Dec 27, 2019</b><br>Game Count: <b>81</b> (+1)</div>'],
+[new Date(2019, 11, 28), 80, '<div class="google-tooltip"><b>Saturday</b><br><b>Dec 28, 2019</b><br>Game Count: <b>80</b> (-1)</div>']] );
 
     var options = {
       vAxis: {
@@ -1940,7 +1944,7 @@ th, td {
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2019-12-26 </b>
+Last Game Acquired on <b> 2019-12-27 </b>
 (<span id="dayDiff"></span> ago)
 <br>
 Currently Unplayed: <b> 80 </b>
@@ -1949,7 +1953,7 @@ Currently Unplayed: <b> 80 </b>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2019, 11, 26) ;
+    var last_acquired = new Date(2019, 11, 27) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -1996,7 +2000,7 @@ Currently Unplayed: <b> 80 </b>
 
 <br>
 
-Next Possible Gamebreaker Threshold: <b>2020-01-31</b> (Score: 36)
+Next Possible Gamebreaker Threshold: <b>2020-02-01</b> (Score: 36)
 
 <br><br>
 
@@ -2015,7 +2019,6 @@ Next Possible Gamebreaker Threshold: <b>2020-01-31</b> (Score: 36)
 <br> <a href=https://www.boardgamegeek.com/boardgame/13122/ target='_blank'>Antiquity</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/188181/ target='_blank'>Avignon: A Clash of Popes</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/209741/ target='_blank'>Avignon: Pilgrimage</a>
-<br> <a href=https://www.boardgamegeek.com/boardgame/287954/ target='_blank'>Azul: Summer</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/202443/ target='_blank'>Barker's Row</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/211534/ target='_blank'>Bears vs Babies</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/235555/ target='_blank'>Bios: Origins</a>
@@ -2042,6 +2045,7 @@ Next Possible Gamebreaker Threshold: <b>2020-01-31</b> (Score: 36)
 <br> HECK: A Tiny Card Game (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/205127/ target='_blank'>Haven</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/171261/ target='_blank'>Hocus</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/265402/ target='_blank'>In the Hall of the Mountain King</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/19777/ target='_blank'>Indonesia</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/275067/ target='_blank'>Key Market</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/239770/ target='_blank'>Kiek</a>

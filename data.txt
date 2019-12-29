@@ -472,3 +472,5 @@
 2019-12-21  -   Coup Reformation
 2019-12-22  -   Scythe Encounters
 2019-12-26  +   Azul: Summer        id287954
+2019-12-27  +   In the Hall of the Mountain King        id265402
+2019-12-28  -   Azul: Summer
