@@ -889,7 +889,18 @@
 [new Date(2019, 11, 25), 79, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2019, 11, 26), 80, '<b>Games Obtained:</b><br>Azul: Summer<br><b>No Games Played</b>'],
 [new Date(2019, 11, 27), 81, '<b>Games Obtained:</b><br>In the Hall of the Mountain King<br><b>No Games Played</b>'],
-[new Date(2019, 11, 28), 80, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Azul: Summer']] ;
+[new Date(2019, 11, 28), 80, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Azul: Summer'],
+[new Date(2019, 11, 29), 80, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 11, 30), 80, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2019, 11, 31), 80, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2020, 0, 1), 80, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2020, 0, 2), 80, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2020, 0, 3), 80, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2020, 0, 4), 80, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2020, 0, 5), 80, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2020, 0, 6), 80, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2020, 0, 7), 80, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2020, 0, 8), 81, '<b>Games Obtained:</b><br>Food Chain Magnate: Ketchup<br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -1778,7 +1789,18 @@
 [new Date(2019, 11, 25), 79, '<div class="google-tooltip"><b>Wednesday</b><br><b>Dec 25, 2019</b><br>Game Count: <b>79</b></div>'],
 [new Date(2019, 11, 26), 80, '<div class="google-tooltip"><b>Thursday</b><br><b>Dec 26, 2019</b><br>Game Count: <b>80</b> (+1)</div>'],
 [new Date(2019, 11, 27), 81, '<div class="google-tooltip"><b>Friday</b><br><b>Dec 27, 2019</b><br>Game Count: <b>81</b> (+1)</div>'],
-[new Date(2019, 11, 28), 80, '<div class="google-tooltip"><b>Saturday</b><br><b>Dec 28, 2019</b><br>Game Count: <b>80</b> (-1)</div>']] );
+[new Date(2019, 11, 28), 80, '<div class="google-tooltip"><b>Saturday</b><br><b>Dec 28, 2019</b><br>Game Count: <b>80</b> (-1)</div>'],
+[new Date(2019, 11, 29), 80, '<div class="google-tooltip"><b>Sunday</b><br><b>Dec 29, 2019</b><br>Game Count: <b>80</b></div>'],
+[new Date(2019, 11, 30), 80, '<div class="google-tooltip"><b>Monday</b><br><b>Dec 30, 2019</b><br>Game Count: <b>80</b></div>'],
+[new Date(2019, 11, 31), 80, '<div class="google-tooltip"><b>Tuesday</b><br><b>Dec 31, 2019</b><br>Game Count: <b>80</b></div>'],
+[new Date(2020, 0, 1), 80, '<div class="google-tooltip"><b>Wednesday</b><br><b>Jan 01, 2020</b><br>Game Count: <b>80</b></div>'],
+[new Date(2020, 0, 2), 80, '<div class="google-tooltip"><b>Thursday</b><br><b>Jan 02, 2020</b><br>Game Count: <b>80</b></div>'],
+[new Date(2020, 0, 3), 80, '<div class="google-tooltip"><b>Friday</b><br><b>Jan 03, 2020</b><br>Game Count: <b>80</b></div>'],
+[new Date(2020, 0, 4), 80, '<div class="google-tooltip"><b>Saturday</b><br><b>Jan 04, 2020</b><br>Game Count: <b>80</b></div>'],
+[new Date(2020, 0, 5), 80, '<div class="google-tooltip"><b>Sunday</b><br><b>Jan 05, 2020</b><br>Game Count: <b>80</b></div>'],
+[new Date(2020, 0, 6), 80, '<div class="google-tooltip"><b>Monday</b><br><b>Jan 06, 2020</b><br>Game Count: <b>80</b></div>'],
+[new Date(2020, 0, 7), 80, '<div class="google-tooltip"><b>Tuesday</b><br><b>Jan 07, 2020</b><br>Game Count: <b>80</b></div>'],
+[new Date(2020, 0, 8), 81, '<div class="google-tooltip"><b>Wednesday</b><br><b>Jan 08, 2020</b><br>Game Count: <b>81</b> (+1)</div>']] );
 
     var options = {
       vAxis: {
@@ -1944,16 +1966,16 @@ th, td {
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2019-12-27 </b>
+Last Game Acquired on <b> 2020-01-08 </b>
 (<span id="dayDiff"></span> ago)
 <br>
-Currently Unplayed: <b> 80 </b>
-(Lowest Since <b> 2019-12-25) </b>
+Currently Unplayed: <b> 81 </b>
+(Lowest Since <b> 2020-01-07) </b>
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2019, 11, 27) ;
+    var last_acquired = new Date(2020, 0, 8) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -2000,7 +2022,7 @@ Currently Unplayed: <b> 80 </b>
 
 <br>
 
-Next Possible Gamebreaker Threshold: <b>2020-02-01</b> (Score: 36)
+Next Possible Gamebreaker Threshold: <b>2020-02-13</b> (Score: 36)
 
 <br><br>
 
@@ -2011,7 +2033,7 @@ Next Possible Gamebreaker Threshold: <b>2020-02-01</b> (Score: 36)
 <br><br><br><img src="images/fine.png" />
 
 <br><br>
-<b><u>Unplayed Games (80):</u></b>
+<b><u>Unplayed Games (81):</u></b>
 <br>
 <a href=https://www.boardgamegeek.com/boardgame/216788/ target='_blank'>A Feast for Odin: The Norwegians</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/207117/ target='_blank'>Abandon Planet</a>
@@ -2039,6 +2061,7 @@ Next Possible Gamebreaker Threshold: <b>2020-02-01</b> (Score: 36)
 <br> <a href=https://www.boardgamegeek.com/boardgame/271664/ target='_blank'>Euphoria: Ignorance is Bliss</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/176371/ target='_blank'>Explorers of the North Sea</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/209748/ target='_blank'>Find Your Seats</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/261526/ target='_blank'>Food Chain Magnate: Ketchup</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/214032/ target='_blank'>Founders of Gloomhaven</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/250865/ target='_blank'>Grifters: Nexus</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/134157/ target='_blank'>Guilds of London</a>
