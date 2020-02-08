@@ -432,7 +432,7 @@
 2019-08-27  -   Microbrewers
 2019-08-28  -   Snowdonia
 2019-09-03  -   Altiplano: The Traveler
-2019-09-05  +   HECK: A Tiny Card Game
+2019-09-05  +   HECK: A Tiny Card Game      id288876
 2019-09-07  -   Ticket to Ride: Asia
 2019-09-13  -   Ticket to Ride: UK and Pennsylvania
 2019-09-13  +   Tapestry        id286096
