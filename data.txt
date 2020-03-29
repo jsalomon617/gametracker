@@ -490,3 +490,11 @@
 2020-03-11  +   Inhuman Conditions      id261403
 2020-03-14  -   Inhuman Conditions
 2020-03-19  -   Ticket to Ride: India and Switzerland
+2020-03-27  +   Unearth Expansion               id276821
+2020-03-27  +   Azul Expansion                  id294345
+2020-03-27  +   Heaven and Ale Expansion        id285961
+2020-03-27  +   Stone Age Expansion             id107576
+2020-03-27  +   Rajas of the Ganges Expansion   id286383
+2020-03-27  +   Alubari                         id228959
+2020-03-27  +   Tzolkin                         id126163
+2020-03-27  -   Unearth Expansion
