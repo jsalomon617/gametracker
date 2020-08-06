@@ -500,3 +500,10 @@
 2020-03-27  -   Unearth Expansion
 2020-04-28  -   Ticket to Ride: Nordic Countries
 2020-07-18  +   Fiasco (Card Game)
+2020-08-05  +   Seasons     id108745
+2020-08-05  +   Merkator    id39684
+2020-08-05  +   Bora Bora   id127060
+2020-08-05  +   Pret-a-Porter   id87890
+2020-08-05  +   La Granja   id146886
+2020-08-05  +   Shipyard    id55600
+2020-08-05  -   Shipyard
