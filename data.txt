@@ -507,3 +507,6 @@
 2020-08-05  +   La Granja   id146886
 2020-08-05  +   Shipyard    id55600
 2020-08-05  -   Shipyard
+2020-08-14  -   Azul Expansion
+2020-08-15  +   Maracaibo                           id276025
+2020-08-15  +   Ticket to Ride: Japan and Italy     id288679

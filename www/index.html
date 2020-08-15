@@ -1110,7 +1110,17 @@
 [new Date(2020, 7, 2), 78, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2020, 7, 3), 78, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2020, 7, 4), 78, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
-[new Date(2020, 7, 5), 83, '<b>Games Obtained:</b><br>Seasons<br>Merkator<br>Bora Bora<br>Pret-a-Porter<br>La Granja<br>Shipyard<br><b>Games Played:</b><br>Shipyard']] ;
+[new Date(2020, 7, 5), 83, '<b>Games Obtained:</b><br>Seasons<br>Merkator<br>Bora Bora<br>Pret-a-Porter<br>La Granja<br>Shipyard<br><b>Games Played:</b><br>Shipyard'],
+[new Date(2020, 7, 6), 83, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2020, 7, 7), 83, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2020, 7, 8), 83, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2020, 7, 9), 83, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2020, 7, 10), 83, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2020, 7, 11), 83, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2020, 7, 12), 83, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2020, 7, 13), 83, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2020, 7, 14), 82, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Azul Expansion'],
+[new Date(2020, 7, 15), 84, '<b>Games Obtained:</b><br>Maracaibo<br>Ticket to Ride: Japan and Italy<br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -2220,7 +2230,17 @@
 [new Date(2020, 7, 2), 78, '<div class="google-tooltip"><b>Sunday</b><br><b>Aug 02, 2020</b><br>Game Count: <b>78</b></div>'],
 [new Date(2020, 7, 3), 78, '<div class="google-tooltip"><b>Monday</b><br><b>Aug 03, 2020</b><br>Game Count: <b>78</b></div>'],
 [new Date(2020, 7, 4), 78, '<div class="google-tooltip"><b>Tuesday</b><br><b>Aug 04, 2020</b><br>Game Count: <b>78</b></div>'],
-[new Date(2020, 7, 5), 83, '<div class="google-tooltip"><b>Wednesday</b><br><b>Aug 05, 2020</b><br>Game Count: <b>83</b> (+5)</div>']] );
+[new Date(2020, 7, 5), 83, '<div class="google-tooltip"><b>Wednesday</b><br><b>Aug 05, 2020</b><br>Game Count: <b>83</b> (+5)</div>'],
+[new Date(2020, 7, 6), 83, '<div class="google-tooltip"><b>Thursday</b><br><b>Aug 06, 2020</b><br>Game Count: <b>83</b></div>'],
+[new Date(2020, 7, 7), 83, '<div class="google-tooltip"><b>Friday</b><br><b>Aug 07, 2020</b><br>Game Count: <b>83</b></div>'],
+[new Date(2020, 7, 8), 83, '<div class="google-tooltip"><b>Saturday</b><br><b>Aug 08, 2020</b><br>Game Count: <b>83</b></div>'],
+[new Date(2020, 7, 9), 83, '<div class="google-tooltip"><b>Sunday</b><br><b>Aug 09, 2020</b><br>Game Count: <b>83</b></div>'],
+[new Date(2020, 7, 10), 83, '<div class="google-tooltip"><b>Monday</b><br><b>Aug 10, 2020</b><br>Game Count: <b>83</b></div>'],
+[new Date(2020, 7, 11), 83, '<div class="google-tooltip"><b>Tuesday</b><br><b>Aug 11, 2020</b><br>Game Count: <b>83</b></div>'],
+[new Date(2020, 7, 12), 83, '<div class="google-tooltip"><b>Wednesday</b><br><b>Aug 12, 2020</b><br>Game Count: <b>83</b></div>'],
+[new Date(2020, 7, 13), 83, '<div class="google-tooltip"><b>Thursday</b><br><b>Aug 13, 2020</b><br>Game Count: <b>83</b></div>'],
+[new Date(2020, 7, 14), 82, '<div class="google-tooltip"><b>Friday</b><br><b>Aug 14, 2020</b><br>Game Count: <b>82</b> (-1)</div>'],
+[new Date(2020, 7, 15), 84, '<div class="google-tooltip"><b>Saturday</b><br><b>Aug 15, 2020</b><br>Game Count: <b>84</b> (+2)</div>']] );
 
     var options = {
       vAxis: {
@@ -2386,16 +2406,16 @@ th, td {
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2020-08-05 </b>
+Last Game Acquired on <b> 2020-08-15 </b>
 (<span id="dayDiff"></span> ago)
 <br>
-Currently Unplayed: <b> 83 </b>
-(Lowest Since <b> 2020-08-04) </b>
+Currently Unplayed: <b> 84 </b>
+(Lowest Since <b> 2020-08-14) </b>
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2020, 7, 5) ;
+    var last_acquired = new Date(2020, 7, 15) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -2444,7 +2464,7 @@ Currently Unplayed: <b> 83 </b>
 
 <br>
 
-Next Possible Gamebreaker Threshold: <b>2020-11-27</b> (Score: 114)
+Next Possible Gamebreaker Threshold: <b>2020-12-07</b> (Score: 114)
 
 <br><br>
 
@@ -2455,7 +2475,7 @@ Next Possible Gamebreaker Threshold: <b>2020-11-27</b> (Score: 114)
 <br><br><br><img src="images/fine.png" />
 
 <br><br>
-<b><u>Unplayed Games (83):</u></b>
+<b><u>Unplayed Games (84):</u></b>
 <br>
 <a href=https://www.boardgamegeek.com/boardgame/216788/ target='_blank'>A Feast for Odin: The Norwegians</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/207117/ target='_blank'>Abandon Planet</a>
@@ -2465,7 +2485,6 @@ Next Possible Gamebreaker Threshold: <b>2020-11-27</b> (Score: 114)
 <br> <a href=https://www.boardgamegeek.com/boardgame/285235/ target='_blank'>Architects of the West Kingdom: Age of Artisans</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/188181/ target='_blank'>Avignon: A Clash of Popes</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/209741/ target='_blank'>Avignon: Pilgrimage</a>
-<br> <a href=https://www.boardgamegeek.com/boardgame/294345/ target='_blank'>Azul Expansion</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/202443/ target='_blank'>Barker's Row</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/211534/ target='_blank'>Bears vs Babies</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/235555/ target='_blank'>Bios: Origins</a>
@@ -2501,6 +2520,7 @@ Next Possible Gamebreaker Threshold: <b>2020-11-27</b> (Score: 114)
 <br> <a href=https://www.boardgamegeek.com/boardgame/170815/ target='_blank'>Lancaster: Big Box</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/35677/ target='_blank'>Le Havre</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/169393/ target='_blank'>Lord of the P.I.G.S.</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/276025/ target='_blank'>Maracaibo</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/65673/ target='_blank'>Masques</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/25292/ target='_blank'>Merchants and Marauders</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/39684/ target='_blank'>Merkator</a>
@@ -2528,6 +2548,7 @@ Next Possible Gamebreaker Threshold: <b>2020-11-27</b> (Score: 114)
 <br> <a href=https://www.boardgamegeek.com/boardgame/107576/ target='_blank'>Stone Age Expansion</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/213268/ target='_blank'>That Snow Moon</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/225244/ target='_blank'>Ticket to Ride: Germany</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/288679/ target='_blank'>Ticket to Ride: Japan and Italy</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/147938/ target='_blank'>Ticket to Ride: Nederland</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/180852/ target='_blank'>Tiny Epic Western</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/197069/ target='_blank'>Traitor Mechanic the Traitor Mechanic Game</a>
