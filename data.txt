@@ -511,5 +511,6 @@
 2020-08-15  +   Maracaibo                           id276025
 2020-08-15  +   Ticket to Ride: Japan and Italy     id288679
 2020-08-15  -   Ticket to Ride: Japan and Italy
+2020-08-27  +   Pendulum        id312804
 2020-09-09  +   Spirit Island: Jagged Earth         id262722
 2020-09-09  -   Spirit Island: Jagged Earth
