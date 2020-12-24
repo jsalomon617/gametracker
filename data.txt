@@ -527,3 +527,5 @@
 2020-10-30  -   Ticket to Ride: Nederland
 2020-11-19  +   Wingspan: Oceania       id300580
 2020-11-28  +   Mint Cooperative        id282765
+2020-12-14  +   Pandemic Legacy: Season 0   id314040
+2020-12-24  -   Haven
