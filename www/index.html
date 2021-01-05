@@ -1251,7 +1251,19 @@
 [new Date(2020, 11, 21), 92, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2020, 11, 22), 92, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2020, 11, 23), 92, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
-[new Date(2020, 11, 24), 91, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Haven']] ;
+[new Date(2020, 11, 24), 91, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Haven'],
+[new Date(2020, 11, 25), 91, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2020, 11, 26), 91, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2020, 11, 27), 91, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2020, 11, 28), 91, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2020, 11, 29), 92, '<b>Games Obtained:</b><br>Kanban EV<br><b>No Games Played</b>'],
+[new Date(2020, 11, 30), 92, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2020, 11, 31), 92, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2021, 0, 1), 91, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Wingspan: Oceania'],
+[new Date(2021, 0, 2), 91, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2021, 0, 3), 91, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2021, 0, 4), 91, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2021, 0, 5), 91, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -2502,7 +2514,19 @@
 [new Date(2020, 11, 21), 92, '<div class="google-tooltip"><b>Monday</b><br><b>Dec 21, 2020</b><br>Game Count: <b>92</b></div>'],
 [new Date(2020, 11, 22), 92, '<div class="google-tooltip"><b>Tuesday</b><br><b>Dec 22, 2020</b><br>Game Count: <b>92</b></div>'],
 [new Date(2020, 11, 23), 92, '<div class="google-tooltip"><b>Wednesday</b><br><b>Dec 23, 2020</b><br>Game Count: <b>92</b></div>'],
-[new Date(2020, 11, 24), 91, '<div class="google-tooltip"><b>Thursday</b><br><b>Dec 24, 2020</b><br>Game Count: <b>91</b> (-1)</div>']] );
+[new Date(2020, 11, 24), 91, '<div class="google-tooltip"><b>Thursday</b><br><b>Dec 24, 2020</b><br>Game Count: <b>91</b> (-1)</div>'],
+[new Date(2020, 11, 25), 91, '<div class="google-tooltip"><b>Friday</b><br><b>Dec 25, 2020</b><br>Game Count: <b>91</b></div>'],
+[new Date(2020, 11, 26), 91, '<div class="google-tooltip"><b>Saturday</b><br><b>Dec 26, 2020</b><br>Game Count: <b>91</b></div>'],
+[new Date(2020, 11, 27), 91, '<div class="google-tooltip"><b>Sunday</b><br><b>Dec 27, 2020</b><br>Game Count: <b>91</b></div>'],
+[new Date(2020, 11, 28), 91, '<div class="google-tooltip"><b>Monday</b><br><b>Dec 28, 2020</b><br>Game Count: <b>91</b></div>'],
+[new Date(2020, 11, 29), 92, '<div class="google-tooltip"><b>Tuesday</b><br><b>Dec 29, 2020</b><br>Game Count: <b>92</b> (+1)</div>'],
+[new Date(2020, 11, 30), 92, '<div class="google-tooltip"><b>Wednesday</b><br><b>Dec 30, 2020</b><br>Game Count: <b>92</b></div>'],
+[new Date(2020, 11, 31), 92, '<div class="google-tooltip"><b>Thursday</b><br><b>Dec 31, 2020</b><br>Game Count: <b>92</b></div>'],
+[new Date(2021, 0, 1), 91, '<div class="google-tooltip"><b>Friday</b><br><b>Jan 01, 2021</b><br>Game Count: <b>91</b> (-1)</div>'],
+[new Date(2021, 0, 2), 91, '<div class="google-tooltip"><b>Saturday</b><br><b>Jan 02, 2021</b><br>Game Count: <b>91</b></div>'],
+[new Date(2021, 0, 3), 91, '<div class="google-tooltip"><b>Sunday</b><br><b>Jan 03, 2021</b><br>Game Count: <b>91</b></div>'],
+[new Date(2021, 0, 4), 91, '<div class="google-tooltip"><b>Monday</b><br><b>Jan 04, 2021</b><br>Game Count: <b>91</b></div>'],
+[new Date(2021, 0, 5), 91, '<div class="google-tooltip"><b>Tuesday</b><br><b>Jan 05, 2021</b><br>Game Count: <b>91</b></div>']] );
 
     var options = {
       vAxis: {
@@ -2668,7 +2692,7 @@ th, td {
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2020-12-14 </b>
+Last Game Acquired on <b> 2020-12-29 </b>
 (<span id="dayDiff"></span> ago)
 <br>
 Currently Unplayed: <b> 91 </b>
@@ -2677,7 +2701,7 @@ Currently Unplayed: <b> 91 </b>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2020, 11, 14) ;
+    var last_acquired = new Date(2020, 11, 29) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -2726,7 +2750,7 @@ Currently Unplayed: <b> 91 </b>
 
 <br>
 
-Next Possible Gamebreaker Threshold: <b>2021-04-07</b> (Score: 114)
+Next Possible Gamebreaker Threshold: <b>2021-04-22</b> (Score: 114)
 
 <br><br>
 
@@ -2774,6 +2798,7 @@ Next Possible Gamebreaker Threshold: <b>2021-04-07</b> (Score: 114)
 <br> <a href=https://www.boardgamegeek.com/boardgame/285961/ target='_blank'>Heaven and Ale Expansion</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/171261/ target='_blank'>Hocus</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/19777/ target='_blank'>Indonesia</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/284378/ target='_blank'>Kanban EV</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/275067/ target='_blank'>Key Market</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/239770/ target='_blank'>Kiek</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/3699/ target='_blank'>Killer Bunnies</a>
@@ -2826,7 +2851,6 @@ Next Possible Gamebreaker Threshold: <b>2021-04-07</b> (Score: 114)
 <br> <a href=https://www.boardgamegeek.com/boardgame/296151/ target='_blank'>Viscounts of the West Kingdom</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/227266/ target='_blank'>Wagon Wheels</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/296152/ target='_blank'>West Kingdom Tomesaga</a>
-<br> <a href=https://www.boardgamegeek.com/boardgame/300580/ target='_blank'>Wingspan: Oceania</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/185154/ target='_blank'>Wizard School</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/281466/ target='_blank'>Yedo: Deluxe</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/244114/ target='_blank'>Yellow and Yangtze</a>
