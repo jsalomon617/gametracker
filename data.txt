@@ -532,3 +532,5 @@
 2020-12-29  +   Kanban EV       id284378
 2021-01-01  -   Wingspan: Oceania
 2021-01-05  +   Anachrony: Fractures of Time        id272077
+2021-01-28  +   Orleans     id164928
+2021-01-29  -   Founders of Gloomhaven
