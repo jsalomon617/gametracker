@@ -1362,7 +1362,9 @@
 [new Date(2021, 3, 11), 91, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2021, 3, 12), 91, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2021, 3, 13), 91, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
-[new Date(2021, 3, 14), 92, '<b>Games Obtained:</b><br>Genotype<br><b>No Games Played</b>']] ;
+[new Date(2021, 3, 14), 92, '<b>Games Obtained:</b><br>Genotype<br><b>No Games Played</b>'],
+[new Date(2021, 3, 15), 92, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2021, 3, 16), 93, '<b>Games Obtained:</b><br>Mercado de Lisboa<br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -2724,7 +2726,9 @@
 [new Date(2021, 3, 11), 91, '<div class="google-tooltip"><b>Sunday</b><br><b>Apr 11, 2021</b><br>Game Count: <b>91</b></div>'],
 [new Date(2021, 3, 12), 91, '<div class="google-tooltip"><b>Monday</b><br><b>Apr 12, 2021</b><br>Game Count: <b>91</b></div>'],
 [new Date(2021, 3, 13), 91, '<div class="google-tooltip"><b>Tuesday</b><br><b>Apr 13, 2021</b><br>Game Count: <b>91</b></div>'],
-[new Date(2021, 3, 14), 92, '<div class="google-tooltip"><b>Wednesday</b><br><b>Apr 14, 2021</b><br>Game Count: <b>92</b> (+1)</div>']] );
+[new Date(2021, 3, 14), 92, '<div class="google-tooltip"><b>Wednesday</b><br><b>Apr 14, 2021</b><br>Game Count: <b>92</b> (+1)</div>'],
+[new Date(2021, 3, 15), 92, '<div class="google-tooltip"><b>Thursday</b><br><b>Apr 15, 2021</b><br>Game Count: <b>92</b></div>'],
+[new Date(2021, 3, 16), 93, '<div class="google-tooltip"><b>Friday</b><br><b>Apr 16, 2021</b><br>Game Count: <b>93</b> (+1)</div>']] );
 
     var options = {
       vAxis: {
@@ -2890,16 +2894,16 @@ th, td {
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2021-04-14 </b>
+Last Game Acquired on <b> 2021-04-16 </b>
 (<span id="dayDiff"></span> ago)
 <br>
-Currently Unplayed: <b> 92 </b>
-(Lowest Since <b> 2021-04-13) </b>
+Currently Unplayed: <b> 93 </b>
+(Lowest Since <b> 2021-04-15) </b>
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2021, 3, 14) ;
+    var last_acquired = new Date(2021, 3, 16) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -2948,7 +2952,7 @@ Currently Unplayed: <b> 92 </b>
 
 <br>
 
-Next Possible Gamebreaker Threshold: <b>2021-08-06</b> (Score: 114)
+Next Possible Gamebreaker Threshold: <b>2021-08-08</b> (Score: 114)
 
 <br><br>
 
@@ -2959,7 +2963,7 @@ Next Possible Gamebreaker Threshold: <b>2021-08-06</b> (Score: 114)
 <br><br><br><img src="images/fine.png" />
 
 <br><br>
-<b><u>Unplayed Games (92):</u></b>
+<b><u>Unplayed Games (93):</u></b>
 <br>
 <a href=https://www.boardgamegeek.com/boardgame/216788/ target='_blank'>A Feast for Odin: The Norwegians</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/207117/ target='_blank'>Abandon Planet</a>
@@ -3008,6 +3012,7 @@ Next Possible Gamebreaker Threshold: <b>2021-08-06</b> (Score: 114)
 <br> <a href=https://www.boardgamegeek.com/boardgame/169393/ target='_blank'>Lord of the P.I.G.S.</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/276025/ target='_blank'>Maracaibo</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/65673/ target='_blank'>Masques</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/262477/ target='_blank'>Mercado de Lisboa</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/25292/ target='_blank'>Merchants and Marauders</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/39684/ target='_blank'>Merkator</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/5941/ target='_blank'>Mermaid Rain</a>
