@@ -549,3 +549,4 @@
 2021-04-16  +   Mercado de Lisboa   id262477
 2021-04-17  -   Genotype
 2021-04-18  +   Railroad Ink Challenge      id306881,id306882
+2021-04-21  +   Red Rising      id329465
