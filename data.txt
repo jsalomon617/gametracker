@@ -553,5 +553,6 @@
 2021-04-23  -   Le Havre
 2021-05-10  +   Mint Control    id299249
 2021-06-07  -   HECK: A Tiny Card Game
+2021-06-11  +   Between Two Castles of Mad King Ludwig Expansion    id336872
 2021-06-12  -   Railroad Ink Challenge
 2021-06-13  -   Ticket to Ride: Germany
