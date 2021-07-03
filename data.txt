@@ -556,3 +556,4 @@
 2021-06-11  +   Between Two Castles of Mad King Ludwig Expansion    id336872
 2021-06-12  -   Railroad Ink Challenge
 2021-06-13  -   Ticket to Ride: Germany
+2021-06-29  +   Mint Bid        id328569

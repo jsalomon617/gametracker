@@ -1431,7 +1431,17 @@
 [new Date(2021, 5, 19), 92, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2021, 5, 20), 92, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2021, 5, 21), 92, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
-[new Date(2021, 5, 22), 92, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
+[new Date(2021, 5, 22), 92, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2021, 5, 23), 92, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2021, 5, 24), 92, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2021, 5, 25), 92, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2021, 5, 26), 92, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2021, 5, 27), 92, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2021, 5, 28), 92, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2021, 5, 29), 93, '<b>Games Obtained:</b><br>Mint Bid<br><b>No Games Played</b>'],
+[new Date(2021, 5, 30), 93, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2021, 6, 1), 93, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2021, 6, 2), 93, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -2862,7 +2872,17 @@
 [new Date(2021, 5, 19), 92, '<div class="google-tooltip"><b>Saturday</b><br><b>Jun 19, 2021</b><br>Game Count: <b>92</b></div>'],
 [new Date(2021, 5, 20), 92, '<div class="google-tooltip"><b>Sunday</b><br><b>Jun 20, 2021</b><br>Game Count: <b>92</b></div>'],
 [new Date(2021, 5, 21), 92, '<div class="google-tooltip"><b>Monday</b><br><b>Jun 21, 2021</b><br>Game Count: <b>92</b></div>'],
-[new Date(2021, 5, 22), 92, '<div class="google-tooltip"><b>Tuesday</b><br><b>Jun 22, 2021</b><br>Game Count: <b>92</b></div>']] );
+[new Date(2021, 5, 22), 92, '<div class="google-tooltip"><b>Tuesday</b><br><b>Jun 22, 2021</b><br>Game Count: <b>92</b></div>'],
+[new Date(2021, 5, 23), 92, '<div class="google-tooltip"><b>Wednesday</b><br><b>Jun 23, 2021</b><br>Game Count: <b>92</b></div>'],
+[new Date(2021, 5, 24), 92, '<div class="google-tooltip"><b>Thursday</b><br><b>Jun 24, 2021</b><br>Game Count: <b>92</b></div>'],
+[new Date(2021, 5, 25), 92, '<div class="google-tooltip"><b>Friday</b><br><b>Jun 25, 2021</b><br>Game Count: <b>92</b></div>'],
+[new Date(2021, 5, 26), 92, '<div class="google-tooltip"><b>Saturday</b><br><b>Jun 26, 2021</b><br>Game Count: <b>92</b></div>'],
+[new Date(2021, 5, 27), 92, '<div class="google-tooltip"><b>Sunday</b><br><b>Jun 27, 2021</b><br>Game Count: <b>92</b></div>'],
+[new Date(2021, 5, 28), 92, '<div class="google-tooltip"><b>Monday</b><br><b>Jun 28, 2021</b><br>Game Count: <b>92</b></div>'],
+[new Date(2021, 5, 29), 93, '<div class="google-tooltip"><b>Tuesday</b><br><b>Jun 29, 2021</b><br>Game Count: <b>93</b> (+1)</div>'],
+[new Date(2021, 5, 30), 93, '<div class="google-tooltip"><b>Wednesday</b><br><b>Jun 30, 2021</b><br>Game Count: <b>93</b></div>'],
+[new Date(2021, 6, 1), 93, '<div class="google-tooltip"><b>Thursday</b><br><b>Jul 01, 2021</b><br>Game Count: <b>93</b></div>'],
+[new Date(2021, 6, 2), 93, '<div class="google-tooltip"><b>Friday</b><br><b>Jul 02, 2021</b><br>Game Count: <b>93</b></div>']] );
 
     var options = {
       vAxis: {
@@ -3028,16 +3048,16 @@ th, td {
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2021-06-11 </b>
+Last Game Acquired on <b> 2021-06-29 </b>
 (<span id="dayDiff"></span> ago)
 <br>
-Currently Unplayed: <b> 92 </b>
-(Lowest Since <b> 2021-04-13) </b>
+Currently Unplayed: <b> 93 </b>
+(Lowest Since <b> 2021-06-28) </b>
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2021, 5, 11) ;
+    var last_acquired = new Date(2021, 5, 29) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -3086,7 +3106,7 @@ Currently Unplayed: <b> 92 </b>
 
 <br>
 
-Next Possible Gamebreaker Threshold: <b>2021-10-03</b> (Score: 114)
+Next Possible Gamebreaker Threshold: <b>2021-10-21</b> (Score: 114)
 
 <br><br>
 
@@ -3097,7 +3117,7 @@ Next Possible Gamebreaker Threshold: <b>2021-10-03</b> (Score: 114)
 <br><br><br><img src="images/fine.png" />
 
 <br><br>
-<b><u>Unplayed Games (92):</u></b>
+<b><u>Unplayed Games (93):</u></b>
 <br>
 <a href=https://www.boardgamegeek.com/boardgame/216788/ target='_blank'>A Feast for Odin: The Norwegians</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/207117/ target='_blank'>Abandon Planet</a>
@@ -3148,6 +3168,7 @@ Next Possible Gamebreaker Threshold: <b>2021-10-03</b> (Score: 114)
 <br> <a href=https://www.boardgamegeek.com/boardgame/25292/ target='_blank'>Merchants and Marauders</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/39684/ target='_blank'>Merkator</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/5941/ target='_blank'>Mermaid Rain</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/328569/ target='_blank'>Mint Bid</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/299249/ target='_blank'>Mint Control</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/282765/ target='_blank'>Mint Cooperative</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/222462/ target='_blank'>Mint Julep</a>
