@@ -565,3 +565,5 @@
 2021-07-14  +   Sagrada     id199561
 2021-07-14  +   Takenoko    id70919
 2021-07-14  -   Takenoko
+2021-07-24  -   Red Rising
+2021-07-24  -   For Science!
