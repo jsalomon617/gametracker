@@ -569,3 +569,4 @@
 2021-07-24  -   For Science!
 2021-07-31  -   Sagrada
 2021-09-03  -   Tzolkin
+2021-10-02  +   Fantastic Factories expansions  id319035,320242
