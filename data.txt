@@ -572,3 +572,5 @@
 2021-10-02  +   Fantastic Factories expansions  id319035,320242
 2021-10-04  +   Deep Space D6: Armada       id225274
 2021-10-04  +   Jumpship                    id275274
+2021-10-07  +   Dinosaur World                      id317457
+2021-10-07  +   Dinosaur Island: Rawr and Write     id318009

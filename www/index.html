@@ -1535,7 +1535,10 @@
 [new Date(2021, 9, 1), 91, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2021, 9, 2), 92, '<b>Games Obtained:</b><br>Fantastic Factories expansions<br><b>No Games Played</b>'],
 [new Date(2021, 9, 3), 92, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
-[new Date(2021, 9, 4), 94, '<b>Games Obtained:</b><br>Deep Space D6: Armada<br>Jumpship<br><b>No Games Played</b>']] ;
+[new Date(2021, 9, 4), 94, '<b>Games Obtained:</b><br>Deep Space D6: Armada<br>Jumpship<br><b>No Games Played</b>'],
+[new Date(2021, 9, 5), 94, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2021, 9, 6), 94, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2021, 9, 7), 96, '<b>Games Obtained:</b><br>Dinosaur World<br>Dinosaur Island: Rawr and Write<br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -3070,7 +3073,10 @@
 [new Date(2021, 9, 1), 91, '<div class="google-tooltip"><b>Friday</b><br><b>Oct 01, 2021</b><br>Game Count: <b>91</b></div>'],
 [new Date(2021, 9, 2), 92, '<div class="google-tooltip"><b>Saturday</b><br><b>Oct 02, 2021</b><br>Game Count: <b>92</b> (+1)</div>'],
 [new Date(2021, 9, 3), 92, '<div class="google-tooltip"><b>Sunday</b><br><b>Oct 03, 2021</b><br>Game Count: <b>92</b></div>'],
-[new Date(2021, 9, 4), 94, '<div class="google-tooltip"><b>Monday</b><br><b>Oct 04, 2021</b><br>Game Count: <b>94</b> (+2)</div>']] );
+[new Date(2021, 9, 4), 94, '<div class="google-tooltip"><b>Monday</b><br><b>Oct 04, 2021</b><br>Game Count: <b>94</b> (+2)</div>'],
+[new Date(2021, 9, 5), 94, '<div class="google-tooltip"><b>Tuesday</b><br><b>Oct 05, 2021</b><br>Game Count: <b>94</b></div>'],
+[new Date(2021, 9, 6), 94, '<div class="google-tooltip"><b>Wednesday</b><br><b>Oct 06, 2021</b><br>Game Count: <b>94</b></div>'],
+[new Date(2021, 9, 7), 96, '<div class="google-tooltip"><b>Thursday</b><br><b>Oct 07, 2021</b><br>Game Count: <b>96</b> (+2)</div>']] );
 
     var options = {
       vAxis: {
@@ -3236,16 +3242,16 @@ th, td {
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2021-10-04 </b>
+Last Game Acquired on <b> 2021-10-07 </b>
 (<span id="dayDiff"></span> ago)
 <br>
-Currently Unplayed: <b> 94 </b>
-(Lowest Since <b> 2021-10-03) </b>
+Currently Unplayed: <b> 96 </b>
+(Lowest Since <b> 2021-10-06) </b>
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2021, 9, 4) ;
+    var last_acquired = new Date(2021, 9, 7) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -3294,7 +3300,7 @@ Currently Unplayed: <b> 94 </b>
 
 <br>
 
-Next Possible Gamebreaker Threshold: <b>2022-01-26</b> (Score: 114)
+Next Possible Gamebreaker Threshold: <b>2022-01-29</b> (Score: 114)
 
 <br><br>
 
@@ -3305,7 +3311,7 @@ Next Possible Gamebreaker Threshold: <b>2022-01-26</b> (Score: 114)
 <br><br><br><img src="images/fine.png" />
 
 <br><br>
-<b><u>Unplayed Games (94):</u></b>
+<b><u>Unplayed Games (96):</u></b>
 <br>
 <a href=https://www.boardgamegeek.com/boardgame/216788/ target='_blank'>A Feast for Odin: The Norwegians</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/207117/ target='_blank'>Abandon Planet</a>
@@ -3330,6 +3336,8 @@ Next Possible Gamebreaker Threshold: <b>2022-01-26</b> (Score: 114)
 <br> <a href=https://www.boardgamegeek.com/boardgame/230534/ target='_blank'>Dark Moon Expansion</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/245197/ target='_blank'>Deadwood 1876</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/225274/ target='_blank'>Deep Space D6: Armada</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/318009/ target='_blank'>Dinosaur Island: Rawr and Write</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/317457/ target='_blank'>Dinosaur World</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/96260/ target='_blank'>Dominant Species: The Card Game</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/38553/ target='_blank'>Duck Dealer</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/154904/ target='_blank'>Easy Breezy Travel Agency</a>
