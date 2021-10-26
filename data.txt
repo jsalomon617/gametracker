@@ -575,3 +575,4 @@
 2021-10-07  +   Dinosaur World                      id317457
 2021-10-07  +   Dinosaur Island: Rawr and Write     id318009
 2021-10-16  +   Rolling Realms      id305682
+2021-10-25  +   Chronicles of Chrime: 1400      id300300
