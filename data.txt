@@ -579,3 +579,4 @@
 2021-11-01  +   Sagrada: Great Facades      id263695
 2021-11-01  +   Teotihuacan                 id229853
 2021-11-01  +   Tekhenu                     id297030
+2021-11-02  +   The Colonists       id192836
