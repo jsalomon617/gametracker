@@ -175,6 +175,26 @@ def generate_webpage(collection):
     # get the info for our next gamebreaker
     next_game_breaker_date, next_game_breaker_count = collection.next_gamebreaker()
 
+    # get stats by year and pretty-print them
+    yearly_stats = collection.yearly_stats()
+    years = [year for (year, _) in yearly_stats]
+    stats = [stat for (stat, _) in yearly_stats[0][1]]
+
+    yearly_stats_str = "\n".join([
+        '<table>',
+        '<tr><th colspan="{}">Yearly Stats</th></tr>'.format(len(years) + 1),
+        '<tr>{}</tr>'.format(''.join(['<th>{}</th>'.format(h) for h in ([''] + years)])),
+    ] + [
+        '<tr>{}</tr>'.format(
+            ''.join(
+                ['<th>{}</th>'.format(stat)]
+                + ['<td>{}</td>'.format(yearly_stats[i][1][j][1]) for i in range(len(years))]
+            ))
+        for (j, stat) in enumerate(stats)
+    ] + [
+        '</table>'
+    ])
+
     ### prepare them for formatting
     format = {
         "datedata": datedata,
@@ -188,6 +208,7 @@ def generate_webpage(collection):
         "game_breaker_rows": game_breaker_rows,
         "next_game_breaker_date": str(next_game_breaker_date),
         "next_game_breaker_count": next_game_breaker_count,
+        "yearly_stats": yearly_stats_str,
     }
 
     ### get the template data

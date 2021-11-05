@@ -95,6 +95,56 @@ class Date(object):
         return [g for (g,e) in self.events if e == Event.PLAY]
 
 
+class DateRange(object):
+    """
+    Stores relevant info about a range of dates
+
+    We provide start and end (inclusive) datetime dates, but also
+    the collection.  Because each game-Date object is the status as
+    of the end of that day, we sometimes need the day before start.
+    """
+
+    def __init__(self, collection, start, end):
+        # store our start/end datetimes and the collection
+        self.collection = collection
+        self.start = start
+        self.end = end
+
+    def stats(self):
+        """ Return relevant stats for our range """
+
+        # get the game-date objects for start (the day before) and end (the real day)
+        bounded_start = self.start - datetime.timedelta(days=1)
+        if not self.collection.has_date(bounded_start):
+            bounded_start = self.start
+
+        # counts at start and end
+        start_count = self.collection.count(bounded_start)
+        end_count = self.collection.count(self.end)
+
+        # net change across the range, and formatted nicely
+        net_change = end_count - start_count
+        human_net = '+{}'.format(net_change) if net_change > 0 else str(net_change)
+
+        # get total games acquired and played across the range
+        acquired_count = 0
+        played_count = 0
+        index_date = self.start
+        while index_date <= self.end:
+            acquired_count += len(self.collection.games_get(index_date))
+            played_count += len(self.collection.games_play(index_date))
+            index_date += datetime.timedelta(days=1)
+
+        # return our interesting stats
+        return [
+            ('Starting Count', start_count),
+            ('Ending Count', end_count),
+            ('Net Change', human_net),
+            ('Games Acquired', acquired_count),
+            ('Games Played', played_count),
+        ]
+
+
 class Collection(object):
     """Stores and compiles all of the relevant info about the collection"""
 
@@ -177,6 +227,10 @@ class Collection(object):
 
         # initialize our gamebreaker list
         self.gamebreakers = _GAMEBREAKER_INPUT_DATA[:]
+
+    def has_date(self, date):
+        """Given a specific date, do we have it in the datestore?"""
+        return date in self.datestore
 
     def get_date(self, date):
         """Given a specific date, get it from datestore (creating it if necessary)"""
@@ -377,3 +431,23 @@ class Collection(object):
 
         # return those
         return (new_date, new_score)
+
+    def yearly_stats(self):
+        """ Return the interesting stats per year """
+
+        # get our relevant years
+        start_year = START.year
+        end_year = TODAY.year
+
+        # be ready to track our stats objects
+        stats_by_year = []
+
+        # compute our stats per year
+        for year in range(start_year, end_year+1):
+            start_date = START + datetime.timedelta(days=1) if year == start_year else datetime.date(year, 1, 1)
+            end_date = TODAY if year == end_year else datetime.date(year, 12, 31)
+            year_range = DateRange(self, start_date, end_date)
+            stats_by_year.append((year, year_range.stats()))
+
+        # return the stats
+        return stats_by_year
