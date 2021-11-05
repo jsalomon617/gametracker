@@ -217,6 +217,9 @@ Currently Unplayed: <b> {{ unplayed_count }} </b>
 <button id='degree_down' type='button' disabled onclick='changeDegree(-1)'>-</button>
 <br><br>
 
+{{ yearly_stats }}
+<br><br>
+
 <table>
 <tr>
 <th colspan="3">Game Breakers (Start: {{ game_breaker_start }})</th>
@@ -229,10 +232,6 @@ Currently Unplayed: <b> {{ unplayed_count }} </b>
 <br>
 
 Next Possible Gamebreaker Threshold: <b>{{ next_game_breaker_date }}</b> (Score: {{ next_game_breaker_count }})
-
-<br><br>
-
-{{ yearly_stats }}
 
 <br><br>
 
