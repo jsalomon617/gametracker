@@ -581,3 +581,4 @@
 2021-11-01  +   Tekhenu                     id297030
 2021-11-02  +   The Colonists       id192836
 2021-11-03  +   Connect the Bay
+2021-11-06  +   Paladins expansion  id317980
