@@ -582,3 +582,5 @@
 2021-11-02  +   The Colonists       id192836
 2021-11-03  +   Connect the Bay
 2021-11-06  +   Paladins expansion  id317980
+2021-11-08  +   Tokyo Metro expansion       id313592
+2021-11-08  +   Tokyo Tsukiji expansion     id313591
