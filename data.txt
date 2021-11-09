@@ -584,3 +584,5 @@
 2021-11-06  +   Paladins expansion  id317980
 2021-11-08  +   Tokyo Metro expansion       id313592
 2021-11-08  +   Tokyo Tsukiji expansion     id313591
+2021-11-09  +   The Great Zimbabwe          id111341
+2021-11-09  +   Cryo                        id330608
