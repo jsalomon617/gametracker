@@ -195,6 +195,10 @@ def generate_webpage(collection):
         '</table>'
     ])
 
+    # we explicitly define the min and max values of the chart, as multiples of 10 exclusive
+    vertical_min = ((collection.lifetime_min() - 1) / 10) * 10
+    vertical_max = (((collection.lifetime_max() + 1) / 10) + 1) * 10
+
     ### prepare them for formatting
     format = {
         "datedata": datedata,
@@ -209,6 +213,8 @@ def generate_webpage(collection):
         "next_game_breaker_date": str(next_game_breaker_date),
         "next_game_breaker_count": next_game_breaker_count,
         "yearly_stats": yearly_stats_str,
+        "vertical_min": vertical_min,
+        "vertical_max": vertical_max,
     }
 
     ### get the template data

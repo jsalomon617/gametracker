@@ -228,6 +228,10 @@ class Collection(object):
         # initialize our gamebreaker list
         self.gamebreakers = _GAMEBREAKER_INPUT_DATA[:]
 
+        # clear our min and max
+        self.count_min = None
+        self.count_max = None
+
     def has_date(self, date):
         """Given a specific date, do we have it in the datestore?"""
         return date in self.datestore
@@ -297,7 +301,14 @@ class Collection(object):
             date_previous = self.get_date(yesterday)
 
             # yesterday's count should already be set, so just add today's net
-            date_current.stats["count"] = date_previous.stats["count"] + date_current.net
+            today_count = date_previous.stats["count"] + date_current.net
+            date_current.stats["count"] = today_count
+
+            ### update min and max if necessary
+            if self.count_min is None or self.count_min > today_count:
+                self.count_min = today_count
+            if self.count_max is None or self.count_max < today_count:
+                self.count_max = today_count
 
             ### store how long it's been since our last game, in case today is a gamebreaker
             days_since_last_game = current - self.last_acquired
@@ -451,3 +462,11 @@ class Collection(object):
 
         # return the stats
         return stats_by_year
+
+    def lifetime_min(self):
+        """ Return lifetime min value """
+        return self.count_min
+
+    def lifetime_max(self):
+        """ return lifetime max value """
+        return self.count_max
