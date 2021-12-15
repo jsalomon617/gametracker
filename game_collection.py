@@ -7,7 +7,7 @@ import bgg_link
 from game_breaker import GameBreaker, _GAMEBREAKER_INPUT_DATA
 
 # start of our tracker
-START = datetime.date(2017, 07, 30)
+START = datetime.date(2017, 7, 30)
 
 # today's date
 TODAY = datetime.date.today()
