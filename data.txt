@@ -588,3 +588,4 @@
 2021-11-09  +   Cryo                        id330608
 2021-12-12  +   Sabobatage          id342636
 2021-12-28  +   Great Wall      id292375
+2022-01-07  -   Deep Space D6: Armada
