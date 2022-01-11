@@ -1633,7 +1633,8 @@
 [new Date(2022, 0, 7), 109, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Deep Space D6: Armada'],
 [new Date(2022, 0, 8), 109, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2022, 0, 9), 110, '<b>Games Obtained:</b><br>Sentinels of the Multiverse: Definitive Edition<br><b>No Games Played</b>'],
-[new Date(2022, 0, 10), 110, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
+[new Date(2022, 0, 10), 110, '<b>Games Obtained:</b><br>Shelfie Stacker<br><b>Games Played:</b><br>Shelfie Stacker'],
+[new Date(2022, 0, 11), 110, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -3266,7 +3267,8 @@
 [new Date(2022, 0, 7), 109, '<div class="google-tooltip"><b>Friday</b><br><b>Jan 07, 2022</b><br>Game Count: <b>109</b> (-1)</div>'],
 [new Date(2022, 0, 8), 109, '<div class="google-tooltip"><b>Saturday</b><br><b>Jan 08, 2022</b><br>Game Count: <b>109</b></div>'],
 [new Date(2022, 0, 9), 110, '<div class="google-tooltip"><b>Sunday</b><br><b>Jan 09, 2022</b><br>Game Count: <b>110</b> (+1)</div>'],
-[new Date(2022, 0, 10), 110, '<div class="google-tooltip"><b>Monday</b><br><b>Jan 10, 2022</b><br>Game Count: <b>110</b></div>']] );
+[new Date(2022, 0, 10), 110, '<div class="google-tooltip"><b>Monday</b><br><b>Jan 10, 2022</b><br>Game Count: <b>110</b></div>'],
+[new Date(2022, 0, 11), 110, '<div class="google-tooltip"><b>Tuesday</b><br><b>Jan 11, 2022</b><br>Game Count: <b>110</b></div>']] );
 
     var options = {
       vAxis: {
@@ -3434,7 +3436,7 @@ th, td {
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2022-01-09 </b>
+Last Game Acquired on <b> 2022-01-10 </b>
 (<span id="dayDiff"></span> ago)
 <br>
 Currently Unplayed: <b> 110 </b>
@@ -3443,7 +3445,7 @@ Currently Unplayed: <b> 110 </b>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2022, 0, 9) ;
+    var last_acquired = new Date(2022, 0, 10) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -3475,8 +3477,8 @@ Currently Unplayed: <b> 110 </b>
 <tr><th>Starting Count</th><td>52</td><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td></tr>
 <tr><th>Ending Count</th><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td><td>110</td></tr>
 <tr><th>Net Change</th><td>+26</td><td>+2</td><td>0</td><td>+12</td><td>+18</td><td>0</td></tr>
-<tr><th>Games Acquired</th><td>56</td><td>106</td><td>64</td><td>34</td><td>38</td><td>1</td></tr>
-<tr><th>Games Played</th><td>30</td><td>104</td><td>64</td><td>22</td><td>20</td><td>1</td></tr>
+<tr><th>Games Acquired</th><td>56</td><td>106</td><td>64</td><td>34</td><td>38</td><td>2</td></tr>
+<tr><th>Games Played</th><td>30</td><td>104</td><td>64</td><td>22</td><td>20</td><td>2</td></tr>
 </table>
 <br><br>
 
@@ -3503,7 +3505,7 @@ Currently Unplayed: <b> 110 </b>
 
 <br>
 
-Next Possible Gamebreaker Threshold: <b>2022-05-03</b> (Score: 114)
+Next Possible Gamebreaker Threshold: <b>2022-05-04</b> (Score: 114)
 
 <br><br>
 

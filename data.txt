@@ -590,3 +590,5 @@
 2021-12-28  +   Great Wall      id292375
 2022-01-07  -   Deep Space D6: Armada
 2022-01-09  +   Sentinels of the Multiverse: Definitive Edition     id335212
+2022-01-10  +   Shelfie Stacker     id281455
+2022-01-10  -   Shelfie Stacker
