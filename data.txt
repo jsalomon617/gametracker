@@ -592,3 +592,4 @@
 2022-01-09  +   Sentinels of the Multiverse: Definitive Edition     id335212
 2022-01-10  +   Shelfie Stacker     id281455
 2022-01-10  -   Shelfie Stacker
+2022-01-25  -   Sentinels of the Multiverse: Definitive Edition
