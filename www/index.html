@@ -1660,7 +1660,11 @@
 [new Date(2022, 1, 3), 107, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2022, 1, 4), 108, '<b>Games Obtained:</b><br>Now or Never<br><b>No Games Played</b>'],
 [new Date(2022, 1, 5), 106, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Sagrada: Great Facades<br>Sabobatage'],
-[new Date(2022, 1, 6), 106, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
+[new Date(2022, 1, 6), 106, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2022, 1, 7), 106, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2022, 1, 8), 106, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2022, 1, 9), 106, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2022, 1, 10), 106, '<b>Games Obtained:</b><br>Stardew Valley<br><b>Games Played:</b><br>Stardew Valley']] ;
 
   function drawChart() {
 
@@ -3320,7 +3324,11 @@
 [new Date(2022, 1, 3), 107, '<div class="google-tooltip"><b>Thursday</b><br><b>Feb 03, 2022</b><br>Game Count: <b>107</b></div>'],
 [new Date(2022, 1, 4), 108, '<div class="google-tooltip"><b>Friday</b><br><b>Feb 04, 2022</b><br>Game Count: <b>108</b> (+1)</div>'],
 [new Date(2022, 1, 5), 106, '<div class="google-tooltip"><b>Saturday</b><br><b>Feb 05, 2022</b><br>Game Count: <b>106</b> (-2)</div>'],
-[new Date(2022, 1, 6), 106, '<div class="google-tooltip"><b>Sunday</b><br><b>Feb 06, 2022</b><br>Game Count: <b>106</b></div>']] );
+[new Date(2022, 1, 6), 106, '<div class="google-tooltip"><b>Sunday</b><br><b>Feb 06, 2022</b><br>Game Count: <b>106</b></div>'],
+[new Date(2022, 1, 7), 106, '<div class="google-tooltip"><b>Monday</b><br><b>Feb 07, 2022</b><br>Game Count: <b>106</b></div>'],
+[new Date(2022, 1, 8), 106, '<div class="google-tooltip"><b>Tuesday</b><br><b>Feb 08, 2022</b><br>Game Count: <b>106</b></div>'],
+[new Date(2022, 1, 9), 106, '<div class="google-tooltip"><b>Wednesday</b><br><b>Feb 09, 2022</b><br>Game Count: <b>106</b></div>'],
+[new Date(2022, 1, 10), 106, '<div class="google-tooltip"><b>Thursday</b><br><b>Feb 10, 2022</b><br>Game Count: <b>106</b></div>']] );
 
     var options = {
       vAxis: {
@@ -3488,7 +3496,7 @@ th, td {
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2022-02-04 </b>
+Last Game Acquired on <b> 2022-02-10 </b>
 (<span id="dayDiff"></span> ago)
 <br>
 Currently Unplayed: <b> 106 </b>
@@ -3497,7 +3505,7 @@ Currently Unplayed: <b> 106 </b>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2022, 1, 4) ;
+    var last_acquired = new Date(2022, 1, 10) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -3529,8 +3537,8 @@ Currently Unplayed: <b> 106 </b>
 <tr><th>Starting Count</th><td>52</td><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td></tr>
 <tr><th>Ending Count</th><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td><td>106</td></tr>
 <tr><th>Net Change</th><td>+26</td><td>+2</td><td>0</td><td>+12</td><td>+18</td><td>-4</td></tr>
-<tr><th>Games Acquired</th><td>56</td><td>106</td><td>64</td><td>34</td><td>38</td><td>3</td></tr>
-<tr><th>Games Played</th><td>30</td><td>104</td><td>64</td><td>22</td><td>20</td><td>7</td></tr>
+<tr><th>Games Acquired</th><td>56</td><td>106</td><td>64</td><td>34</td><td>38</td><td>4</td></tr>
+<tr><th>Games Played</th><td>30</td><td>104</td><td>64</td><td>22</td><td>20</td><td>8</td></tr>
 </table>
 <br><br>
 
@@ -3557,7 +3565,7 @@ Currently Unplayed: <b> 106 </b>
 
 <br>
 
-Next Possible Gamebreaker Threshold: <b>2022-05-29</b> (Score: 114)
+Next Possible Gamebreaker Threshold: <b>2022-06-04</b> (Score: 114)
 
 <br><br>
 
