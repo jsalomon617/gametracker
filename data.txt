@@ -600,3 +600,5 @@
 2022-02-05  -   Sabobatage
 2022-02-10  +   Stardew Valley      id332290
 2022-02-10  -   Stardew Valley
+2022-02-12  -   Heaven and Ale Expansion
+2022-02-12  -   Dinosaur World
