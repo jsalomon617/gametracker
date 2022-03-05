@@ -606,3 +606,12 @@
 2022-02-26  +   Isle of Cats        id281259
 2022-02-26  -   Cryo
 2022-03-03  +   Sentinels of Earth Prime    id220609
+2022-03-04  -   Now or Never
+2022-03-04  +   Hanabi      id98778
+2022-03-04  +   Apollo      id313008
+2022-03-04  +   Captain Sonar       id171131
+2022-03-04  +   Peptide     id166298
+2022-03-04  +   New York    id66190
+2022-03-04  +   Super Motherload    id162286
+2022-03-04  -   Hanabi
+2022-03-04  -   Apollo

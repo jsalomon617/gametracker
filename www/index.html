@@ -1685,7 +1685,9 @@
 [new Date(2022, 1, 28), 103, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2022, 2, 1), 103, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2022, 2, 2), 103, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
-[new Date(2022, 2, 3), 104, '<b>Games Obtained:</b><br>Sentinels of Earth Prime<br><b>No Games Played</b>']] ;
+[new Date(2022, 2, 3), 104, '<b>Games Obtained:</b><br>Sentinels of Earth Prime<br><b>No Games Played</b>'],
+[new Date(2022, 2, 4), 107, '<b>Games Obtained:</b><br>Hanabi<br>Apollo<br>Captain Sonar<br>Peptide<br>New York<br>Super Motherload<br><b>Games Played:</b><br>Now or Never<br>Hanabi<br>Apollo'],
+[new Date(2022, 2, 5), 107, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -3370,7 +3372,9 @@
 [new Date(2022, 1, 28), 103, '<div class="google-tooltip"><b>Monday</b><br><b>Feb 28, 2022</b><br>Game Count: <b>103</b></div>'],
 [new Date(2022, 2, 1), 103, '<div class="google-tooltip"><b>Tuesday</b><br><b>Mar 01, 2022</b><br>Game Count: <b>103</b></div>'],
 [new Date(2022, 2, 2), 103, '<div class="google-tooltip"><b>Wednesday</b><br><b>Mar 02, 2022</b><br>Game Count: <b>103</b></div>'],
-[new Date(2022, 2, 3), 104, '<div class="google-tooltip"><b>Thursday</b><br><b>Mar 03, 2022</b><br>Game Count: <b>104</b> (+1)</div>']] );
+[new Date(2022, 2, 3), 104, '<div class="google-tooltip"><b>Thursday</b><br><b>Mar 03, 2022</b><br>Game Count: <b>104</b> (+1)</div>'],
+[new Date(2022, 2, 4), 107, '<div class="google-tooltip"><b>Friday</b><br><b>Mar 04, 2022</b><br>Game Count: <b>107</b> (+3)</div>'],
+[new Date(2022, 2, 5), 107, '<div class="google-tooltip"><b>Saturday</b><br><b>Mar 05, 2022</b><br>Game Count: <b>107</b></div>']] );
 
     var options = {
       vAxis: {
@@ -3538,16 +3542,16 @@ th, td {
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2022-03-03 </b>
+Last Game Acquired on <b> 2022-03-04 </b>
 (<span id="dayDiff"></span> ago)
 <br>
-Currently Unplayed: <b> 104 </b>
-(Lowest Since <b> 2022-03-02) </b>
+Currently Unplayed: <b> 107 </b>
+(Lowest Since <b> 2022-03-03) </b>
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2022, 2, 3) ;
+    var last_acquired = new Date(2022, 2, 4) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -3577,10 +3581,10 @@ Currently Unplayed: <b> 104 </b>
 <tr><th colspan="7">Yearly Stats</th></tr>
 <tr><th></th><th>2017</th><th>2018</th><th>2019</th><th>2020</th><th>2021</th><th>2022</th></tr>
 <tr><th>Starting Count</th><td>52</td><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td></tr>
-<tr><th>Ending Count</th><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td><td>104</td></tr>
-<tr><th>Net Change</th><td>+26</td><td>+2</td><td>0</td><td>+12</td><td>+18</td><td>-6</td></tr>
-<tr><th>Games Acquired</th><td>56</td><td>106</td><td>64</td><td>34</td><td>38</td><td>6</td></tr>
-<tr><th>Games Played</th><td>30</td><td>104</td><td>64</td><td>22</td><td>20</td><td>12</td></tr>
+<tr><th>Ending Count</th><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td><td>107</td></tr>
+<tr><th>Net Change</th><td>+26</td><td>+2</td><td>0</td><td>+12</td><td>+18</td><td>-3</td></tr>
+<tr><th>Games Acquired</th><td>56</td><td>106</td><td>64</td><td>34</td><td>38</td><td>12</td></tr>
+<tr><th>Games Played</th><td>30</td><td>104</td><td>64</td><td>22</td><td>20</td><td>15</td></tr>
 </table>
 <br><br>
 
@@ -3607,7 +3611,7 @@ Currently Unplayed: <b> 104 </b>
 
 <br>
 
-Next Possible Gamebreaker Threshold: <b>2022-06-25</b> (Score: 114)
+Next Possible Gamebreaker Threshold: <b>2022-06-26</b> (Score: 114)
 
 <br><br>
 
@@ -3618,7 +3622,7 @@ Next Possible Gamebreaker Threshold: <b>2022-06-25</b> (Score: 114)
 <br><br><br><img src="images/fine.png" />
 
 <br><br>
-<b><u>Unplayed Games (104):</u></b>
+<b><u>Unplayed Games (107):</u></b>
 <br>
 <a href=https://www.boardgamegeek.com/boardgame/216788/ target='_blank'>A Feast for Odin: The Norwegians</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/207117/ target='_blank'>Abandon Planet</a>
@@ -3636,6 +3640,7 @@ Next Possible Gamebreaker Threshold: <b>2022-06-25</b> (Score: 114)
 <br> <a href=https://www.boardgamegeek.com/boardgame/258474/ target='_blank'>Brains!</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/308989/ target='_blank'>Bristol: 1350</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/552/ target='_blank'>Bus</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/171131/ target='_blank'>Captain Sonar</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/236781/ target='_blank'>Cerebria: The Inside World</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/300300/ target='_blank'>Chronicles of Chrime: 1400</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/213266/ target='_blank'>Circle the Wagons</a>
@@ -3680,8 +3685,8 @@ Next Possible Gamebreaker Threshold: <b>2022-06-25</b> (Score: 114)
 <br> <a href=https://www.boardgamegeek.com/boardgame/222462/ target='_blank'>Mint Julep</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/182626/ target='_blank'>Mistborn: House War</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/142584/ target='_blank'>Moby Dick</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/66190/ target='_blank'>New York</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/230064/ target='_blank'>Ninjitsu</a>
-<br> <a href=https://www.boardgamegeek.com/boardgame/314745/ target='_blank'>Now or Never</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/282227/ target='_blank'>One Small Step</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/164928/ target='_blank'>Orleans</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/317980/ target='_blank'>Paladins expansion</a>
@@ -3689,6 +3694,7 @@ Next Possible Gamebreaker Threshold: <b>2022-06-25</b> (Score: 114)
 <br> <a href=https://www.boardgamegeek.com/boardgame/128780/ target='_blank'>Pax Porfiriana</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/198953/ target='_blank'>Pax Renaissance</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/312804/ target='_blank'>Pendulum</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/166298/ target='_blank'>Peptide</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/87890/ target='_blank'>Pret-a-Porter</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/286383/ target='_blank'>Rajas of the Ganges Expansion</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/224212/ target='_blank'>Red Scare</a>
@@ -3705,6 +3711,7 @@ Next Possible Gamebreaker Threshold: <b>2022-06-25</b> (Score: 114)
 <br> <a href=https://www.boardgamegeek.com/boardgame/191679/ target='_blank'>Spaceteam: Triangulum Expansion</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/251658/ target='_blank'>Sprawlopolis</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/107576/ target='_blank'>Stone Age Expansion</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/162286/ target='_blank'>Super Motherload</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/315708/ target='_blank'>Tapestry Expansion</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/297030/ target='_blank'>Tekhenu</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/229853/ target='_blank'>Teotihuacan</a>
