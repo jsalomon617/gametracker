@@ -615,3 +615,4 @@
 2022-03-04  +   Super Motherload    id162286
 2022-03-04  -   Hanabi
 2022-03-04  -   Apollo
+2022-03-05  -   Isle of Cats
