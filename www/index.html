@@ -1695,7 +1695,9 @@
 [new Date(2022, 2, 10), 106, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2022, 2, 11), 106, '<b>Games Obtained:</b><br>Cellulose<br><b>Games Played:</b><br>Dinosaur Island: Rawr and Write'],
 [new Date(2022, 2, 12), 104, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Sentinels of Earth Prime<br>Rolling Realms'],
-[new Date(2022, 2, 13), 104, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
+[new Date(2022, 2, 13), 104, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2022, 2, 14), 104, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2022, 2, 15), 105, '<b>Games Obtained:</b><br>Libertalia: Winds of Galecrest<br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -3390,7 +3392,9 @@
 [new Date(2022, 2, 10), 106, '<div class="google-tooltip"><b>Thursday</b><br><b>Mar 10, 2022</b><br>Game Count: <b>106</b></div>'],
 [new Date(2022, 2, 11), 106, '<div class="google-tooltip"><b>Friday</b><br><b>Mar 11, 2022</b><br>Game Count: <b>106</b></div>'],
 [new Date(2022, 2, 12), 104, '<div class="google-tooltip"><b>Saturday</b><br><b>Mar 12, 2022</b><br>Game Count: <b>104</b> (-2)</div>'],
-[new Date(2022, 2, 13), 104, '<div class="google-tooltip"><b>Sunday</b><br><b>Mar 13, 2022</b><br>Game Count: <b>104</b></div>']] );
+[new Date(2022, 2, 13), 104, '<div class="google-tooltip"><b>Sunday</b><br><b>Mar 13, 2022</b><br>Game Count: <b>104</b></div>'],
+[new Date(2022, 2, 14), 104, '<div class="google-tooltip"><b>Monday</b><br><b>Mar 14, 2022</b><br>Game Count: <b>104</b></div>'],
+[new Date(2022, 2, 15), 105, '<div class="google-tooltip"><b>Tuesday</b><br><b>Mar 15, 2022</b><br>Game Count: <b>105</b> (+1)</div>']] );
 
     var options = {
       vAxis: {
@@ -3558,16 +3562,16 @@ th, td {
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2022-03-11 </b>
+Last Game Acquired on <b> 2022-03-15 </b>
 (<span id="dayDiff"></span> ago)
 <br>
-Currently Unplayed: <b> 104 </b>
-(Lowest Since <b> 2022-03-02) </b>
+Currently Unplayed: <b> 105 </b>
+(Lowest Since <b> 2022-03-14) </b>
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2022, 2, 11) ;
+    var last_acquired = new Date(2022, 2, 15) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -3597,9 +3601,9 @@ Currently Unplayed: <b> 104 </b>
 <tr><th colspan="7">Yearly Stats</th></tr>
 <tr><th></th><th>2017</th><th>2018</th><th>2019</th><th>2020</th><th>2021</th><th>2022</th></tr>
 <tr><th>Starting Count</th><td>52</td><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td></tr>
-<tr><th>Ending Count</th><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td><td>104</td></tr>
-<tr><th>Net Change</th><td>+26</td><td>+2</td><td>0</td><td>+12</td><td>+18</td><td>-6</td></tr>
-<tr><th>Games Acquired</th><td>56</td><td>106</td><td>64</td><td>34</td><td>38</td><td>13</td></tr>
+<tr><th>Ending Count</th><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td><td>105</td></tr>
+<tr><th>Net Change</th><td>+26</td><td>+2</td><td>0</td><td>+12</td><td>+18</td><td>-5</td></tr>
+<tr><th>Games Acquired</th><td>56</td><td>106</td><td>64</td><td>34</td><td>38</td><td>14</td></tr>
 <tr><th>Games Played</th><td>30</td><td>104</td><td>64</td><td>22</td><td>20</td><td>19</td></tr>
 </table>
 <br><br>
@@ -3627,7 +3631,7 @@ Currently Unplayed: <b> 104 </b>
 
 <br>
 
-Next Possible Gamebreaker Threshold: <b>2022-07-03</b> (Score: 114)
+Next Possible Gamebreaker Threshold: <b>2022-07-07</b> (Score: 114)
 
 <br><br>
 
@@ -3638,7 +3642,7 @@ Next Possible Gamebreaker Threshold: <b>2022-07-03</b> (Score: 114)
 <br><br><br><img src="images/fine.png" />
 
 <br><br>
-<b><u>Unplayed Games (104):</u></b>
+<b><u>Unplayed Games (105):</u></b>
 <br>
 <a href=https://www.boardgamegeek.com/boardgame/216788/ target='_blank'>A Feast for Odin: The Norwegians</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/207117/ target='_blank'>Abandon Planet</a>
@@ -3687,6 +3691,7 @@ Next Possible Gamebreaker Threshold: <b>2022-07-03</b> (Score: 114)
 <br> <a href=https://www.boardgamegeek.com/boardgame/3699/ target='_blank'>Killer Bunnies</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/146886/ target='_blank'>La Granja</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/170815/ target='_blank'>Lancaster: Big Box</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/356033/ target='_blank'>Libertalia: Winds of Galecrest</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/169393/ target='_blank'>Lord of the P.I.G.S.</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/276025/ target='_blank'>Maracaibo</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/65673/ target='_blank'>Masques</a>
