@@ -621,3 +621,4 @@
 2022-03-12  -   Sentinels of Earth Prime
 2022-03-12  -   Rolling Realms
 2022-03-15  +   Libertalia: Winds of Galecrest      id356033
+2022-03-18  -   Paladins expansion
