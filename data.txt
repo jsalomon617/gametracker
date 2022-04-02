@@ -623,3 +623,5 @@
 2022-03-15  +   Libertalia: Winds of Galecrest      id356033
 2022-03-18  -   Paladins expansion
 2022-03-25  -   The Great Zimbabwe
+2022-04-02  +   Perseverance    id256997
+2022-04-02  +   Architects expansion    id327245
