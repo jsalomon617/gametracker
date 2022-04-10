@@ -625,3 +625,5 @@
 2022-03-25  -   The Great Zimbabwe
 2022-04-02  +   Perseverance    id256997
 2022-04-02  +   Architects expansion    id327245
+2022-04-08  -   The Colonists
+2022-04-09  -   Cellulose
