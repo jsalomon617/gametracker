@@ -629,3 +629,5 @@
 2022-04-09  -   Cellulose
 2022-04-22  -   Tekhenu
 2022-04-23  -   Mercado de Lisboa
+2022-04-25  +   Azul: Queen's Garden        id346965
+2022-04-25  +   Golem                       id298383

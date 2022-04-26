@@ -1737,7 +1737,9 @@
 [new Date(2022, 3, 21), 103, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2022, 3, 22), 102, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Tekhenu'],
 [new Date(2022, 3, 23), 101, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Mercado de Lisboa'],
-[new Date(2022, 3, 24), 101, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
+[new Date(2022, 3, 24), 101, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2022, 3, 25), 103, '<b>Games Obtained:</b><br>Azul: Queen\'s Garden<br>Golem<br><b>No Games Played</b>'],
+[new Date(2022, 3, 26), 103, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -3474,7 +3476,9 @@
 [new Date(2022, 3, 21), 103, '<div class="google-tooltip"><b>Thursday</b><br><b>Apr 21, 2022</b><br>Game Count: <b>103</b></div>'],
 [new Date(2022, 3, 22), 102, '<div class="google-tooltip"><b>Friday</b><br><b>Apr 22, 2022</b><br>Game Count: <b>102</b> (-1)</div>'],
 [new Date(2022, 3, 23), 101, '<div class="google-tooltip"><b>Saturday</b><br><b>Apr 23, 2022</b><br>Game Count: <b>101</b> (-1)</div>'],
-[new Date(2022, 3, 24), 101, '<div class="google-tooltip"><b>Sunday</b><br><b>Apr 24, 2022</b><br>Game Count: <b>101</b></div>']] );
+[new Date(2022, 3, 24), 101, '<div class="google-tooltip"><b>Sunday</b><br><b>Apr 24, 2022</b><br>Game Count: <b>101</b></div>'],
+[new Date(2022, 3, 25), 103, '<div class="google-tooltip"><b>Monday</b><br><b>Apr 25, 2022</b><br>Game Count: <b>103</b> (+2)</div>'],
+[new Date(2022, 3, 26), 103, '<div class="google-tooltip"><b>Tuesday</b><br><b>Apr 26, 2022</b><br>Game Count: <b>103</b></div>']] );
 
     var options = {
       vAxis: {
@@ -3642,16 +3646,16 @@ th, td {
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2022-04-02 </b>
+Last Game Acquired on <b> 2022-04-25 </b>
 (<span id="dayDiff"></span> ago)
 <br>
-Currently Unplayed: <b> 101 </b>
-(Lowest Since <b> 2021-10-31) </b>
+Currently Unplayed: <b> 103 </b>
+(Lowest Since <b> 2022-04-24) </b>
 <br><br>
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2022, 3, 2) ;
+    var last_acquired = new Date(2022, 3, 25) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
@@ -3681,9 +3685,9 @@ Currently Unplayed: <b> 101 </b>
 <tr><th colspan="7">Yearly Stats</th></tr>
 <tr><th></th><th>2017</th><th>2018</th><th>2019</th><th>2020</th><th>2021</th><th>2022</th></tr>
 <tr><th>Starting Count</th><td>52</td><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td></tr>
-<tr><th>Ending Count</th><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td><td>101</td></tr>
-<tr><th>Net Change</th><td>+26</td><td>+2</td><td>0</td><td>+12</td><td>+18</td><td>-9</td></tr>
-<tr><th>Games Acquired</th><td>56</td><td>106</td><td>64</td><td>34</td><td>38</td><td>16</td></tr>
+<tr><th>Ending Count</th><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td><td>103</td></tr>
+<tr><th>Net Change</th><td>+26</td><td>+2</td><td>0</td><td>+12</td><td>+18</td><td>-7</td></tr>
+<tr><th>Games Acquired</th><td>56</td><td>106</td><td>64</td><td>34</td><td>38</td><td>18</td></tr>
 <tr><th>Games Played</th><td>30</td><td>104</td><td>64</td><td>22</td><td>20</td><td>25</td></tr>
 </table>
 <br><br>
@@ -3711,7 +3715,7 @@ Currently Unplayed: <b> 101 </b>
 
 <br>
 
-Next Possible Gamebreaker Threshold: <b>2022-07-25</b> (Score: 114)
+Next Possible Gamebreaker Threshold: <b>2022-08-17</b> (Score: 114)
 
 <br><br>
 
@@ -3722,7 +3726,7 @@ Next Possible Gamebreaker Threshold: <b>2022-07-25</b> (Score: 114)
 <br><br><br><img src="images/fine.png" />
 
 <br><br>
-<b><u>Unplayed Games (101):</u></b>
+<b><u>Unplayed Games (103):</u></b>
 <br>
 <a href=https://www.boardgamegeek.com/boardgame/216788/ target='_blank'>A Feast for Odin: The Norwegians</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/207117/ target='_blank'>Abandon Planet</a>
@@ -3732,6 +3736,7 @@ Next Possible Gamebreaker Threshold: <b>2022-07-25</b> (Score: 114)
 <br> <a href=https://www.boardgamegeek.com/boardgame/327245/ target='_blank'>Architects expansion</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/188181/ target='_blank'>Avignon: A Clash of Popes</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/209741/ target='_blank'>Avignon: Pilgrimage</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/346965/ target='_blank'>Azul: Queen's Garden</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/202443/ target='_blank'>Barker's Row</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/211534/ target='_blank'>Bears vs Babies</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/336872/ target='_blank'>Between Two Castles of Mad King Ludwig Expansion</a>
@@ -3758,6 +3763,7 @@ Next Possible Gamebreaker Threshold: <b>2022-07-25</b> (Score: 114)
 <br> Fiasco (Card Game) (no BGG link)
 <br> <a href=https://www.boardgamegeek.com/boardgame/209748/ target='_blank'>Find Your Seats</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/261526/ target='_blank'>Food Chain Magnate: Ketchup</a>
+<br> <a href=https://www.boardgamegeek.com/boardgame/298383/ target='_blank'>Golem</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/292375/ target='_blank'>Great Wall</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/250865/ target='_blank'>Grifters: Nexus</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/134157/ target='_blank'>Guilds of London</a>
