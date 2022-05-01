@@ -631,3 +631,4 @@
 2022-04-23  -   Mercado de Lisboa
 2022-04-25  +   Azul: Queen's Garden        id346965
 2022-04-25  +   Golem                       id298383
+2022-04-30  -   Libertalia: Winds of Galecrest
