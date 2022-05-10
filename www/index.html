@@ -3725,25 +3725,27 @@ Game Breakers (Start: 2016-12-03)
 
 At any given time, we track the number of days since the last game was acquired
 (currently <span id="dayDiffGB"></span> ago, as noted above). Consider, then, the
-following: what is the highest number that <i>Last Game Acquired</i> has ever been?
+following: at any given point in time, what is the highest number that <i>days since
+Last Game Acquired</i> has ever been (up until that point)?
 
 <br><br>
 
-By definition, said highest number must either be today, or a day in the past
-in which one or more games arrived (on a day in the past where no game arrived,
-the following day is one higher) - at which point the value would reset to 0.
+By definition, said highest number must either be reached on that very day (in
+the middle of a long streak of no new game arrivals), or on some previous day
+on which the streak was broken by a game's arrival (at which point we'd reset
+to 0).
 
 <br><br>
 
-From here, we may define another emergent value: because non-today values of
-<i>highest-ever Last Game Acquired</i> will inevitably reset to 0 by the arrival of new
-games, what games arrived to cause that reset and on what day did they arrive?
+From here, we see an interesting set of data to track: for each time that <i>days since
+Last Game Acquired</i> was the highest that it had ever been but then reset to 0, what day
+did the reset happen on? What games arrived to cause the reset? What was that
+highest-ever-at-the-time value?
 
 <br><br>
 
-Game Breakers track those games and days: starting from 2016-12-03, mark the
-date that we went from the highest ever <i>Last Game Acquired</i> so far to 0, along
-with the game(s) which appeared that day.
+This trio of questions is what Game Breakers tracks, starting from 2016-12-03
+and continuing until the present day.
 
 </div>
 
