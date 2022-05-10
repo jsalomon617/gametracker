@@ -224,29 +224,29 @@ Game Breakers (Start: {{ game_breaker_start }})
 
 <tr id="game-breakers-info" style="display:none"> <td colspan="3" style="text-align:left">
 
-<div style="width: 100px; word-wrap: break-word">
+<div style="width: 400px; word-wrap: break-word">
 
-At any given time, we track the number of days since the last game was
-<br>acquired (currently <span id="dayDiffGB"></span> ago, as noted above). Consider, then, the
-<br>following: what is the highest number that <i>Last Game Acquired</i> has ever been?
+At any given time, we track the number of days since the last game was acquired
+(currently <span id="dayDiffGB"></span> ago, as noted above). Consider, then, the
+following: what is the highest number that <i>Last Game Acquired</i> has ever been?
 
-<br>
+<br><br>
 
-<br>By definition, said highest number must either be today, or a day in the past
-<br>in which one or more games arrived (on a day in the past where no game arrived,
-<br>the following day is one higher) - at which point the value would reset to 0.
+By definition, said highest number must either be today, or a day in the past
+in which one or more games arrived (on a day in the past where no game arrived,
+the following day is one higher) - at which point the value would reset to 0.
 
-<br>
+<br><br>
 
-<br>From here, we may define another emergent value: because non-today values of
-<br><i>highest-ever Last Game Acquired</i> will inevitably reset to 0 by the arrival of new
-<br>games, what games arrived to cause that reset and on what day did they arrive?
+From here, we may define another emergent value: because non-today values of
+<i>highest-ever Last Game Acquired</i> will inevitably reset to 0 by the arrival of new
+games, what games arrived to cause that reset and on what day did they arrive?
 
-<br>
+<br><br>
 
-<br>Game Breakers track those games and days: starting from {{ game_breaker_start }}, mark the
-<br>date that we went from the highest ever <i>Last Game Acquired</i> to 0, along
-<br>with the game(s) which appeared that day.
+Game Breakers track those games and days: starting from {{ game_breaker_start }}, mark the
+date that we went from the highest ever <i>Last Game Acquired</i> to 0, along
+with the game(s) which appeared that day.
 
 </div>
 
