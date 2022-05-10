@@ -165,7 +165,7 @@ def generate_webpage(collection):
     # compute our gamebreakers
     game_breaker_start = GAMEBREAKER_START_DATE
     game_breaker_rows = "\n".join([
-        '<tr><td>{score}</td><td>{date}</td><td style="text-align:left">{games}</td></tr>'.format(
+        '<tr><td>{score}</td><td>{date}</td><td style="text-align:left" colspan="2">{games}</td></tr>'.format(
             score=gb.score,
             date=str(gb.date),
             games="\n<br>".join(gb.games))
