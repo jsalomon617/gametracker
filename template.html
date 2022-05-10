@@ -206,8 +206,12 @@ Currently Unplayed: <b> {{ unplayed_count }} </b>
     }
 
     // write the answer to our html
-    var div = document.getElementById("dayDiff");
-    div.textContent = days + " day" + plural;
+    const ids = ["dayDiff", "dayDiffGB"];
+    const elementsList = document.querySelectorAll(ids.map(id => `#${id}`).join(', '));
+    const elementsArray = [...elementsList];
+    elementsArray.forEach(div => {
+        div.textContent = days + " day" + plural;
+    });
 </script>
 
 <b>Trendline:</b>
@@ -229,24 +233,24 @@ Currently Unplayed: <b> {{ unplayed_count }} </b>
 
 <tr> <td colspan="3" style="text-align:left">
 
-<br>At any given time, we track the number of days since the last game was acquired
-<br>(currently <span id="dayDiff"></span> ago, as noted above). Consider, then, the
+At any given time, we track the number of days since the last game was acquired
+<br>(currently <span id="dayDiffGB"></span> ago, as noted above). Consider, then, the
 <br>following: what is the highest number that <i>Last Game Acquired</i> has ever been?
 
-<br><br>
+<br>
 
 <br>By definition, said highest number must either be today, or a day in the past
 <br>in which one or more games arrived (on a day in the past where no game arrived,
 <br>the following day is one higher) - at which point the value would reset to 0.
 
-<br><br>
+<br>
 
 <br>From here, we may define another emergent value: because non-today values of
-<br><i>highest ever Last Game Acquired</i> will inevitably reset to 0 by the
+<br><i>highest-ever Last Game Acquired</i> will inevitably reset to 0 by the
 <br>arrival of new games, what games arrived to cause that reset and on what day
 <br>did they arrive?
 
-<br><br>
+<br>
 
 <br>Game Breakers track those games and days: starting from {{ game_breaker_start }},
 <br>mark the date that we went from the highest ever <i>Last Game Acquired</i> to
