@@ -3679,29 +3679,6 @@ Currently Unplayed: <b> 100 </b>
 (Lowest Since <b> 2021-10-31) </b>
 <br><br>
 
-<script>
-    // count days since we last got a new game
-    var last_acquired = new Date(2022, 3, 25) ;
-    var today = new Date();
-    today.setHours(0,0,0,0);
-    var diff = Math.abs(today - last_acquired);
-    var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-
-    // "day" if 1 day, "days" otherwise
-    var plural = "s";
-    if (days == 1) {
-      plural = "";
-    }
-
-    // write the answer to our html
-    const ids = ["dayDiff", "dayDiffGB"];
-    const elementsList = document.querySelectorAll(ids.map(id => `#${id}`).join(', '));
-    const elementsArray = [...elementsList];
-    elementsArray.forEach(div => {
-        div.textContent = days + " day" + plural;
-    });
-</script>
-
 <b>Trendline:</b>
 <input id='trendline_toggle' type='checkbox' onclick="toggleTrendlineDegree()">
 <br>
@@ -3725,9 +3702,10 @@ Currently Unplayed: <b> 100 </b>
 <table>
 <tr>
 <th colspan="3">Game Breakers (Start: 2016-12-03)</th>
+<td> &#8505; &#9432; </td>
 </tr>
 
-<tr> <td colspan="3" style="text-align:left">
+<tr> <td colspan="4" style="text-align:left">
 
 At any given time, we track the number of days since the last game was acquired
 <br>(currently <span id="dayDiffGB"></span> ago, as noted above). Consider, then, the
@@ -3755,7 +3733,7 @@ At any given time, we track the number of days since the last game was acquired
 </td> </tr>
 
 <tr>
-<th>Score</th><th>Date</th><th>Game(s)</tH></tr>
+<th>Score</th><th>Date</th><th colspan="2">Game(s)</th></tr>
 <tr><td>4</td><td>2016-12-07</td><td style="text-align:left"><a href=https://www.boardgamegeek.com/boardgame/38855/ target='_blank'>Carcassonne Catapult</a></td></tr>
 <tr><td>10</td><td>2016-12-19</td><td style="text-align:left"><a href=https://www.boardgamegeek.com/boardgame/182064/ target='_blank'>Nantucket</a></td></tr>
 <tr><td>20</td><td>2017-01-08</td><td style="text-align:left"><a href=https://www.boardgamegeek.com/boardgame/129904/ target='_blank'>Shadows over Camelot: The Card Game</a>
@@ -3886,5 +3864,29 @@ Next Possible Gamebreaker Threshold: <b>2022-08-17</b> (Score: 114)
 <br> <a href=https://www.boardgamegeek.com/boardgame/185154/ target='_blank'>Wizard School</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/281466/ target='_blank'>Yedo: Deluxe</a>
 <br> <a href=https://www.boardgamegeek.com/boardgame/244114/ target='_blank'>Yellow and Yangtze</a>
+
+
+<script>
+    // count days since we last got a new game
+    var last_acquired = new Date(2022, 3, 25) ;
+    var today = new Date();
+    today.setHours(0,0,0,0);
+    var diff = Math.abs(today - last_acquired);
+    var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+    // "day" if 1 day, "days" otherwise
+    var plural = "s";
+    if (days == 1) {
+      plural = "";
+    }
+
+    // write the answer to our html
+    const ids = ["dayDiff", "dayDiffGB"];
+    const elementsList = document.querySelectorAll(ids.map(id => `#${id}`).join(', '));
+    const elementsArray = [...elementsList];
+    elementsArray.forEach(div => {
+        div.textContent = days + " day" + plural;
+    });
+</script>
 
 </body></html>

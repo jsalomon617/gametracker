@@ -191,29 +191,6 @@ Currently Unplayed: <b> {{ unplayed_count }} </b>
 (Lowest Since <b> {{ lowest_since }}) </b>
 <br><br>
 
-<script>
-    // count days since we last got a new game
-    var last_acquired = {{ js_last_acquired }} ;
-    var today = new Date();
-    today.setHours(0,0,0,0);
-    var diff = Math.abs(today - last_acquired);
-    var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-
-    // "day" if 1 day, "days" otherwise
-    var plural = "s";
-    if (days == 1) {
-      plural = "";
-    }
-
-    // write the answer to our html
-    const ids = ["dayDiff", "dayDiffGB"];
-    const elementsList = document.querySelectorAll(ids.map(id => `#${id}`).join(', '));
-    const elementsArray = [...elementsList];
-    elementsArray.forEach(div => {
-        div.textContent = days + " day" + plural;
-    });
-</script>
-
 <b>Trendline:</b>
 <input id='trendline_toggle' type='checkbox' onclick="toggleTrendlineDegree()">
 <br>
@@ -229,9 +206,10 @@ Currently Unplayed: <b> {{ unplayed_count }} </b>
 <table>
 <tr>
 <th colspan="3">Game Breakers (Start: {{ game_breaker_start }})</th>
+<td> &#8505; &#9432; </td>
 </tr>
 
-<tr> <td colspan="3" style="text-align:left">
+<tr> <td colspan="4" style="text-align:left">
 
 At any given time, we track the number of days since the last game was acquired
 <br>(currently <span id="dayDiffGB"></span> ago, as noted above). Consider, then, the
@@ -259,7 +237,7 @@ At any given time, we track the number of days since the last game was acquired
 </td> </tr>
 
 <tr>
-<th>Score</th><th>Date</th><th>Game(s)</tH></tr>
+<th>Score</th><th>Date</th><th colspan="2">Game(s)</th></tr>
 {{ game_breaker_rows }}
 </table>
 
@@ -279,5 +257,29 @@ Next Possible Gamebreaker Threshold: <b>{{ next_game_breaker_date }}</b> (Score:
 <b><u>Unplayed Games ({{ unplayed_count }}):</u></b>
 <br>
 {{ unplayed_lines }}
+
+
+<script>
+    // count days since we last got a new game
+    var last_acquired = {{ js_last_acquired }} ;
+    var today = new Date();
+    today.setHours(0,0,0,0);
+    var diff = Math.abs(today - last_acquired);
+    var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+    // "day" if 1 day, "days" otherwise
+    var plural = "s";
+    if (days == 1) {
+      plural = "";
+    }
+
+    // write the answer to our html
+    const ids = ["dayDiff", "dayDiffGB"];
+    const elementsList = document.querySelectorAll(ids.map(id => `#${id}`).join(', '));
+    const elementsArray = [...elementsList];
+    elementsArray.forEach(div => {
+        div.textContent = days + " day" + plural;
+    });
+</script>
 
 </body></html>
