@@ -214,7 +214,7 @@ function toggleGBInfo() {
 }
 </script>
 
-<table style="table-layout: fixed; width: 100%">
+<table>
 <tr>
 <th colspan="3">
 Game Breakers (Start: {{ game_breaker_start }})
@@ -222,7 +222,9 @@ Game Breakers (Start: {{ game_breaker_start }})
 </th>
 </tr>
 
-<tr id="game-breakers-info" style="display:none"> <td colspan="3" style="text-align:left; word-wrap:break-word">
+<tr id="game-breakers-info" style="display:none"> <td colspan="3" style="text-align:left">
+
+<div style="width: 100px; word-wrap: break-word">
 
 At any given time, we track the number of days since the last game was
 <br>acquired (currently <span id="dayDiffGB"></span> ago, as noted above). Consider, then, the
@@ -245,6 +247,8 @@ At any given time, we track the number of days since the last game was
 <br>Game Breakers track those games and days: starting from {{ game_breaker_start }}, mark the
 <br>date that we went from the highest ever <i>Last Game Acquired</i> to 0, along
 <br>with the game(s) which appeared that day.
+
+</div>
 
 </td> </tr>
 
