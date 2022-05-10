@@ -218,13 +218,13 @@ function toggleGBInfo() {
 <tr>
 <th colspan="3">
 Game Breakers (Start: {{ game_breaker_start }})
-<button class="btn info" onclick="toggleGBInfo()">&#8505;</button>
+<button class="btn info" float:right; onclick="toggleGBInfo()">&#8505;</button>
 </th>
 </tr>
 
 <tr id="game-breakers-info" style="display:none"> <td colspan="3" style="text-align:left">
 
-<div style="width: 450px; word-wrap: break-word">
+<div style="width: 450px; max-width:100%; word-wrap: break-word">
 
 At any given time, we track the number of days since the last game was acquired
 (currently <span id="dayDiffGB"></span> ago, as noted above). Consider, then, the
@@ -245,7 +245,7 @@ games, what games arrived to cause that reset and on what day did they arrive?
 <br><br>
 
 Game Breakers track those games and days: starting from {{ game_breaker_start }}, mark the
-date that we went from the highest ever <i>Last Game Acquired</i> to 0, along
+date that we went from the highest ever <i>Last Game Acquired</i> so far to 0, along
 with the game(s) which appeared that day.
 
 </div>
