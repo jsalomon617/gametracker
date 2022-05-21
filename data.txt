@@ -634,3 +634,5 @@
 2022-04-30  -   Libertalia: Winds of Galecrest
 2022-05-06  -   Teotihuacan
 2022-05-09  -   Fantastic Factories expansions
+2022-05-21  +   Energy Empire expansion     id267743
+2022-05-21  -   Energy Empire expansion
