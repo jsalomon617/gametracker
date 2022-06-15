@@ -638,3 +638,4 @@
 2022-05-21  -   Energy Empire expansion
 2022-05-23  +   On Mars expansion       id278241
 2022-05-28  -   Azul: Queen's Garden
+2022-06-15  +   Viticulture World       id360226
