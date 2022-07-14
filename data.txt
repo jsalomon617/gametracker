@@ -643,3 +643,9 @@
 2022-07-01  -   Antiquity
 2022-07-03  -   Food Chain Magnate: Ketchup
 2022-07-04  -   Perseverance
+2022-07-13  +   Cacao               id171499
+2022-07-13  +   Brass: Lancashire   id28720
+2022-07-13  +   Kraftwagen      id171879
+2022-07-13  +   Key Harvest     id29839
+2022-07-13  +   Diplomacy       id483
+2022-07-13  -   Diplomacy
