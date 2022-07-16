@@ -650,3 +650,4 @@
 2022-07-13  +   Diplomacy       id483
 2022-07-13  -   Diplomacy
 2022-07-13  -   Viticulture World
+2022-07-15  -   On Mars expansion
