@@ -652,3 +652,5 @@
 2022-07-13  -   Viticulture World
 2022-07-15  -   On Mars expansion
 2022-08-06  +   Viscounts expansions    id343468,343470
+2022-08-26  +   Horizons of Spirit Island   id367498
+2022-08-26  -   Horizons of Spirit Island
