@@ -654,3 +654,4 @@
 2022-08-06  +   Viscounts expansions    id343468,343470
 2022-08-26  +   Horizons of Spirit Island   id367498
 2022-08-26  -   Horizons of Spirit Island
+2022-09-01  +   Knight Fall     id364541
