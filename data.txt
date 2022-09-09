@@ -655,3 +655,8 @@
 2022-08-26  +   Horizons of Spirit Island   id367498
 2022-08-26  -   Horizons of Spirit Island
 2022-09-01  +   Knight Fall     id364541
+2022-09-08  +   Hadrian's Wall      id304783
+2022-09-08  +   Boonlake            id343905
+2022-09-08  +   Pinball             id328826,302524
+2022-09-08  -   Hadrian's Wall
+2022-09-08  -   Pinball
