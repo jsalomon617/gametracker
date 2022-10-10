@@ -660,3 +660,5 @@
 2022-09-08  +   Pinball             id328826,302524
 2022-09-08  -   Hadrian's Wall
 2022-09-08  -   Pinball
+2022-10-06  +   Smitten     id369634
+2022-10-09  -   Rajas of the Ganges Expansion
