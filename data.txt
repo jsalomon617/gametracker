@@ -665,3 +665,4 @@
 2022-10-14  +   Flamecraft      id336986
 2022-10-30  +   Fealty      id96704
 2022-10-30  -   Fealty
+2022-11-10  +   Sagrada: Glory      id359142
