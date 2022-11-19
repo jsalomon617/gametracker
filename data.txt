@@ -668,3 +668,4 @@
 2022-11-10  +   Sagrada: Glory      id359142
 2022-11-11  +   Wayfarers of the South Tigris       id350316
 2022-11-12  -   Flamecraft
+2022-11-18  +   Wingspan: Asia      id366161
