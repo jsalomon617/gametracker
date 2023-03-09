@@ -678,3 +678,4 @@
 2023-01-19  +   Bot Factory     id328124
 2023-01-27  +   Sentinels Definitive: Rook City     id358536
 2023-03-03  +   Horseless Carriage      id350205
+2023-03-05  -   Pandemic Legacy: Season 0
