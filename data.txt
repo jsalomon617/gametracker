@@ -681,3 +681,4 @@
 2023-03-05  -   Pandemic Legacy: Season 0
 2023-05-02  +   Hegemony        id321608
 2023-05-27  -   Architects expansion
+2023-06-03  -   Wayfarers of the South Tigris
