@@ -687,3 +687,9 @@
 2023-07-19  +   Expeditions     id379078
 2023-07-28  +   Circadians: First Light expansions      id368403,373061
 2023-07-31  +   Sagrada: Artisans       id369751
+2023-09-22  +   Lab Notes           id363771
+2023-10-10  +   My Father's Work    id328866
+2023-10-10  +   Lacrimosa           id348450
+2023-10-10  +   Atiwa               id362452
+2023-10-10  -   My Father's Work
+2023-10-10  -   Lacrimosa
