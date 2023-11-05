@@ -2288,7 +2288,16 @@
 [new Date(2023, 9, 24), 115, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2023, 9, 25), 115, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
 [new Date(2023, 9, 26), 116, '<b>Games Obtained:</b><br>Scholars of the South Tigris<br><b>No Games Played</b>'],
-[new Date(2023, 9, 27), 116, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
+[new Date(2023, 9, 27), 116, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2023, 9, 28), 116, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2023, 9, 29), 116, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2023, 9, 30), 116, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2023, 9, 31), 116, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2023, 10, 1), 117, '<b>Games Obtained:</b><br>Apiary<br><b>No Games Played</b>'],
+[new Date(2023, 10, 2), 117, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2023, 10, 3), 117, '<b>No Games Obtained</b><br><b>No Games Played</b>'],
+[new Date(2023, 10, 4), 116, '<b>No Games Obtained</b><br><b>Games Played:</b><br>Apiary'],
+[new Date(2023, 10, 5), 116, '<b>No Games Obtained</b><br><b>No Games Played</b>']] ;
 
   function drawChart() {
 
@@ -4576,7 +4585,16 @@
 [new Date(2023, 9, 24), 115, '<div class="google-tooltip"><b>Tuesday</b><br><b>Oct 24, 2023</b><br>Game Count: <b>115</b></div>'],
 [new Date(2023, 9, 25), 115, '<div class="google-tooltip"><b>Wednesday</b><br><b>Oct 25, 2023</b><br>Game Count: <b>115</b></div>'],
 [new Date(2023, 9, 26), 116, '<div class="google-tooltip"><b>Thursday</b><br><b>Oct 26, 2023</b><br>Game Count: <b>116</b> (+1)</div>'],
-[new Date(2023, 9, 27), 116, '<div class="google-tooltip"><b>Friday</b><br><b>Oct 27, 2023</b><br>Game Count: <b>116</b></div>']] );
+[new Date(2023, 9, 27), 116, '<div class="google-tooltip"><b>Friday</b><br><b>Oct 27, 2023</b><br>Game Count: <b>116</b></div>'],
+[new Date(2023, 9, 28), 116, '<div class="google-tooltip"><b>Saturday</b><br><b>Oct 28, 2023</b><br>Game Count: <b>116</b></div>'],
+[new Date(2023, 9, 29), 116, '<div class="google-tooltip"><b>Sunday</b><br><b>Oct 29, 2023</b><br>Game Count: <b>116</b></div>'],
+[new Date(2023, 9, 30), 116, '<div class="google-tooltip"><b>Monday</b><br><b>Oct 30, 2023</b><br>Game Count: <b>116</b></div>'],
+[new Date(2023, 9, 31), 116, '<div class="google-tooltip"><b>Tuesday</b><br><b>Oct 31, 2023</b><br>Game Count: <b>116</b></div>'],
+[new Date(2023, 10, 1), 117, '<div class="google-tooltip"><b>Wednesday</b><br><b>Nov 01, 2023</b><br>Game Count: <b>117</b> (+1)</div>'],
+[new Date(2023, 10, 2), 117, '<div class="google-tooltip"><b>Thursday</b><br><b>Nov 02, 2023</b><br>Game Count: <b>117</b></div>'],
+[new Date(2023, 10, 3), 117, '<div class="google-tooltip"><b>Friday</b><br><b>Nov 03, 2023</b><br>Game Count: <b>117</b></div>'],
+[new Date(2023, 10, 4), 116, '<div class="google-tooltip"><b>Saturday</b><br><b>Nov 04, 2023</b><br>Game Count: <b>116</b> (-1)</div>'],
+[new Date(2023, 10, 5), 116, '<div class="google-tooltip"><b>Sunday</b><br><b>Nov 05, 2023</b><br>Game Count: <b>116</b></div>']] );
 
     var options = {
       vAxis: {
@@ -4584,7 +4602,7 @@
         format: '#',
         gridlines: {count: -1},
         //viewWindowMode: 'maximized',
-        //viewWindow: {min: 51.0, max: 127.0},
+        //viewWindow: {min: 51.0, max: 128.0},
       },
       hAxis: {
         title: 'Date',
@@ -4745,7 +4763,7 @@ th, td {
 
 <div id="chart_div"></div>
 
-Last Game Acquired on <b> 2023-10-26 </b>
+Last Game Acquired on <b> 2023-11-01 </b>
 (<span id="dayDiff"></span> ago)
 <br>
 Currently Unplayed: <b> 116 </b>
@@ -4767,8 +4785,8 @@ Currently Unplayed: <b> 116 </b>
 <tr><th>Starting Count</th><td>52</td><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td><td>109</td></tr>
 <tr><th>Ending Count</th><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td><td>109</td><td>116</td></tr>
 <tr><th>Net Change</th><td>+26</td><td>+2</td><td>0</td><td>+12</td><td>+18</td><td>-1</td><td>+7</td></tr>
-<tr><th>Games Acquired</th><td>56</td><td>106</td><td>64</td><td>34</td><td>38</td><td>43</td><td>13</td></tr>
-<tr><th>Games Played</th><td>30</td><td>104</td><td>64</td><td>22</td><td>20</td><td>44</td><td>6</td></tr>
+<tr><th>Games Acquired</th><td>56</td><td>106</td><td>64</td><td>34</td><td>38</td><td>43</td><td>14</td></tr>
+<tr><th>Games Played</th><td>30</td><td>104</td><td>64</td><td>22</td><td>20</td><td>44</td><td>7</td></tr>
 </table>
 <br><br>
 
@@ -4842,7 +4860,7 @@ and continuing until the present day.
 
 <br>
 
-Next Possible Gamebreaker Threshold: <b>2024-02-17</b> (Score: 114)
+Next Possible Gamebreaker Threshold: <b>2024-02-23</b> (Score: 114)
 
 <br><br>
 
@@ -4975,7 +4993,7 @@ Next Possible Gamebreaker Threshold: <b>2024-02-17</b> (Score: 114)
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2023, 9, 26) ;
+    var last_acquired = new Date(2023, 10, 1) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
