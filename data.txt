@@ -712,3 +712,5 @@
 2024-02-17  -   Wyrmspan
 2024-03-24  -   Yellow and Yangtze
 2024-03-24  +   Manhattan Project: War Machine      id375573
+2024-03-25  +   Inventions: Evolution of Ideas      id347305
+2024-03-30  -   Manhattan Project: War Machine
