@@ -148,7 +148,7 @@ curl --request POST \
      --header 'accept: application/json' \
      --header 'authorization: Bearer %s' \
      --header 'content-type: application/json' \
-     --data '
+     --data @- <<EOF
 {
   "data": {
     "name": "%s",
@@ -158,7 +158,7 @@ curl --request POST \
     ]
   }
 }
-'
+EOF
 """
 
 CREATE_COMPLETED_TASK_CURL = """
@@ -167,7 +167,7 @@ curl --request POST \
      --header 'accept: application/json' \
      --header 'authorization: Bearer %s' \
      --header 'content-type: application/json' \
-     --data '
+     --data @- <<EOF
 {
   "data": {
     "completed": true,
@@ -178,7 +178,7 @@ curl --request POST \
     ]
   }
 }
-'
+EOF
 """
 
 COMPLETE_TASK_CURL = """
@@ -253,7 +253,8 @@ def update_tasks(secrets):
         if eventstr == "+" and name not in tasks_by_name:
             names_to_create.add(name)
         elif eventstr == "-" and name in tasks_by_name:
-            names_to_complete.add(name)
+            if not tasks_by_name[name]["completed"]:
+                names_to_complete.add(name)
         elif eventstr == "-" and name in names_to_create:
             names_to_create.remove(name)
             names_to_create_as_completed.add(name)
@@ -271,6 +272,8 @@ def update_tasks(secrets):
         print(action)
         subprocess.run(action, shell=True)
         time.sleep(1)
+
+    print()
 
 
 def get_args():

@@ -2,3 +2,4 @@
 
 python generate_html.py
 git add www/index.html
+python3 plugins/asana.py --update-tasks
