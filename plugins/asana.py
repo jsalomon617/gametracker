@@ -8,6 +8,7 @@ import os
 import subprocess
 import sys
 import time
+from urllib.request import urlopen
 
 #import asana
 #from asana.rest import ApiException
@@ -28,7 +29,7 @@ CF_BGG_ID = "bgg_id"
 CF_KEYS = [
     CF_TIME_LOWER,
     CF_TIME_UPPER,
-    CF_WEIGHT,
+    #CF_WEIGHT,
     CF_BGG_ID,
 ]
 
@@ -173,6 +174,7 @@ curl --request POST \
      --data @- <<EOF
 {
   "data": {
+    %s
     "name": "%s",
     "html_notes": "<body>%s</body>",
     "projects": [
@@ -192,6 +194,7 @@ curl --request POST \
      --data @- <<EOF
 {
   "data": {
+    %s
     "completed": true,
     "name": "%s",
     "html_notes": "<body>%s</body>",
@@ -249,14 +252,37 @@ def linked_name(name, bgg_ids=None):
 
 def task_updates_needed(secrets, task, ids):
     needed = set()
+    if ids is None:
+        # without a BGG id we can't do anything
+        return needed
+
     for cf in task["custom_fields"]:
         for key in CF_KEYS:
-            if ids is None and key == CF_BGG_ID:
-                # skip bgg IDs if we don't have them
-                continue
             if cf["gid"] == secrets[CUSTOM_FIELDS][key] and cf["number_value"] is None:
                 needed.add(key)
     return needed
+
+
+def bgg_lookups(bgg_ids):
+    URL = "https://www.boardgamegeek.com/xmlapi/boardgame/" + ",".join(bgg_ids)
+    cmd = 'wget -O - "%s"' % URL
+    result = str(subprocess.run(cmd, shell=True, capture_output=True).stdout)
+    
+    info = [
+        ("id", '<boardgame objectid="', '"'),
+        (CF_TIME_LOWER, "<minplaytime>", "</minplaytime>"),
+        (CF_TIME_UPPER, "<maxplaytime>", "</maxplaytime>"),
+    ]
+    
+    data = {}
+    for bgg_id in bgg_ids:
+        blob = {}
+        for (key, start, end) in info:
+            item, result = result.split(start, 1)[1].split(end, 1)
+            blob[key] = item
+        data[blob["id"]] = blob
+    
+    return data
 
 
 def update_tasks(secrets):
@@ -283,13 +309,13 @@ def update_tasks(secrets):
     for (name, _, eventstr, ids) in game_data:
         if eventstr == "+":
             # first time we're seeing the game in the list
-            gamedata_by_name[name] = ids
+            gamedata_by_name[name] = [str(id) for id in ids] if ids else None
             if name not in tasks_by_name:
                 # need to create a task
                 names_to_create.add(name)
             else:
                 # may need to update the task
-                if task_updates_needed(secrets, tasks_by_name[name], ids):
+                if len(task_updates_needed(secrets, tasks_by_name[name], ids)) > 0:
                     names_to_update.add(name)
         elif eventstr == "-":
             # second time we're seeing the game in the list
@@ -306,28 +332,40 @@ def update_tasks(secrets):
     task_puts = defaultdict(dict)
     for name in names_to_complete:
         task_puts[name]["completed"] = True
-    for name in names_to_update:
+    
+    bgg_ids = []
+    for name in names_to_update.union(names_to_create).union(names_to_create_as_completed):
+        if gamedata_by_name[name]:
+            bgg_ids.extend(gamedata_by_name[name])
+    bggdata = bgg_lookups(bgg_ids) if bgg_ids else {}
+
+    for name in names_to_update.union(names_to_create).union(names_to_create_as_completed):
         cfs = {}
         task_puts[name]["custom_fields"] = cfs
         ids = gamedata_by_name[name]
         if ids:
-            cfs[secrets[CUSTOM_FIELDS][CF_BGG_ID]] = gamedata_by_name[name][0]
+            use_id = ids[0]
+            cfs[secrets[CUSTOM_FIELDS][CF_BGG_ID]] = use_id
+            if use_id in bggdata:
+                for key in (CF_TIME_LOWER, CF_TIME_UPPER):
+                    cfs[secrets[CUSTOM_FIELDS][key]] = bggdata[use_id][key]
 
     actions = []
     for name, ids in gamedata_by_name.items():
+        task_puts_json = json.dumps(task_puts[name]) if name in task_puts else ""
         if name in names_to_create:
-            actions.append(CREATE_TASK_CURL % (secrets[PAT], name, linked_name(name, ids), secrets[PROJECT_ID]))
+            actions.append(CREATE_TASK_CURL % (secrets[PAT], task_puts_json + ",", name, linked_name(name, ids), secrets[PROJECT_ID]))
         elif name in names_to_create_as_completed:
-            actions.append(CREATE_COMPLETED_TASK_CURL % (secrets[PAT], name, linked_name(name, ids), secrets[PROJECT_ID]))
+            actions.append(CREATE_COMPLETED_TASK_CURL % (secrets[PAT], task_puts_json + ",", name, linked_name(name, ids), secrets[PROJECT_ID]))
         #elif name in names_to_complete:
         #    actions.append(COMPLETE_TASK_CURL % (tasks_by_name[name]["gid"], secrets[PAT]))
         elif name in task_puts:
-            actions.append(UPDATE_TASK_CURL % (tasks_by_name[name]["gid"], secrets[PAT], json.dumps(task_puts[name])))
+            actions.append(UPDATE_TASK_CURL % (tasks_by_name[name]["gid"], secrets[PAT], task_puts_json))
 
     for action in actions:
         print(action)
-        #subprocess.run(action, shell=True)
-        #time.sleep(1)
+        subprocess.run(action, shell=True)
+        time.sleep(1)
 
     print()
 
