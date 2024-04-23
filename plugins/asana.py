@@ -19,6 +19,18 @@ DATA_FILE = "data.txt"
 PAT = "pat"
 WORKSPACE_ID = "workspace_id"
 PROJECT_ID = "project_id"
+CUSTOM_FIELDS = "custom_fields"
+
+CF_TIME_LOWER = "time_lower"
+CF_TIME_UPPER = "time_upper"
+CF_WEIGHT = "weight"
+CF_BGG_ID = "bgg_id"
+CF_KEYS = [
+    CF_TIME_LOWER,
+    CF_TIME_UPPER,
+    CF_WEIGHT,
+    CF_BGG_ID,
+]
 
 
 def quit():
@@ -83,7 +95,14 @@ curl --request GET \
 
 TASKS_CURL = """
 curl --request GET \
-     --url 'https://app.asana.com/api/1.0/tasks?project={project_id}&opt_fields=name,completed' \
+     --url 'https://app.asana.com/api/1.0/tasks?project={project_id}&opt_fields=name,completed,custom_fields' \
+     --header 'accept: application/json' \
+     --header 'authorization: Bearer {pat}'
+"""
+
+CUSTOM_FIELDS_CURL = """
+curl --request GET \
+     --url https://app.asana.com/api/1.0/projects/{project_id}/custom_field_settings?opt_fields=custom_field.name,custom_field.gid \
      --header 'accept: application/json' \
      --header 'authorization: Bearer {pat}'
 """
@@ -99,6 +118,9 @@ def get_projects(secrets):
 
 def get_tasks(secrets):
     return run_and_parse_curl(TASKS_CURL.format(pat=secrets[PAT], project_id=secrets[PROJECT_ID]))
+
+def get_custom_fields(secrets):
+    return run_and_parse_curl(CUSTOM_FIELDS_CURL.format(pat=secrets[PAT], project_id=secrets[PROJECT_ID]))
 
 
 # copied from game_collection.py
@@ -181,7 +203,7 @@ curl --request POST \
 EOF
 """
 
-COMPLETE_TASK_CURL = """
+UPDATE_TASK_CURL = """
 curl --request PUT \
      --url https://app.asana.com/api/1.0/tasks/%s \
      --header 'accept: application/json' \
@@ -189,9 +211,7 @@ curl --request PUT \
      --header 'content-type: application/json' \
      --data '
 {
-  "data": {
-    "completed": true
-  }
+  "data": %s
 }
 '
 """
@@ -227,6 +247,16 @@ def linked_name(name, bgg_ids=None):
             ])
         )
 
+def task_updates_needed(secrets, task, ids):
+    needed = set()
+    for cf in task["custom_fields"]:
+        for key in CF_KEYS:
+            if ids is None and key == CF_BGG_ID:
+                # skip bgg IDs if we don't have them
+                continue
+            if cf["gid"] == secrets[CUSTOM_FIELDS][key] and cf["number_value"] is None:
+                needed.add(key)
+    return needed
 
 
 def update_tasks(secrets):
@@ -248,30 +278,56 @@ def update_tasks(secrets):
     names_to_create = set()
     names_to_complete = set()
     names_to_create_as_completed = set()
-    for (name, _, eventstr, _) in game_data:
-        # if it's a create, we're trying to create the task
-        if eventstr == "+" and name not in tasks_by_name:
-            names_to_create.add(name)
-        elif eventstr == "-" and name in tasks_by_name:
-            if not tasks_by_name[name]["completed"]:
-                names_to_complete.add(name)
-        elif eventstr == "-" and name in names_to_create:
-            names_to_create.remove(name)
-            names_to_create_as_completed.add(name)
+    names_to_update = set()
+    gamedata_by_name = {}
+    for (name, _, eventstr, ids) in game_data:
+        if eventstr == "+":
+            # first time we're seeing the game in the list
+            gamedata_by_name[name] = ids
+            if name not in tasks_by_name:
+                # need to create a task
+                names_to_create.add(name)
+            else:
+                # may need to update the task
+                if task_updates_needed(secrets, tasks_by_name[name], ids):
+                    names_to_update.add(name)
+        elif eventstr == "-":
+            # second time we're seeing the game in the list
+            if name in tasks_by_name:
+                # already have a task, may need to complete it
+                if not tasks_by_name[name]["completed"]:
+                    names_to_complete.add(name)
+            elif name in names_to_create:
+                # no task yet, but since we're seeing it for the second time, let's move
+                # the creation here
+                names_to_create.remove(name)
+                names_to_create_as_completed.add(name)
+
+    task_puts = defaultdict(dict)
+    for name in names_to_complete:
+        task_puts[name]["completed"] = True
+    for name in names_to_update:
+        cfs = {}
+        task_puts[name]["custom_fields"] = cfs
+        ids = gamedata_by_name[name]
+        if ids:
+            cfs[secrets[CUSTOM_FIELDS][CF_BGG_ID]] = gamedata_by_name[name][0]
 
     actions = []
-    for (name, _, eventstr, ids) in game_data:
-        if eventstr == "+" and name in names_to_create:
+    for name, ids in gamedata_by_name.items():
+        if name in names_to_create:
             actions.append(CREATE_TASK_CURL % (secrets[PAT], name, linked_name(name, ids), secrets[PROJECT_ID]))
-        elif eventstr == "+" and name in names_to_create_as_completed:
+        elif name in names_to_create_as_completed:
             actions.append(CREATE_COMPLETED_TASK_CURL % (secrets[PAT], name, linked_name(name, ids), secrets[PROJECT_ID]))
-        if eventstr == "-" and name in names_to_complete:
-            actions.append(COMPLETE_TASK_CURL % (tasks_by_name[name]["gid"], secrets[PAT]))
+        #elif name in names_to_complete:
+        #    actions.append(COMPLETE_TASK_CURL % (tasks_by_name[name]["gid"], secrets[PAT]))
+        elif name in task_puts:
+            actions.append(UPDATE_TASK_CURL % (tasks_by_name[name]["gid"], secrets[PAT], json.dumps(task_puts[name])))
 
     for action in actions:
         print(action)
-        subprocess.run(action, shell=True)
-        time.sleep(1)
+        #subprocess.run(action, shell=True)
+        #time.sleep(1)
 
     print()
 
@@ -292,6 +348,12 @@ def get_args():
         "--list-projects",
         action="store_true",
         help="list projects visible given PAT and workspace secrets",
+    )
+
+    mutex.add_argument(
+        "--list-custom-fields",
+        action="store_true",
+        help="list custom fields visible on project given secrets",
     )
 
     mutex.add_argument(
@@ -352,6 +414,14 @@ def main():
         print("Tasks:")
         for task in tasks:
             print("{}\t{}".format(task["name"], task["completed"]))
+        quit()
+
+    if args.list_custom_fields:
+        cfs = get_custom_fields(secrets)
+        print("Custom Fields:")
+        for cf in cfs:
+            cf = cf["custom_field"]
+            print("{}\t{}".format(cf["gid"], cf["name"]))
         quit()
 
     if args.update_tasks:
