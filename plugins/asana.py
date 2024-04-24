@@ -29,7 +29,7 @@ CF_BGG_ID = "bgg_id"
 CF_KEYS = [
     CF_TIME_LOWER,
     CF_TIME_UPPER,
-    #CF_WEIGHT,
+    CF_WEIGHT,
     CF_BGG_ID,
 ]
 
@@ -264,22 +264,38 @@ def task_updates_needed(secrets, task, ids):
 
 
 def bgg_lookups(bgg_ids):
-    URL = "https://www.boardgamegeek.com/xmlapi/boardgame/" + ",".join(bgg_ids)
+    #URL = "https://www.boardgamegeek.com/xmlapi/boardgame/" + ",".join(bgg_ids)
+    URL = "https://www.boardgamegeek.com/xmlapi2/thing?id={}&stats=1".format(",".join(bgg_ids))
     cmd = 'wget -O - "%s"' % URL
     result = str(subprocess.run(cmd, shell=True, capture_output=True).stdout)
+
+    ignored_keys = {
+        "id-initial-ignore",
+    }
     
     info = [
-        ("id", '<boardgame objectid="', '"'),
-        (CF_TIME_LOWER, "<minplaytime>", "</minplaytime>"),
-        (CF_TIME_UPPER, "<maxplaytime>", "</maxplaytime>"),
+        ("id-initial-ignore", '<item type="', '"'),
+        ("id", 'id="', '"'),
+        (CF_TIME_LOWER, '<minplaytime value="', '"'),
+        (CF_TIME_UPPER, '<maxplaytime value="', '"'),
+        (CF_WEIGHT, '<averageweight value="', '"'),
     ]
     
     data = {}
     for bgg_id in bgg_ids:
         blob = {}
         for (key, start, end) in info:
+            if start not in result:
+                print("Error: key '{}' start '{}' not in result for blob '{}'".format(key, start, blob))
+                print(result)
+                quit()
+            if end not in result:
+                print("Error: key '{}' end '{}' not in result for blob '{}'".format(key, end, blob))
+                print(result)
+                quit()
             item, result = result.split(start, 1)[1].split(end, 1)
-            blob[key] = item
+            if key not in ignored_keys:
+                blob[key] = item
         data[blob["id"]] = blob
     
     return data
@@ -305,6 +321,7 @@ def update_tasks(secrets):
     names_to_complete = set()
     names_to_create_as_completed = set()
     names_to_update = set()
+    keys_to_update_per_name = defaultdict(set)
     gamedata_by_name = {}
     for (name, _, eventstr, ids) in game_data:
         if eventstr == "+":
@@ -315,8 +332,11 @@ def update_tasks(secrets):
                 names_to_create.add(name)
             else:
                 # may need to update the task
-                if len(task_updates_needed(secrets, tasks_by_name[name], ids)) > 0:
+                keys_to_update = task_updates_needed(secrets, tasks_by_name[name], ids)
+                if len(keys_to_update) > 0:
                     names_to_update.add(name)
+                    for key in keys_to_update:
+                        keys_to_update_per_name[name].add(key)
         elif eventstr == "-":
             # second time we're seeing the game in the list
             if name in tasks_by_name:
@@ -345,9 +365,10 @@ def update_tasks(secrets):
         ids = gamedata_by_name[name]
         if ids:
             use_id = ids[0]
-            cfs[secrets[CUSTOM_FIELDS][CF_BGG_ID]] = use_id
+            if CF_BGG_ID in keys_to_update_per_name[name]:
+                cfs[secrets[CUSTOM_FIELDS][CF_BGG_ID]] = use_id
             if use_id in bggdata:
-                for key in (CF_TIME_LOWER, CF_TIME_UPPER):
+                for key in keys_to_update_per_name[name]:
                     cfs[secrets[CUSTOM_FIELDS][key]] = bggdata[use_id][key]
 
     actions = []
