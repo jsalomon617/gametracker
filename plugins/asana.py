@@ -26,11 +26,15 @@ CF_TIME_LOWER = "time_lower"
 CF_TIME_UPPER = "time_upper"
 CF_WEIGHT = "weight"
 CF_BGG_ID = "bgg_id"
+CF_PLAYERS_LOWER = "players_lower"
+CF_PLAYERS_UPPER = "players_upper"
 CF_KEYS = [
     CF_TIME_LOWER,
     CF_TIME_UPPER,
     CF_WEIGHT,
     CF_BGG_ID,
+    CF_PLAYERS_LOWER,
+    CF_PLAYERS_UPPER,
 ]
 
 
@@ -58,6 +62,41 @@ def load_secrets():
             secrets[key] = data[key]
 
     return secrets
+
+def save_secrets():
+    if not os.path.exists(ASANA_SECRETS_FILE):
+        with open(ASANA_SECRETS_FILE, 'w'):
+            pass
+    
+    secrets = load_secrets()
+    
+    if PAT not in secrets:
+        secrets[PAT] = input("Provide Asana PAT: ")
+    
+    if WORKSPACE_ID not in secrets:
+        list_workspaces(secrets)
+        secrets[WORKSPACE_ID] = input("Provide Workspace ID: ")
+
+    if PROJECT_ID not in secrets:
+        list_projects(secrets)
+        secrets[PROJECT_ID] = input("Provide Project ID: ")
+
+    if CUSTOM_FIELDS not in secrets:
+        secrets[CUSTOM_FIELDS] = dict()
+
+    missing_cfs = [
+        key
+        for key in CF_KEYS
+        if key not in secrets[CUSTOM_FIELDS]
+    ]
+    if len(missing_cfs) > 0:
+        list_custom_fields(secrets)
+        for key in missing_cfs:
+            secrets[CUSTOM_FIELDS][key] = input("Provide CF '{}' ID: ".format(key))
+
+    # save the secrets
+    with open(ASANA_SECRETS_FILE, 'w') as f:
+        f.write(json.dumps(secrets, indent=4) + "\n")
 
 """
 def to_capitalized_camelcase(snake_cased_words):
@@ -276,6 +315,8 @@ def bgg_lookups(bgg_ids):
     info = [
         ("id-initial-ignore", '<item type="', '"'),
         ("id", 'id="', '"'),
+        (CF_PLAYERS_LOWER, '<minplayers value="', '"'),
+        (CF_PLAYERS_UPPER, '<maxplayers value="', '"'),
         (CF_TIME_LOWER, '<minplaytime value="', '"'),
         (CF_TIME_UPPER, '<maxplaytime value="', '"'),
         (CF_WEIGHT, '<averageweight value="', '"'),
@@ -394,6 +435,12 @@ def update_tasks(secrets):
 def get_args():
     parser = argparse.ArgumentParser()
 
+    parser.add_argument(
+        "--update-secrets",
+        action="store_true",
+        help="bring the secrets file up to date, possibly with prompts as necessary",
+    )
+
     mutex = parser.add_mutually_exclusive_group()
     
     # utility to list workspaces and projects to initialize the secrets file
@@ -432,9 +479,34 @@ def get_args():
     return args
 
 
+def list_workspaces(secrets):
+    workspaces = get_workspaces(secrets)
+    print("Workspaces:")
+    for workspace in workspaces:
+        print("{}\t{}".format(workspace["gid"], workspace["name"]))
+
+
+def list_projects(secrets):
+    projects = get_projects(secrets)
+    print("Projects:")
+    for project in projects:
+        print("{}\t{}".format(project["gid"], project["name"]))
+
+def list_custom_fields(secrets):
+    cfs = get_custom_fields(secrets)
+    print("Custom Fields:")
+    for cf in cfs:
+        cf = cf["custom_field"]
+        print("{}\t{}".format(cf["gid"], cf["name"]))
+    
+
 def main():
     args = get_args()
-    
+
+    if args.update_secrets:
+        save_secrets()
+        quit()
+
     secrets = load_secrets()
     
     if not secrets[PAT]:
@@ -446,10 +518,7 @@ def main():
     #api_client = asana.ApiClient(configuration)
     
     if args.list_workspaces:
-        workspaces = get_workspaces(secrets)
-        print("Workspaces:")
-        for workspace in workspaces:
-            print("{}\t{}".format(workspace["gid"], workspace["name"]))
+        list_workspaces(secrests)
         quit()
 
     if not secrets[WORKSPACE_ID]:
@@ -457,10 +526,7 @@ def main():
         quit()
 
     if args.list_projects:
-        projects = get_projects(secrets)
-        print("Projects:")
-        for project in projects:
-            print("{}\t{}".format(project["gid"], project["name"]))
+        list_projects(secrets)
         quit()
 
     if not secrets[PROJECT_ID]:
@@ -476,11 +542,7 @@ def main():
         quit()
 
     if args.list_custom_fields:
-        cfs = get_custom_fields(secrets)
-        print("Custom Fields:")
-        for cf in cfs:
-            cf = cf["custom_field"]
-            print("{}\t{}".format(cf["gid"], cf["name"]))
+        list_custom_fields(secrets)
         quit()
 
     if args.update_tasks:
