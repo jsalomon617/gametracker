@@ -28,6 +28,7 @@ CF_WEIGHT = "weight"
 CF_BGG_ID = "bgg_id"
 CF_PLAYERS_LOWER = "players_lower"
 CF_PLAYERS_UPPER = "players_upper"
+CF_RATING = "rating"
 CF_KEYS = [
     CF_TIME_LOWER,
     CF_TIME_UPPER,
@@ -35,6 +36,7 @@ CF_KEYS = [
     CF_BGG_ID,
     CF_PLAYERS_LOWER,
     CF_PLAYERS_UPPER,
+    CF_RATING,
 ]
 
 
@@ -319,6 +321,7 @@ def bgg_lookups(bgg_ids):
         (CF_PLAYERS_UPPER, '<maxplayers value="', '"'),
         (CF_TIME_LOWER, '<minplaytime value="', '"'),
         (CF_TIME_UPPER, '<maxplaytime value="', '"'),
+        (CF_RATING, '<average value="', '"'),
         (CF_WEIGHT, '<averageweight value="', '"'),
     ]
     
