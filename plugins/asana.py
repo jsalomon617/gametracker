@@ -340,6 +340,7 @@ def bgg_lookups(bgg_ids):
             item, result = result.split(start, 1)[1].split(end, 1)
             if key not in ignored_keys:
                 blob[key] = item
+        blob[CF_BGG_ID] = blob["id"]
         data[blob["id"]] = blob
     
     return data
@@ -374,6 +375,8 @@ def update_tasks(secrets):
             if name not in tasks_by_name:
                 # need to create a task
                 names_to_create.add(name)
+                # need all CF keys
+                keys_to_update_per_name[name] = CF_KEYS
             else:
                 # may need to update the task
                 keys_to_update = task_updates_needed(secrets, tasks_by_name[name], ids)
@@ -418,10 +421,12 @@ def update_tasks(secrets):
     actions = []
     for name, ids in gamedata_by_name.items():
         task_puts_json = json.dumps(task_puts[name]) if name in task_puts else ""
+        # for create, strip the leading and trailing {} and then add the comma
+        task_puts_json_create = "" if not task_puts_json else task_puts_json[1:-1] + ","
         if name in names_to_create:
-            actions.append(CREATE_TASK_CURL % (secrets[PAT], task_puts_json + ",", name, linked_name(name, ids), secrets[PROJECT_ID]))
+            actions.append(CREATE_TASK_CURL % (secrets[PAT], task_puts_json_create, name, linked_name(name, ids), secrets[PROJECT_ID]))
         elif name in names_to_create_as_completed:
-            actions.append(CREATE_COMPLETED_TASK_CURL % (secrets[PAT], task_puts_json + ",", name, linked_name(name, ids), secrets[PROJECT_ID]))
+            actions.append(CREATE_COMPLETED_TASK_CURL % (secrets[PAT], task_puts_json_create, name, linked_name(name, ids), secrets[PROJECT_ID]))
         #elif name in names_to_complete:
         #    actions.append(COMPLETE_TASK_CURL % (tasks_by_name[name]["gid"], secrets[PAT]))
         elif name in task_puts:
