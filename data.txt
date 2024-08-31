@@ -732,3 +732,5 @@
 2024-07-20  +   Terraforming Mars: Prelude 2        id387809
 2024-07-28  -   Terraforming Mars: Prelude 2
 2024-08-03  -   Pendulum
+2024-08-30  +   Inventors of the South Tigris   id378387
+2024-08-31  -   Inventors of the South Tigris
