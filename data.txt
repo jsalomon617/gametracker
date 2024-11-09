@@ -739,3 +739,4 @@
 2024-09-13  +   Stamp Swap          id426796
 2024-09-13  +   Apiary Expansion    id427705
 2024-09-14  +   Creature Caravan    id428559
+2024-11-02  -   Horseless Carriage
