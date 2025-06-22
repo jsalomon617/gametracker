@@ -499,7 +499,7 @@
 2020-03-27  +   Tzolkin                         id126163
 2020-03-27  -   Unearth Expansion
 2020-04-28  -   Ticket to Ride: Nordic Countries
-2020-07-18  +   Fiasco (Card Game)
+2020-07-18  +   Fiasco (Card Game)  id286213
 2020-08-05  +   Seasons     id108745
 2020-08-05  +   Merkator    id39684
 2020-08-05  +   Bora Bora   id127060
