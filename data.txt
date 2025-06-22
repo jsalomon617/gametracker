@@ -744,7 +744,7 @@
 2024-11-17  -   Bus
 2024-11-23  +   Fromage     id384213
 2025-02-01  +   House of Fado   id373667
-2025-05-01  +   The Anarchy     id408637
-2025-05-01  +   Skara Brae      id408636
-2025-05-10  -   The Anarchy
+2025-04-17  +   The Anarchy     id408637
+2025-04-17  +   Skara Brae      id408636
+2025-04-26  -   The Anarchy
 2025-06-21  -   Skara Brae
