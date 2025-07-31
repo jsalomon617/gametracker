@@ -137,7 +137,7 @@ curl --request GET \
 
 TASKS_CURL = """
 curl --request GET \
-     --url 'https://app.asana.com/api/1.0/tasks?project={project_id}&opt_fields=name,completed,custom_fields' \
+     --url 'https://app.asana.com/api/1.0/tasks?project={project_id}&opt_fields=name,completed,custom_fields.gid,custom_fields.number_value' \
      --header 'accept: application/json' \
      --header 'authorization: Bearer {pat}'
 """
@@ -304,7 +304,7 @@ def task_updates_needed(secrets, task, ids):
     return needed
 
 
-def bgg_lookups(bgg_ids):
+def _bgg_lookups(bgg_ids):
     #URL = "https://www.boardgamegeek.com/xmlapi/boardgame/" + ",".join(bgg_ids)
     URL = "https://www.boardgamegeek.com/xmlapi2/thing?id={}&stats=1".format(",".join(bgg_ids))
     cmd = 'wget -O - "%s"' % URL
@@ -330,13 +330,13 @@ def bgg_lookups(bgg_ids):
         blob = {}
         for (key, start, end) in info:
             if start not in result:
-                print("Error: key '{}' start '{}' not in result for blob '{}'".format(key, start, blob))
-                print(result)
-                quit()
+                errmsg = f"Error (BGG ID {bgg_id}): key '{key}' start '{start}' not in result for blob '{blob}'"
+                #print(result)
+                raise KeyError(errmsg)
             if end not in result:
-                print("Error: key '{}' end '{}' not in result for blob '{}'".format(key, end, blob))
-                print(result)
-                quit()
+                errmsg = f"Error (BGG ID {bgg_id}): key '{key}' end '{end}' not in result for blob '{blob}'"
+                #print(result)
+                raise KeyError(errmsg)
             item, result = result.split(start, 1)[1].split(end, 1)
             if key not in ignored_keys:
                 blob[key] = item
@@ -345,6 +345,24 @@ def bgg_lookups(bgg_ids):
     
     return data
 
+
+def bgg_lookups(bgg_ids):
+    if len(bgg_ids) == 0:
+        return {}
+    try:
+        return _bgg_lookups(bgg_ids)
+    except Exception as e:
+        if len(bgg_ids) == 1:
+            print(f"Error with bgg ID {bgg_ids[0]}, skipping!")
+            print(e)
+            return {}
+        halfway = int(len(bgg_ids) // 2)
+        first_half = bgg_lookups(bgg_ids[:halfway])
+        second_half = bgg_lookups(bgg_ids[halfway:])
+        results = {}
+        results.update(first_half)
+        results.update(second_half)
+        return results
 
 def update_tasks(secrets):
     # get existing tasks in the project
@@ -404,11 +422,11 @@ def update_tasks(secrets):
     for name in names_to_update.union(names_to_create).union(names_to_create_as_completed):
         if gamedata_by_name[name]:
             bgg_ids.extend(gamedata_by_name[name])
+    print("BGG IDs to look up:", bgg_ids)
     bggdata = bgg_lookups(bgg_ids) if bgg_ids else {}
 
     for name in names_to_update.union(names_to_create).union(names_to_create_as_completed):
         cfs = {}
-        task_puts[name]["custom_fields"] = cfs
         ids = gamedata_by_name[name]
         if ids:
             use_id = ids[0]
@@ -417,6 +435,8 @@ def update_tasks(secrets):
             if use_id in bggdata:
                 for key in keys_to_update_per_name[name]:
                     cfs[secrets[CUSTOM_FIELDS][key]] = bggdata[use_id][key]
+        if cfs:
+            task_puts[name]["custom_fields"] = cfs
 
     actions = []
     for name, ids in gamedata_by_name.items():
@@ -434,7 +454,7 @@ def update_tasks(secrets):
 
     for action in actions:
         print(action)
-        subprocess.run(action, shell=True)
+        #subprocess.run(action, shell=True)
         time.sleep(1)
 
     print()
