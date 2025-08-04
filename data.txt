@@ -757,3 +757,5 @@
 2025-07-26  +   Vantage     id420033
 2025-07-26  -   Vantage
 2025-07-30  +   Flock Together expansion        id430246
+2025-08-02  -   The King Is Dead
+2025-08-03  -   Cerebria: The Inside World
