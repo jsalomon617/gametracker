@@ -759,3 +759,9 @@
 2025-07-30  +   Flock Together expansion        id430246
 2025-08-02  -   The King Is Dead
 2025-08-03  -   Cerebria: The Inside World
+2025-08-08  +   Wayfarers of the South Tigris expansion     id427130
+2025-08-08  +   Scholars of the South Tigris expansion      id427131
+2025-08-08  +   Inventors of the South Tigris expansion     id427132
+2025-08-08  +   South Tigris Moonsaga                       id427133
+2025-08-09  -   Stamp Swap
+2025-08-10  -   Atiwa
