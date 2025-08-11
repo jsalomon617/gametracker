@@ -452,9 +452,12 @@ def update_tasks(secrets):
         elif name in task_puts:
             actions.append(UPDATE_TASK_CURL % (tasks_by_name[name]["gid"], secrets[PAT], task_puts_json))
 
+    if actions:
+        print("Executing Asana Actions")
     for action in actions:
-        print(action)
-        #subprocess.run(action, shell=True)
+        #print(action)
+        subprocess.run(action, shell=True)
+        print("... next action ...")
         time.sleep(1)
 
     print()
