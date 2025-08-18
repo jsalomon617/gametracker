@@ -39,6 +39,9 @@ CF_KEYS = [
     CF_RATING,
 ]
 
+KNOWN_NOT_WORKING_BGG_IDS = [
+    "286213",
+]
 
 def quit():
     print()
@@ -305,6 +308,11 @@ def task_updates_needed(secrets, task, ids):
 
 
 def _bgg_lookups(bgg_ids):
+    bgg_ids = [
+        bgg_id
+        for bgg_id in bgg_ids
+        if bgg_id not in KNOWN_NOT_WORKING_BGG_IDS
+    ]
     #URL = "https://www.boardgamegeek.com/xmlapi/boardgame/" + ",".join(bgg_ids)
     URL = "https://www.boardgamegeek.com/xmlapi2/thing?id={}&stats=1".format(",".join(bgg_ids))
     cmd = 'wget -O - "%s"' % URL
