@@ -765,3 +765,5 @@
 2025-08-08  +   South Tigris Moonsaga                       id427133
 2025-08-09  -   Stamp Swap
 2025-08-10  -   Atiwa
+2025-08-16  -   Between Two Castles of Mad King Ludwig Expansion
+2025-08-17  -   Ultimate Railroads
