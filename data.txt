@@ -770,3 +770,4 @@
 2025-08-23  -   Key Harvest
 2025-08-24  -   Maracaibo
 2025-08-30  -   Knight Fall
+2025-08-31  -   Hegemony
