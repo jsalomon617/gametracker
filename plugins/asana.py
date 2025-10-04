@@ -54,6 +54,9 @@ def load_secrets():
 
     with open(ASANA_SECRETS_FILE) as f:
         blob = f.read()
+    if not blob.strip():
+        # empty secrets file
+        return {}
     try:
         data = json.loads(blob)
     except Exception as e:
