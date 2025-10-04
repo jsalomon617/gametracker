@@ -776,3 +776,5 @@
 2025-09-14  -   Mint Julep
 2025-09-16  +   Perseverance 3/4        id387849
 2025-09-20  -   Apiary Expansion
+2025-09-26  -   Wayfarers of the South Tigris expansion
+2025-09-28  -   Scholars of the South Tigris expansion
