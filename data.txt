@@ -781,3 +781,4 @@
 2025-10-04  -   Flock Together expansion
 2025-10-05  -   Inventors of the South Tigris expansion
 2025-10-05  -   South Tigris Moonsaga
+2025-10-12  -   Kanban EV
