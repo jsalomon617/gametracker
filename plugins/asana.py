@@ -75,12 +75,12 @@ def save_secrets():
     if not os.path.exists(ASANA_SECRETS_FILE):
         with open(ASANA_SECRETS_FILE, 'w'):
             pass
-    
+
     secrets = load_secrets()
-    
+
     if PAT not in secrets:
         secrets[PAT] = input("Provide Asana PAT: ")
-    
+
     if WORKSPACE_ID not in secrets:
         list_workspaces(secrets)
         secrets[WORKSPACE_ID] = input("Provide Workspace ID: ")
@@ -316,6 +316,11 @@ def _bgg_lookups(bgg_ids):
         for bgg_id in bgg_ids
         if bgg_id not in KNOWN_NOT_WORKING_BGG_IDS
     ]
+
+    if not bgg_ids:
+        print("No valid BGG IDs to look up")
+        return {}
+
     #URL = "https://www.boardgamegeek.com/xmlapi/boardgame/" + ",".join(bgg_ids)
     URL = "https://www.boardgamegeek.com/xmlapi2/thing?id={}&stats=1".format(",".join(bgg_ids))
     cmd = 'wget -O - "%s"' % URL
@@ -324,7 +329,7 @@ def _bgg_lookups(bgg_ids):
     ignored_keys = {
         "id-initial-ignore",
     }
-    
+
     info = [
         ("id-initial-ignore", '<item type="', '"'),
         ("id", 'id="', '"'),
@@ -335,7 +340,7 @@ def _bgg_lookups(bgg_ids):
         (CF_RATING, '<average value="', '"'),
         (CF_WEIGHT, '<averageweight value="', '"'),
     ]
-    
+
     data = {}
     for bgg_id in bgg_ids:
         blob = {}
@@ -353,7 +358,7 @@ def _bgg_lookups(bgg_ids):
                 blob[key] = item
         blob[CF_BGG_ID] = blob["id"]
         data[blob["id"]] = blob
-    
+
     return data
 
 
@@ -428,7 +433,7 @@ def update_tasks(secrets):
     task_puts = defaultdict(dict)
     for name in names_to_complete:
         task_puts[name]["completed"] = True
-    
+
     bgg_ids = []
     for name in names_to_update.union(names_to_create).union(names_to_create_as_completed):
         if gamedata_by_name[name]:
@@ -484,14 +489,14 @@ def get_args():
     )
 
     mutex = parser.add_mutually_exclusive_group()
-    
+
     # utility to list workspaces and projects to initialize the secrets file
     mutex.add_argument(
         "--list-workspaces",
         action="store_true",
         help="list workspaces visible given PAT secret",
     )
-    
+
     mutex.add_argument(
         "--list-projects",
         action="store_true",
@@ -540,7 +545,7 @@ def list_custom_fields(secrets):
     for cf in cfs:
         cf = cf["custom_field"]
         print("{}\t{}".format(cf["gid"], cf["name"]))
-    
+
 
 def main():
     args = get_args()
@@ -550,15 +555,15 @@ def main():
         quit()
 
     secrets = load_secrets()
-    
+
     if not secrets[PAT]:
         print("cannot use Asana API without a PAT")
         quit()
-    
+
     #configuration = asana.Configuration()
     #configuration.access_token = secrets[PAT]
     #api_client = asana.ApiClient(configuration)
-    
+
     if args.list_workspaces:
         list_workspaces(secrests)
         quit()

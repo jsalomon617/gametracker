@@ -237,7 +237,7 @@ def main():
 
     # create our collection
     collection = Collection()
-    
+
     # get the page
     page = generate_webpage(collection)
 
