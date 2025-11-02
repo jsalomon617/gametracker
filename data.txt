@@ -783,3 +783,6 @@
 2025-10-05  -   South Tigris Moonsaga
 2025-10-12  -   Kanban EV
 2025-10-22  +   Speakeasy   id375459
+2025-10-25  +   Wingspan Fan-Designed Birds     id455576,455581,455578,455580,455577,455579
+2025-10-25  +   Wyrmspan Expansion              id453406
+2025-10-25  +   Origin Story                    id454909
