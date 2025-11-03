@@ -6161,14 +6161,19 @@
 
 <script type="text/javascript">
   function toggleChartDetails() {
-    var divs = document.querySelectorAll('.chart_details_div');
-    toggledDivs.forEach(function(div) {
-      if (div.style.display !== 'none') {
-        div.style.display = 'none';
-      } else {
-        div.style.display = 'block';
+    for (let i = 0; i < document.styleSheets.length; i++) {
+      var sheet = document.styleSheets[i];
+      for (let j = 0; j < sheet.cssRules.length; j++) {
+        var rule = sheet.cssRules[j];
+        if (rule.selectorText === '.chart_details_div') {
+          if (div.style.display !== 'none') {
+            div.style.display = 'none';
+          } else {
+            div.style.display = 'block';
+          }
+        }
       }
-    });
+    }
   };
 </script>
 
