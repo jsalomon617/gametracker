@@ -422,8 +422,8 @@ class Collection(object):
             changed_games.append("- %s" % game.linked_name(escape=True))
         if changed_games:
             details_blob = "<br>".join(changed_games)
-            #details_div = '<div class="chart_details_div" style="display:none">%s</div>' % details_blob
-            lines.append(details_blob)
+            details_div = '<div class="chart_details_div" style="display:none">%s</div>' % details_blob
+            lines.append(details_div)
 
         # put it all together
         multiline = "<br>".join(lines)
