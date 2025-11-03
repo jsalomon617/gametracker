@@ -5,7 +5,12 @@ Common library for turning game names and BGG IDs into links
 """
 
 
-def linked_name(name, bgg_ids=None):
+def escape_string(original):
+    newstr = original.replace("'", "&apos;")
+    return newstr
+
+
+def linked_name(name, bgg_ids=None, escape=False):
     """Return the name of the game as part of a BGG link, if possible"""
 
     # if we don't provide any bgg IDs, initialize to an empty list
@@ -14,7 +19,11 @@ def linked_name(name, bgg_ids=None):
 
     # the base bgg link
     base = "https://www.boardgamegeek.com/boardgame/{id}/"
-    target_blank = "target=&apos;_blank&apos;"  # use &apos; to avoid nested single quotes
+    target_blank = "target='_blank'"
+
+    if escape:
+        name = escape_string(name)
+        target_blank = escape_string(target_blank)
 
     # check how many bgg IDs we have
     if len(bgg_ids) == 0:

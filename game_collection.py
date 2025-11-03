@@ -40,10 +40,10 @@ class Game(object):
         """Whether or not we've played the game yet"""
         return self.play is not None
 
-    def linked_name(self):
+    def linked_name(self, escape=False):
         """Return the name of the game as part of a BGG link, if possible"""
 
-        return bgg_link.linked_name(self.name, self.bgg)
+        return bgg_link.linked_name(self.name, self.bgg, escape=escape)
 
 
 class Date(object):
@@ -417,9 +417,9 @@ class Collection(object):
         # track actual changed games if details checkbox is checked
         changed_games = []
         for game in self.games_get(date):
-            changed_games.append("+ %s" % game.name)
+            changed_games.append("+ %s" % game.linked_name(escape=True))
         for game in self.games_play(date):
-            changed_games.append("- %s" % game.name)
+            changed_games.append("- %s" % game.linked_name(escape=True))
         if changed_games:
             details_blob = "<br>".join(changed_games)
             #details_div = '<div class="chart_details_div" style="display:none">%s</div>' % details_blob
