@@ -6166,10 +6166,10 @@
       for (let j = 0; j < sheet.cssRules.length; j++) {
         var rule = sheet.cssRules[j];
         if (rule.selectorText === '.chart_details_div') {
-          if (div.style.display !== 'none') {
-            div.style.display = 'none';
+          if (rule.style.display !== 'none') {
+            rule.style.display = 'none';
           } else {
-            div.style.display = 'block';
+            rule.style.display = 'block';
           }
         }
       }
