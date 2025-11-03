@@ -417,9 +417,9 @@ class Collection(object):
         # track actual changed games if details checkbox is checked
         changed_games = []
         for game in self.games_get(date):
-            changed_games.append("+ %s" % game.linked_name())
+            changed_games.append("+ %s" % game.name)
         for game in self.games_play(date):
-            changed_games.append("- %s" % game.linked_name())
+            changed_games.append("- %s" % game.name)
         if changed_games:
             details_blob = "<br>".join(changed_games)
             #details_div = '<div class="chart_details_div" style="display:none">%s</div>' % details_blob
