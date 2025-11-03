@@ -17,6 +17,8 @@ from urllib.request import urlopen
 ASANA_SECRETS_FILE = "plugins/secrets/asana-secrets.json"
 DATA_FILE = "data.txt"
 
+BGG_XML_API_TOKEN = "bgg_token"
+
 PAT = "pat"
 WORKSPACE_ID = "workspace_id"
 PROJECT_ID = "project_id"
@@ -77,6 +79,9 @@ def save_secrets():
             pass
 
     secrets = load_secrets()
+
+    if BGG_XML_API_TOKEN not in secrets:
+        secrets[BGG_XML_API_TOKEN] = input("Provide BGG XML API Token: ")
 
     if PAT not in secrets:
         secrets[PAT] = input("Provide Asana PAT: ")
@@ -310,7 +315,7 @@ def task_updates_needed(secrets, task, ids):
     return needed
 
 
-def _bgg_lookups(bgg_ids):
+def _bgg_lookups(bgg_token, bgg_ids):
     bgg_ids = [
         bgg_id
         for bgg_id in bgg_ids
@@ -323,7 +328,7 @@ def _bgg_lookups(bgg_ids):
 
     #URL = "https://www.boardgamegeek.com/xmlapi/boardgame/" + ",".join(bgg_ids)
     URL = "https://www.boardgamegeek.com/xmlapi2/thing?id={}&stats=1".format(",".join(bgg_ids))
-    cmd = 'wget -O - "%s"' % URL
+    cmd = 'wget --header="Authorization: Bearer %s" -O - "%s"' % (bgg_token, URL)
     result = str(subprocess.run(cmd, shell=True, capture_output=True).stdout)
 
     ignored_keys = {
@@ -362,19 +367,19 @@ def _bgg_lookups(bgg_ids):
     return data
 
 
-def bgg_lookups(bgg_ids):
+def bgg_lookups(bgg_token, bgg_ids):
     if len(bgg_ids) == 0:
         return {}
     try:
-        return _bgg_lookups(bgg_ids)
+        return _bgg_lookups(bgg_token, bgg_ids)
     except Exception as e:
         if len(bgg_ids) == 1:
             print(f"Error with bgg ID {bgg_ids[0]}, skipping!")
             print(e)
             return {}
         halfway = int(len(bgg_ids) // 2)
-        first_half = bgg_lookups(bgg_ids[:halfway])
-        second_half = bgg_lookups(bgg_ids[halfway:])
+        first_half = bgg_lookups(bgg_token, bgg_ids[:halfway])
+        second_half = bgg_lookups(bgg_token, bgg_ids[halfway:])
         results = {}
         results.update(first_half)
         results.update(second_half)
@@ -439,7 +444,7 @@ def update_tasks(secrets):
         if gamedata_by_name[name]:
             bgg_ids.extend(gamedata_by_name[name])
     print("BGG IDs to look up:", bgg_ids)
-    bggdata = bgg_lookups(bgg_ids) if bgg_ids else {}
+    bggdata = bgg_lookups(secrets[BGG_XML_API_TOKEN], bgg_ids) if bgg_ids else {}
 
     for name in names_to_update.union(names_to_create).union(names_to_create_as_completed):
         cfs = {}
