@@ -4,6 +4,7 @@
 Common library for turning game names and BGG IDs into links
 """
 
+
 def linked_name(name, bgg_ids=None):
     """Return the name of the game as part of a BGG link, if possible"""
 
@@ -13,6 +14,7 @@ def linked_name(name, bgg_ids=None):
 
     # the base bgg link
     base = "https://www.boardgamegeek.com/boardgame/{id}/"
+    target_blank = "target=&apos;_blank&apos;"  # use &apos; to avoid nested single quotes
 
     # check how many bgg IDs we have
     if len(bgg_ids) == 0:
@@ -21,7 +23,7 @@ def linked_name(name, bgg_ids=None):
     elif len(bgg_ids) == 1:
         # we have exactly one ID, let's link the name
         link = base.format(id=bgg_ids[0])
-        return "<a href={link} target=\\'_blank\\'>{name}</a>".format(link=link, name=name)
+        return "<a href={link} {target_blank}>{name}</a>".format(link=link, target_blank=target_blank, name=name)
     else:
         # we have many ids, let's include them generically for now
         # TODO reference BGG library to provide names
@@ -29,7 +31,7 @@ def linked_name(name, bgg_ids=None):
         return "{name} ({links})".format(
             name=name,
             links=", ".join([
-                "<a href={link} target=\\'_blank\\'>{id}</a>".format(link=link, id=id)
+                "<a href={link} {target_blank}>{id}</a>".format(link=link, target_blank=target_blank, id=id)
                 for (id, link) in pairs
             ])
         )
