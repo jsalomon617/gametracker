@@ -152,7 +152,7 @@ class Collection(object):
 
     def __init__(self):
         """Initialize our collection object"""
-        
+
         # store the game data
         self.store()
 
@@ -164,7 +164,7 @@ class Collection(object):
         lines = [x.strip() for x in lines]
         lines = [x for x in lines if x]
         return lines
- 
+
     def parse_line(self, line):
         """Parse an individual line.  Current format expects:
         <date> <+ or -> <name>
@@ -244,13 +244,13 @@ class Collection(object):
 
     def store(self):
         """Store the dataset by date and by name"""
-        
+
         # reset the stored data
         self.wipe()
 
         # read our datafile
         lines = self.read()
-        
+
         # go through each line
         last_date = None
         for line in lines:
@@ -413,6 +413,16 @@ class Collection(object):
         # get the rolling 7-day net
         #netweek = "7-Day Rolling Net: <b>%s</b>" % delta_prefix(self.net_week(date))
         #lines.append(netweek)
+
+        # track actual changed games if details checkbox is checked
+        changed_games = []
+        for game in self.games_get(date):
+            changed_games += "+ %s" % game.linked_name()
+        for game in self.games_play(date):
+            changed_games += "- %s" % game.linked_name()
+        if changed_games:
+            details_div = '<div class="chart_details_div" style="display:none">%s</div>' % "<br>".join(changed_games)
+            lines.append(details_div)
 
         # put it all together
         multiline = "<br>".join(lines)

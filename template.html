@@ -124,6 +124,19 @@
 </script>
 
 <script type="text/javascript">
+  function toggleChartDetails() {
+    var divs = document.querySelectorAll('.chart_details_div');
+    toggledDivs.forEach(function(div) {
+      if (div.style.display !== 'none') {
+        div.style.display = 'none';
+      } else {
+        div.style.display = 'block';
+      }
+    });
+  };
+</script>
+
+<script type="text/javascript">
   function toggleElement(id) {
     var element = document.getElementById(id);
     var disabled = element.disabled;
@@ -190,6 +203,10 @@ Last Game Acquired on <b> {{ last_acquired }} </b>
 <br>
 Currently Unplayed: <b> {{ unplayed_count }} </b>
 (Lowest Since <b> {{ lowest_since }}) </b>
+<br><br>
+
+<b>Tooltip Details:</b>
+<input id='chart_details_toggle' type='checkbox' onclick="toggleChartDetails()">
 <br><br>
 
 <b>Trendline:</b>
@@ -301,8 +318,8 @@ Next Possible Gamebreaker Threshold: <b>{{ next_game_breaker_date }}</b> (Score:
     });
 </script>
 
-<br><br>
-Some BGG lookups handled by the BGG XML API:
+<br><br><br>
+<b><u>Some BGG lookups handled by the BGG XML API:</u></b>
 <br>
 <a href="https://boardgamegeek.com/using_the_xml_api"><img src="images/powered_by_bgg.jpg" alt="Powered by BGG" /></a>
 
