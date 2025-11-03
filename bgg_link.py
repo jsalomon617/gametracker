@@ -21,7 +21,7 @@ def linked_name(name, bgg_ids=None):
     elif len(bgg_ids) == 1:
         # we have exactly one ID, let's link the name
         link = base.format(id=bgg_ids[0])
-        return "<a href={link} target=\'_blank\'>{name}</a>".format(link=link, name=name)
+        return "<a href={link} target=\\'_blank\\'>{name}</a>".format(link=link, name=name)
     else:
         # we have many ids, let's include them generically for now
         # TODO reference BGG library to provide names
@@ -29,7 +29,7 @@ def linked_name(name, bgg_ids=None):
         return "{name} ({links})".format(
             name=name,
             links=", ".join([
-                "<a href={link} target=\'_blank\'>{id}</a>".format(link=link, id=id)
+                "<a href={link} target=\\'_blank\\'>{id}</a>".format(link=link, id=id)
                 for (id, link) in pairs
             ])
         )
