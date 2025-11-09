@@ -786,3 +786,4 @@
 2025-10-25  +   Wingspan Fan-Designed Birds     id455576,455581,455578,455580,455577,455579
 2025-10-25  +   Wyrmspan Expansion              id453406
 2025-10-25  +   Origin Story                    id454909
+2025-11-08  -   Origin Story
