@@ -341,54 +341,55 @@ Next Possible Gamebreaker Threshold: <b>{{ next_game_breaker_date }}</b> (Score:
 </script>
 
 <script>
-    function sortTable(columnIndex) {
-        const table = document.getElementById("sortableTable");
-        let rows = Array.from(table.rows).slice(1); // Get all rows except the header
-        let switching = true;
-        let dir = "asc"; // Set the sorting direction to ascending
-        let switchcount = 0;
 
-        while (switching) {
-            switching = false;
-            let i;
-            for (i = 0; i < rows.length - 1; i++) {
-                let shouldSwitch = false;
+function sortTable(columnIndex) {
+    const table = document.getElementById("sortableTable");
+    const tbody = table.querySelector('tbody');
+    let switching = true;
+    let dir = "asc";
+    let switchcount = 0;
 
-                // Get the cell values, specifically the link text if present
-                let cellA = rows[i].cells[columnIndex].querySelector('a') ? 
-                            rows[i].cells[columnIndex].querySelector('a').innerText : 
-                            rows[i].cells[columnIndex].innerText;
-                let cellB = rows[i + 1].cells[columnIndex].querySelector('a') ? 
-                            rows[i + 1].cells[columnIndex].querySelector('a').innerText : 
-                            rows[i + 1].cells[columnIndex].innerText;
+    while (switching) {
+        switching = false;
+        let rows = Array.from(tbody.rows); // Re-query rows each iteration
+        
+        for (let i = 0; i < rows.length - 1; i++) {
+            let shouldSwitch = false;
 
-                // Compare the values based on direction
-                if (dir == "asc") {
-                    if (cellA.localeCompare(cellB) > 0) {
-                        shouldSwitch = true;
-                        break;
-                    }
-                } else if (dir == "desc") {
-                    if (cellA.localeCompare(cellB) < 0) {
-                        shouldSwitch = true;
-                        break;
-                    }
+            let cellA = rows[i].cells[columnIndex].querySelector('a') ? 
+                        rows[i].cells[columnIndex].querySelector('a').innerText : 
+                        rows[i].cells[columnIndex].innerText;
+            let cellB = rows[i + 1].cells[columnIndex].querySelector('a') ? 
+                        rows[i + 1].cells[columnIndex].querySelector('a').innerText : 
+                        rows[i + 1].cells[columnIndex].innerText;
+
+            if (dir == "asc") {
+                if (cellA.localeCompare(cellB) > 0) {
+                    shouldSwitch = true;
+                    break;
                 }
-            }
-            if (shouldSwitch) {
-                // If a switch is needed, insert the row in the correct place
-                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-                switching = true;
-                switchcount++;
-            } else {
-                // If no switch, and direction is "asc", change to "desc" and repeat
-                if (switchcount == 0 && dir == "asc") {
-                    dir = "desc";
-                    switching = true;
+            } else if (dir == "desc") {
+                if (cellA.localeCompare(cellB) < 0) {
+                    shouldSwitch = true;
+                    break;
                 }
             }
         }
+        
+        if (shouldSwitch) {
+            rows = Array.from(tbody.rows); // Re-query again before swapping
+            tbody.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+            switchcount++;
+        } else {
+            if (switchcount == 0 && dir == "asc") {
+                dir = "desc";
+                switching = true;
+            }
+        }
     }
+}
+
 </script>
 
 
