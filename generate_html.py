@@ -139,6 +139,14 @@ def get_template():
 
     return (content, matches)
 
+def _table_row_for_unplayed_game(g):
+    cells = [
+        g.linked_name(),
+        g.get,
+    ]
+    td_cells = [f"<td>{cell}</td>" for cell in cells]
+    return f"<tr>{''.join(td_cells)}</tr>"
+
 def generate_webpage(collection):
     """Print our webpage"""
 
@@ -153,8 +161,11 @@ def generate_webpage(collection):
     unplayed = collection.get_unplayed()
     unplayed.sort(key=lambda g: g.name)
 
-    # get the display links for the unplayed games
-    unplayed_links = [g.linked_name() for g in unplayed]
+    # get the display links for the unplayed games + other metadata
+    unplayed_rows = [
+        _table_row_for_unplayed_game(g)
+        for g in unplayed
+    ]
 
     # get the date we last acquired a game
     last_acquired = collection.last_acquired_date()
@@ -207,7 +218,7 @@ def generate_webpage(collection):
         "js_last_acquired": date_js(last_acquired),
         "lowest_since": str(lowest_since),
         "unplayed_count": len(unplayed),
-        "unplayed_lines": "\n<br> ".join(unplayed_links),
+        "unplayed_lines": "\n<br> ".join(unplayed_rows),
         "game_breaker_start": str(game_breaker_start),
         "game_breaker_rows": game_breaker_rows,
         "next_game_breaker_date": str(next_game_breaker_date),

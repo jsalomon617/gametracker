@@ -303,7 +303,17 @@ Next Possible Gamebreaker Threshold: <b>{{ next_game_breaker_date }}</b> (Score:
 <br><br>
 <b><u>Unplayed Games ({{ unplayed_count }}):</u></b>
 <br>
+<table id="sortableTable">
+<thead>
+<tr>
+<th onclick="sortTable(0)">Game</th>
+<th onclick="sortTable(1)">Date Acquired</th>
+</tr>
+</thead>
+<tbody>
 {{ unplayed_lines }}
+</tbody>
+</table>
 
 
 <script>
@@ -327,6 +337,47 @@ Next Possible Gamebreaker Threshold: <b>{{ next_game_breaker_date }}</b> (Score:
     elementsArray.forEach(div => {
         div.textContent = days + " day" + plural;
     });
+
+    // sort table
+    function sortTable(n) {
+      var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+      table = document.getElementById("sortableTable");
+      switching = true;
+      dir = "asc"; // Set sorting direction to ascending
+      while (switching) {
+        switching = false;
+        rows = table.rows;
+        for (i = 1; i < (rows.length - 1); i++) {
+          shouldSwitch = false;
+          x = rows[i].getElementsByTagName("TD")[n];
+          y = rows[i + 1].getElementsByTagName("TD")[n];
+
+          // Logic to compare rows based on direction (asc or desc) and determine if switching is needed
+          if (dir == "asc") {
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+              shouldSwitch = true;
+              break;
+            }
+          } else if (dir == "desc") {
+            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+              shouldSwitch = true;
+              break;
+            }
+          }
+        }
+        if (shouldSwitch) {
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          switching = true;
+          switchcount++; // Increment switch count
+        } else {
+          // If no switches and direction is ascending, change direction to descending and loop again
+          if (switchcount == 0 && dir == "asc") {
+            dir = "desc";
+            switching = true;
+          }
+        }
+      }
+    }
 </script>
 
 <br><br><br>
