@@ -6515,8 +6515,8 @@ Next Possible Gamebreaker Threshold: <b>2026-02-16</b> (Score: 114)
 <th colspan="2">Unplayed Games (90)</th>
 </tr>
 <tr>
-<th onclick="sortTable(0)" style="cursor: pointer;">Game</th>
-<th onclick="sortTable(1)" style="cursor: pointer;">Date Acquired</th>
+<th onclick="sortTable(0)" style="cursor: pointer;" class="arrowHeader">Game ▲</th>
+<th onclick="sortTable(1)" style="cursor: pointer;" class="arrowHeader">Date Acquired</th>
 </tr>
 </thead>
 <tbody>
@@ -6683,7 +6683,7 @@ function sortTable(columnIndex) {
 }
 
 function updateSortArrows(columnIndex, direction) {
-    const headers = document.querySelectorAll('#sortableTable th');
+    const headers = document.querySelectorAll('#sortableTable th.arrowHeader');
     headers.forEach((header, index) => {
         // Remove existing arrows
         header.innerHTML = header.innerHTML.replace(/ ▲| ▼/g, '');
