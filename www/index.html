@@ -6642,49 +6642,65 @@ Next Possible Gamebreaker Threshold: <b>2026-02-16</b> (Score: 114)
 function sortTable(columnIndex) {
     const table = document.getElementById("sortableTable");
     const tbody = table.querySelector('tbody');
-    let switching = true;
-    let dir = "asc";
-    let switchcount = 0;
-
-    while (switching) {
-        switching = false;
-        let rows = Array.from(tbody.rows); // Re-query rows each iteration
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+    
+    // Determine current sort direction by checking a data attribute
+    const currentDir = table.dataset.sortDir || 'asc';
+    const currentCol = table.dataset.sortCol;
+    
+    // Toggle direction if clicking the same column, otherwise default to asc
+    const dir = (currentCol == columnIndex && currentDir == 'asc') ? 'desc' : 'asc';
+    
+    // Sort the rows array
+    rows.sort((rowA, rowB) => {
+        let cellA = rowA.cells[columnIndex].querySelector('a') ? 
+                    rowA.cells[columnIndex].querySelector('a').innerText : 
+                    rowA.cells[columnIndex].innerText;
+        let cellB = rowB.cells[columnIndex].querySelector('a') ? 
+                    rowB.cells[columnIndex].querySelector('a').innerText : 
+                    rowB.cells[columnIndex].innerText;
         
-        for (let i = 0; i < rows.length - 1; i++) {
-            let shouldSwitch = false;
-
-            let cellA = rows[i].cells[columnIndex].querySelector('a') ? 
-                        rows[i].cells[columnIndex].querySelector('a').innerText : 
-                        rows[i].cells[columnIndex].innerText;
-            let cellB = rows[i + 1].cells[columnIndex].querySelector('a') ? 
-                        rows[i + 1].cells[columnIndex].querySelector('a').innerText : 
-                        rows[i + 1].cells[columnIndex].innerText;
-
-            if (dir == "asc") {
-                if (cellA.localeCompare(cellB) > 0) {
-                    shouldSwitch = true;
-                    break;
-                }
-            } else if (dir == "desc") {
-                if (cellA.localeCompare(cellB) < 0) {
-                    shouldSwitch = true;
-                    break;
-                }
-            }
-        }
+        const comparison = cellA.localeCompare(cellB);
+        return dir == 'asc' ? comparison : -comparison;
+    });
+    
+    // Re-append rows in sorted order
+    rows.forEach(row => tbody.appendChild(row));
+    
+    // Store the current sort state
+    table.dataset.sortDir = dir;
+    table.dataset.sortCol = columnIndex;
+}function sortTable(columnIndex) {
+    const table = document.getElementById("sortableTable");
+    const tbody = table.querySelector('tbody');
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+    
+    // Determine current sort direction by checking a data attribute
+    const currentDir = table.dataset.sortDir || 'asc';
+    const currentCol = table.dataset.sortCol;
+    
+    // Toggle direction if clicking the same column, otherwise default to asc
+    const dir = (currentCol == columnIndex && currentDir == 'asc') ? 'desc' : 'asc';
+    
+    // Sort the rows array
+    rows.sort((rowA, rowB) => {
+        let cellA = rowA.cells[columnIndex].querySelector('a') ? 
+                    rowA.cells[columnIndex].querySelector('a').innerText : 
+                    rowA.cells[columnIndex].innerText;
+        let cellB = rowB.cells[columnIndex].querySelector('a') ? 
+                    rowB.cells[columnIndex].querySelector('a').innerText : 
+                    rowB.cells[columnIndex].innerText;
         
-        if (shouldSwitch) {
-            rows = Array.from(tbody.rows); // Re-query again before swapping
-            tbody.insertBefore(rows[i + 1], rows[i]);
-            switching = true;
-            switchcount++;
-        } else {
-            if (switchcount == 0 && dir == "asc") {
-                dir = "desc";
-                switching = true;
-            }
-        }
-    }
+        const comparison = cellA.localeCompare(cellB);
+        return dir == 'asc' ? comparison : -comparison;
+    });
+    
+    // Re-append rows in sorted order
+    rows.forEach(row => tbody.appendChild(row));
+    
+    // Store the current sort state
+    table.dataset.sortDir = dir;
+    table.dataset.sortCol = columnIndex;
 }
 
 </script>
