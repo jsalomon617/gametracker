@@ -338,47 +338,59 @@ Next Possible Gamebreaker Threshold: <b>{{ next_game_breaker_date }}</b> (Score:
         div.textContent = days + " day" + plural;
     });
 
-    // sort table
-    function sortTable(n) {
-      var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-      table = document.getElementById("sortableTable");
-      switching = true;
-      dir = "asc"; // Set sorting direction to ascending
-      while (switching) {
-        switching = false;
-        rows = table.rows;
-        for (i = 1; i < (rows.length - 1); i++) {
-          shouldSwitch = false;
-          x = rows[i].getElementsByTagName("TD")[n];
-          y = rows[i + 1].getElementsByTagName("TD")[n];
+</script>
 
-          // Logic to compare rows based on direction (asc or desc) and determine if switching is needed
-          if (dir == "asc") {
-            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-              shouldSwitch = true;
-              break;
+<script>
+    function sortTable(columnIndex) {
+        const table = document.getElementById("sortableTable");
+        let rows = Array.from(table.rows).slice(1); // Get all rows except the header
+        let switching = true;
+        let dir = "asc"; // Set the sorting direction to ascending
+        let switchcount = 0;
+
+        while (switching) {
+            switching = false;
+            let i;
+            for (i = 0; i < rows.length - 1; i++) {
+                let shouldSwitch = false;
+
+                // Get the cell values, specifically the link text if present
+                let cellA = rows[i].cells[columnIndex].querySelector('a') ? 
+                            rows[i].cells[columnIndex].querySelector('a').innerText : 
+                            rows[i].cells[columnIndex].innerText;
+                let cellB = rows[i + 1].cells[columnIndex].querySelector('a') ? 
+                            rows[i + 1].cells[columnIndex].querySelector('a').innerText : 
+                            rows[i + 1].cells[columnIndex].innerText;
+
+                // Compare the values based on direction
+                if (dir == "asc") {
+                    if (cellA.localeCompare(cellB) > 0) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                } else if (dir == "desc") {
+                    if (cellA.localeCompare(cellB) < 0) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
             }
-          } else if (dir == "desc") {
-            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-              shouldSwitch = true;
-              break;
+            if (shouldSwitch) {
+                // If a switch is needed, insert the row in the correct place
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+                switchcount++;
+            } else {
+                // If no switch, and direction is "asc", change to "desc" and repeat
+                if (switchcount == 0 && dir == "asc") {
+                    dir = "desc";
+                    switching = true;
+                }
             }
-          }
         }
-        if (shouldSwitch) {
-          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-          switching = true;
-          switchcount++; // Increment switch count
-        } else {
-          // If no switches and direction is ascending, change direction to descending and loop again
-          if (switchcount == 0 && dir == "asc") {
-            dir = "desc";
-            switching = true;
-          }
-        }
-      }
     }
 </script>
+
 
 <br><br><br>
 <b><u>Some BGG lookups handled by the BGG XML API:</u></b>

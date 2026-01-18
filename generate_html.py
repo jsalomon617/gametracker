@@ -218,7 +218,7 @@ def generate_webpage(collection):
         "js_last_acquired": date_js(last_acquired),
         "lowest_since": str(lowest_since),
         "unplayed_count": len(unplayed),
-        "unplayed_lines": "\n<br> ".join(unplayed_rows),
+        "unplayed_lines": "\n".join(unplayed_rows),
         "game_breaker_start": str(game_breaker_start),
         "game_breaker_rows": game_breaker_rows,
         "next_game_breaker_date": str(next_game_breaker_date),
