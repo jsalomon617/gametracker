@@ -6,8 +6,8 @@
 <script type="text/javascript">
   google.load('visualization', '1', {packages: ['controls', 'charteditor']});
   google.setOnLoadCallback(drawChart);
-  google.charts.load('current', {'packages':['corechart', 'line']});
-  google.charts.setOnLoadCallback(drawChart);
+  //google.charts.load('current', {'packages':['corechart', 'line']});
+  //google.charts.setOnLoadCallback(drawChart);
 
   function drawChart() {
 
@@ -3148,7 +3148,7 @@
 
     // https://stackoverflow.com/questions/43368734/custom-zoom-to-google-line-chart
     // https://jsfiddle.net/hicaro/vk8oaryy/8/
-    var dash = new google.visualization.Dashboard(document.getElementById('dashboard'));
+    var dash = new google.visualization.Dashboard(document.getElementById('dashboard_div'));
     var chart = new google.visualization.ChartWrapper({
         chartType: 'LineChart',
         containerId: 'chart_div',
