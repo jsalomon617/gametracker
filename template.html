@@ -13,6 +13,12 @@ function dateToStr(date_object) {
     return formattedDate;
 }
 
+
+function stringToDate(date_as_string) {
+    const splitdate = date_as_string.split("-");
+    return new Date(parseInt(splitdate[0]), parseInt(splitdate[1]) - 1, parseInt(splitdate[2]));
+}
+
   function todayStr() {
     var today = new Date();
     return dateToStr(today);
@@ -28,8 +34,8 @@ function updateVariableStatsForSelectedDateRange() {
     var variableStatsGamesAcquired = document.getElementById("variable_stats_games_acquired");
     var variableStatsGamesPlayed = document.getElementById("variable_stats_games_played");
 
-    var startDate = new Date(document.getElementById('start_date').value);
-    var endDate = new Date(document.getElementById('end_date').value);
+    var startDate = stringToDate(document.getElementById('start_date_str').innerHTML);
+    var endDate = stringToDate(document.getElementById('end_date_str').innerHTML);
 
     var starting_count = 0;
     var games_acquired_count = 0;
