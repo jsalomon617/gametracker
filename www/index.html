@@ -3175,7 +3175,7 @@
         }
     });
     dash.bind([control], [chart]);
-    dash.draw(data);
+    //dash.draw(data);
 
     // define our static image function (calling getImageURI)
     function setStatic() {
@@ -3220,16 +3220,19 @@
           },
         };
       }
-      chart.draw(data, options)
+      //chart.draw(data, options)
+      dash.draw(data);
     });
 
     // changing the trendline degree should redraw the trendline
     document.getElementById('trendline_degree').addEventListener('change', function () {
       options.trendlines[0].degree = this.value;
-      chart.draw(data, options);
+      //chart.draw(data, options);
+      dash.draw(data);
     });
 
-    chart.draw(data, options);
+    //chart.draw(data, options);
+    dash.draw(data);
   }
 </script>
 
