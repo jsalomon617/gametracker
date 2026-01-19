@@ -4,8 +4,10 @@
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
-  google.charts.load('current', {'packages':['corechart', 'line']});
-  google.charts.setOnLoadCallback(drawChart);
+  google.load('visualization', '1', {packages: ['controls', 'charteditor']});
+  google.setOnLoadCallback(drawChart);
+  //google.charts.load('current', {'packages':['corechart', 'line']});
+  //google.charts.setOnLoadCallback(drawChart);
 
   function drawChart() {
 
@@ -47,8 +49,13 @@
       height: 500
     };
 
-    var chart_div = document.getElementById('chart_div');
-    var chart = new google.visualization.LineChart(chart_div);
+    //var chart_div = document.getElementById('chart_div');
+    //var chart = new google.visualization.LineChart(chart_div);
+    var chart = new google.visualization.ChartWrapper({
+        chartType: 'ComboChart',
+        containerId: 'chart_div',
+        options
+    });
 
     // define our static image function (calling getImageURI)
     function setStatic() {
@@ -202,7 +209,10 @@ th, td {
 
 </head><body>
 
+<div id="dhasboard_div">
 <div id="chart_div"></div>
+<div id="control_div"></div>
+</div>
 
 Last Game Acquired on <b> {{ last_acquired }} </b>
 (<span id="dayDiff"></span> ago)
