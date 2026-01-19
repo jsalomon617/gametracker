@@ -3165,7 +3165,7 @@
                     width: 900,
                     chartArea: {
                         height: '100%',
-                        width: '100%',
+                        width: '75%',
                         left: 0
                     }
                 }
@@ -3246,8 +3246,7 @@
     var todayString = today.toISOString().split('T')[0];
     document.getElementById('end_date').value = todayString;
 
-    // Function to apply the selected date range
-    document.getElementById('apply_dates').addEventListener('click', function() {
+    function applyDates() {
       var startDateInput = document.getElementById('start_date').value;
       var endDateInput = document.getElementById('end_date').value;
   
@@ -3269,6 +3268,24 @@
         });
         control.draw();
       }
+    };
+
+    // Function to apply the selected date range
+    document.getElementById('apply_dates').addEventListener('click', applyDates);
+
+
+    document.getElementById('reset_dates').addEventListener('click', function() {
+        var startDateInput = document.getElementById('start_date');
+        var endDateInput = document.getElementById('end_date');
+
+        var today = new Date();
+        const formattedDate = today.getFullYear() + '-' +
+            String(today.getMonth() + 1).padStart(2, '0') + '-' + // getMonth() is 0-indexed
+            String(today.getDate()).padStart(2, '0')
+
+        startDateInput.value = '2017-07-30';
+        endDateInput.value = formattedDate;
+        applyDates();
     });
 
     // Listen for manual changes to the control and update the date inputs
@@ -3395,14 +3412,17 @@ th, td {
 <br><br>
 
 <div id="date_selectors">
-Adjust Selected Date Range
+<u>Adjust Selected Date Range</u>
+<br>
 <label for="start_date">Start Date:</label>
 <input type="date" id="start_date" value="2017-07-30">
-
+<br>
 <label for="end_date">End Date:</label>
 <input type="date" id="end_date">
 <br>
 <button id="apply_dates">Apply Date Range</button>
+<br>
+<button id="reset_dates">Reset Selection</button>
 </div>
 
 <br><br>
