@@ -56,7 +56,11 @@ function updateVariableStatsForSelectedDateRange() {
 
         if (dateToStr(this_date) === dateToStr(endDate)) {
             variableStatsEndingCount.innerHTML = previous_day_count;
-            variableStatsNetChange.innerHTML = previous_day_count - starting_count;
+            var net_change = previous_day_count - starting_count;
+            if (net_change > 0) {
+                net_change = "+" + net_change;
+            }
+            variableStatsNetChange.innerHTML = net_change;
             variableStatsGamesAcquired.innerHTML = games_acquired_count;
             variableStatsGamesPlayed.innerHTML = games_played_count;
             break;
