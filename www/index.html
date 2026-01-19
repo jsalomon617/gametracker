@@ -3166,7 +3166,7 @@
                     chartArea: {
                         height: '100%',
                         width: '75%',
-                        left: 0
+                        left: '25%'
                     }
                 }
             }
@@ -3270,8 +3270,12 @@
       }
     };
 
+    // changing the start and/or end dates should redraw the control
+    document.getElementById('start_date').addEventListener('change', applyDates);
+
+
     // Function to apply the selected date range
-    document.getElementById('apply_dates').addEventListener('click', applyDates);
+    //document.getElementById('apply_dates').addEventListener('click', applyDates);
 
 
     document.getElementById('reset_dates').addEventListener('click', function() {
@@ -3285,7 +3289,7 @@
 
         startDateInput.value = '2017-07-30';
         endDateInput.value = formattedDate;
-        applyDates();
+        //applyDates();
     });
 
     // Listen for manual changes to the control and update the date inputs
@@ -3305,6 +3309,16 @@
 
 
   }
+</script>
+
+<script type="text/javascript">
+function addYear(year) {
+    var startDateInput = document.getElementById('start_date');
+    var endDateInput = document.getElementById('end_date');
+
+    startDateInput.value = year + '-01-01';
+    endDateInput.value = year + '-12-31';
+};
 </script>
 
 <script type="text/javascript">
@@ -3412,16 +3426,16 @@ th, td {
 <br><br>
 
 <div id="date_selectors">
-<u>Adjust Selected Date Range</u>
+<b><u>Adjust Selected Date Range</u></b>
 <br>
 <label for="start_date">Start Date:</label>
 <input type="date" id="start_date" value="2017-07-30">
 <br>
 <label for="end_date">End Date:</label>
 <input type="date" id="end_date">
-<br>
-<button id="apply_dates">Apply Date Range</button>
-<br>
+<br><br>
+//<button id="apply_dates">Apply Date Range</button>
+//<br><br>
 <button id="reset_dates">Reset Selection</button>
 </div>
 
@@ -3451,7 +3465,7 @@ Currently Unplayed: <b> 90 </b>
 
 <table>
 <tr><th colspan="11">Yearly Stats</th></tr>
-<tr><th></th><th>2017</th><th>2018</th><th>2019</th><th>2020</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>2026</th></tr>
+<tr><th></th><th onclick="applyYear(2017)" style="cursor: pointer;">2017</th><th onclick="applyYear(2018)" style="cursor: pointer;">2018</th><th onclick="applyYear(2019)" style="cursor: pointer;">2019</th><th onclick="applyYear(2020)" style="cursor: pointer;">2020</th><th onclick="applyYear(2021)" style="cursor: pointer;">2021</th><th onclick="applyYear(2022)" style="cursor: pointer;">2022</th><th onclick="applyYear(2023)" style="cursor: pointer;">2023</th><th onclick="applyYear(2024)" style="cursor: pointer;">2024</th><th onclick="applyYear(2025)" style="cursor: pointer;">2025</th><th onclick="applyYear(2026)" style="cursor: pointer;">2026</th></tr>
 <tr><th>Starting Count</th><td>52</td><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td><td>109</td><td>120</td><td>111</td><td>92</td></tr>
 <tr><th>Ending Count</th><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td><td>109</td><td>120</td><td>111</td><td>92</td><td>90</td></tr>
 <tr><th>Net Change</th><td>+26</td><td>+2</td><td>0</td><td>+12</td><td>+18</td><td>-1</td><td>+11</td><td>-9</td><td>-19</td><td>-2</td></tr>

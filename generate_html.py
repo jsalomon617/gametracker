@@ -194,7 +194,7 @@ def generate_webpage(collection):
     yearly_stats_str = "\n".join([
         '<table>',
         '<tr><th colspan="{}">Yearly Stats</th></tr>'.format(len(years) + 1),
-        '<tr>{}</tr>'.format(''.join(['<th>{}</th>'.format(h) for h in ([''] + years)])),
+        '<tr>{}</tr>'.format(''.join(['<th></th>'] + ['<th onclick="applyYear({year})" style="cursor: pointer;">{year}</th>'.format(year=h) for h in (years)])),
     ] + [
         '<tr>{}</tr>'.format(
             ''.join(
