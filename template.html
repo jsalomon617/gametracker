@@ -51,11 +51,35 @@
 
     //var chart_div = document.getElementById('chart_div');
     //var chart = new google.visualization.LineChart(chart_div);
+
+    var dash = new google.visualization.Dashboard(document.getElementById('dashboard'));
     var chart = new google.visualization.ChartWrapper({
         chartType: 'ComboChart',
         containerId: 'chart_div',
         options
     });
+    var control = new google.visualization.ControlWrapper({
+        controlType: 'ChartRangeFilter',
+        containerId: 'control_div',
+        options: {
+            filterColumnIndex: 0,
+            ui: {
+                chartOptions: {
+                    height: 50,
+                    chartArea: {
+                        width: '75%'
+                    }
+                }
+            }
+        },
+        state: {
+            range: {
+                start: new Date(2017, 6, 30)
+            }
+        }
+    });
+    dash.bind([control], [chart]);
+    dash.draw(data);
 
     // define our static image function (calling getImageURI)
     function setStatic() {
