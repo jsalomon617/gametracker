@@ -23,8 +23,8 @@ function updateVariableStatsForSelectedDateRange() {
     var variableStatsGamesAcquired = document.getElementById("variable_stats_games_acquired");
     var variableStatsGamesPlayed = document.getElementById("variable_stats_games_played");
 
-    var startDate = new Date(document.getElementById('start_date').value;
-    var endDate = new Date(document.getElementById('end_date').value;
+    var startDate = new Date(document.getElementById('start_date').value);
+    var endDate = new Date(document.getElementById('end_date').value);
 
     var games_acquired_count = 0;
     var games_played_count = 0;
@@ -430,7 +430,7 @@ Currently Unplayed: <b> {{ unplayed_count }} </b>
 {{ yearly_stats }}
 <br><br>
 
-<b><u>Stats: <span id="start_date_str">Beginning</span> to <span id="end_date_str">End</span></u></b>
+<b><u>Stats: <span id="start_date_str">2017-07-30</span> to <span id="end_date_str">End</span></u></b>
 <script>
 document.getElementById("end_date_str").innerHTML = todayStr();
 </script>
@@ -440,7 +440,7 @@ document.getElementById("end_date_str").innerHTML = todayStr();
 <br><b>Net Change: </b><span id="variable_stats_net_change"></span>
 <br><b>Games Acquired: </b><span id="variable_stats_games_acquired"></span>
 <br><b>Games Played: </b><span id="variable_stats_games_played"></span>
-<script>
+<script type="text/javascript">
 updateVariableStatsForSelectedDateRange();
 </script>
 
