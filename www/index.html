@@ -4,13 +4,18 @@
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
+
 <script type="text/javascript">
+function dateToStr(date_object) {
+    const formattedDate = date_object.getFullYear() + '-' +
+        String(date_object.getMonth() + 1).padStart(2, '0') + '-' + // getMonth() is 0-indexed
+        String(date_object.getDate()).padStart(2, '0');
+    return formattedDate;
+}
+
   function todayStr() {
     var today = new Date();
-    const formattedDate = today.getFullYear() + '-' +
-        String(today.getMonth() + 1).padStart(2, '0') + '-' + // getMonth() is 0-indexed
-        String(today.getDate()).padStart(2, '0');
-    return formattedDate;
+    return dateToStr(today);
   };
 </script>
 
@@ -3125,18 +3130,20 @@ function updateVariableStatsForSelectedDateRange() {
     var games_acquired_count = 0;
     var games_played_count = 0;
     var previous_day_count = 0;
+    var begin_tracking_acquired_played = false;
     for (const dateinfo of datedata) {
         const this_date = dateinfo[0];
         const count_on_date = dateinfo[1];
         const games_acquired_on_date = dateinfo[2];
         const games_played_on_date = dateinfo[3];
 
-        if (this_date.toDateString() === startDate.toDateString()) {
+        if (dateToStr(this_date) === dateToStr(startDate)) {
             starting_count = count_on_date;
             variableStatsStartingCount.innerHTML = starting_count;
+            begin_tracking_acquired_played = true;
         }
 
-        if (this_date.toDateString() === endDate.toDateString()) {
+        if (dateToStr(this_date) === dateToStr(endDate)) {
             variableStatsEndingCount.innerHTML = previous_day_count;
             variableStatsNetChange.innerHTML = previous_day_count - starting_count;
             variableStatsGamesAcquired.innerHTML = games_acquired_count;
@@ -3144,8 +3151,10 @@ function updateVariableStatsForSelectedDateRange() {
             break;
         }
         previous_day_count = count_on_date;
-        games_acquired_count += games_acquired_on_date;
-        games_played_count += games_played_on_date;
+        if (begin_tracking_acquired_played) {
+            games_acquired_count += games_acquired_on_date;
+            games_played_count += games_played_on_date;
+        }
     }
 };
 </script>
