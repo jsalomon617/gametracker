@@ -212,7 +212,7 @@ def generate_webpage(collection):
 
     ### prepare them for formatting
     format = {
-        "datedata": datedata,
+        #"datedata": datedata,
         "datatable": datatable,
         "last_acquired": str(last_acquired),
         "js_last_acquired": date_js(last_acquired),

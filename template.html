@@ -7,9 +7,6 @@
   google.charts.load('current', {'packages':['corechart', 'line']});
   google.charts.setOnLoadCallback(drawChart);
 
-  // get the dataset with game info for our sidebars
-  var dataset = {{ datedata }} ;
-
   function drawChart() {
 
     var data = new google.visualization.DataTable();
