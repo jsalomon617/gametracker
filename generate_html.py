@@ -87,8 +87,10 @@ def date_data(self, start=None, end=None):
 
         # generate the get-list and play-list of each day
         gameinfo = []
-        for (title, func) in (("Obtained", self.games_get), ("Played", self.games_play)):
-            namelist = [escape(g.name) for g in func(date)]
+        games_gotten = self.games_get(date)
+        games_played = self.games_play(date)
+        for (title, game_sublist) in (("Obtained", games_gotten), ("Played", games_played)):
+            namelist = [escape(g.name) for g in game_sublist]
             if len(namelist) == 0:
                 gameinfo.append("<b>No Games %s</b>" % title)
             else:
@@ -96,7 +98,7 @@ def date_data(self, start=None, end=None):
         gamestr = "<br>".join(gameinfo)
 
         # generate the row
-        row = "[%s, %s, '%s']" % (datestr, gamecount, gamestr)
+        row = f"[{datestr}, {gamecount}, {len(games_gotten)}, {len(games_played)}]" #, '{gamestr}']"
         return row
 
     # return the actual datatable
@@ -212,7 +214,7 @@ def generate_webpage(collection):
 
     ### prepare them for formatting
     format = {
-        #"datedata": datedata,
+        "datedata": datedata,
         "datatable": datatable,
         "last_acquired": str(last_acquired),
         "js_last_acquired": date_js(last_acquired),

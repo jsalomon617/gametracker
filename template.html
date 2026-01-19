@@ -3,6 +3,56 @@
 <title>Unplayed Game Tracker</title>
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+  function todayStr() {
+    var today = new Date();
+    const formattedDate = today.getFullYear() + '-' +
+        String(today.getMonth() + 1).padStart(2, '0') + '-' + // getMonth() is 0-indexed
+        String(today.getDate()).padStart(2, '0');
+    return formattedDate;
+  };
+</script>
+
+<script type="text/javascript">
+var datedata = {{ datedata }};
+function updateVariableStatsForSelectedDateRange() {
+    var variableStatsStartingCount = document.getElementById("variable_stats_starting_count");
+    var variableStatsEndingCount = document.getElementById("variable_stats_ending_count");
+    var variableStatsNetChange = document.getElementById("variable_stats_net_change");
+    var variableStatsGamesAcquired = document.getElementById("variable_stats_games_acquired");
+    var variableStatsGamesPlayed = document.getElementById("variable_stats_games_played");
+
+    var startDate = new Date(document.getElementById('start_date').value;
+    var endDate = new Date(document.getElementById('end_date').value;
+
+    var games_acquired_count = 0;
+    var games_played_count = 0;
+    var previous_day_count = 0;
+    for (const dateinfo of datedata) {
+        const this_date = dateinfo[0];
+        const count_on_date = dateinfo[1];
+        const games_acquired_on_date = dateinfo[2];
+        const games_played_on_date = dateinfo[3];
+
+        if (this_date == startDate) {
+            variableStatsStartingCount.innerHTML = count_on_date;
+        }
+
+        if (this_date == endDate) {
+            variableStatsEndingCount.innerHTML = previous_day_count;
+            variableStatsNetChange.innerHTML = previous_day_count - count_on_date;
+            variableStatsGamesAcquired.innerHTML = games_acquired_count;
+            variableStatsGamesPlayed.innerHTML = games_played_count;
+            break;
+        }
+        previous_day_count = count_on_date;
+        games_acquired_count += games_acquired_on_date;
+        games_played_Count += games_played_on_date;
+    }
+};
+</script>
+
 <script type="text/javascript">
   google.load('visualization', '1', {packages: ['controls', 'charteditor']});
   google.setOnLoadCallback(drawChart);
@@ -173,6 +223,12 @@
           }
         });
         control.draw();
+
+      var startDateStr = document.getElementById('start_date_str');
+      var endDateStr = document.getElementById('end_date_str');
+      startDateStr.innerHTML = startDateInput;
+      endDateStr.innerHTML = endDateInput;
+      updateVariableStatsForSelectedDateRange();
       }
     };
 
@@ -189,13 +245,8 @@
         var startDateInput = document.getElementById('start_date');
         var endDateInput = document.getElementById('end_date');
 
-        var today = new Date();
-        const formattedDate = today.getFullYear() + '-' +
-            String(today.getMonth() + 1).padStart(2, '0') + '-' + // getMonth() is 0-indexed
-            String(today.getDate()).padStart(2, '0')
-
         startDateInput.value = '2017-07-30';
-        endDateInput.value = formattedDate;
+        endDateInput.value = todayStr();
         startDateInput.dispatchEvent(new Event('change'));
         //applyDates();
     });
@@ -377,6 +428,22 @@ Currently Unplayed: <b> {{ unplayed_count }} </b>
 <br><br>
 
 {{ yearly_stats }}
+<br><br>
+
+<b><u>Stats: <span id="start_date_str">Beginning</span> to <span id="end_date_str">End</span></u></b>
+<script>
+document.getElementById("end_date_str").innerHTML = todayStr();
+</script>
+
+<br><b>Starting Count: </b><span id="variable_stats_starting_count"></span>
+<br><b>Ending Count: </b><span id="variable_stats_ending_count"></span>
+<br><b>Net Change: </b><span id="variable_stats_net_change"></span>
+<br><b>Games Acquired: </b><span id="variable_stats_games_acquired"></span>
+<br><b>Games Played: </b><span id="variable_stats_games_played"></span>
+<script>
+updateVariableStatsForSelectedDateRange();
+</script>
+
 <br><br>
 
 <script>
