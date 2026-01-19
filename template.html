@@ -68,8 +68,11 @@
             ui: {
                 chartOptions: {
                     height: 50,
+                    width: 900,
                     chartArea: {
-                        width: '900'
+                        height: '100%',
+                        width: '100%',
+                        left: 0
                     }
                 }
             }
@@ -294,15 +297,21 @@ th, td {
 <div id="control_div"></div>
 </div>
 
+
+<br><br>
+
 <div id="date_selectors">
+Adjust Selected Date Range
 <label for="start_date">Start Date:</label>
 <input type="date" id="start_date" value="2017-07-30">
 
 <label for="end_date">End Date:</label>
 <input type="date" id="end_date">
-
+<br>
 <button id="apply_dates">Apply Date Range</button>
 </div>
+
+<br><br>
 
 Last Game Acquired on <b> {{ last_acquired }} </b>
 (<span id="dayDiff"></span> ago)
