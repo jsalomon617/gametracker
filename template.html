@@ -28,8 +28,8 @@ function updateVariableStatsForSelectedDateRange() {
     var variableStatsGamesAcquired = document.getElementById("variable_stats_games_acquired");
     var variableStatsGamesPlayed = document.getElementById("variable_stats_games_played");
 
-    var startDate = new Date(document.getElementById('start_date_str').innerHTML);
-    var endDate = new Date(document.getElementById('end_date_str').innerHTML);
+    var startDate = new Date(document.getElementById('start_date').value);
+    var endDate = new Date(document.getElementById('end_date').value);
 
     var starting_count = 0;
     var games_acquired_count = 0;
