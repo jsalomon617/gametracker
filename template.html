@@ -72,7 +72,7 @@
                     chartArea: {
                         height: '100%',
                         width: '75%',
-                        left: '25%'
+                        left: '15%'
                     }
                 }
             }
@@ -195,6 +195,7 @@
 
         startDateInput.value = '2017-07-30';
         endDateInput.value = formattedDate;
+        startDateInput.dispatchEvent(new Event('change'));
         //applyDates();
     });
 
@@ -224,6 +225,7 @@ function addYear(year) {
 
     startDateInput.value = year + '-01-01';
     endDateInput.value = year + '-12-31';
+    startDateInput.dispatchEvent(new Event('change'));
 };
 </script>
 
@@ -340,8 +342,12 @@ th, td {
 <label for="end_date">End Date:</label>
 <input type="date" id="end_date">
 <br><br>
-//<button id="apply_dates">Apply Date Range</button>
-//<br><br>
+
+<!--
+<button id="apply_dates">Apply Date Range</button>
+<br><br>
+-->
+
 <button id="reset_dates">Reset Selection</button>
 </div>
 
