@@ -35,11 +35,11 @@ function updateVariableStatsForSelectedDateRange() {
         const games_acquired_on_date = dateinfo[2];
         const games_played_on_date = dateinfo[3];
 
-        if (this_date == startDate) {
+        if (this_date.toDateString() === startDate.toDateString()) {
             variableStatsStartingCount.innerHTML = count_on_date;
         }
 
-        if (this_date == endDate) {
+        if (this_date.toDateString() === endDate.toDateString()) {
             variableStatsEndingCount.innerHTML = previous_day_count;
             variableStatsNetChange.innerHTML = previous_day_count - count_on_date;
             variableStatsGamesAcquired.innerHTML = games_acquired_count;
@@ -264,6 +264,7 @@ function updateVariableStatsForSelectedDateRange() {
           document.getElementById('end_date').value = endDate.toISOString().split('T')[0];
         }
       }
+      document.getElementById('start_date').dispatchEvent(new Event('change'));
     });
 
 
