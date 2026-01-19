@@ -23,9 +23,10 @@ function updateVariableStatsForSelectedDateRange() {
     var variableStatsGamesAcquired = document.getElementById("variable_stats_games_acquired");
     var variableStatsGamesPlayed = document.getElementById("variable_stats_games_played");
 
-    var startDate = new Date(document.getElementById('start_date').value);
-    var endDate = new Date(document.getElementById('end_date').value);
+    var startDate = new Date(document.getElementById('start_date_str').value);
+    var endDate = new Date(document.getElementById('end_date_str').value);
 
+    var starting_count = 0;
     var games_acquired_count = 0;
     var games_played_count = 0;
     var previous_day_count = 0;
@@ -36,12 +37,13 @@ function updateVariableStatsForSelectedDateRange() {
         const games_played_on_date = dateinfo[3];
 
         if (this_date.toDateString() === startDate.toDateString()) {
-            variableStatsStartingCount.innerHTML = count_on_date;
+            starting_count = count_on_date;
+            variableStatsStartingCount.innerHTML = starting_count;
         }
 
         if (this_date.toDateString() === endDate.toDateString()) {
             variableStatsEndingCount.innerHTML = previous_day_count;
-            variableStatsNetChange.innerHTML = previous_day_count - count_on_date;
+            variableStatsNetChange.innerHTML = previous_day_count - starting_count;
             variableStatsGamesAcquired.innerHTML = games_acquired_count;
             variableStatsGamesPlayed.innerHTML = games_played_count;
             break;
@@ -202,6 +204,17 @@ function updateVariableStatsForSelectedDateRange() {
     var todayString = today.toISOString().split('T')[0];
     document.getElementById('end_date').value = todayString;
 
+    function applyDatesExceptControlRange() {
+      var startDateInput = document.getElementById('start_date').value;
+      var endDateInput = document.getElementById('end_date').value;
+
+      var startDateStr = document.getElementById('start_date_str');
+      var endDateStr = document.getElementById('end_date_str');
+      startDateStr.innerHTML = startDateInput;
+      endDateStr.innerHTML = endDateInput;
+      updateVariableStatsForSelectedDateRange();
+    }
+
     function applyDates() {
       var startDateInput = document.getElementById('start_date').value;
       var endDateInput = document.getElementById('end_date').value;
@@ -223,12 +236,7 @@ function updateVariableStatsForSelectedDateRange() {
           }
         });
         control.draw();
-
-      var startDateStr = document.getElementById('start_date_str');
-      var endDateStr = document.getElementById('end_date_str');
-      startDateStr.innerHTML = startDateInput;
-      endDateStr.innerHTML = endDateInput;
-      updateVariableStatsForSelectedDateRange();
+        applyDatesExceptControlRange();
       }
     };
 
@@ -264,7 +272,7 @@ function updateVariableStatsForSelectedDateRange() {
           document.getElementById('end_date').value = endDate.toISOString().split('T')[0];
         }
       }
-      document.getElementById('start_date').dispatchEvent(new Event('change'));
+      applyDatesExceptControlRange();
     });
 
 
