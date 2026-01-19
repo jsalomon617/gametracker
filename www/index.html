@@ -3163,7 +3163,7 @@
                 chartOptions: {
                     height: 50,
                     chartArea: {
-                        width: '75%'
+                        width: '900'
                     }
                 }
             }
@@ -3179,7 +3179,10 @@
 
     // define our static image function (calling getImageURI)
     function setStatic() {
-      document.getElementById('png').innerHTML = '<img src="' + chart.getImageURI() + '">';
+      var chartObject = chart.getChart();
+      if (chartObject) {
+        document.getElementById('png').innerHTML = '<img src="' + chartObject.getImageURI() + '">';
+      }
     };
 
     // wait for the chart to finish drawing before initializing our static image
@@ -3233,6 +3236,54 @@
 
     //chart.draw(data, options);
     dash.draw(data);
+
+
+    // Set the end date input to today by default
+    var today = new Date();
+    var todayString = today.toISOString().split('T')[0];
+    document.getElementById('end_date').value = todayString;
+
+    // Function to apply the selected date range
+    document.getElementById('apply_dates').addEventListener('click', function() {
+      var startDateInput = document.getElementById('start_date').value;
+      var endDateInput = document.getElementById('end_date').value;
+  
+      if (startDateInput && endDateInput) {
+        var startDate = new Date(startDateInput);
+        var endDate = new Date(endDateInput);
+    
+        // Validate that start is before end
+        if (startDate > endDate) {
+          alert('Start date must be before end date');
+          return;
+        }
+    
+        control.setState({
+          range: {
+            start: startDate,
+            end: endDate
+          }
+        });
+        control.draw();
+      }
+    });
+
+    // Listen for manual changes to the control and update the date inputs
+    google.visualization.events.addListener(control, 'statechange', function() {
+      var state = control.getState();
+      if (state.range) {
+        if (state.range.start) {
+          var startDate = new Date(state.range.start);
+          document.getElementById('start_date').value = startDate.toISOString().split('T')[0];
+        }
+        if (state.range.end) {
+          var endDate = new Date(state.range.end);
+          document.getElementById('end_date').value = endDate.toISOString().split('T')[0];
+        }
+      }
+    });
+
+
   }
 </script>
 
@@ -3335,6 +3386,16 @@ th, td {
 <div id="dashboard_div">
 <div id="chart_div"></div>
 <div id="control_div"></div>
+</div>
+
+<div id="date_selectors">
+<label for="start_date">Start Date:</label>
+<input type="date" id="start_date" value="2017-07-30">
+
+<label for="end_date">End Date:</label>
+<input type="date" id="end_date">
+
+<button id="apply_dates">Apply Date Range</button>
 </div>
 
 Last Game Acquired on <b> 2025-10-25 </b>
