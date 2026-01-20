@@ -6905,7 +6905,7 @@ function sortTable(columnIndex) {
     
     // Determine current sort direction
     const currentDir = table.dataset.sortDir || 'asc';
-    const currentCol = table.dataset.sortCol;
+    const currentCol = table.dataset.sortCol || 0;
     
     // Toggle direction if clicking the same column, otherwise default to asc
     const dir = (currentCol == columnIndex && currentDir == 'asc') ? 'desc' : 'asc';
