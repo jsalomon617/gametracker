@@ -3159,7 +3159,7 @@ function updateVariableStatsForSelectedDateRange() {
         }
     }
 
-    variableStatsEndingCount.innerHTML = previous_day_count;
+    variableStatsEndingCount.innerHTML = current_day_count;
     var net_change = current_day_count - starting_count;
     if (net_change > 0) {
         net_change = "+" + net_change;
@@ -6613,6 +6613,9 @@ th, td {
 <label for="end_date">End Date:</label>
 <input type="date" id="end_date">
 <br><br>
+<script type="text/javascript">
+document.getElementById('end_date').value = todayStr();
+</script>
 
 <!--
 <button id="apply_dates">Apply Date Range</button>
