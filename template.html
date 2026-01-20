@@ -404,8 +404,6 @@ th, td {
 }
 
 
-.highlighted {}
-
 .highlighted {
     background-color: lightgreen;
 }
@@ -685,7 +683,7 @@ function updateUnplayedGamesHighlighting() {
     const highlighted_count = document.querySelectorAll('.highlighted').length;
     var text = "";
     if (highlighted_count > 0) {
-        text = "[" + highlighted_count + " Highlighted]";
+        text = "[Highlighted: " + highlighted_count + "]";
     }
     document.getElementById('count_highlighted').innerHTML = text;
 };
