@@ -54,13 +54,13 @@ function updateVariableStatsForSelectedDateRange() {
             begin_tracking_acquired_played = true;
         }
 
-        if (dateToStr(this_date) === dateToStr(endDate)) {
-            break;
-        }
-
         if (begin_tracking_acquired_played) {
             games_acquired_count += games_acquired_on_date;
             games_played_count += games_played_on_date;
+        }
+
+        if (dateToStr(this_date) === dateToStr(endDate)) {
+            break;
         }
     }
 
@@ -72,7 +72,6 @@ function updateVariableStatsForSelectedDateRange() {
     variableStatsNetChange.innerHTML = net_change;
     variableStatsGamesAcquired.innerHTML = games_acquired_count;
     variableStatsGamesPlayed.innerHTML = games_played_count;
-
 };
 </script>
 
@@ -458,19 +457,19 @@ Currently Unplayed: <b> {{ unplayed_count }} </b>
 <br><br>
 
 {{ yearly_stats }}
+
+<!--
 <br><br>
-
 <b><u>Stats: <span id="start_date_str">2017-07-30</span> to <span id="end_date_str">End</span></u></b>
-<script>
-document.getElementById("end_date_str").innerHTML = todayStr();
-</script>
-
 <br><b>Starting Count: </b><span id="variable_stats_starting_count"></span>
 <br><b>Ending Count: </b><span id="variable_stats_ending_count"></span>
 <br><b>Net Change: </b><span id="variable_stats_net_change"></span>
 <br><b>Games Acquired: </b><span id="variable_stats_games_acquired"></span>
 <br><b>Games Played: </b><span id="variable_stats_games_played"></span>
+-->
+
 <script type="text/javascript">
+document.getElementById("end_date_str").innerHTML = todayStr();
 updateVariableStatsForSelectedDateRange();
 </script>
 

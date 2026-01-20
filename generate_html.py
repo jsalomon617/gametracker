@@ -195,13 +195,18 @@ def generate_webpage(collection):
 
     yearly_stats_str = "\n".join([
         '<table>',
-        '<tr><th colspan="{}">Yearly Stats</th></tr>'.format(len(years) + 1),
-        '<tr>{}</tr>'.format(''.join(['<th></th>'] + ['<th onclick="applyYear({year})" style="cursor: pointer;">{year}</th>'.format(year=h) for h in (years)])),
+        '<tr><th colspan="{}">Yearly Stats</th><th>Selected Stats</th></tr>'.format(len(years) + 1),
+        '<tr>{}</tr>'.format(''.join(
+            ['<th></th>']
+            + ['<th onclick="applyYear({year})" style="cursor: pointer;">{year}</th>'.format(year=h) for h in (years)]
+            + ['<th><span id="start_date_str">2017-07-30</span> to <span id="end_date_str">Today</span></th>']
+        )),
     ] + [
         '<tr>{}</tr>'.format(
             ''.join(
                 ['<th>{}</th>'.format(stat)]
                 + ['<td>{}</td>'.format(yearly_stats[i][1][j][1]) for i in range(len(years))]
+                + ['<td><span id="variable_stats_{}"></span></td>'.format(stat.lower().replace(' ', '_'))]
             ))
         for (j, stat) in enumerate(stats)
     ] + [
