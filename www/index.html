@@ -3144,7 +3144,7 @@ function updateVariableStatsForSelectedDateRange() {
         const games_played_on_date = dateinfo[3];
 
         if (dateToStr(this_date) === dateToStr(startDate)) {
-            starting_count = count_on_date;
+            starting_count = current_date_count;
             variableStatsStartingCount.innerHTML = starting_count;
             begin_tracking_acquired_played = true;
         }
