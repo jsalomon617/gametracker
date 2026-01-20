@@ -6410,9 +6410,9 @@ function updateVariableStatsForSelectedDateRange() {
 
 
     // Set the end date input to today by default
-    var today = new Date();
-    var todayString = today.toISOString().split('T')[0];
-    document.getElementById('end_date').value = todayString;
+    //var today = new Date();
+    //var todayString = today.toISOString().split('T')[0];
+    document.getElementById('end_date').value = todayStr();
 
     function applyDatesExceptControlRange() {
       var startDateInput = document.getElementById('start_date').value;
@@ -6613,9 +6613,12 @@ th, td {
 <label for="end_date">End Date:</label>
 <input type="date" id="end_date">
 <br><br>
+
+<!--
 <script type="text/javascript">
 document.getElementById('end_date').value = todayStr();
 </script>
+-->
 
 <!--
 <button id="apply_dates">Apply Date Range</button>
