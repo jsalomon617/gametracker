@@ -40,11 +40,11 @@ function updateVariableStatsForSelectedDateRange() {
     var starting_count = 0;
     var games_acquired_count = 0;
     var games_played_count = 0;
-    var previous_day_count = 0;
+    var current_day_count = 0;
     var begin_tracking_acquired_played = false;
     for (const dateinfo of datedata) {
         const this_date = dateinfo[0];
-        const count_on_date = dateinfo[1];
+        current_day_count = dateinfo[1];
         const games_acquired_on_date = dateinfo[2];
         const games_played_on_date = dateinfo[3];
 
@@ -55,22 +55,24 @@ function updateVariableStatsForSelectedDateRange() {
         }
 
         if (dateToStr(this_date) === dateToStr(endDate)) {
-            variableStatsEndingCount.innerHTML = previous_day_count;
-            var net_change = previous_day_count - starting_count;
-            if (net_change > 0) {
-                net_change = "+" + net_change;
-            }
-            variableStatsNetChange.innerHTML = net_change;
-            variableStatsGamesAcquired.innerHTML = games_acquired_count;
-            variableStatsGamesPlayed.innerHTML = games_played_count;
             break;
         }
-        previous_day_count = count_on_date;
+
         if (begin_tracking_acquired_played) {
             games_acquired_count += games_acquired_on_date;
             games_played_count += games_played_on_date;
         }
     }
+
+    variableStatsEndingCount.innerHTML = previous_day_count;
+    var net_change = current_day_count - starting_count;
+    if (net_change > 0) {
+        net_change = "+" + net_change;
+    }
+    variableStatsNetChange.innerHTML = net_change;
+    variableStatsGamesAcquired.innerHTML = games_acquired_count;
+    variableStatsGamesPlayed.innerHTML = games_played_count;
+
 };
 </script>
 
