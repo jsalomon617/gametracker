@@ -6771,7 +6771,7 @@ Next Possible Gamebreaker Threshold: <b>2026-02-16</b> (Score: 114)
 <table id="sortableTable">
 <thead>
 <tr>
-<th colspan="2">Unplayed Games (89)</th>
+<th colspan="2">Unplayed Games (89)<span id="count_highlighted></span></th>
 </tr>
 <tr>
 <th onclick="sortTable(0)" style="cursor: pointer;" class="arrowHeader">Game ▲</th>
@@ -6979,6 +6979,13 @@ function updateUnplayedGamesHighlighting() {
             element.classList.remove('highlighted');
         }
     });
+
+    const highlighted_count = document.querySelectorAll('.highlighted').length;
+    var text = "";
+    if (highlighted_count > 0) {
+        text = "[" + highlighted_count + " Highlighted]";
+    }
+    document.getElementById('count_highlighted').innerText = text;
 };
 checkbox.addEventListener("change", updateUnplayedGamesHighlighting);
 </script>

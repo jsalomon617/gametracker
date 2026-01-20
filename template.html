@@ -561,7 +561,7 @@ Next Possible Gamebreaker Threshold: <b>{{ next_game_breaker_date }}</b> (Score:
 <table id="sortableTable">
 <thead>
 <tr>
-<th colspan="2">Unplayed Games ({{ unplayed_count }})</th>
+<th colspan="2">Unplayed Games ({{ unplayed_count }})<span id="count_highlighted></span></th>
 </tr>
 <tr>
 <th onclick="sortTable(0)" style="cursor: pointer;" class="arrowHeader">Game ▲</th>
@@ -681,6 +681,13 @@ function updateUnplayedGamesHighlighting() {
             element.classList.remove('highlighted');
         }
     });
+
+    const highlighted_count = document.querySelectorAll('.highlighted').length;
+    var text = "";
+    if (highlighted_count > 0) {
+        text = "[" + highlighted_count + " Highlighted]";
+    }
+    document.getElementById('count_highlighted').innerText = text;
 };
 checkbox.addEventListener("change", updateUnplayedGamesHighlighting);
 </script>
