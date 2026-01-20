@@ -663,7 +663,7 @@ function updateSortArrows(columnIndex, direction) {
 var checkbox = document.getElementById("enable-unplayed-highlighting");
 
 function updateUnplayedGamesHighlighting() {
-    const checkbox_is_selected = document.getElementById('enable-unplayed-highlighting').value === "checked";
+    const checkbox_is_selected = document.getElementById('enable-unplayed-highlighting').checked;
 
     const start_date_as_str = document.getElementById('start_date').value;
     const end_date_as_str = document.getElementById('end_date').value;
