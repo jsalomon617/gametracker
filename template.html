@@ -233,6 +233,7 @@ function updateVariableStatsForSelectedDateRange() {
       startDateStr.innerHTML = startDateInput;
       endDateStr.innerHTML = endDateInput;
       updateVariableStatsForSelectedDateRange();
+      updateUnplayedGamesHighlighting();
     }
 
     function applyDates() {
@@ -402,6 +403,13 @@ th, td {
   padding: 5px;
 }
 
+
+.highlighted {}
+
+.highlighted {
+    background-color: lightgreen;
+}
+
 </style>
 
 </head><body>
@@ -565,6 +573,9 @@ Next Possible Gamebreaker Threshold: <b>{{ next_game_breaker_date }}</b> (Score:
 </tbody>
 </table>
 
+<br>
+<b>Highlight Unplayed Games Acquired in Selected Date Range: </b>
+<input type="checkbox" id="enable-unplayed-highlighting" />
 
 <script>
     // count days since we last got a new game
@@ -646,6 +657,32 @@ function updateSortArrows(columnIndex, direction) {
         }
     });
 }
+</script>
+
+<script>
+var checkbox = document.getElementById("enable-unplayed-highlighting");
+
+function updateUnplayedGamesHighlighting() {
+    const checkbox_is_selected = document.getElementById('enable-unplayed-highlighting').value === "checked";
+
+    const start_date_as_str = document.getElementById('start_date').value;
+    const end_date_as_str = document.getElementById('end_date').value;
+
+    const highlightable_elements = document.querySelectorAll('.highlightedIfInDateRange');
+    highlightable_elements.forEach(function(element) {
+        const cells_in_row = element.cells;
+        const date_cell = cells_in_row[1].innerText;
+        const is_in_date_range = (start_date_as_str <= date_cell) && (date_cell <= end_date_as_str);
+        const should_highlight = is_in_date_range && checkbox_is_selected;
+        const is_already_highlighted = element.classList.contains('highlighted');
+        if (should_highlight && !is_already_highlighted) {
+            element.classList.add('highlighted');
+        } else if (!should_highlight && is_already_highlighted) {
+            element.classList.remove('highlighted');
+        }
+    });
+};
+checkbox.addEventListener("change", updateUnplayedGamesHighlighting);
 </script>
 
 

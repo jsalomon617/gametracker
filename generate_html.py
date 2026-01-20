@@ -146,8 +146,8 @@ def _table_row_for_unplayed_game(g):
         g.linked_name(),
         g.get,
     ]
-    td_cells = [f"<td>{cell}</td>" for cell in cells]
-    return f"<tr>{''.join(td_cells)}</tr>"
+    td_cells = [f'<td>{cell}</td>' for cell in cells]
+    return f'<tr class="highlightedIfInDateRange">{"".join(td_cells)}</tr>'
 
 def generate_webpage(collection):
     """Print our webpage"""
