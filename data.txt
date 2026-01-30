@@ -793,3 +793,6 @@
 2026-01-16  -   Clans of Caledonia
 2026-01-17  -   Crisis
 2026-01-19  -   Key Market
+2026-01-29  +   Wingspan Americas Expansion     id461932
+2026-01-29  +   Viticulture Bordeaux Expansion  id462369
+2026-01-29  +   Tokaido Expansions              id454910

@@ -3121,7 +3121,17 @@ var datedata = [[new Date(2017, 6, 30), 52, 52, 0],
 [new Date(2026, 0, 16), 91, 0, 1],
 [new Date(2026, 0, 17), 90, 0, 1],
 [new Date(2026, 0, 18), 90, 0, 0],
-[new Date(2026, 0, 19), 89, 0, 1]];
+[new Date(2026, 0, 19), 89, 0, 1],
+[new Date(2026, 0, 20), 89, 0, 0],
+[new Date(2026, 0, 21), 89, 0, 0],
+[new Date(2026, 0, 22), 89, 0, 0],
+[new Date(2026, 0, 23), 89, 0, 0],
+[new Date(2026, 0, 24), 89, 0, 0],
+[new Date(2026, 0, 25), 89, 0, 0],
+[new Date(2026, 0, 26), 89, 0, 0],
+[new Date(2026, 0, 27), 89, 0, 0],
+[new Date(2026, 0, 28), 89, 0, 0],
+[new Date(2026, 0, 29), 92, 3, 0]];
 function updateVariableStatsForSelectedDateRange() {
     var variableStatsStartingCount = document.getElementById("variable_stats_starting_count");
     var variableStatsEndingCount = document.getElementById("variable_stats_ending_count");
@@ -6277,7 +6287,17 @@ function updateVariableStatsForSelectedDateRange() {
 [new Date(2026, 0, 16), 91, '<div class="google-tooltip"><b>Friday</b><br><b>Jan 16, 2026</b><br>Game Count: <b>91</b> (-1)<br><div class="chart_details_div">- <a href=https://www.boardgamegeek.com/boardgame/216132/ target=&apos;_blank&apos;>Clans of Caledonia</a></div></div>'],
 [new Date(2026, 0, 17), 90, '<div class="google-tooltip"><b>Saturday</b><br><b>Jan 17, 2026</b><br>Game Count: <b>90</b> (-1)<br><div class="chart_details_div">- <a href=https://www.boardgamegeek.com/boardgame/128721/ target=&apos;_blank&apos;>Crisis</a></div></div>'],
 [new Date(2026, 0, 18), 90, '<div class="google-tooltip"><b>Sunday</b><br><b>Jan 18, 2026</b><br>Game Count: <b>90</b></div>'],
-[new Date(2026, 0, 19), 89, '<div class="google-tooltip"><b>Monday</b><br><b>Jan 19, 2026</b><br>Game Count: <b>89</b> (-1)<br><div class="chart_details_div">- <a href=https://www.boardgamegeek.com/boardgame/275067/ target=&apos;_blank&apos;>Key Market</a></div></div>']] );
+[new Date(2026, 0, 19), 89, '<div class="google-tooltip"><b>Monday</b><br><b>Jan 19, 2026</b><br>Game Count: <b>89</b> (-1)<br><div class="chart_details_div">- <a href=https://www.boardgamegeek.com/boardgame/275067/ target=&apos;_blank&apos;>Key Market</a></div></div>'],
+[new Date(2026, 0, 20), 89, '<div class="google-tooltip"><b>Tuesday</b><br><b>Jan 20, 2026</b><br>Game Count: <b>89</b></div>'],
+[new Date(2026, 0, 21), 89, '<div class="google-tooltip"><b>Wednesday</b><br><b>Jan 21, 2026</b><br>Game Count: <b>89</b></div>'],
+[new Date(2026, 0, 22), 89, '<div class="google-tooltip"><b>Thursday</b><br><b>Jan 22, 2026</b><br>Game Count: <b>89</b></div>'],
+[new Date(2026, 0, 23), 89, '<div class="google-tooltip"><b>Friday</b><br><b>Jan 23, 2026</b><br>Game Count: <b>89</b></div>'],
+[new Date(2026, 0, 24), 89, '<div class="google-tooltip"><b>Saturday</b><br><b>Jan 24, 2026</b><br>Game Count: <b>89</b></div>'],
+[new Date(2026, 0, 25), 89, '<div class="google-tooltip"><b>Sunday</b><br><b>Jan 25, 2026</b><br>Game Count: <b>89</b></div>'],
+[new Date(2026, 0, 26), 89, '<div class="google-tooltip"><b>Monday</b><br><b>Jan 26, 2026</b><br>Game Count: <b>89</b></div>'],
+[new Date(2026, 0, 27), 89, '<div class="google-tooltip"><b>Tuesday</b><br><b>Jan 27, 2026</b><br>Game Count: <b>89</b></div>'],
+[new Date(2026, 0, 28), 89, '<div class="google-tooltip"><b>Wednesday</b><br><b>Jan 28, 2026</b><br>Game Count: <b>89</b></div>'],
+[new Date(2026, 0, 29), 92, '<div class="google-tooltip"><b>Thursday</b><br><b>Jan 29, 2026</b><br>Game Count: <b>92</b> (+3)<br><div class="chart_details_div">+ <a href=https://www.boardgamegeek.com/boardgame/461932/ target=&apos;_blank&apos;>Wingspan Americas Expansion</a><br>+ <a href=https://www.boardgamegeek.com/boardgame/462369/ target=&apos;_blank&apos;>Viticulture Bordeaux Expansion</a><br>+ <a href=https://www.boardgamegeek.com/boardgame/454910/ target=&apos;_blank&apos;>Tokaido Expansions</a></div></div>']] );
 
     var options = {
       vAxis: {
@@ -6636,11 +6656,11 @@ document.getElementById('end_date').value = todayStr();
 
 <br><br>
 
-Last Game Acquired on <b> 2025-10-25 </b>
+Last Game Acquired on <b> 2026-01-29 </b>
 (<span id="dayDiff"></span> ago)
 <br>
-Currently Unplayed: <b> 89 </b>
-(Lowest Since <b> 2020-10-22) </b>
+Currently Unplayed: <b> 92 </b>
+(Lowest Since <b> 2026-01-28) </b>
 <br><br>
 
 <!-- tooltip toggling not working -->
@@ -6662,9 +6682,9 @@ Currently Unplayed: <b> 89 </b>
 <tr><th rowspan="2">Stats</th><th colspan="10">Yearly (Click Year to Set Range)</th><th>Selected Range</th></tr>
 <tr><th onclick="applyYear(2017)" style="cursor: pointer;">2017</th><th onclick="applyYear(2018)" style="cursor: pointer;">2018</th><th onclick="applyYear(2019)" style="cursor: pointer;">2019</th><th onclick="applyYear(2020)" style="cursor: pointer;">2020</th><th onclick="applyYear(2021)" style="cursor: pointer;">2021</th><th onclick="applyYear(2022)" style="cursor: pointer;">2022</th><th onclick="applyYear(2023)" style="cursor: pointer;">2023</th><th onclick="applyYear(2024)" style="cursor: pointer;">2024</th><th onclick="applyYear(2025)" style="cursor: pointer;">2025</th><th onclick="applyYear(2026)" style="cursor: pointer;">2026</th><th><span id="start_date_str">2017-07-30</span> to <span id="end_date_str">Today</span></th></tr>
 <tr><th>Starting Count</th><td>52</td><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td><td>109</td><td>120</td><td>111</td><td>92</td><td><span id="variable_stats_starting_count"></span></td></tr>
-<tr><th>Ending Count</th><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td><td>109</td><td>120</td><td>111</td><td>92</td><td>89</td><td><span id="variable_stats_ending_count"></span></td></tr>
-<tr><th>Net Change</th><td>+26</td><td>+2</td><td>0</td><td>+12</td><td>+18</td><td>-1</td><td>+11</td><td>-9</td><td>-19</td><td>-3</td><td><span id="variable_stats_net_change"></span></td></tr>
-<tr><th>Games Acquired</th><td>56</td><td>106</td><td>64</td><td>34</td><td>38</td><td>43</td><td>22</td><td>13</td><td>14</td><td>0</td><td><span id="variable_stats_games_acquired"></span></td></tr>
+<tr><th>Ending Count</th><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td><td>109</td><td>120</td><td>111</td><td>92</td><td>92</td><td><span id="variable_stats_ending_count"></span></td></tr>
+<tr><th>Net Change</th><td>+26</td><td>+2</td><td>0</td><td>+12</td><td>+18</td><td>-1</td><td>+11</td><td>-9</td><td>-19</td><td>0</td><td><span id="variable_stats_net_change"></span></td></tr>
+<tr><th>Games Acquired</th><td>56</td><td>106</td><td>64</td><td>34</td><td>38</td><td>43</td><td>22</td><td>13</td><td>14</td><td>3</td><td><span id="variable_stats_games_acquired"></span></td></tr>
 <tr><th>Games Played</th><td>30</td><td>104</td><td>64</td><td>22</td><td>20</td><td>44</td><td>11</td><td>22</td><td>33</td><td>3</td><td><span id="variable_stats_games_played"></span></td></tr>
 </table>
 
@@ -6755,7 +6775,7 @@ and continuing until the present day.
 
 <br>
 
-Next Possible Gamebreaker Threshold: <b>2026-02-16</b> (Score: 114)
+Next Possible Gamebreaker Threshold: <b>2026-05-23</b> (Score: 114)
 
 <br><br>
 
@@ -6769,7 +6789,7 @@ Next Possible Gamebreaker Threshold: <b>2026-02-16</b> (Score: 114)
 <table id="sortableTable">
 <thead>
 <tr>
-<th colspan="2">Unplayed Games (89) <span id="count_highlighted"></span></th>
+<th colspan="2">Unplayed Games (92) <span id="count_highlighted"></span></th>
 </tr>
 <tr>
 <th onclick="sortTable(0)" style="cursor: pointer;" class="arrowHeader">Game ▲</th>
@@ -6853,6 +6873,7 @@ Next Possible Gamebreaker Threshold: <b>2026-02-16</b> (Score: 114)
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/315708/ target='_blank'>Tapestry Expansion</a></td><td>2020-09-22</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/213268/ target='_blank'>That Snow Moon</a></td><td>2017-08-07</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/180852/ target='_blank'>Tiny Epic Western</a></td><td>2017-10-01</td></tr>
+<tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/454910/ target='_blank'>Tokaido Expansions</a></td><td>2026-01-29</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/313592/ target='_blank'>Tokyo Metro expansion</a></td><td>2021-11-08</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/313591/ target='_blank'>Tokyo Tsukiji expansion</a></td><td>2021-11-08</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/197069/ target='_blank'>Traitor Mechanic the Traitor Mechanic Game</a></td><td>2017-07-30</td></tr>
@@ -6862,8 +6883,10 @@ Next Possible Gamebreaker Threshold: <b>2026-02-16</b> (Score: 114)
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/231854/ target='_blank'>Twin Stars: Adventure Series 1</a></td><td>2017-09-29</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/247342/ target='_blank'>Village Pillage</a></td><td>2019-02-20</td></tr>
 <tr class="highlightedIfInDateRange"><td>Viscounts expansions (<a href=https://www.boardgamegeek.com/boardgame/343468/ target='_blank'>343468</a>, <a href=https://www.boardgamegeek.com/boardgame/343470/ target='_blank'>343470</a>)</td><td>2022-08-06</td></tr>
+<tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/462369/ target='_blank'>Viticulture Bordeaux Expansion</a></td><td>2026-01-29</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/227266/ target='_blank'>Wagon Wheels</a></td><td>2017-08-07</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/237179/ target='_blank'>Weather Machine</a></td><td>2022-11-30</td></tr>
+<tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/461932/ target='_blank'>Wingspan Americas Expansion</a></td><td>2026-01-29</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/185154/ target='_blank'>Wizard School</a></td><td>2017-07-30</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/281466/ target='_blank'>Yedo: Deluxe</a></td><td>2020-09-15</td></tr>
 </tbody>
@@ -6875,7 +6898,7 @@ Next Possible Gamebreaker Threshold: <b>2026-02-16</b> (Score: 114)
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2025, 9, 25) ;
+    var last_acquired = new Date(2026, 0, 29) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
