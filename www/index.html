@@ -3140,7 +3140,8 @@ var datedata = [[new Date(2017, 6, 30), 52, 52, 0],
 [new Date(2026, 1, 4), 91, 0, 0],
 [new Date(2026, 1, 5), 91, 0, 0],
 [new Date(2026, 1, 6), 91, 0, 0],
-[new Date(2026, 1, 7), 92, 1, 0]];
+[new Date(2026, 1, 7), 91, 1, 1],
+[new Date(2026, 1, 8), 91, 0, 0]];
 function updateVariableStatsForSelectedDateRange() {
     var variableStatsStartingCount = document.getElementById("variable_stats_starting_count");
     var variableStatsEndingCount = document.getElementById("variable_stats_ending_count");
@@ -6315,7 +6316,8 @@ function updateVariableStatsForSelectedDateRange() {
 [new Date(2026, 1, 4), 91, '<div class="google-tooltip"><b>Wednesday</b><br><b>Feb 04, 2026</b><br>Game Count: <b>91</b></div>'],
 [new Date(2026, 1, 5), 91, '<div class="google-tooltip"><b>Thursday</b><br><b>Feb 05, 2026</b><br>Game Count: <b>91</b></div>'],
 [new Date(2026, 1, 6), 91, '<div class="google-tooltip"><b>Friday</b><br><b>Feb 06, 2026</b><br>Game Count: <b>91</b></div>'],
-[new Date(2026, 1, 7), 92, '<div class="google-tooltip"><b>Saturday</b><br><b>Feb 07, 2026</b><br>Game Count: <b>92</b> (+1)<br><div class="chart_details_div">+ <a href=https://www.boardgamegeek.com/boardgame/379369/ target=&apos;_blank&apos;>Sentinels Definitive: Disparation</a></div></div>']] );
+[new Date(2026, 1, 7), 91, '<div class="google-tooltip"><b>Saturday</b><br><b>Feb 07, 2026</b><br>Game Count: <b>91</b><br><div class="chart_details_div">+ <a href=https://www.boardgamegeek.com/boardgame/379369/ target=&apos;_blank&apos;>Sentinels Definitive: Disparation</a><br>- <a href=https://www.boardgamegeek.com/boardgame/461932/ target=&apos;_blank&apos;>Wingspan Americas Expansion</a></div></div>'],
+[new Date(2026, 1, 8), 91, '<div class="google-tooltip"><b>Sunday</b><br><b>Feb 08, 2026</b><br>Game Count: <b>91</b></div>']] );
 
     var options = {
       vAxis: {
@@ -6677,8 +6679,8 @@ document.getElementById('end_date').value = todayStr();
 Last Game Acquired on <b> 2026-02-07 </b>
 (<span id="dayDiff"></span> ago)
 <br>
-Currently Unplayed: <b> 92 </b>
-(Lowest Since <b> 2026-02-06) </b>
+Currently Unplayed: <b> 91 </b>
+(Lowest Since <b> 2026-01-28) </b>
 <br><br>
 
 <!-- tooltip toggling not working -->
@@ -6700,10 +6702,10 @@ Currently Unplayed: <b> 92 </b>
 <tr><th rowspan="2">Stats</th><th colspan="10">Yearly (Click Year to Set Range)</th><th>Selected Range</th></tr>
 <tr><th onclick="applyYear(2017)" style="cursor: pointer;">2017</th><th onclick="applyYear(2018)" style="cursor: pointer;">2018</th><th onclick="applyYear(2019)" style="cursor: pointer;">2019</th><th onclick="applyYear(2020)" style="cursor: pointer;">2020</th><th onclick="applyYear(2021)" style="cursor: pointer;">2021</th><th onclick="applyYear(2022)" style="cursor: pointer;">2022</th><th onclick="applyYear(2023)" style="cursor: pointer;">2023</th><th onclick="applyYear(2024)" style="cursor: pointer;">2024</th><th onclick="applyYear(2025)" style="cursor: pointer;">2025</th><th onclick="applyYear(2026)" style="cursor: pointer;">2026</th><th><span id="start_date_str">2017-07-30</span> to <span id="end_date_str">Today</span></th></tr>
 <tr><th>Starting Count</th><td>52</td><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td><td>109</td><td>120</td><td>111</td><td>92</td><td><span id="variable_stats_starting_count"></span></td></tr>
-<tr><th>Ending Count</th><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td><td>109</td><td>120</td><td>111</td><td>92</td><td>92</td><td><span id="variable_stats_ending_count"></span></td></tr>
-<tr><th>Net Change</th><td>+26</td><td>+2</td><td>0</td><td>+12</td><td>+18</td><td>-1</td><td>+11</td><td>-9</td><td>-19</td><td>0</td><td><span id="variable_stats_net_change"></span></td></tr>
+<tr><th>Ending Count</th><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td><td>109</td><td>120</td><td>111</td><td>92</td><td>91</td><td><span id="variable_stats_ending_count"></span></td></tr>
+<tr><th>Net Change</th><td>+26</td><td>+2</td><td>0</td><td>+12</td><td>+18</td><td>-1</td><td>+11</td><td>-9</td><td>-19</td><td>-1</td><td><span id="variable_stats_net_change"></span></td></tr>
 <tr><th>Games Acquired</th><td>56</td><td>106</td><td>64</td><td>34</td><td>38</td><td>43</td><td>22</td><td>13</td><td>14</td><td>4</td><td><span id="variable_stats_games_acquired"></span></td></tr>
-<tr><th>Games Played</th><td>30</td><td>104</td><td>64</td><td>22</td><td>20</td><td>44</td><td>11</td><td>22</td><td>33</td><td>4</td><td><span id="variable_stats_games_played"></span></td></tr>
+<tr><th>Games Played</th><td>30</td><td>104</td><td>64</td><td>22</td><td>20</td><td>44</td><td>11</td><td>22</td><td>33</td><td>5</td><td><span id="variable_stats_games_played"></span></td></tr>
 </table>
 
 <!--
@@ -6807,7 +6809,7 @@ Next Possible Gamebreaker Threshold: <b>2026-06-01</b> (Score: 114)
 <table id="sortableTable">
 <thead>
 <tr>
-<th colspan="2">Unplayed Games (92) <span id="count_highlighted"></span></th>
+<th colspan="2">Unplayed Games (91) <span id="count_highlighted"></span></th>
 </tr>
 <tr>
 <th onclick="sortTable(0)" style="cursor: pointer;" class="arrowHeader">Game ▲</th>
@@ -6904,7 +6906,6 @@ Next Possible Gamebreaker Threshold: <b>2026-06-01</b> (Score: 114)
 <tr class="highlightedIfInDateRange"><td>Viscounts expansions (<a href=https://www.boardgamegeek.com/boardgame/343468/ target='_blank'>343468</a>, <a href=https://www.boardgamegeek.com/boardgame/343470/ target='_blank'>343470</a>)</td><td>2022-08-06</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/227266/ target='_blank'>Wagon Wheels</a></td><td>2017-08-07</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/237179/ target='_blank'>Weather Machine</a></td><td>2022-11-30</td></tr>
-<tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/461932/ target='_blank'>Wingspan Americas Expansion</a></td><td>2026-01-29</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/185154/ target='_blank'>Wizard School</a></td><td>2017-07-30</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/281466/ target='_blank'>Yedo: Deluxe</a></td><td>2020-09-15</td></tr>
 </tbody>
