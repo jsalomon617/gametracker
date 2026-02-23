@@ -3141,7 +3141,21 @@ var datedata = [[new Date(2017, 6, 30), 52, 52, 0],
 [new Date(2026, 1, 5), 91, 0, 0],
 [new Date(2026, 1, 6), 91, 0, 0],
 [new Date(2026, 1, 7), 91, 1, 1],
-[new Date(2026, 1, 8), 91, 0, 0]];
+[new Date(2026, 1, 8), 91, 0, 0],
+[new Date(2026, 1, 9), 91, 0, 0],
+[new Date(2026, 1, 10), 91, 0, 0],
+[new Date(2026, 1, 11), 91, 0, 0],
+[new Date(2026, 1, 12), 91, 0, 0],
+[new Date(2026, 1, 13), 91, 0, 0],
+[new Date(2026, 1, 14), 91, 0, 0],
+[new Date(2026, 1, 15), 91, 0, 0],
+[new Date(2026, 1, 16), 91, 0, 0],
+[new Date(2026, 1, 17), 91, 0, 0],
+[new Date(2026, 1, 18), 91, 0, 0],
+[new Date(2026, 1, 19), 91, 0, 0],
+[new Date(2026, 1, 20), 91, 0, 0],
+[new Date(2026, 1, 21), 91, 0, 0],
+[new Date(2026, 1, 22), 90, 0, 1]];
 function updateVariableStatsForSelectedDateRange() {
     var variableStatsStartingCount = document.getElementById("variable_stats_starting_count");
     var variableStatsEndingCount = document.getElementById("variable_stats_ending_count");
@@ -6317,7 +6331,21 @@ function updateVariableStatsForSelectedDateRange() {
 [new Date(2026, 1, 5), 91, '<div class="google-tooltip"><b>Thursday</b><br><b>Feb 05, 2026</b><br>Game Count: <b>91</b></div>'],
 [new Date(2026, 1, 6), 91, '<div class="google-tooltip"><b>Friday</b><br><b>Feb 06, 2026</b><br>Game Count: <b>91</b></div>'],
 [new Date(2026, 1, 7), 91, '<div class="google-tooltip"><b>Saturday</b><br><b>Feb 07, 2026</b><br>Game Count: <b>91</b><br><div class="chart_details_div">+ <a href=https://www.boardgamegeek.com/boardgame/379369/ target=&apos;_blank&apos;>Sentinels Definitive: Disparation</a><br>- <a href=https://www.boardgamegeek.com/boardgame/461932/ target=&apos;_blank&apos;>Wingspan Americas Expansion</a></div></div>'],
-[new Date(2026, 1, 8), 91, '<div class="google-tooltip"><b>Sunday</b><br><b>Feb 08, 2026</b><br>Game Count: <b>91</b></div>']] );
+[new Date(2026, 1, 8), 91, '<div class="google-tooltip"><b>Sunday</b><br><b>Feb 08, 2026</b><br>Game Count: <b>91</b></div>'],
+[new Date(2026, 1, 9), 91, '<div class="google-tooltip"><b>Monday</b><br><b>Feb 09, 2026</b><br>Game Count: <b>91</b></div>'],
+[new Date(2026, 1, 10), 91, '<div class="google-tooltip"><b>Tuesday</b><br><b>Feb 10, 2026</b><br>Game Count: <b>91</b></div>'],
+[new Date(2026, 1, 11), 91, '<div class="google-tooltip"><b>Wednesday</b><br><b>Feb 11, 2026</b><br>Game Count: <b>91</b></div>'],
+[new Date(2026, 1, 12), 91, '<div class="google-tooltip"><b>Thursday</b><br><b>Feb 12, 2026</b><br>Game Count: <b>91</b></div>'],
+[new Date(2026, 1, 13), 91, '<div class="google-tooltip"><b>Friday</b><br><b>Feb 13, 2026</b><br>Game Count: <b>91</b></div>'],
+[new Date(2026, 1, 14), 91, '<div class="google-tooltip"><b>Saturday</b><br><b>Feb 14, 2026</b><br>Game Count: <b>91</b></div>'],
+[new Date(2026, 1, 15), 91, '<div class="google-tooltip"><b>Sunday</b><br><b>Feb 15, 2026</b><br>Game Count: <b>91</b></div>'],
+[new Date(2026, 1, 16), 91, '<div class="google-tooltip"><b>Monday</b><br><b>Feb 16, 2026</b><br>Game Count: <b>91</b></div>'],
+[new Date(2026, 1, 17), 91, '<div class="google-tooltip"><b>Tuesday</b><br><b>Feb 17, 2026</b><br>Game Count: <b>91</b></div>'],
+[new Date(2026, 1, 18), 91, '<div class="google-tooltip"><b>Wednesday</b><br><b>Feb 18, 2026</b><br>Game Count: <b>91</b></div>'],
+[new Date(2026, 1, 19), 91, '<div class="google-tooltip"><b>Thursday</b><br><b>Feb 19, 2026</b><br>Game Count: <b>91</b></div>'],
+[new Date(2026, 1, 20), 91, '<div class="google-tooltip"><b>Friday</b><br><b>Feb 20, 2026</b><br>Game Count: <b>91</b></div>'],
+[new Date(2026, 1, 21), 91, '<div class="google-tooltip"><b>Saturday</b><br><b>Feb 21, 2026</b><br>Game Count: <b>91</b></div>'],
+[new Date(2026, 1, 22), 90, '<div class="google-tooltip"><b>Sunday</b><br><b>Feb 22, 2026</b><br>Game Count: <b>90</b> (-1)<br><div class="chart_details_div">- <a href=https://www.boardgamegeek.com/boardgame/298383/ target=&apos;_blank&apos;>Golem</a></div></div>']] );
 
     var options = {
       vAxis: {
@@ -6679,7 +6707,7 @@ document.getElementById('end_date').value = todayStr();
 Last Game Acquired on <b> 2026-02-07 </b>
 (<span id="dayDiff"></span> ago)
 <br>
-Currently Unplayed: <b> 91 </b>
+Currently Unplayed: <b> 90 </b>
 (Lowest Since <b> 2026-01-28) </b>
 <br><br>
 
@@ -6702,10 +6730,10 @@ Currently Unplayed: <b> 91 </b>
 <tr><th rowspan="2">Stats</th><th colspan="10">Yearly (Click Year to Set Range)</th><th>Selected Range</th></tr>
 <tr><th onclick="applyYear(2017)" style="cursor: pointer;">2017</th><th onclick="applyYear(2018)" style="cursor: pointer;">2018</th><th onclick="applyYear(2019)" style="cursor: pointer;">2019</th><th onclick="applyYear(2020)" style="cursor: pointer;">2020</th><th onclick="applyYear(2021)" style="cursor: pointer;">2021</th><th onclick="applyYear(2022)" style="cursor: pointer;">2022</th><th onclick="applyYear(2023)" style="cursor: pointer;">2023</th><th onclick="applyYear(2024)" style="cursor: pointer;">2024</th><th onclick="applyYear(2025)" style="cursor: pointer;">2025</th><th onclick="applyYear(2026)" style="cursor: pointer;">2026</th><th><span id="start_date_str">2017-07-30</span> to <span id="end_date_str">Today</span></th></tr>
 <tr><th>Starting Count</th><td>52</td><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td><td>109</td><td>120</td><td>111</td><td>92</td><td><span id="variable_stats_starting_count"></span></td></tr>
-<tr><th>Ending Count</th><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td><td>109</td><td>120</td><td>111</td><td>92</td><td>91</td><td><span id="variable_stats_ending_count"></span></td></tr>
-<tr><th>Net Change</th><td>+26</td><td>+2</td><td>0</td><td>+12</td><td>+18</td><td>-1</td><td>+11</td><td>-9</td><td>-19</td><td>-1</td><td><span id="variable_stats_net_change"></span></td></tr>
+<tr><th>Ending Count</th><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td><td>109</td><td>120</td><td>111</td><td>92</td><td>90</td><td><span id="variable_stats_ending_count"></span></td></tr>
+<tr><th>Net Change</th><td>+26</td><td>+2</td><td>0</td><td>+12</td><td>+18</td><td>-1</td><td>+11</td><td>-9</td><td>-19</td><td>-2</td><td><span id="variable_stats_net_change"></span></td></tr>
 <tr><th>Games Acquired</th><td>56</td><td>106</td><td>64</td><td>34</td><td>38</td><td>43</td><td>22</td><td>13</td><td>14</td><td>4</td><td><span id="variable_stats_games_acquired"></span></td></tr>
-<tr><th>Games Played</th><td>30</td><td>104</td><td>64</td><td>22</td><td>20</td><td>44</td><td>11</td><td>22</td><td>33</td><td>5</td><td><span id="variable_stats_games_played"></span></td></tr>
+<tr><th>Games Played</th><td>30</td><td>104</td><td>64</td><td>22</td><td>20</td><td>44</td><td>11</td><td>22</td><td>33</td><td>6</td><td><span id="variable_stats_games_played"></span></td></tr>
 </table>
 
 <!--
@@ -6809,7 +6837,7 @@ Next Possible Gamebreaker Threshold: <b>2026-06-01</b> (Score: 114)
 <table id="sortableTable">
 <thead>
 <tr>
-<th colspan="2">Unplayed Games (91) <span id="count_highlighted"></span></th>
+<th colspan="2">Unplayed Games (90) <span id="count_highlighted"></span></th>
 </tr>
 <tr>
 <th onclick="sortTable(0)" style="cursor: pointer;" class="arrowHeader">Game ▲</th>
@@ -6843,7 +6871,6 @@ Next Possible Gamebreaker Threshold: <b>2026-06-01</b> (Score: 114)
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/154904/ target='_blank'>Easy Breezy Travel Agency</a></td><td>2017-07-30</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/72125/ target='_blank'>Eclipse</a></td><td>2017-07-30</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/209748/ target='_blank'>Find Your Seats</a></td><td>2017-07-30</td></tr>
-<tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/298383/ target='_blank'>Golem</a></td><td>2022-04-25</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/292375/ target='_blank'>Great Wall</a></td><td>2021-12-28</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/250865/ target='_blank'>Grifters: Nexus</a></td><td>2018-12-27</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/134157/ target='_blank'>Guilds of London</a></td><td>2019-02-15</td></tr>
