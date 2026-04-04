@@ -802,3 +802,4 @@
 2026-02-22  -   Golem
 2026-03-07  -   A Feast for Odin: The Norwegians
 2026-03-28  -   Sentinels Definitive: Disparation
+2026-04-03  +   Secret Societies        id455363
