@@ -3265,8 +3265,8 @@ function updateVariableStatsForSelectedDateRange() {
     variableStatsNetChange.innerHTML = net_change;
     variableStatsGamesAcquired.innerHTML = games_acquired_count;
     variableStatsGamesPlayed.innerHTML = games_played_count;
-    variableStatsHighestCount.innerHTML = highest_count + " (" + dateToStr(highestCountDate) + ")";
-    variableStatsLowestCount.innerHTML = lowest_count + " (" + dateToStr(lowestCountDate) + ")";
+    variableStatsHighestCount.innerHTML = highest_count; // + " (" + dateToStr(highestCountDate) + ")";
+    variableStatsLowestCount.innerHTML = lowest_count; // + " (" + dateToStr(lowestCountDate) + ")";
 };
 </script>
 
@@ -6849,8 +6849,8 @@ Currently Unplayed: <b> 88 </b>
 <tr><th>Net Change</th><td>+26</td><td>+2</td><td>0</td><td>+12</td><td>+18</td><td>-1</td><td>+11</td><td>-9</td><td>-19</td><td>-4</td><td><span id="variable_stats_net_change"></span></td></tr>
 <tr><th>Games Acquired</th><td>56</td><td>106</td><td>64</td><td>34</td><td>38</td><td>43</td><td>22</td><td>13</td><td>14</td><td>5</td><td><span id="variable_stats_games_acquired"></span></td></tr>
 <tr><th>Games Played</th><td>30</td><td>104</td><td>64</td><td>22</td><td>20</td><td>44</td><td>11</td><td>22</td><td>33</td><td>9</td><td><span id="variable_stats_games_played"></span></td></tr>
-<tr><th>Highest Count</th><td>78 (2017-12-22)</td><td>81 (2018-12-20)</td><td>91 (2019-01-10)</td><td>92 (2020-12-14)</td><td>110 (2021-12-28)</td><td>110 (2021-12-31)</td><td>120 (2023-11-07)</td><td>121 (2024-02-13)</td><td>114 (2025-04-17)</td><td>92 (2025-12-31)</td><td><span id="variable_stats_highest_count"></span></td></tr>
-<tr><th>Lowest Count</th><td>52 (2017-07-30)</td><td>55 (2018-09-19)</td><td>75 (2019-10-19)</td><td>72 (2020-02-25)</td><td>91 (2021-01-02)</td><td>99 (2022-07-04)</td><td>109 (2022-12-31)</td><td>108 (2024-09-02)</td><td>92 (2025-10-12)</td><td>0 (2026-04-13)</td><td><span id="variable_stats_lowest_count"></span></td></tr>
+<tr><th>Highest Count</th><td>78</td><td>81</td><td>91</td><td>92</td><td>110</td><td>110</td><td>120</td><td>121</td><td>114</td><td>92</td><td><span id="variable_stats_highest_count"></span></td></tr>
+<tr><th>Lowest Count</th><td>52</td><td>55</td><td>75</td><td>72</td><td>91</td><td>99</td><td>109</td><td>108</td><td>92</td><td>0</td><td><span id="variable_stats_lowest_count"></span></td></tr>
 </table>
 
 <!--

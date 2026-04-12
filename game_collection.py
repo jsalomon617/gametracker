@@ -149,6 +149,9 @@ class DateRange(object):
                 lowest_count = count_on_index_date
                 lowest_reached_on = index_date
 
+        highest_count_string = "%s (%s)" % (highest_count, highest_reached_on)
+        lowest_count_string = "%s (%s)" % (lowest_count, lowest_reached_on)
+
         # return our interesting stats
         return [
             ('Starting Count', start_count),
@@ -156,9 +159,9 @@ class DateRange(object):
             ('Net Change', human_net),
             ('Games Acquired', acquired_count),
             ('Games Played', played_count),
-            ('Highest Count', "%s (%s)" % (highest_count, highest_reached_on)),
+            ('Highest Count', highest_count),
             #('Highest Reached On', highest_reached_on),
-            ('Lowest Count', "%s (%s)" % (lowest_count, lowest_reached_on)),
+            ('Lowest Count', lowest_count),
             #('Lowest Reached On', lowest_reached_on),
         ]
 
