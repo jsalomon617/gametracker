@@ -33,13 +33,20 @@ function updateVariableStatsForSelectedDateRange() {
     var variableStatsNetChange = document.getElementById("variable_stats_net_change");
     var variableStatsGamesAcquired = document.getElementById("variable_stats_games_acquired");
     var variableStatsGamesPlayed = document.getElementById("variable_stats_games_played");
+    var variableStatsHighestCount = document.getElementById("variable_stats_highest_count");
+    var variableStatsLowestCount = document.getElementById("variable_stats_lowest_count");
 
     var startDate = stringToDate(document.getElementById('start_date_str').innerHTML);
     var endDate = stringToDate(document.getElementById('end_date_str').innerHTML);
 
+    var highestCountDate = startDate;
+    var lowestCountDate = startDate;
+
     var starting_count = 0;
     var games_acquired_count = 0;
     var games_played_count = 0;
+    var highest_count = 0;
+    var lowest_count = 0;
     var current_day_count = 0;
     var begin_tracking_acquired_played = false;
     for (const dateinfo of datedata) {
@@ -57,6 +64,14 @@ function updateVariableStatsForSelectedDateRange() {
         if (begin_tracking_acquired_played) {
             games_acquired_count += games_acquired_on_date;
             games_played_count += games_played_on_date;
+            if (current_day_count > highest_count) {
+                highest_count = current_day_count;
+                highestCountDate = this_date;
+            }
+            if (current_day_count < lowest_count) {
+                lowest_count = current_day_count;
+                lowestCountDate = this_date;
+            }
         }
 
         if (dateToStr(this_date) === dateToStr(endDate)) {
@@ -72,6 +87,8 @@ function updateVariableStatsForSelectedDateRange() {
     variableStatsNetChange.innerHTML = net_change;
     variableStatsGamesAcquired.innerHTML = games_acquired_count;
     variableStatsGamesPlayed.innerHTML = games_played_count;
+    variableStatsHighestCount.innerHTML = highest_count + " (" + dateToStr(highestCountDate) + ")";
+    variableStatsLowestCount.innerHTML = lowest_count + " (" + dateToStr(lowestCountDate) + ")";
 };
 </script>
 

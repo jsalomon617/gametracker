@@ -3203,20 +3203,28 @@ var datedata = [[new Date(2017, 6, 30), 52, 52, 0],
 [new Date(2026, 3, 8), 89, 0, 0],
 [new Date(2026, 3, 9), 89, 0, 0],
 [new Date(2026, 3, 10), 89, 0, 0],
-[new Date(2026, 3, 11), 88, 0, 1]];
+[new Date(2026, 3, 11), 88, 0, 1],
+[new Date(2026, 3, 12), 88, 0, 0]];
 function updateVariableStatsForSelectedDateRange() {
     var variableStatsStartingCount = document.getElementById("variable_stats_starting_count");
     var variableStatsEndingCount = document.getElementById("variable_stats_ending_count");
     var variableStatsNetChange = document.getElementById("variable_stats_net_change");
     var variableStatsGamesAcquired = document.getElementById("variable_stats_games_acquired");
     var variableStatsGamesPlayed = document.getElementById("variable_stats_games_played");
+    var variableStatsHighestCount = document.getElementById("variable_stats_highest_count");
+    var variableStatsLowestCount = document.getElementById("variable_stats_lowest_count");
 
     var startDate = stringToDate(document.getElementById('start_date_str').innerHTML);
     var endDate = stringToDate(document.getElementById('end_date_str').innerHTML);
 
+    var highestCountDate = startDate;
+    var lowestCountDate = startDate;
+
     var starting_count = 0;
     var games_acquired_count = 0;
     var games_played_count = 0;
+    var highest_count = 0;
+    var lowest_count = 0;
     var current_day_count = 0;
     var begin_tracking_acquired_played = false;
     for (const dateinfo of datedata) {
@@ -3234,6 +3242,14 @@ function updateVariableStatsForSelectedDateRange() {
         if (begin_tracking_acquired_played) {
             games_acquired_count += games_acquired_on_date;
             games_played_count += games_played_on_date;
+            if (current_day_count > highest_count) {
+                highest_count = current_day_count;
+                highestCountDate = this_date;
+            }
+            if (current_day_count < lowest_count) {
+                lowest_count = current_day_count;
+                lowestCountDate = this_date;
+            }
         }
 
         if (dateToStr(this_date) === dateToStr(endDate)) {
@@ -3249,6 +3265,8 @@ function updateVariableStatsForSelectedDateRange() {
     variableStatsNetChange.innerHTML = net_change;
     variableStatsGamesAcquired.innerHTML = games_acquired_count;
     variableStatsGamesPlayed.innerHTML = games_played_count;
+    variableStatsHighestCount.innerHTML = highest_count + " (" + dateToStr(highestCountDate) + ")";
+    variableStatsLowestCount.innerHTML = lowest_count + " (" + dateToStr(lowestCountDate) + ")";
 };
 </script>
 
@@ -6441,7 +6459,8 @@ function updateVariableStatsForSelectedDateRange() {
 [new Date(2026, 3, 8), 89, '<div class="google-tooltip"><b>Wednesday</b><br><b>Apr 08, 2026</b><br>Game Count: <b>89</b></div>'],
 [new Date(2026, 3, 9), 89, '<div class="google-tooltip"><b>Thursday</b><br><b>Apr 09, 2026</b><br>Game Count: <b>89</b></div>'],
 [new Date(2026, 3, 10), 89, '<div class="google-tooltip"><b>Friday</b><br><b>Apr 10, 2026</b><br>Game Count: <b>89</b></div>'],
-[new Date(2026, 3, 11), 88, '<div class="google-tooltip"><b>Saturday</b><br><b>Apr 11, 2026</b><br>Game Count: <b>88</b> (-1)<br><div class="chart_details_div">- <a href=https://www.boardgamegeek.com/boardgame/454910/ target=&apos;_blank&apos;>Tokaido Expansions</a></div></div>']] );
+[new Date(2026, 3, 11), 88, '<div class="google-tooltip"><b>Saturday</b><br><b>Apr 11, 2026</b><br>Game Count: <b>88</b> (-1)<br><div class="chart_details_div">- <a href=https://www.boardgamegeek.com/boardgame/454910/ target=&apos;_blank&apos;>Tokaido Expansions</a></div></div>'],
+[new Date(2026, 3, 12), 88, '<div class="google-tooltip"><b>Sunday</b><br><b>Apr 12, 2026</b><br>Game Count: <b>88</b></div>']] );
 
     var options = {
       vAxis: {
@@ -6830,6 +6849,8 @@ Currently Unplayed: <b> 88 </b>
 <tr><th>Net Change</th><td>+26</td><td>+2</td><td>0</td><td>+12</td><td>+18</td><td>-1</td><td>+11</td><td>-9</td><td>-19</td><td>-4</td><td><span id="variable_stats_net_change"></span></td></tr>
 <tr><th>Games Acquired</th><td>56</td><td>106</td><td>64</td><td>34</td><td>38</td><td>43</td><td>22</td><td>13</td><td>14</td><td>5</td><td><span id="variable_stats_games_acquired"></span></td></tr>
 <tr><th>Games Played</th><td>30</td><td>104</td><td>64</td><td>22</td><td>20</td><td>44</td><td>11</td><td>22</td><td>33</td><td>9</td><td><span id="variable_stats_games_played"></span></td></tr>
+<tr><th>Highest Count</th><td>78 (2017-12-22)</td><td>81 (2018-12-20)</td><td>91 (2019-01-10)</td><td>92 (2020-12-14)</td><td>110 (2021-12-28)</td><td>110 (2021-12-31)</td><td>120 (2023-11-07)</td><td>121 (2024-02-13)</td><td>114 (2025-04-17)</td><td>92 (2025-12-31)</td><td><span id="variable_stats_highest_count"></span></td></tr>
+<tr><th>Lowest Count</th><td>52 (2017-07-30)</td><td>55 (2018-09-19)</td><td>75 (2019-10-19)</td><td>72 (2020-02-25)</td><td>91 (2021-01-02)</td><td>99 (2022-07-04)</td><td>109 (2022-12-31)</td><td>108 (2024-09-02)</td><td>92 (2025-10-12)</td><td>0 (2026-04-13)</td><td><span id="variable_stats_lowest_count"></span></td></tr>
 </table>
 
 <!--

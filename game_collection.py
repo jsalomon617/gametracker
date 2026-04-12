@@ -122,6 +122,12 @@ class DateRange(object):
         start_count = self.collection.count(bounded_start)
         end_count = self.collection.count(self.end)
 
+        # track highest and lowest counts
+        highest_count = start_count
+        highest_reached_on = bounded_start
+        lowest_count = start_count
+        lowest_reached_on = bounded_start
+
         # net change across the range, and formatted nicely
         net_change = end_count - start_count
         human_net = '+{}'.format(net_change) if net_change > 0 else str(net_change)
@@ -135,6 +141,14 @@ class DateRange(object):
             played_count += len(self.collection.games_play(index_date))
             index_date += datetime.timedelta(days=1)
 
+            count_on_index_date = self.collection.count(index_date)
+            if count_on_index_date > highest_count:
+                highest_count = count_on_index_date
+                highest_reached_on = index_date
+            if count_on_index_date < lowest_count:
+                lowest_count = count_on_index_date
+                lowest_reached_on = index_date
+
         # return our interesting stats
         return [
             ('Starting Count', start_count),
@@ -142,6 +156,10 @@ class DateRange(object):
             ('Net Change', human_net),
             ('Games Acquired', acquired_count),
             ('Games Played', played_count),
+            ('Highest Count', "%s (%s)" % (highest_count, highest_reached_on)),
+            #('Highest Reached On', highest_reached_on),
+            ('Lowest Count', "%s (%s)" % (lowest_count, lowest_reached_on)),
+            #('Lowest Reached On', lowest_reached_on),
         ]
 
 
