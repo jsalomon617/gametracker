@@ -139,7 +139,6 @@ class DateRange(object):
         while index_date <= self.end:
             acquired_count += len(self.collection.games_get(index_date))
             played_count += len(self.collection.games_play(index_date))
-            index_date += datetime.timedelta(days=1)
 
             count_on_index_date = self.collection.count(index_date)
             if count_on_index_date > highest_count:
@@ -148,6 +147,9 @@ class DateRange(object):
             if count_on_index_date < lowest_count:
                 lowest_count = count_on_index_date
                 lowest_reached_on = index_date
+
+            # increment index date after *all* math
+            index_date += datetime.timedelta(days=1)
 
         highest_count_string = "%s (%s)" % (highest_count, highest_reached_on)
         lowest_count_string = "%s (%s)" % (lowest_count, lowest_reached_on)
