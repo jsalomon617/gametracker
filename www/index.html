@@ -3204,7 +3204,8 @@ var datedata = [[new Date(2017, 6, 30), 52, 52, 0],
 [new Date(2026, 3, 9), 89, 0, 0],
 [new Date(2026, 3, 10), 89, 0, 0],
 [new Date(2026, 3, 11), 88, 0, 1],
-[new Date(2026, 3, 12), 88, 0, 0]];
+[new Date(2026, 3, 12), 88, 0, 0],
+[new Date(2026, 3, 13), 89, 1, 0]];
 function updateVariableStatsForSelectedDateRange() {
     var variableStatsStartingCount = document.getElementById("variable_stats_starting_count");
     var variableStatsEndingCount = document.getElementById("variable_stats_ending_count");
@@ -6462,7 +6463,8 @@ function updateVariableStatsForSelectedDateRange() {
 [new Date(2026, 3, 9), 89, '<div class="google-tooltip"><b>Thursday</b><br><b>Apr 09, 2026</b><br>Game Count: <b>89</b></div>'],
 [new Date(2026, 3, 10), 89, '<div class="google-tooltip"><b>Friday</b><br><b>Apr 10, 2026</b><br>Game Count: <b>89</b></div>'],
 [new Date(2026, 3, 11), 88, '<div class="google-tooltip"><b>Saturday</b><br><b>Apr 11, 2026</b><br>Game Count: <b>88</b> (-1)<br><div class="chart_details_div">- <a href=https://www.boardgamegeek.com/boardgame/454910/ target=&apos;_blank&apos;>Tokaido Expansions</a></div></div>'],
-[new Date(2026, 3, 12), 88, '<div class="google-tooltip"><b>Sunday</b><br><b>Apr 12, 2026</b><br>Game Count: <b>88</b></div>']] );
+[new Date(2026, 3, 12), 88, '<div class="google-tooltip"><b>Sunday</b><br><b>Apr 12, 2026</b><br>Game Count: <b>88</b></div>'],
+[new Date(2026, 3, 13), 89, '<div class="google-tooltip"><b>Monday</b><br><b>Apr 13, 2026</b><br>Game Count: <b>89</b> (+1)<br><div class="chart_details_div">+ <a href=https://www.boardgamegeek.com/boardgame/429405/ target=&apos;_blank&apos;>Orloj: The Prague Astronomical Clock</a></div></div>']] );
 
     var options = {
       vAxis: {
@@ -6821,11 +6823,11 @@ document.getElementById('end_date').value = todayStr();
 
 <br><br>
 
-Last Game Acquired on <b> 2026-04-03 </b>
+Last Game Acquired on <b> 2026-04-13 </b>
 (<span id="dayDiff"></span> ago)
 <br>
-Currently Unplayed: <b> 88 </b>
-(Lowest Since <b> 2020-09-16) </b>
+Currently Unplayed: <b> 89 </b>
+(Lowest Since <b> 2026-04-12) </b>
 <br><br>
 
 <!-- tooltip toggling not working -->
@@ -6847,9 +6849,9 @@ Currently Unplayed: <b> 88 </b>
 <tr><th rowspan="2">Stats</th><th colspan="10">Yearly (Click Year to Set Range)</th><th>Selected Range</th></tr>
 <tr><th onclick="applyYear(2017)" style="cursor: pointer;">2017</th><th onclick="applyYear(2018)" style="cursor: pointer;">2018</th><th onclick="applyYear(2019)" style="cursor: pointer;">2019</th><th onclick="applyYear(2020)" style="cursor: pointer;">2020</th><th onclick="applyYear(2021)" style="cursor: pointer;">2021</th><th onclick="applyYear(2022)" style="cursor: pointer;">2022</th><th onclick="applyYear(2023)" style="cursor: pointer;">2023</th><th onclick="applyYear(2024)" style="cursor: pointer;">2024</th><th onclick="applyYear(2025)" style="cursor: pointer;">2025</th><th onclick="applyYear(2026)" style="cursor: pointer;">2026</th><th><span id="start_date_str">2017-07-30</span> to <span id="end_date_str">Today</span></th></tr>
 <tr><th>Starting Count</th><td>52</td><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td><td>109</td><td>120</td><td>111</td><td>92</td><td><span id="variable_stats_starting_count"></span></td></tr>
-<tr><th>Ending Count</th><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td><td>109</td><td>120</td><td>111</td><td>92</td><td>88</td><td><span id="variable_stats_ending_count"></span></td></tr>
-<tr><th>Net Change</th><td>+26</td><td>+2</td><td>0</td><td>+12</td><td>+18</td><td>-1</td><td>+11</td><td>-9</td><td>-19</td><td>-4</td><td><span id="variable_stats_net_change"></span></td></tr>
-<tr><th>Games Acquired</th><td>56</td><td>106</td><td>64</td><td>34</td><td>38</td><td>43</td><td>22</td><td>13</td><td>14</td><td>5</td><td><span id="variable_stats_games_acquired"></span></td></tr>
+<tr><th>Ending Count</th><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td><td>109</td><td>120</td><td>111</td><td>92</td><td>89</td><td><span id="variable_stats_ending_count"></span></td></tr>
+<tr><th>Net Change</th><td>+26</td><td>+2</td><td>0</td><td>+12</td><td>+18</td><td>-1</td><td>+11</td><td>-9</td><td>-19</td><td>-3</td><td><span id="variable_stats_net_change"></span></td></tr>
+<tr><th>Games Acquired</th><td>56</td><td>106</td><td>64</td><td>34</td><td>38</td><td>43</td><td>22</td><td>13</td><td>14</td><td>6</td><td><span id="variable_stats_games_acquired"></span></td></tr>
 <tr><th>Games Played</th><td>30</td><td>104</td><td>64</td><td>22</td><td>20</td><td>44</td><td>11</td><td>22</td><td>33</td><td>9</td><td><span id="variable_stats_games_played"></span></td></tr>
 <tr><th>Highest Count</th><td>78</td><td>81</td><td>91</td><td>92</td><td>110</td><td>110</td><td>120</td><td>121</td><td>114</td><td>92</td><td><span id="variable_stats_highest_count"></span></td></tr>
 <tr><th>Lowest Count</th><td>52</td><td>55</td><td>75</td><td>72</td><td>91</td><td>99</td><td>109</td><td>108</td><td>92</td><td>88</td><td><span id="variable_stats_lowest_count"></span></td></tr>
@@ -6942,7 +6944,7 @@ and continuing until the present day.
 
 <br>
 
-Next Possible Gamebreaker Threshold: <b>2026-07-26</b> (Score: 114)
+Next Possible Gamebreaker Threshold: <b>2026-08-05</b> (Score: 114)
 
 <br><br>
 
@@ -6956,7 +6958,7 @@ Next Possible Gamebreaker Threshold: <b>2026-07-26</b> (Score: 114)
 <table id="sortableTable">
 <thead>
 <tr>
-<th colspan="2">Unplayed Games (88) <span id="count_highlighted"></span></th>
+<th colspan="2">Unplayed Games (89) <span id="count_highlighted"></span></th>
 </tr>
 <tr>
 <th onclick="sortTable(0)" style="cursor: pointer;" class="arrowHeader">Game ▲</th>
@@ -7014,6 +7016,7 @@ Next Possible Gamebreaker Threshold: <b>2026-07-26</b> (Score: 114)
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/66190/ target='_blank'>New York</a></td><td>2022-03-04</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/230064/ target='_blank'>Ninjitsu</a></td><td>2018-08-18</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/282227/ target='_blank'>One Small Step</a></td><td>2020-09-17</td></tr>
+<tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/429405/ target='_blank'>Orloj: The Prague Astronomical Clock</a></td><td>2026-04-13</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/128780/ target='_blank'>Pax Porfiriana</a></td><td>2019-11-27</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/198953/ target='_blank'>Pax Renaissance</a></td><td>2017-07-30</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/166298/ target='_blank'>Peptide</a></td><td>2022-03-04</td></tr>
@@ -7061,7 +7064,7 @@ Next Possible Gamebreaker Threshold: <b>2026-07-26</b> (Score: 114)
 
 <script>
     // count days since we last got a new game
-    var last_acquired = new Date(2026, 3, 3) ;
+    var last_acquired = new Date(2026, 3, 13) ;
     var today = new Date();
     today.setHours(0,0,0,0);
     var diff = Math.abs(today - last_acquired);
