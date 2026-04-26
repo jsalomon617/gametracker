@@ -3211,7 +3211,14 @@ var datedata = [[new Date(2017, 6, 30), 52, 52, 0],
 [new Date(2026, 3, 16), 89, 0, 0],
 [new Date(2026, 3, 17), 89, 0, 0],
 [new Date(2026, 3, 18), 88, 0, 1],
-[new Date(2026, 3, 19), 88, 0, 0]];
+[new Date(2026, 3, 19), 88, 0, 0],
+[new Date(2026, 3, 20), 88, 0, 0],
+[new Date(2026, 3, 21), 88, 0, 0],
+[new Date(2026, 3, 22), 88, 0, 0],
+[new Date(2026, 3, 23), 88, 0, 0],
+[new Date(2026, 3, 24), 88, 0, 0],
+[new Date(2026, 3, 25), 87, 0, 1],
+[new Date(2026, 3, 26), 87, 0, 0]];
 function updateVariableStatsForSelectedDateRange() {
     var variableStatsStartingCount = document.getElementById("variable_stats_starting_count");
     var variableStatsEndingCount = document.getElementById("variable_stats_ending_count");
@@ -6476,7 +6483,14 @@ function updateVariableStatsForSelectedDateRange() {
 [new Date(2026, 3, 16), 89, '<div class="google-tooltip"><b>Thursday</b><br><b>Apr 16, 2026</b><br>Game Count: <b>89</b></div>'],
 [new Date(2026, 3, 17), 89, '<div class="google-tooltip"><b>Friday</b><br><b>Apr 17, 2026</b><br>Game Count: <b>89</b></div>'],
 [new Date(2026, 3, 18), 88, '<div class="google-tooltip"><b>Saturday</b><br><b>Apr 18, 2026</b><br>Game Count: <b>88</b> (-1)<br><div class="chart_details_div">- <a href=https://www.boardgamegeek.com/boardgame/429405/ target=&apos;_blank&apos;>Orloj: The Prague Astronomical Clock</a></div></div>'],
-[new Date(2026, 3, 19), 88, '<div class="google-tooltip"><b>Sunday</b><br><b>Apr 19, 2026</b><br>Game Count: <b>88</b></div>']] );
+[new Date(2026, 3, 19), 88, '<div class="google-tooltip"><b>Sunday</b><br><b>Apr 19, 2026</b><br>Game Count: <b>88</b></div>'],
+[new Date(2026, 3, 20), 88, '<div class="google-tooltip"><b>Monday</b><br><b>Apr 20, 2026</b><br>Game Count: <b>88</b></div>'],
+[new Date(2026, 3, 21), 88, '<div class="google-tooltip"><b>Tuesday</b><br><b>Apr 21, 2026</b><br>Game Count: <b>88</b></div>'],
+[new Date(2026, 3, 22), 88, '<div class="google-tooltip"><b>Wednesday</b><br><b>Apr 22, 2026</b><br>Game Count: <b>88</b></div>'],
+[new Date(2026, 3, 23), 88, '<div class="google-tooltip"><b>Thursday</b><br><b>Apr 23, 2026</b><br>Game Count: <b>88</b></div>'],
+[new Date(2026, 3, 24), 88, '<div class="google-tooltip"><b>Friday</b><br><b>Apr 24, 2026</b><br>Game Count: <b>88</b></div>'],
+[new Date(2026, 3, 25), 87, '<div class="google-tooltip"><b>Saturday</b><br><b>Apr 25, 2026</b><br>Game Count: <b>87</b> (-1)<br><div class="chart_details_div">- <a href=https://www.boardgamegeek.com/boardgame/455363/ target=&apos;_blank&apos;>Secret Societies</a></div></div>'],
+[new Date(2026, 3, 26), 87, '<div class="google-tooltip"><b>Sunday</b><br><b>Apr 26, 2026</b><br>Game Count: <b>87</b></div>']] );
 
     var options = {
       vAxis: {
@@ -6838,8 +6852,8 @@ document.getElementById('end_date').value = todayStr();
 Last Game Acquired on <b> 2026-04-13 </b>
 (<span id="dayDiff"></span> ago)
 <br>
-Currently Unplayed: <b> 88 </b>
-(Lowest Since <b> 2020-09-16) </b>
+Currently Unplayed: <b> 87 </b>
+(Lowest Since <b> 2020-09-15) </b>
 <br><br>
 
 <!-- tooltip toggling not working -->
@@ -6861,12 +6875,12 @@ Currently Unplayed: <b> 88 </b>
 <tr><th rowspan="2">Stats</th><th colspan="10">Yearly (Click Year to Set Range)</th><th>Selected Range</th></tr>
 <tr><th onclick="applyYear(2017)" style="cursor: pointer;">2017</th><th onclick="applyYear(2018)" style="cursor: pointer;">2018</th><th onclick="applyYear(2019)" style="cursor: pointer;">2019</th><th onclick="applyYear(2020)" style="cursor: pointer;">2020</th><th onclick="applyYear(2021)" style="cursor: pointer;">2021</th><th onclick="applyYear(2022)" style="cursor: pointer;">2022</th><th onclick="applyYear(2023)" style="cursor: pointer;">2023</th><th onclick="applyYear(2024)" style="cursor: pointer;">2024</th><th onclick="applyYear(2025)" style="cursor: pointer;">2025</th><th onclick="applyYear(2026)" style="cursor: pointer;">2026</th><th><span id="start_date_str">2017-07-30</span> to <span id="end_date_str">Today</span></th></tr>
 <tr><th>Starting Count</th><td>52</td><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td><td>109</td><td>120</td><td>111</td><td>92</td><td><span id="variable_stats_starting_count"></span></td></tr>
-<tr><th>Ending Count</th><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td><td>109</td><td>120</td><td>111</td><td>92</td><td>88</td><td><span id="variable_stats_ending_count"></span></td></tr>
-<tr><th>Net Change</th><td>+26</td><td>+2</td><td>0</td><td>+12</td><td>+18</td><td>-1</td><td>+11</td><td>-9</td><td>-19</td><td>-4</td><td><span id="variable_stats_net_change"></span></td></tr>
+<tr><th>Ending Count</th><td>78</td><td>80</td><td>80</td><td>92</td><td>110</td><td>109</td><td>120</td><td>111</td><td>92</td><td>87</td><td><span id="variable_stats_ending_count"></span></td></tr>
+<tr><th>Net Change</th><td>+26</td><td>+2</td><td>0</td><td>+12</td><td>+18</td><td>-1</td><td>+11</td><td>-9</td><td>-19</td><td>-5</td><td><span id="variable_stats_net_change"></span></td></tr>
 <tr><th>Games Acquired</th><td>56</td><td>106</td><td>64</td><td>34</td><td>38</td><td>43</td><td>22</td><td>13</td><td>14</td><td>6</td><td><span id="variable_stats_games_acquired"></span></td></tr>
-<tr><th>Games Played</th><td>30</td><td>104</td><td>64</td><td>22</td><td>20</td><td>44</td><td>11</td><td>22</td><td>33</td><td>10</td><td><span id="variable_stats_games_played"></span></td></tr>
+<tr><th>Games Played</th><td>30</td><td>104</td><td>64</td><td>22</td><td>20</td><td>44</td><td>11</td><td>22</td><td>33</td><td>11</td><td><span id="variable_stats_games_played"></span></td></tr>
 <tr><th>Highest Count</th><td>78</td><td>81</td><td>91</td><td>92</td><td>110</td><td>110</td><td>120</td><td>121</td><td>114</td><td>92</td><td><span id="variable_stats_highest_count"></span></td></tr>
-<tr><th>Lowest Count</th><td>52</td><td>55</td><td>75</td><td>72</td><td>91</td><td>99</td><td>109</td><td>108</td><td>92</td><td>88</td><td><span id="variable_stats_lowest_count"></span></td></tr>
+<tr><th>Lowest Count</th><td>52</td><td>55</td><td>75</td><td>72</td><td>91</td><td>99</td><td>109</td><td>108</td><td>92</td><td>87</td><td><span id="variable_stats_lowest_count"></span></td></tr>
 </table>
 
 <!--
@@ -6970,7 +6984,7 @@ Next Possible Gamebreaker Threshold: <b>2026-08-05</b> (Score: 114)
 <table id="sortableTable">
 <thead>
 <tr>
-<th colspan="2">Unplayed Games (88) <span id="count_highlighted"></span></th>
+<th colspan="2">Unplayed Games (87) <span id="count_highlighted"></span></th>
 </tr>
 <tr>
 <th onclick="sortTable(0)" style="cursor: pointer;" class="arrowHeader">Game ▲</th>
@@ -7039,7 +7053,6 @@ Next Possible Gamebreaker Threshold: <b>2026-08-05</b> (Score: 114)
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/175549/ target='_blank'>Salem: 1692</a></td><td>2017-08-31</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/195296/ target='_blank'>Scuttle!</a></td><td>2017-09-22</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/108745/ target='_blank'>Seasons</a></td><td>2020-08-05</td></tr>
-<tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/455363/ target='_blank'>Secret Societies</a></td><td>2026-04-03</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/224151/ target='_blank'>Seii Daimyo</a></td><td>2017-07-30</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/129904/ target='_blank'>Shadows Over Camelot: The Card Game</a></td><td>2017-07-30</td></tr>
 <tr class="highlightedIfInDateRange"><td><a href=https://www.boardgamegeek.com/boardgame/220188/ target='_blank'>Smash Up: Sheep</a></td><td>2017-12-22</td></tr>
