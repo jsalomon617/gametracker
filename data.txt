@@ -809,3 +809,6 @@
 2026-04-25  -   Secret Societies
 2026-06-15  +   World Order     id403150
 2026-06-22  +   Container       id453740
+2026-07-26  +   Duel of Meloch              id473061
+2026-07-26  +   Wingspan Pocket             id473508
+2026-07-26  +   Origin Story expansion      id473503
